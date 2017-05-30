@@ -1,0 +1,128 @@
+.App {
+  height: 100%;
+  font-family: 'Gotham Pro';
+  font-weight: normal;
+  font-style: normal;
+}
+/*-------------------------------------------------------------------------------------------*/
+/*********************************** WSR-MENU STYLES *****************************************/
+/*-------------------------------------------------------------------------------------------*/
+.wsr-affix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: inherit;
+  height: 100%;
+  background-size: cover;
+}
+.wsr-affix-background {
+  background-image: url(/Images/menu.svg);
+  background-size: cover;
+  height: 100%;
+}
+/*-------------------------------------------------------------------------------------------*/
+/*********************************** WSR-LOGO STYLES *****************************************/
+/*-------------------------------------------------------------------------------------------*/
+.wsr_annouce-label {
+  margin-top: 0px;
+}
+.wsr-logo-square {
+  float: right;
+  margin: 0;
+  width: 152%;
+}
+.carousel {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+}
+.wsr-carousel-image {
+  width: 100%;
+  height: 100%;
+}
+.wsr-menu {
+  font-weight: bold;
+}
+.wsr-numbers {
+  font-weight: bold;
+  color: #AC162C;
+}
+.wsr-red {
+  margin-top: 5%;
+  color: #AC162C;
+}
+.wsr-white {
+  color: white;
+}
+.wsr-category {
+  color: #999999;
+  font-weight: normal;
+}
+.wsr-thumbnail--active {
+  border: 0px solid #dddddd;
+  background-color: #f2f2f2;
+}
+.wsr-thumbnail {
+  border: none;
+}
+h4 {
+  font-weight: bold;
+}
+.wsr-media {
+  margin-top: 0;
+}
+.thumbnail .caption {
+  padding: 0px;
+}
+p {
+  opacity: .7;
+}
+.label {
+  background-color: #AC162C;
+}
+.well {
+  border: none;
+}
+.wsr-whole-category {
+  float: right;
+  vertical-align: bottom;
+  display: inline-block;
+  background-color: #999999;
+  border: none;
+}
+.wsr-vertical-align {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.vertical-divider {
+  border-left: solid 1px #e6e6e6;
+}
+.horizontal-divider {
+  border-bottom: solid 1px #e6e6e6;
+}
+.wsr-sponsor {
+  height: 2em;
+  opacity: 0.7;
+}
+.wsr-sponsor:hover {
+  height: 2em;
+  opacity: 1;
+  cursor: pointer;
+}
+.wsr-vertical-align--center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wsr-topbar {
+  background-color: #AC162C;
+  border: none;
+}
+.wsr-footer {
+  background-color: #033C5A;
+}
+.wsr-footer-menu {
+  font-weight: bold;
+  color: white;
+}
