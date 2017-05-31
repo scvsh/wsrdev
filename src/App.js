@@ -4,7 +4,6 @@ import "./css/wsr.css";
 import "./css/fonts.css";
 
 /* Import React-Boorstrap components*/
-
 import {
 	Button,
 	Grid,
@@ -446,3 +445,5 @@ class App extends Component {
 }
 
 export default App;
+
+/* */
