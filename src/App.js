@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../bootswatch/cosmo/bootstrap.css";
-import "./wsr.css";
-import "./fonts.css";
+import "./css/wsr.css";
+import "./css/fonts.css";
 
 /* Import React-Boorstrap components*/
 import {
@@ -52,7 +52,7 @@ class App extends Component {
 						<Row>
 						<Col xs={2} md={5} lg={3} className="wsr-carousel-menu__bg pull-right">
 							<Button bsClass="wsr-skewed-btn skew-left text-right">
-								<span className="skew-left">
+								<span className="skew-right">
 									<MdApps className="ri-big" />
 									Архив мероприятий
 								</span>
@@ -118,7 +118,7 @@ class App extends Component {
 							<div className="wsr-affix">
 								<div className="wsr-affix">
 									<WsrMenuTitle />
-									<Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn skew-right text-left">
+									<Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left">
 										<span className="skew-left">
 											<MdVpnKey className="ri-big" />
 											Личный кабинет
@@ -181,7 +181,7 @@ class App extends Component {
 													{"Пресс-центр".toUpperCase()}
 												</NavItem>
 											</Nav>
-											<Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn skew-right text-left">
+											<Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left">
 												{" "}
 												<span className="skew-left">
 													<MdSearch className="ri-big" />
