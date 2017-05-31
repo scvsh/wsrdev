@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../bootswatch/cosmo/bootstrap.css";
-import "./css/wsr.css";
-import "./css/fonts.css";
+import "./wsr.css";
+import "./fonts.css";
 
 /* Import React-Boorstrap components*/
 import {

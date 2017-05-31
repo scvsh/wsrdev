@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./css/wsr.css";
+import "./wsr.css";
 import { MdDateRange, MdArrowForward } from "react-icons/lib/md";
 import TextTruncate from "react-text-truncate";
 
