@@ -63,7 +63,7 @@ export class WsrBlock extends React.Component {
         return (
             <div className={"wsr-block " + _props.type}>
                 <Row>
-                    <Col xs={10} md={7}>
+                    <Col sm={9} md={7} className="wsr_block__container">
                         <h5 className="text-left wsr-block__heading">
                             <TextTruncate
                                 line={4}
@@ -89,7 +89,7 @@ export class WsrBlock extends React.Component {
                             {_props.date}
                         </p>
                     </Col>
-                    <Col md={5}>
+                    <Col sm={3} md={5} className="wsr-block__image-container">
                         <WsrImage
                             className="wsr-block__image"
                             src={_props.image}
@@ -170,53 +170,7 @@ export class WsrPartnersItem extends React.Component {
         return (
             <Row className="wsr_block-menu__item">
                 <Col md={12} className="text-center">
-                    <div className="center-block">
-                        <Image
-                            className="center-block wsr-parther-logo"
-                            src="Images/panel_logo_01.svg"
-                            responsive
-                        />
-                    </div>
-                    <div className="wsr_block-menu__divider" />
-                    <div className="center-block">
-                        <Image
-                            className="center-block wsr-parther-logo"
-                            src="Images/panel_logo_02.svg"
-                            responsive
-                        />
-                    </div>
-                    <div className="wsr_block-menu__divider" />
-                    <div className="center-block">
-                        <Image
-                            className="center-block wsr-parther-logo"
-                            src="Images/panel_logo_03.svg"
-                            responsive
-                        />
-                    </div>
-                    <div className="wsr_block-menu__divider" />
-                    <div className="center-block">
-                        <Image
-                            className="center-block wsr-parther-logo"
-                            src="Images/panel_logo_04.svg"
-                            responsive
-                        />
-                    </div>
-                    <div className="wsr_block-menu__divider" />
-                    <div className="center-block">
-                        <Image
-                            className="center-block wsr-parther-logo"
-                            src="Images/panel_logo_05.svg"
-                            responsive
-                        />
-                    </div>
-                    <div className="wsr_block-menu__divider" />
-                    <div className="center-block">
-                        <Image
-                            className="center-block wsr-parther-logo"
-                            src="Images/panel_logo_06.svg"
-                            responsive
-                        />
-                    </div>
+                    {_props.children }
                 </Col>
 
             </Row>
@@ -234,6 +188,7 @@ export class WsrBlockBlank extends React.Component {
         );
     }
 }
+
 
 export class WsrBlockTitle extends React.Component {
     render() {
@@ -264,58 +219,7 @@ export class WsrFooter extends React.Component {
         var _props = this.props;
         return (
             <Row className="wsr-footer">
-
-                <div className="wsr_footer__divider" />
-                <Col md={3} />
-                <Col md={1}>
-                    <h7 className="wsr-footer__heading">
-                        {"Wsr в Москве".toUpperCase()}
-                    </h7>
-                    <p>Об РКЦ</p>
-                    <p>История WorldSkills</p>
-                    <p>Активные мероприятия</p>
-                </Col>
-                <Col md={1}>
-                    <h7 className="wsr-footer__heading">
-                        {"Эксперты".toUpperCase()}
-                    </h7>
-                    <p>Инофрмация для экспертов</p>
-                </Col>
-                <Col md={1}>
-                    <h7 className="wsr-footer__heading">
-                        {"СЦК".toUpperCase()}
-                    </h7>
-                </Col>
-                <Col md={1}>
-                    <h7 className="wsr-footer__heading">
-                        {"Компетенции".toUpperCase()}
-                    </h7>
-                </Col>
-                <Col md={1}>
-                    <h7 className="wsr-footer__heading">
-                        {"Проекты".toUpperCase()}
-                    </h7>
-                    <p>Региональный эксперт WSR</p>
-                    <p>"Эксперт ДЭ</p>
-                    <p>Обучение становлению СЦК</p>
-                    <p>Обучение экспертов WorldSkills</p>
-                </Col>
-                <Col md={1}>
-                    <h7 className="wsr-footer__heading">
-                        {"Партнёры".toUpperCase()}
-                    </h7>
-                    <p>Наши партнёры</p>
-                    <p>Стать партнёром</p>
-                </Col>
-                <Col md={1}>
-                    <h7 className="wsr-footer__heading">
-                        {"Пресс-центр".toUpperCase()}
-                    </h7>
-                    <p>Новости</p>
-                    <p>Важная информация</p>
-                    <p>Фотогалерея</p>
-                    <p>Видеогалерея</p>
-                </Col>
+                {_props.children}
             </Row>
         );
     }
