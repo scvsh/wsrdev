@@ -19,7 +19,7 @@ export class WsrMenuTitle extends React.Component {
                     Региональный координационный центр
                 </div>
                 <div className="wsr-title-primary">
-                    WorldSkills Russia по г. Москве
+                    WorldSkills Russia по городу Москва
                 </div>
                 <div className="wsr-title-logo">
                     <img alt="" src="/Images/wsr-msk-logo.png" />

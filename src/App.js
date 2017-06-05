@@ -12,7 +12,7 @@ import {
 	Nav,
 	NavItem,
 	Carousel,
-	Image,
+	Image
 } from "react-bootstrap";
 
 /* Import WSR React components*/
@@ -49,53 +49,58 @@ class App extends Component {
 
 						{/* Carousel menu */}
 						<Grid bsClass="containter-fluid">
-						<Row>
-						<Col xs={2} md={5} lg={3} className="wsr-carousel-menu__bg pull-right">
-							<Button bsClass="wsr-skewed-btn skew-left text-right">
-								<span className="skew-right">
-									<MdApps className="ri-big" />
-									Архив мероприятий
-								</span>
-							</Button>
-							<Nav
-								className="wsr-carousel-menu text-right pull-right"
-								bsStyle="pills"
-								stacked
-								activeKey={1}
-							>
+							<Row>
+								<Col
+									xs={2}
+									md={5}
+									lg={3}
+									className="wsr-carousel-menu__bg pull-right"
+								>
+									<Button bsClass="wsr-skewed-btn skew-left text-right">
+										<span className="skew-right">
+											<MdApps className="ri-big" />
+											Архив мероприятий
+										</span>
+									</Button>
+									<Nav
+										className="wsr-carousel-menu text-right pull-right"
+										bsStyle="pills"
+										stacked
+										activeKey={1}
+									>
 
-								<NavItem
-									className="wsr-carousel-menu-item "
-									eventKey={1}
-									href="/home"
-								>
-									V ОЧМ «Московские мастера»
-								</NavItem>
-								<NavItem
-									className="wsr-carousel-menu-item "
-									eventKey={2}
-									href="/home"
-								>
-									Всероссийские отборочные соревнования
-								</NavItem>
-								<NavItem
-									className="wsr-carousel-menu-item "
-									eventKey={3}
-									href="/home"
-								>
-									Демонстрационный экзамен по&nbsp;стандартам WorldSkills
-								</NavItem>
-								<NavItem
-									className="wsr-carousel-menu-item "
-									eventKey={4}
-									href="/home"
-								>
-									Juniorskills
-								</NavItem>
-							</Nav>
+										<NavItem
+											className="wsr-carousel-menu-item "
+											eventKey={1}
+											href="/home"
+										>
+											V ОЧМ «Московские мастера»
+										</NavItem>
+										<NavItem
+											className="wsr-carousel-menu-item "
+											eventKey={2}
+											href="/home"
+										>
+											Всероссийские отборочные соревнования
+										</NavItem>
+										<NavItem
+											className="wsr-carousel-menu-item "
+											eventKey={3}
+											href="/home"
+										>
+											Демонстрационный экзамен по&nbsp;стандартам WorldSkills
+										</NavItem>
+										<NavItem
+											className="wsr-carousel-menu-item "
+											eventKey={4}
+											href="/home"
+										>
+											Juniorskills
+										</NavItem>
+									</Nav>
 
-						</Col>
-						</Row>
+								</Col>
+							</Row>
 						</Grid>
 						<img
 							className="wsr-carousel-image"
@@ -109,10 +114,16 @@ class App extends Component {
 
 						{/* Left sidebar */}
 						<div className="">
-						<Col xs={1} md={1} className="wsr-burger__background text-center">
-							<div className="wsr-burger__icon text-center"> <MdMenu /></div>
+							<Col
+								xs={1}
+								md={1}
+								className="wsr-burger__background text-center"
+							>
+								<div className="wsr-burger__icon text-center">
+									{" "}<MdMenu />
+								</div>
 
-						</Col>
+							</Col>
 						</div>
 						<Col xs={5} md={5} lg={3}>
 							<div className="wsr-affix">
@@ -125,70 +136,70 @@ class App extends Component {
 										</span>
 									</Button>
 									<Row>
-											<Nav
-												className="wsr-menu"
-												bsStyle="pills"
-												stacked
-												activeKey={1}
+										<Nav
+											className="wsr-menu"
+											bsStyle="pills"
+											stacked
+											activeKey={1}
+										>
+											<NavItem
+												className="wsr-menu-item"
+												eventKey={1}
+												href="/home"
 											>
-												<NavItem
-													className="wsr-menu-item"
-													eventKey={1}
-													href="/home"
-												>
-													{"Wsr в Москве".toUpperCase()}
-												</NavItem>
-												<NavItem
-													className="wsr-menu-item"
-													eventKey={2}
-													href="/home"
-												>
-													{"Эксперты".toUpperCase()}
-												</NavItem>
-												<NavItem
-													className="wsr-menu-item"
-													eventKey={3}
-													href="/home"
-												>
-													{"СЦК".toUpperCase()}
-												</NavItem>
-												<NavItem
-													className="wsr-menu-item"
-													eventKey={4}
-													href="/home"
-												>
-													{"Компетенции".toUpperCase()}
-												</NavItem>
-												<NavItem
-													className="wsr-menu-item"
-													eventKey={5}
-													href="/home"
-												>
-													{"Проекты".toUpperCase()}
-												</NavItem>
-												<NavItem
-													className="wsr-menu-item"
-													eventKey={6}
-													href="/home"
-												>
-													{"Партнёры".toUpperCase()}
-												</NavItem>
-												<NavItem
-													className="wsr-menu-item"
-													eventKey={3}
-													href="/home"
-												>
-													{"Пресс-центр".toUpperCase()}
-												</NavItem>
-											</Nav>
-											<Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left">
-												{" "}
-												<span className="skew-left">
-													<MdSearch className="ri-big" />
-													Поиск
-												</span>
-												{" "}
-											</Button>	
+												{"Wsr в Москве".toUpperCase()}
+											</NavItem>
+											<NavItem
+												className="wsr-menu-item"
+												eventKey={2}
+												href="/home"
+											>
+												{"Эксперты".toUpperCase()}
+											</NavItem>
+											<NavItem
+												className="wsr-menu-item"
+												eventKey={3}
+												href="/home"
+											>
+												{"СЦК".toUpperCase()}
+											</NavItem>
+											<NavItem
+												className="wsr-menu-item"
+												eventKey={4}
+												href="/home"
+											>
+												{"Компетенции".toUpperCase()}
+											</NavItem>
+											<NavItem
+												className="wsr-menu-item"
+												eventKey={5}
+												href="/home"
+											>
+												{"Проекты".toUpperCase()}
+											</NavItem>
+											<NavItem
+												className="wsr-menu-item"
+												eventKey={6}
+												href="/home"
+											>
+												{"Партнёры".toUpperCase()}
+											</NavItem>
+											<NavItem
+												className="wsr-menu-item"
+												eventKey={3}
+												href="/home"
+											>
+												{"Пресс-центр".toUpperCase()}
+											</NavItem>
+										</Nav>
+										<Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left">
+											{" "}
+											<span className="skew-left">
+												<MdSearch className="ri-big" />
+												Поиск
+											</span>
+											{" "}
+										</Button>
 									</Row>
 								</div>
 								<WsrMenuBg />
@@ -297,147 +308,147 @@ class App extends Component {
 							</WsrBlockBlank>
 						</Col>
 
-					{/* Block partners */}
+						{/* Block partners */}
 
 						<Col xs={12} sm={3} md={2}>
 							<WsrBlockTitle title="Партнёры" />
 							<WsrBlockBlank type="wsr-block-partners">
 								<WsrPartnersItem>
 									<div className="center-block">
-					                        <Image
-					                            className="center-block wsr-parther-logo"
-					                            src="Images/panel_logo_01.svg"
-					                            responsive
-					                        />
-					                    </div>
-					                    <div className="wsr_block-menu__divider" />
-					                    <div className="center-block">
-					                        <Image
-					                            className="center-block wsr-parther-logo"
-					                            src="Images/panel_logo_02.svg"
-					                            responsive
-					                        />
-					                    </div>
-					                    <div className="wsr_block-menu__divider" />
-					                    <div className="center-block">
-					                        <Image
-					                            className="center-block wsr-parther-logo"
-					                            src="Images/panel_logo_03.svg"
-					                            responsive
-					                        />
-					                    </div>
-					                    <div className="wsr_block-menu__divider" />
-					                    <div className="center-block">
-					                        <Image
-					                            className="center-block wsr-parther-logo"
-					                            src="Images/panel_logo_04.svg"
-					                            responsive
-					                        />
-					                    </div>
-					                    <div className="wsr_block-menu__divider" />
-					                    <div className="center-block">
-					                        <Image
-					                            className="center-block wsr-parther-logo"
-					                            src="Images/panel_logo_05.svg"
-					                            responsive
-					                        />
-					                    </div>
-					                    <div className="wsr_block-menu__divider" />
-					                    <div className="center-block">
-					                        <Image
-					                            className="center-block wsr-parther-logo"
-					                            src="Images/panel_logo_06.svg"
-					                            responsive
-					                        />
-					                    </div>
+										<Image
+											className="center-block wsr-parther-logo"
+											src="Images/panel_logo_01.svg"
+											responsive
+										/>
+									</div>
+									<div className="wsr_block-menu__divider" />
+									<div className="center-block">
+										<Image
+											className="center-block wsr-parther-logo"
+											src="Images/panel_logo_02.svg"
+											responsive
+										/>
+									</div>
+									<div className="wsr_block-menu__divider" />
+									<div className="center-block">
+										<Image
+											className="center-block wsr-parther-logo"
+											src="Images/panel_logo_03.svg"
+											responsive
+										/>
+									</div>
+									<div className="wsr_block-menu__divider" />
+									<div className="center-block">
+										<Image
+											className="center-block wsr-parther-logo"
+											src="Images/panel_logo_04.svg"
+											responsive
+										/>
+									</div>
+									<div className="wsr_block-menu__divider" />
+									<div className="center-block">
+										<Image
+											className="center-block wsr-parther-logo"
+											src="Images/panel_logo_05.svg"
+											responsive
+										/>
+									</div>
+									<div className="wsr_block-menu__divider" />
+									<div className="center-block">
+										<Image
+											className="center-block wsr-parther-logo"
+											src="Images/panel_logo_06.svg"
+											responsive
+										/>
+									</div>
 								</WsrPartnersItem>
 
 							</WsrBlockBlank>
 						</Col>
 
 					</Row>
-					
+
 					{/* Bottom Gallery */}
 					<Row>
-					<WsrGallery>
-						<Image
-							src="/Images/thumb01.jpg"
-							className="wsr-gallery-item"
-							responsive
-						/>
-						<Image
-							src="/Images/thumb02.jpg"
-							className="wsr-gallery-item"
-							responsive
-						/>
-						<Image
-							src="/Images/thumb03.jpg"
-							className="wsr-gallery-item"
-							responsive
-						/>
-						<Image
-							src="/Images/thumb04.jpg"
-							className="wsr-gallery-item"
-							responsive
-						/>
-					</WsrGallery>
+						<WsrGallery>
+							<Image
+								src="/Images/thumb01.jpg"
+								className="wsr-gallery-item"
+								responsive
+							/>
+							<Image
+								src="/Images/thumb02.jpg"
+								className="wsr-gallery-item"
+								responsive
+							/>
+							<Image
+								src="/Images/thumb03.jpg"
+								className="wsr-gallery-item"
+								responsive
+							/>
+							<Image
+								src="/Images/thumb04.jpg"
+								className="wsr-gallery-item"
+								responsive
+							/>
+						</WsrGallery>
 					</Row>
 
-				{/* Footer */}
+					{/* Footer */}
 
 					<WsrFooter>
 						<div className="wsr_footer__divider" />
-		                <Col md={3} />
-		                <Col md={1}>
-		                    <h7 className="wsr-footer__heading">
-		                        {"Wsr в Москве".toUpperCase()}
-		                    </h7>
-		                    <p>Об РКЦ</p>
-		                    <p>История WorldSkills</p>
-		                    <p>Активные мероприятия</p>
-		                </Col>
-		                <Col md={1}>
-		                    <h7 className="wsr-footer__heading">
-		                        {"Эксперты".toUpperCase()}
-		                    </h7>
-		                    <p>Инофрмация для экспертов</p>
-		                </Col>
-		                <Col md={1}>
-		                    <h7 className="wsr-footer__heading">
-		                        {"СЦК".toUpperCase()}
-		                    </h7>
-		                </Col>
-		                <Col md={1}>
-		                    <h7 className="wsr-footer__heading">
-		                        {"Компетенции".toUpperCase()}
-		                    </h7>
-		                </Col>
-		                <Col md={1}>
-		                    <h7 className="wsr-footer__heading">
-		                        {"Проекты".toUpperCase()}
-		                    </h7>
-		                    <p>Региональный эксперт WSR</p>
-		                    <p>"Эксперт ДЭ</p>
-		                    <p>Обучение становлению СЦК</p>
-		                    <p>Обучение экспертов WorldSkills</p>
-		                </Col>
-		                <Col md={1}>
-		                    <h7 className="wsr-footer__heading">
-		                        {"Партнёры".toUpperCase()}
-		                    </h7>
-		                    <p>Наши партнёры</p>
-		                    <p>Стать партнёром</p>
-		                </Col>
-		                <Col md={1}>
-		                    <h7 className="wsr-footer__heading">
-		                        {"Пресс-центр".toUpperCase()}
-		                    </h7>
-		                    <p>Новости</p>
-		                    <p>Важная информация</p>
-		                    <p>Фотогалерея</p>
-		                    <p>Видеогалерея</p>
-		                </Col>
-		            </WsrFooter>    	
+						<Col md={3} />
+						<Col md={1}>
+							<h7 className="wsr-footer__heading">
+								{"Wsr в Москве".toUpperCase()}
+							</h7>
+							<p>Об РКЦ</p>
+							<p>История WorldSkills</p>
+							<p>Активные мероприятия</p>
+						</Col>
+						<Col md={1}>
+							<h7 className="wsr-footer__heading">
+								{"Эксперты".toUpperCase()}
+							</h7>
+							<p>Инофрмация для экспертов</p>
+						</Col>
+						<Col md={1}>
+							<h7 className="wsr-footer__heading">
+								{"СЦК".toUpperCase()}
+							</h7>
+						</Col>
+						<Col md={1}>
+							<h7 className="wsr-footer__heading">
+								{"Компетенции".toUpperCase()}
+							</h7>
+						</Col>
+						<Col md={1}>
+							<h7 className="wsr-footer__heading">
+								{"Проекты".toUpperCase()}
+							</h7>
+							<p>Региональный эксперт WSR</p>
+							<p>"Эксперт ДЭ</p>
+							<p>Обучение становлению СЦК</p>
+							<p>Обучение экспертов WorldSkills</p>
+						</Col>
+						<Col md={1}>
+							<h7 className="wsr-footer__heading">
+								{"Партнёры".toUpperCase()}
+							</h7>
+							<p>Наши партнёры</p>
+							<p>Стать партнёром</p>
+						</Col>
+						<Col md={1}>
+							<h7 className="wsr-footer__heading">
+								{"Пресс-центр".toUpperCase()}
+							</h7>
+							<p>Новости</p>
+							<p>Важная информация</p>
+							<p>Фотогалерея</p>
+							<p>Видеогалерея</p>
+						</Col>
+					</WsrFooter>
 				</Grid>
 			</div>
 		);
