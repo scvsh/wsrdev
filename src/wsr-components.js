@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./css/wsr.css";
-import { MdDateRange, MdArrowForward, MdMenu } from "react-icons/lib/md";
+import { MdDateRange, MdArrowForward, MdMenu, MdApps, MdSearch, MdVpnKey} from "react-icons/lib/md";
 import TextTruncate from "react-text-truncate";
 
+import { Button, Grid, Row, Col, Nav, NavItem, Carousel, Image, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
 
-import { Row, Col, Image } from "react-bootstrap";
 
 export class WsrMenuBg extends React.Component {
     render() {
@@ -30,6 +30,121 @@ export class WsrMenuTitle extends React.Component {
                     <img alt="" src="/Images/wsr-msk-logo.png" />
                 </div>
             </div>
+        );
+    }
+}
+
+export class WsrMainMenu extends React.Component {
+    render() {
+        return (
+            <Grid bsClass="containter-fluid">
+                <Row>
+            <Navbar inverse collapseOnSelect className="navbar-fixed-top">
+                <Navbar.Header>
+                  <Navbar.Brand>
+                    <a href="#">РКЦ WorldSkills Russia</a>
+                  </Navbar.Brand>
+                  <Navbar.Toggle />
+                </Navbar.Header>
+                <Navbar.Collapse>
+                  <Nav>
+                    <NavDropdown eventKey={ 1 } title="Wsr в Москве" id="basic-nav-dropdown">
+                      <MenuItem eventKey={ 1.1 }>Об РКЦ</MenuItem>
+                      <MenuItem eventKey={ 1.2 }>
+                        История WorldSkills
+                      </MenuItem>
+                      <MenuItem eventKey={ 1.3 }>
+                        Активные мероприятия
+                      </MenuItem>
+                    </NavDropdown>
+                    <NavDropdown eventKey={ 2 } title="Эксперты" id="basic-nav-dropdown">
+                      <MenuItem eventKey={ 2.1 }>
+                        Инофрмация для экспертов
+                      </MenuItem>
+                    </NavDropdown>
+                    <NavDropdown eventKey={ 3 } title="СЦК" id="basic-nav" />
+                    <NavDropdown eventKey={ 4 } title="Компетенции" id="basic-nav" />
+                    <NavDropdown eventKey={ 5 } title="Проекты" id="basic-nav-dropdown">
+                      <MenuItem eventKey={ 5.1 }>
+                        Региональный эксперт WSR
+                      </MenuItem>
+                      <MenuItem eventKey={ 5.1 }>Эксперт ДЭ</MenuItem>
+                      <MenuItem eventKey={ 5.1 }>
+                        Обучение становлению СЦК
+                      </MenuItem>
+                      <MenuItem eventKey={ 5.1 }>
+                        Обучение экспертов WorldSkills
+                      </MenuItem>
+                    </NavDropdown>
+                    <NavDropdown eventKey={ 6 } title="Партнёры" id="basic-nav-dropdown">
+                      <MenuItem eventKey={ 6.1 }>
+                        Наши партнёры
+                      </MenuItem>
+                      <MenuItem eventKey={ 6.1 }>
+                        Стать партнёром
+                      </MenuItem>
+                    </NavDropdown>
+                    <NavDropdown eventKey={ 7 } title="Пресс-центр" id="basic-nav-dropdown">
+                      <MenuItem eventKey={ 7.1 }>Новости</MenuItem>
+                      <MenuItem eventKey={ 7.1 }>
+                        Важная информация
+                      </MenuItem>
+                      <MenuItem eventKey={ 7.1 }>Фотогалерея</MenuItem>
+                      <MenuItem eventKey={ 7.1 }>Видеогалерея</MenuItem>
+                    </NavDropdown>
+                  </Nav>
+                </Navbar.Collapse>
+              </Navbar>
+
+            <Col xs={ 5 } md={ 5 } lg={ 3 }>
+                    <div  dir="rtl" className="wsr-affix">
+                      <div className="wsr-affix">
+                      <Row dir="ltr" >
+                        <WsrMenuTitle />
+                        <Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left">
+                          <span className="skew-left">
+                         <MdVpnKey className="ri-big" />
+                          Личный кабинет                                                                                                    </span>
+                        </Button>
+                        
+                          <Nav className="wsr-menu" bsStyle="pills" stacked activeKey={ 1 }>
+                            <NavItem className="wsr-menu-item" eventKey={ 1 } href="/home">
+                              { "Wsr в Москве".toUpperCase() }
+                            </NavItem>
+                            <NavItem className="wsr-menu-item" eventKey={ 2 } href="/home">
+                              { "Эксперты".toUpperCase() }
+                            </NavItem>
+                            <NavItem className="wsr-menu-item" eventKey={ 3 } href="/home">
+                              { "СЦК".toUpperCase() }
+                            </NavItem>
+                            <NavItem className="wsr-menu-item" eventKey={ 4 } href="/home">
+                              { "Компетенции".toUpperCase() }
+                            </NavItem>
+                            <NavItem className="wsr-menu-item" eventKey={ 5 } href="/home">
+                              { "Проекты".toUpperCase() }
+                            </NavItem>
+                            <NavItem className="wsr-menu-item" eventKey={ 6 } href="/home">
+                              { "Партнёры".toUpperCase() }
+                            </NavItem>
+                            <NavItem className="wsr-menu-item" eventKey={ 3 } href="/home">
+                              { "Пресс-центр".toUpperCase() }
+                            </NavItem>
+                          </Nav>
+                          <Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left">
+                            { " " }
+                            <span className="skew-left">
+                                                                                                                                    <MdSearch className="ri-big" />
+                                                                                                                                    Поиск
+                                                                                                                                </span>
+                            { " " }
+                          </Button>
+                        </Row>
+                      </div>
+                      <WsrMenuBg />
+                    </div>
+                  </Col>
+           </Row>
+              </Grid>
         );
     }
 }
