@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./css/wsr.css";
-import { MdDateRange, MdArrowForward } from "react-icons/lib/md";
+import { MdDateRange, MdArrowForward, MdMenu } from "react-icons/lib/md";
 import TextTruncate from "react-text-truncate";
+
 
 import { Row, Col, Image } from "react-bootstrap";
 
@@ -10,6 +11,10 @@ export class WsrMenuBg extends React.Component {
         return <div className="wsr-affix-background" />;
     }
 }
+
+
+
+
 
 export class WsrMenuTitle extends React.Component {
     render() {

@@ -17,8 +17,11 @@ body {
 /*-------------------------------------------------------------------------------------------*/
 /*********************************** WSR-MENU STYLES *****************************************/
 /*------------------- ------------------------------------------------------------------------*/
+.wsr-affix-container {
+  direction: ltr;
+}
 .wsr-affix {
-  /* display: none; */
+  overflow-y: auto;
   background-color: #002b4a;
   position: fixed;
   top: 0;
@@ -96,38 +99,6 @@ body {
   font-size: 80%;
   pointer-events: all;
 }
-@media (min-width: 1200px) {
-  .wsr-title-descriptor {
-    font-size: 0.75vw;
-  }
-  .wsr-title-primary {
-    font-size: 0.75vw;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .wsr-title-descriptor {
-    font-size: 1.2vw;
-  }
-  .wsr-title-primary {
-    font-size: 1.2vw;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .wsr-title-descriptor {
-    font-size: 1.2vw;
-  }
-  .wsr-title-primary {
-    font-size: 1.2vw;
-  }
-}
-@media (min-width: 480px) and (max-width: 767px) {
-  .wsr-title-descriptor {
-    font-size: 1.2vw;
-  }
-  .wsr-title-primary {
-    font-size: 1.2vw;
-  }
-}
 .wsr-title-logo {
   padding-top: 10%;
   width: 50%;
@@ -179,27 +150,6 @@ body {
 }
 .wsr-menu__container {
   margin-left: -15px;
-}
-/*-------------------------------------------------------------------------------------------*/
-/********************************** BURGER MENU STYLES ***************************************/
-/*-------------------------------------------------------------------------------------------*/
-.wsr-burger__background {
-  display: none;
-  /* Large screen */
-  padding: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #002b4a;
-  height: 100%;
-  z-index: 10000;
-}
-.wsr-burger__icon {
-  padding-top: 3vw;
-  color: white;
-  width: 100%;
-  z-index: 4526262;
-  font-size: 5vw;
 }
 /*-------------------------------------------------------------------------------------------*/
 /*********************************** WSR-LOGO STYLES *****************************************/
@@ -387,11 +337,6 @@ p {
   margin-right: .8em;
   opacity: 1 !important;
 }
-.wsr-block__image {
-  border-radius: 0 3px 3px 0;
-  -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
-  clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
-}
 .wsr-block__title {
   font-weight: 100;
   font-size: 1.1em;
@@ -425,7 +370,7 @@ p {
   opacity: 0.1;
 }
 .wsr-block-partners {
-  border-radius: 3px 0px 0px 3px;
+  border-radius: 3px;
   background-color: #ffffff;
   box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -478,12 +423,15 @@ p {
   align-items: flex-start;
 }
 .wsr-gallery-item {
-  height: 20vw;
+  width: 25%;
   transition: 300ms ease-out;
 }
 .wsr-gallery-item:hover {
   opacity: 0.6;
   cursor: pointer;
+}
+.owl-theme {
+  margin-top: 5em;
 }
 /*-------------------------------------------------------------------------------------------*/
 /************************************* FOOTER STYLES *****************************************/
@@ -512,4 +460,167 @@ p {
   height: 1px;
   border-bottom: 2px dotted white;
   opacity: 0.1;
+}
+/*-------------------------------------------------------------------------------------------*/
+/************************************* SIDEBAR STYLES *****************************************/
+/*-------------------------------------------------------------------------------------------*/
+.bm-menu-wrap {
+  background: #002b4a;
+}
+.bm-burger-button {
+  z-index: 1000500;
+}
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 2vw;
+  height: 1.5vw;
+  left: 3vw;
+  top: 3vw;
+}
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: white;
+}
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+/* General sidebar styles */
+.bm-menu {
+  background: #002b4a;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding-top: 2vw;
+}
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+/*-------------------------------------------------------------------------------------------*/
+/********************************** BURGER MENU STYLES ***************************************/
+/*-------------------------------------------------------------------------------------------*/
+.wsr-burger__icon {
+  color: white;
+  width: 100%;
+  z-index: 4526262;
+  font-size: 2vw;
+  cursor: pointer;
+}
+/* .wsr-burger__icon:active svg{
+	transform: rotate(90deg);
+	transition: 200ms ease-out;
+}
+
+*/
+/*-------------------------------------------------------------------------------------------*/
+/********************************** NAVBAR MENU STYLES ***************************************/
+/*-------------------------------------------------------------------------------------------*/
+.navbar-inverse {
+  background-color: #002b4a;
+  border: none;
+}
+@media (min-width: 1200px) {
+  .wsr-title-descriptor {
+    font-size: 0.75vw;
+  }
+  .wsr-title-primary {
+    font-size: 0.75vw;
+  }
+  .wsr-burger__background {
+    display: none;
+  }
+  .navbar-inverse {
+    display: none;
+  }
+  .wsr-block__image {
+    border-radius: 0 3px 3px 0;
+    -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .wsr-title-descriptor {
+    font-size: 1.2vw;
+  }
+  .wsr-title-primary {
+    font-size: 1.2vw;
+  }
+  .wsr-burger__background {
+    display: none;
+  }
+  .navbar-inverse {
+    display: none;
+  }
+  .wsr-block__image {
+    border-radius: 0 3px 3px 0;
+    -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .wsr-title-descriptor {
+    font-size: 1.2vw;
+  }
+  .wsr-title-primary {
+    font-size: 1.2vw;
+  }
+  .wsr-burger__background {
+    display: none;
+  }
+  .navbar-inverse {
+    display: none;
+  }
+  .wsr-block__image {
+    border-radius: 0 3px 3px 0;
+    -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .wsr-title-descriptor {
+    font-size: 1.2vw;
+  }
+  .wsr-title-primary {
+    font-size: 1.2vw;
+  }
+  .wsr-affix {
+    display: none;
+  }
+  .wsr-block__image-container {
+    padding-left: 0px;
+  }
+  .wsr-block__image {
+    border-radius: 0px 0px 3px 0px;
+  }
+}
+@media (max-width: 480px) {
+  .wsr-title-descriptor {
+    font-size: 1.2vw;
+  }
+  .wsr-title-primary {
+    font-size: 1.2vw;
+  }
+  .wsr-affix {
+    display: none;
+  }
+  .wsr-block__image-container {
+    padding-left: 0px;
+  }
+  .wsr-block__image {
+    border-radius: 0px 0px 3px 0px;
+  }
 }
