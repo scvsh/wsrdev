@@ -255,10 +255,10 @@ class App extends Component {
                 { /* Bottom Gallery */ }
                 <Row>
                 <OwlCarousel className="owl-theme" loop margin={10} nav items={ 4 } margin={ 0 } nav= { false } dots={ false } >
-					<div class="item"><Image src="/Images/thumb01.jpg" className="wsr-gallery-item" responsive /></div>
-				    <div class="item"><Image src="/Images/thumb02.jpg" className="wsr-gallery-item" responsive /></div>
-				    <div class="item"><Image src="/Images/thumb03.jpg" className="wsr-gallery-item" responsive /></div>
-				    <div class="item"><Image src="/Images/thumb04.jpg" className="wsr-gallery-item" responsive /></div>
+					<div className="item"><Image src="/Images/thumb01.jpg" className="wsr-gallery-item" responsive /></div>
+				    <div className="item"><Image src="/Images/thumb02.jpg" className="wsr-gallery-item" responsive /></div>
+				    <div className="item"><Image src="/Images/thumb03.jpg" className="wsr-gallery-item" responsive /></div>
+				    <div className="item"><Image src="/Images/thumb04.jpg" className="wsr-gallery-item" responsive /></div>
 				</OwlCarousel>
                
                 </Row>
