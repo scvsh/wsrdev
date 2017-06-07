@@ -79,7 +79,7 @@ class App extends Component {
                 </Navbar.Collapse>
               </Navbar>
               { /* Header carousel */ }
-              <Carousel indicators={ false } controls={ false }>
+              <Carousel className="wsr-header__carousel" indicators={ false } controls={ false }>
                 <Carousel.Item>
                   { /* Carousel menu */ }
                   <Grid bsClass="containter-fluid">
@@ -265,8 +265,8 @@ class App extends Component {
                 { /* Footer */ }
                 <WsrFooter>
                   <div className="wsr_footer__divider" />
-                  <Col md={ 3 } />
-                  <Col md={ 1 }>
+                  <Col xs={0} sm={10} md={ 2 } />
+                  <Col xs={12} md={ 1 }>
                     <h7 className="wsr-footer__heading">
                       { "Wsr в Москве".toUpperCase() }
                     </h7>
@@ -274,23 +274,23 @@ class App extends Component {
                     <p>История WorldSkills</p>
                     <p>Активные мероприятия</p>
                   </Col>
-                  <Col md={ 1 }>
+                  <Col xs={12} sm={2} md={ 1 }>
                     <h7 className="wsr-footer__heading">
                       { "Эксперты".toUpperCase() }
                     </h7>
                     <p>Инофрмация для экспертов</p>
                   </Col>
-                  <Col md={ 1 }>
+                  <Col xs={12} sm={2} md={ 1 }>
                     <h7 className="wsr-footer__heading">
                       { "СЦК".toUpperCase() }
                     </h7>
                   </Col>
-                  <Col md={ 1 }>
+                  <Col xs={12} sm={2} md={ 1 }>
                     <h7 className="wsr-footer__heading">
                       { "Компетенции".toUpperCase() }
                     </h7>
                   </Col>
-                  <Col md={ 1 }>
+                  <Col xs={12} sm={2} md={ 1 }>
                     <h7 className="wsr-footer__heading">
                       { "Проекты".toUpperCase() }
                     </h7>
@@ -299,14 +299,14 @@ class App extends Component {
                     <p>Обучение становлению СЦК</p>
                     <p>Обучение экспертов WorldSkills</p>
                   </Col>
-                  <Col md={ 1 }>
+                  <Col xs={12} sm={2} md={ 1 }>
                     <h7 className="wsr-footer__heading">
                       { "Партнёры".toUpperCase() }
                     </h7>
                     <p>Наши партнёры</p>
                     <p>Стать партнёром</p>
                   </Col>
-                  <Col md={ 1 }>
+                  <Col xs={12} sm={2} md={ 1 }>
                     <h7 className="wsr-footer__heading">
                       { "Пресс-центр".toUpperCase() }
                     </h7>

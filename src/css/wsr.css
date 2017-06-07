@@ -437,7 +437,7 @@ p {
 /************************************* FOOTER STYLES *****************************************/
 /*-------------------------------------------------------------------------------------------*/
 .wsr-footer {
-  height: 20vw;
+  height: auto;
   background: #CE112D;
   padding: 20px;
 }
@@ -624,6 +624,9 @@ p {
   .wsr-carousel-menu__bg {
     display: none;
   }
+  .wsr-header__carousel {
+    padding-top: 50px;
+  }
 }
 @media (max-width: 480px) {
   .wsr-title-descriptor {
@@ -643,5 +646,8 @@ p {
   }
   .wsr-carousel-menu__bg {
     display: none;
+  }
+  .wsr-header__carousel {
+    padding-top: 50px;
   }
 }
