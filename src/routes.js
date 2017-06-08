@@ -1,14 +1,17 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import App from "./App"
-import About from "./about"
+import Rkc from "./rkc"
+import History from "./history"
 
 
 const Routes = () => (
     <Router>
       <div>
         <Route exact path="/" component={ App }/>
-		<Route path="/about" component={ About } />
+        <Route exact path="/about" render={() => ( <Redirect to="/about/rkc"/> ) }/>
+		<Route path="/about/rkc" component={ Rkc } />
+		<Route path="/about/history" component={ History } />
       </div>
     </Router>
 )

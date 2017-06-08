@@ -22,6 +22,39 @@ h2 h3 {
 	font-weight: normal !important;
 }
 
+a:any-link {
+    color: -webkit-link;
+    text-decoration: none !important;
+    cursor: pointer;
+    
+}
+
+.wsr-menu a:any-link {
+	font-weight: 700 !important;
+}
+
+.wsr-menu a:any-link:visited {
+    color: @secondary-gray;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.wsr-menu a:any-link:hover {
+    color: white;
+    text-decoration: none !important;
+    cursor: pointer;
+    opacity: 1;
+}
+
+li .active > a:any-link {
+    color: @brand-secondary !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    opacity: 1;
+    font-weight: normal;
+}
+
+
 .row {
 	margin: 0;
 }
@@ -333,6 +366,25 @@ p {
 	margin: 0;
 }
 
+.nav-tabs > li > a {
+	color: @gray;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	color: @brand-primary;
+
+}
+
+.nav-tabs > li > a:active {
+	color: @brand-primary;
+}
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+	background-color: rgba(255, 255, 255, .3);
+	color: @brand-primary;
+	transition: 300ms ease-out;
+}
+
 /*-------------------------------------------------------------------------------------------*/
 
 /*********************************** WSR-BLOCK STYLES ****************************************/
@@ -360,6 +412,7 @@ p {
 
 .wsr_block__container {
 	padding-right: 0px;
+	padding-left: 20px;
 }
 
 
@@ -405,15 +458,14 @@ p {
 	color: @brand-primary;
 	margin-top: 0;
 	padding-top: 20px;
-	padding-left: 10px;
 }
 
 .wsr-block__heading h2, h3 {
-	font-weight: 100;
+	font-weight: normal;
 }
 
 .wsr-block__heading h4, h5 {
-	font-weight: normal;
+	font-weight: 300;
 }
 
 .wsr-block__heading:hover {
@@ -422,15 +474,15 @@ p {
 
 .wsr-block__description {
 	font-size: 0.9em;
-	padding-left: 10px;
 	opacity: 0.8;
+	padding-top: 0.2em;
 }
 
 .wsr-block__date {
 	font-weight: bold;
 	font-size: 0.8em;
 	bottom: 0px;
-	padding: .8em 0 0 10px;
+	padding: .8em 0 0 0;
 	margin: 0;
 	margin-bottom: 20px;
 }
@@ -769,6 +821,16 @@ p {
 	margin-top:  1em;
 }
 
+
+.wsr-page__gallery .owl-theme{
+	margin-top: 0px;
+	border-radius: 3px;
+}
+
+.wsr-page__gallery .owl-item {
+	height:220px;
+    width:100%;
+}
 
 
 
