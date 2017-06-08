@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./css/wsr.css";
-import { MdDateRange, MdArrowForward, MdMenu, MdApps, MdSearch, MdVpnKey} from "react-icons/lib/md";
+import { MdDateRange, MdArrowForward, MdSearch, MdVpnKey} from "react-icons/lib/md";
 import TextTruncate from "react-text-truncate";
 
-import { Button, Grid, Row, Col, Nav, NavItem, Carousel, Image, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
+import { Button, Grid, Row, Col, Nav, NavItem, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
 
 
 export class WsrMenuBg extends React.Component {
@@ -108,7 +108,7 @@ export class WsrMainMenu extends React.Component {
                         </Button>
                         
                           <Nav className="wsr-menu" bsStyle="pills" stacked activeKey={ 1 }>
-                            <NavItem className="wsr-menu-item" eventKey={ 1 } href="/home">
+                            <NavItem className="wsr-menu-item" eventKey={ 1 } href="/about">
                               { "Wsr в Москве".toUpperCase() }
                             </NavItem>
                             <NavItem className="wsr-menu-item" eventKey={ 2 } href="/home">
@@ -223,6 +223,7 @@ export class WsrBlock extends React.Component {
         );
     }
 }
+
 
 export class WsrNewsItem extends React.Component {
     render() {
@@ -339,8 +340,81 @@ export class WsrFooter extends React.Component {
         var _props = this.props;
         return (
             <Row className="wsr-footer">
-                {_props.children}
+                <div className="wsr_footer__divider" />
+                  <Col xs={ 0 } sm={ 10 } md={ 2 } />
+                  <Col xs={ 12 } md={ 1 }>
+                    <h7 className="wsr-footer__heading">
+                      { "Wsr в Москве".toUpperCase() }
+                    </h7>
+                    <p>Об РКЦ</p>
+                    <p>История WorldSkills</p>
+                    <p>Активные мероприятия</p>
+                  </Col>
+                  <Col xs={ 12 } sm={ 2 } md={ 1 }>
+                    <h7 className="wsr-footer__heading">
+                      { "Эксперты".toUpperCase() }
+                    </h7>
+                    <p>Информация для экспертов</p>
+                  </Col>
+                  <Col xs={ 12 } sm={ 2 } md={ 1 }>
+                    <h7 className="wsr-footer__heading">
+                      { "СЦК".toUpperCase() }
+                    </h7>
+                  </Col>
+                  <Col xs={ 12 } sm={ 2 } md={ 2 }>
+                    <h7 className="wsr-footer__heading">
+                      { "Компетенции".toUpperCase() }
+                    </h7>
+                  </Col>
+                  <Col xs={ 12 } sm={ 2 } md={ 2 }>
+                    <h7 className="wsr-footer__heading">
+                      { "Проекты".toUpperCase() }
+                    </h7>
+                    <p>Региональный эксперт WSR</p>
+                    <p>Эксперт ДЭ</p>
+                    <p>Обучение становлению СЦК</p>
+                    <p>Обучение экспертов WorldSkills</p>
+                  </Col>
+                  <Col xs={ 12 } sm={ 2 } md={ 1 }>
+                    <h7 className="wsr-footer__heading">
+                      { "Партнёры".toUpperCase() }
+                    </h7>
+                    <p>Наши партнёры</p>
+                    <p>Стать партнёром</p>
+                  </Col>
+                  <Col xs={ 12 } sm={ 2 } md={ 2 }>
+                    <h7 className="wsr-footer__heading">
+                      { "Пресс-центр".toUpperCase() }
+                    </h7>
+                    <p>Новости</p>
+                    <p>Важная информация</p>
+                    <p>Фотогалерея</p>
+                    <p>Видеогалерея</p>
+                  </Col>
             </Row>
+        );
+    }
+}
+
+export class WsrPage extends React.Component {
+    render() {
+        var _props = this.props;
+        return (
+            <div className={"wsr-block " + _props.type}>
+                <Row>
+                    <Col sm={9} md={12} className="wsr_page__container">
+                        <h3 className="text-left wsr-page__heading">
+                            {_props.heading}
+                        </h3>
+                        <div className="wsr-page__description">
+                        { _props.description ? " <p> { _props.description } </p> " : false }
+                        { _props.children }
+                        </div>
+
+                    </Col>
+
+                </Row>
+            </div>
         );
     }
 }

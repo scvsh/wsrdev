@@ -2,19 +2,20 @@ import React, { Component } from "react";
 import "../bootswatch/cosmo/bootstrap.css";
 import "./css/wsr.css";
 import "./css/fonts.css";
+/* import { Link } from 'react-router-dom' */
 
 import OwlCarousel from 'react-owl-carousel';
 
 /* Import React-Boorstrap components*/
-import { Button, Grid, Row, Col, Nav, NavItem, Carousel, Image, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
+import { Button, Grid, Row, Col, Nav, NavItem, Carousel, Image} from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrMainMenu, WsrMenuBg, WsrMenuTitle, WsrBlockTitle, WsrBlock, WsrBlockBlank, WsrNewsItem, WsrPartnersItem, WsrNumbersItem, WsrGallery, WsrFooter, WsrCarouselMenu } from "./wsr-components.js";
+import { WsrMainMenu, WsrBlockTitle, WsrBlock, WsrBlockBlank, WsrNewsItem, WsrPartnersItem, WsrNumbersItem, WsrFooter,} from "./wsr-components.js";
 
 /* Import Icons */
 
-import { MdApps, MdSearch, MdVpnKey, MdMenu } from "react-icons/lib/md";
+import { MdApps} from "react-icons/lib/md";
 
 /* Main app */
 
@@ -147,7 +148,7 @@ class App extends Component {
                 </Row>
                 { /* Bottom Gallery */ }
                 <Row>
-                  <OwlCarousel className="owl-theme" loop margin={ 10 } nav items={ 4 } margin={ 0 } nav={ false } dots={ false }>
+                  <OwlCarousel className="owl-theme" loop  items={ 4 } margin={ 0 } nav={ false } dots={ false }>
                     <div className="item">
                       <Image src="/Images/thumb01.jpg" className="wsr-gallery-item" responsive />
                     </div>
@@ -162,60 +163,9 @@ class App extends Component {
                     </div>
                   </OwlCarousel>
                 </Row>
+                
                 { /* Footer */ }
-                <WsrFooter>
-                  <div className="wsr_footer__divider" />
-                  <Col xs={ 0 } sm={ 10 } md={ 2 } />
-                  <Col xs={ 12 } md={ 1 }>
-                    <h7 className="wsr-footer__heading">
-                      { "Wsr в Москве".toUpperCase() }
-                    </h7>
-                    <p>Об РКЦ</p>
-                    <p>История WorldSkills</p>
-                    <p>Активные мероприятия</p>
-                  </Col>
-                  <Col xs={ 12 } sm={ 2 } md={ 1 }>
-                    <h7 className="wsr-footer__heading">
-                      { "Эксперты".toUpperCase() }
-                    </h7>
-                    <p>Инофрмация для экспертов</p>
-                  </Col>
-                  <Col xs={ 12 } sm={ 2 } md={ 1 }>
-                    <h7 className="wsr-footer__heading">
-                      { "СЦК".toUpperCase() }
-                    </h7>
-                  </Col>
-                  <Col xs={ 12 } sm={ 2 } md={ 2 }>
-                    <h7 className="wsr-footer__heading">
-                      { "Компетенции".toUpperCase() }
-                    </h7>
-                  </Col>
-                  <Col xs={ 12 } sm={ 2 } md={ 2 }>
-                    <h7 className="wsr-footer__heading">
-                      { "Проекты".toUpperCase() }
-                    </h7>
-                    <p>Региональный эксперт WSR</p>
-                    <p>"Эксперт ДЭ</p>
-                    <p>Обучение становлению СЦК</p>
-                    <p>Обучение экспертов WorldSkills</p>
-                  </Col>
-                  <Col xs={ 12 } sm={ 2 } md={ 1 }>
-                    <h7 className="wsr-footer__heading">
-                      { "Партнёры".toUpperCase() }
-                    </h7>
-                    <p>Наши партнёры</p>
-                    <p>Стать партнёром</p>
-                  </Col>
-                  <Col xs={ 12 } sm={ 2 } md={ 2 }>
-                    <h7 className="wsr-footer__heading">
-                      { "Пресс-центр".toUpperCase() }
-                    </h7>
-                    <p>Новости</p>
-                    <p>Важная информация</p>
-                    <p>Фотогалерея</p>
-                    <p>Видеогалерея</p>
-                  </Col>
-                </WsrFooter>
+                <WsrFooter/>
               </Grid>
             </div>
         );
