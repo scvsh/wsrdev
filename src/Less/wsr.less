@@ -29,7 +29,12 @@ a:any-link {
     
 }
 
+a:any-link {
+	color: #333333;
+}
+
 .wsr-menu a:any-link {
+	color: @secondary-gray;
 	font-weight: 700 !important;
 }
 
@@ -93,6 +98,10 @@ li .active > a:any-link {
 	padding-left: 0;
 	padding-right: 0;
 	width: 20%;
+}
+
+.wsr-header__carousel {
+	margin-bottom: 20px;
 }
 
 .wsr-carousel-menu {
@@ -406,7 +415,7 @@ p {
 	box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);
 	width: 100%;
 	z-index: 103;
-	margin-top: 20px;
+	margin-bottom: 20px;
 	transition: 300ms ease-out;
 }
 
@@ -497,8 +506,8 @@ p {
 	font-size: 1.1em;
 	opacity: 0.8;
 	margin: 0;
-	padding-top: 30px;
-	margin-bottom: -10px;
+	padding-top: 10px;
+	margin-bottom: 10px;
 }
 
 .wsr-block__title span {
@@ -766,7 +775,7 @@ p {
 
 /*-------------------------------------------------------------------------------------------*/
 
-/********************((************** PAGE MENU STYLES ***************************************/
+/************************************ PAGE MENU STYLES ***************************************/
 
 /*-------------------------------------------------------------------------------------------*/
 
@@ -834,7 +843,156 @@ p {
 
 
 
+/*-------------------------------------------------------------------------------------------*/
 
+/************************************ TAB SELECTOR STYLES ************************************/
+
+/*-------------------------------------------------------------------------------------------*/
+
+
+.wsr-competence-category > li {
+	border-bottom: 1px solid #dddddd;
+}
+
+.wsr-competence-category > li > a {
+	transition: 100ms ease-in;
+}
+
+
+.wsr-competence-category > li > a:hover {
+	color: @brand-primary;
+	font-weight: normal;
+}
+
+.wsr-competence-category > li.active > a {
+	color: @brand-primary;
+	font-weight: 300;
+}
+
+
+.panel-title > a {
+	font-weight: normal;
+}
+
+.panel > .list-group {
+	border-left: 3px solid @brand-primary;
+	transition: 100ms ease-in;
+}
+
+.wsr-competence-category > li:first-child {
+	border-top: 1px solid #dddddd;
+}
+
+.wsr-competence__title  {
+	color: @brand-primary;
+	margin-top: 0;
+}
+
+.dropdown-backdrop {
+    position: static;
+}
+
+.row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+* And with max cross-browser enabled.
+* Nobody should ever write this by hand. 
+* Use a preprocesser with autoprefixing.
+*/
+.row.is-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.row.is-flex > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5px;
+}
+
+.wsr-team__description > .row.is-flex{
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.wsr-team__member-photo--primary  {
+	border: 2px solid white;
+	outline-offset: 5px;
+	-webkit-box-shadow: 0px 0px 0px 2px @brand-primary;
+	-moz-box-shadow: 0px 0px 0px 2px @brand-primary;
+	box-shadow: 0px 0px 0px 2px @brand-primary;
+}
+
+.wsr-team__member-photo--secondary  {
+	border: 2px solid white;
+	outline-offset: 5px;
+	-webkit-box-shadow: 0px 0px 0px 2px @gray-light;
+	-moz-box-shadow: 0px 0px 0px 2px @gray-light;
+	box-shadow: 0px 0px 0px 2px @gray-light;
+}
+
+.wsr-team__member--primary {
+	display: block;
+	font-weight: 300;
+	color: @brand-primary;	
+}
+
+.wsr-team__member--secondary {
+	display: block;
+	font-weight: 300;
+
+}
+
+.wsr-team__divider {
+
+	width: 100%;
+	height: 1px;
+}
+
+.wsr-team__host {
+	display: block;
+	font-size: 0.8em;
+	bottom: 0px;
+	padding: .8em 0 0 0;
+	margin: 0;
+}
+
+.wsr-team-label__primary {
+	background-color: @brand-primary;
+}
+
+.wsr-team-label__secondary {
+	background-color: @gray-light;
+}
 
 
 

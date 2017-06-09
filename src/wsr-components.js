@@ -5,7 +5,23 @@ import TextTruncate from "react-text-truncate";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom"
 
-import { Button, Grid, Row, Col, Nav, NavItem, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
+import MetaTags from 'react-meta-tags';
+import { ListGroup, Image, Panel, Label, Button, Grid, Row, Col, Nav, NavItem, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
+
+
+export class WsrMeta extends React.Component {
+    render() {
+        return (
+            <div className="wrapper">
+              <MetaTags>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+              </MetaTags>
+            </div>
+        );
+    }
+}
+
+
 
 
 export class WsrMenuBg extends React.Component {
@@ -22,17 +38,17 @@ export class WsrMenuTitle extends React.Component {
     render() {
         return (
             <Link to="/">
-            <div className="wsr-title" href="/">
-              <div className="wsr-title-descriptor">
-                Региональный координационный центр
+              <div className="wsr-title" href="/">
+                <div className="wsr-title-descriptor">
+                  Региональный координационный центр
+                </div>
+                <div className="wsr-title-primary">
+                  WorldSkills Russia по городу Москва
+                </div>
+                <div className="wsr-title-logo">
+                  <img alt="" src="/Images/wsr-msk-logo.svg" />
+                </div>
               </div>
-              <div className="wsr-title-primary">
-                WorldSkills Russia по городу Москва
-              </div>
-              <div className="wsr-title-logo">
-                <img alt="" src="/Images/wsr-msk-logo.svg" />
-              </div>
-            </div>
             </Link>
         );
     }
@@ -53,13 +69,19 @@ export class WsrMainMenu extends React.Component {
                   <Navbar.Collapse>
                     <Nav>
                       <NavDropdown eventKey={ 1 } title="Wsr в Москве" id="basic-nav-dropdown">
-                        <MenuItem eventKey={ 1.1 }>Об РКЦ</MenuItem>
-                        <MenuItem eventKey={ 1.2 }>
-                          История WorldSkills
-                        </MenuItem>
-                        <MenuItem eventKey={ 1.3 }>
-                          Активные мероприятия
-                        </MenuItem>
+                        <LinkContainer to="/about/rkc">
+                          <MenuItem eventKey={ 1.1 }>Об РКЦ</MenuItem>
+                        </LinkContainer>
+                        <LinkContainer to="/about/history">
+                          <MenuItem eventKey={ 1.2 }>
+                            История WorldSkills
+                          </MenuItem>
+                        </LinkContainer>
+                        <LinkContainer to="/about/active">
+                          <MenuItem eventKey={ 1.3 }>
+                            Активные мероприятия
+                          </MenuItem>
+                        </LinkContainer>
                       </NavDropdown>
                       <NavDropdown eventKey={ 2 } title="Эксперты" id="basic-nav-dropdown">
                         <MenuItem eventKey={ 2.1 }>
@@ -67,7 +89,11 @@ export class WsrMainMenu extends React.Component {
                         </MenuItem>
                       </NavDropdown>
                       <NavDropdown eventKey={ 3 } title="СЦК" id="basic-nav" />
-                      <NavDropdown eventKey={ 4 } title="Компетенции" id="basic-nav" />
+                      <LinkContainer to="/competence">
+                        <NavItem eventKey={ 4 } title="Компетенции" id="basic-nav">
+                          Компетенции
+                        </NavItem>
+                      </LinkContainer>
                       <NavDropdown eventKey={ 5 } title="Проекты" id="basic-nav-dropdown">
                         <MenuItem eventKey={ 5.1 }>
                           Региональный эксперт WSR
@@ -106,26 +132,28 @@ export class WsrMainMenu extends React.Component {
                         <WsrMenuTitle />
                         <Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left">
                           <span className="skew-left">
-                                     <MdVpnKey className="ri-big" />
-                                      Личный кабинет                                                                                                    </span>
+                                                 <MdVpnKey className="ri-big" />
+                                                  Личный кабинет                                                                                                    </span>
                         </Button>
                         <Nav className="wsr-menu" bsStyle="pills" stacked>
                           <LinkContainer to="/about">
-                              <NavItem  className="wsr-menu-item" eventKey={ 1 } href="/about/rkc">
-                                { "Wsr в Москве".toUpperCase() }
-                              </NavItem>
+                            <NavItem className="wsr-menu-item" eventKey={ 1 } href="/about/rkc">
+                              { "Wsr в Москве".toUpperCase() }
+                            </NavItem>
                           </LinkContainer>
                           <LinkContainer to="/experts">
-                              <NavItem className="wsr-menu-item" eventKey={ 2 } href="/home">
-                                { "Эксперты".toUpperCase() }
-                              </NavItem>
+                            <NavItem className="wsr-menu-item" eventKey={ 2 } href="/home">
+                              { "Эксперты".toUpperCase() }
+                            </NavItem>
                           </LinkContainer>
                           <NavItem className="wsr-menu-item" eventKey={ 3 } href="/home">
                             { "СЦК".toUpperCase() }
                           </NavItem>
-                          <NavItem className="wsr-menu-item" eventKey={ 4 } href="/home">
-                            { "Компетенции".toUpperCase() }
-                          </NavItem>
+                          <LinkContainer to="/competence">
+                            <NavItem className="wsr-menu-item" eventKey={ 4 } href="/home">
+                              { "Компетенции".toUpperCase() }
+                            </NavItem>
+                          </LinkContainer>
                           <NavItem className="wsr-menu-item" eventKey={ 5 } href="/home">
                             { "Проекты".toUpperCase() }
                           </NavItem>
@@ -139,9 +167,9 @@ export class WsrMainMenu extends React.Component {
                         <Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left">
                           { " " }
                           <span className="skew-left">
-                                                                                                                                                <MdSearch className="ri-big" />
-                                                                                                                                                Поиск
-                                                                                                                                            </span>
+                                                                                                                                                            <MdSearch className="ri-big" />
+                                                                                                                                                            Поиск
+                                                                                                                                                        </span>
                           { " " }
                         </Button>
                       </Row>
@@ -188,15 +216,15 @@ export class WsrBlock extends React.Component {
         var _props = this.props;
         return (
             <div className={ "wsr-block " + _props.type }>
-              <Row>
+              <Row className="row-eq-height">
                 <Col sm={ 9 } md={ 7 } className="wsr_block__container">
                   <h5 className="text-left wsr-block__heading">
-                                        <TextTruncate
+                                                    <TextTruncate
                         line={ 4 }
                         truncateText="…"
                         text={ _props.heading }
                         />
-                                    </h5>
+                                                </h5>
                   <div className="wsr-block__description">
                     <TextTruncate className="wsr-block__description" line={ 3 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
                                                                                                                                                    <MdArrowForward className="wsr-block__date-icon" />
@@ -224,12 +252,12 @@ export class WsrNewsItem extends React.Component {
             <Row className="wsr_block-menu__item">
               <Col md={ 12 }>
                 <h5 className="text-left wsr-block__heading">
-                                    <TextTruncate
+                                                <TextTruncate
                         line={ 4 }
                         truncateText="…"
                         text={ _props.heading }
                         />
-                                </h5>
+                                            </h5>
                 <div className="wsr-block__description">
                   <TextTruncate className="wsr-block__description" line={ 2 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
                                                                                                                                                  <MdArrowForward className="wsr-block__date-icon" />
@@ -290,8 +318,8 @@ export class WsrBlockTitle extends React.Component {
         return (
             <div className="wsr-block__title">
               <span>
-                                { _props.title }
-                            </span>
+                                            { _props.title }
+                                        </span>
             </div>
         );
     }
@@ -377,8 +405,8 @@ export class WsrPage extends React.Component {
               <Row>
                 <Col sm={ 9 } md={ 12 } className="wsr_page__container">
                   <h3 className="text-left wsr-page__heading">
-                                        { _props.heading }
-                                    </h3>
+                                                    { _props.heading }
+                                                </h3>
                   <div className="wsr-page__description">
                     { _props.description ? " <p> { _props.description } </p> " : false }
                     { _props.children }
@@ -389,3 +417,60 @@ export class WsrPage extends React.Component {
         );
     }
 }
+
+export class WsrTierLabel extends React.Component {
+    render() {
+        var _props = this.props;
+        return (
+
+            <Label className={ _props.tier === "primary" ? "wsr-team-label__primary" : "wsr-team-label__secondary" }>
+              { _props.tier === "primary" ? "Основной состав" : "Запасной состав" }
+            </Label>
+
+        );
+    }
+}
+
+export class WsrTeamMember extends React.Component {
+    render() {
+        var _props = this.props;
+        return (
+            <Panel footer={ "Эксперт: " + _props.expert }>
+              <Row className="is-flex">
+                <Col lg={ 3 }>
+                  <Image className={ _props.tier === "primary" ? "wsr-team__member-photo--primary" : "wsr-team__member-photo--secondary" } src={ _props.photo } circle responsive />
+                </Col>
+                <Col lg={ 9 } className="wsr-team__description">
+                  <Row className="is-flex">
+                    <span className={ _props.tier === "primary" ? "wsr-team__member--primary" : "wsr-team__member--secondary" }>{ _props.name } <br/><WsrTierLabel tier={ _props.tier } /></span>
+                  </Row>
+                  <div className="wsr-team__divider" />
+                </Col>
+              </Row>
+              <Row className="is-flex">
+                <span className="wsr-team__host">{ _props.host }</span>
+              </Row>
+            </Panel>
+        );
+    }
+}
+
+
+
+export class WsrCompetence extends React.Component {
+    render() {
+        var _props = this.props;
+        let listItems = _props.competences.map((competence, index) => 
+            <NavItem key = { index } eventKey={ index + 1 + "c" } href="">
+                { competence }
+            </NavItem>
+        );
+        return (
+            <Nav bsStyle="pills" className="wsr-competence-category" stacked>
+              { listItems }
+            </Nav>
+        );
+    }
+}
+
+
