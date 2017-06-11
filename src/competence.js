@@ -8,11 +8,11 @@ import { LinkContainer } from "react-router-bootstrap";
 
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { Label, Panel, Tab, ListGroupItem, ListGroup, Button, Grid, Row, Col, Nav, NavItem, Carousel, Image } from "react-bootstrap";
+import { Panel, Tab, ListGroup, Button, Grid, Row, Col, Nav, NavItem, Carousel, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrCompetence, WsrTeamMember, WsrTierLabel, WsrMeta, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrCompetence, WsrTeamMember, WsrMeta, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 /* Import Icons */
 

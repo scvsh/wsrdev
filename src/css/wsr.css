@@ -38,11 +38,13 @@ a:any-link {
   opacity: 1;
 }
 li .active > a:any-link {
-  color: #002b4a !important;
   text-decoration: none !important;
   cursor: pointer;
   opacity: 1;
   font-weight: normal;
+}
+.wsr-menu > li.active > a:hover {
+  color: #002b4a !important;
 }
 .row {
   margin: 0;
@@ -290,7 +292,7 @@ p {
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  color: #002b4a;
+  color: #CE112D;
   background-color: #ffffff;
 }
 .nav > li > a:hover,
@@ -712,11 +714,6 @@ h6 {
   display: flex;
   flex-direction: column;
 }
-/*
-* And with max cross-browser enabled.
-* Nobody should ever write this by hand. 
-* Use a preprocesser with autoprefixing.
-*/
 .row.is-flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -791,6 +788,65 @@ h6 {
 .wsr-team-label__secondary {
   background-color: #999999;
 }
+/*-------------------------------------------------------------------------------------------*/
+/************************************* SEARCH FORM STYLES ************************************/
+/*-------------------------------------------------------------------------------------------*/
+.wsr-btn-search {
+  background-color: #999999;
+  transition: 100ms ease-in;
+  border: 1px solid #999999;
+}
+.wsr-btn-search:hover {
+  background-color: #CE112D;
+  border: 1px solid #CE112D;
+}
+.ri-search {
+  transform: scale(1.5);
+}
+/*-------------------------------------------------------------------------------------------*/
+/***************************************** EXPERTS STYLES ************************************/
+/*-------------------------------------------------------------------------------------------*/
+.wsr-expert-panel {
+  margin-top: 5px;
+}
+.wsr-expert-panel .panel-heading {
+  background-color: white;
+  cursor: pointer;
+}
+.wsr-expert-panel .panel-heading h4 {
+  background-color: white;
+  color: #002b4a;
+}
+.wsr-expert-panel .panel-title > a {
+  font-weight: 300 !important;
+  font-size: 15px;
+}
+.wsr-expert-panel .panel + .panel {
+  margin-top: 20px;
+}
+.wsr-expert-panel .panel-body {
+  padding: 0px;
+}
+.table > tr > td {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.wsr-expert-table {
+  margin-bottom: 0px;
+}
+.table-striped > thead > tr > th {
+  opacity: 0.8;
+  font-weight: 100 !important;
+  background-color: #f9f9f9;
+}
+/*
+Should we change this at all?
+.form-control:focus {
+  border-color: @brand-secondary;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
+}
+*/
 @media (min-width: 1200px) {
   .wsr-title-descriptor {
     font-size: 0.75vw;

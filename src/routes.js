@@ -4,6 +4,8 @@ import App from "./App"
 import Rkc from "./rkc"
 import History from "./history"
 import Competence from "./competence"
+import ExpertCommunity from "./expert-community"
+
 
 
 const Routes = () => (
@@ -14,6 +16,8 @@ const Routes = () => (
 		<Route path="/about/rkc" component={ Rkc } />
 		<Route path="/about/history" component={ History } />
 		<Route path="/competence" component={ Competence } />
+		<Route exact path="/expert" render={() => ( <Redirect to="/expert/community"/> ) }/>
+		<Route path="/expert/community" component={ ExpertCommunity } />
       </div>
     </Router>
 )
