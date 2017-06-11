@@ -10,15 +10,15 @@ import { Panel, Thumbnail, ListGroupItem, ListGroup, Button, Grid, Row, Col, Nav
 
 /* Import WSR React components*/
 
-import { WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrSizeLabel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 /* Import Icons */
 
-import { MdApps } from "react-icons/lib/md";
+import { MdApps, MdFileDownload } from "react-icons/lib/md";
 
 /* Main app */
 
-class Rkc extends Component {
+class Sck extends Component {
     render() {
         return (
             <div className="App">
@@ -62,61 +62,27 @@ class Rkc extends Component {
                 <Row>
                   <Col xs={ 0 } sm={ 4 } md={ 3 } lg={ 2 } />
                   <Col xs={ 12 } sm={ 5 } md={ 6 } lg={ 7 }>
-                    <WsrBlockTitle title="Об РКЦ" />
-                    <WsrPage type="wsr-page" heading="Основные задачи регионального координационного центра WorldSkills Russia по городу Москва " description="" date="10.05.2017">
-                      <p>Основная задача Регионального координационного центра WorldSkills Russia по городу Москва — это осуществление многоуровневой системы связи между образовательными
-                        организациями Москвы, бизнес-партнерами и экспертными сообществами по различным компетенциям с Союзом «Агентство развития профессиональных сообществ
-                        и рабочих кадров «Ворлдскиллс Россия» (Союз наделяется полномочием представлять Российскую Федерацию в международной организации WorldSkills International
-                        при подготовке мероприятий по подаче заявки на проведение мирового чемпионата по профессиональному мастерству WorldSkills Competition в 2019 году в России).
-                        Также РКЦ WorldSkills Russia по городу Москва осуществляет организацию и координацию чемпионатов, конкурсов и соревнований в рамках движения WorldSkills
-                        в городе Москва.
+                    <WsrBlockTitle title="СЦК" />
+                    <WsrPage type="wsr-page" heading="Специализированный центр компетенций" description="" date="10.05.2017">
+                      <p>Специализированный центр компетенций (СЦК) — это центр развития профессий и профессиональных сообществ WorldSkills, ресурсный центр, обладающий современным оборудованием и технологиями, отвечающими требованиям WorldSkills, а также наличием экспертов для осуществления обучения и оценки соответствующей квалификации по стандартам WorldSkills.
                       </p>
-                      <Thumbnail href="#" alt="171x180" src="/Images/about/1.jpg" />
-                      <h4 className="wsr-page__heading">Достижения регионального координационного центра WorldSkills Russia по городу Москва</h4>
-                      <p>
-                        Участвуя в IV Национальном чемпионате «Молодые профессионалы» — 2016, который проходил по стандартам WorldSkills, сборная команда Москвы завоевала 15 золотых, 13 серебряных,
-                        11 бронзовых медалей и 6 медалей за профессионализм из 84 компетенций, которые были заявлены на чемпионате. По итогам чемпионата команда Москвы завоевала
-                        127 призовых медалей в 60 компетенциях, став первой в Национальном чемпионате!
-                      </p>
-                      <Thumbnail href="#" alt="171x180" src="/Images/about/2.jpg" />
-                      <p>
-                        V Открытый чемпионат профессионального мастерства города Москвы «Московские мастера» по стандартам WorldSkills Russia, который состоялся в октябре, стал самым масштабным
-                        соревнованием профессионального мастерства в Москве в 2016 году! В V Открытом чемпионате профессионального мастерства «Московские мастера» по стандартам
-                        WorldSkills Russia приняли участие более 2000 человек!
-                      </p>
-                      <Thumbnail href="#" alt="171x180" src="/Images/about/3.jpg" />
-                      <p>
-                        С 1 по 3 декабря в Швеции, в городе Гётеборг, состоялись соревнования EuroSkills-2016. Копилка сборной команды WorldSkills Москвы пополнилась еще одной медалью.
-                        Серебро заработала участница от Москвы сборной команды WorldSkills Russia в компетенции «Графический дизайн».
-                      </p>
-                      <Thumbnail href="#" alt="171x180" src="/Images/about/4.jpg" />
-                      <p>
-                        По итогам чемпионата у россиян два золота, две серебряных медали, одна бронза и 11 почетных наград. Сборная команда WorldSkills Russia стала 1-й в балльном и 7-й
-                        в общемедальном зачете! Президент России Владимир Путин встретился с победителями европейского чемпионата рабочих профессий EuroSkills-2016, поздравил
-                        ребят с победой и пожелал дальнейших побед сборной команде России на предстоящих чемпионатах WorldSkills!
-                      </p>
-                      <Thumbnail href="#" alt="171x180" src="/Images/about/5.jpg" />
-                      <p>
-                        РКЦ WorldSkills Russia по городу Москва в 2017 году продолжит работу по подготовке участников сборной команды WorldSkills Москвы к участию в Национальном чемпионате
-                        России. А также к участию в составе сборной команды WorldSkills Russia в международном чемпионате WorldSkills, который состоится в Абу-Даби, столице
-                        Объединенных Арабских Эмиратов, в октябре 2017 года.
-                      </p>
-                      <h4 className="wsr-page__heading">Региональный координационный центр WorldSkills Russia по городу Москва</h4>
-                      <Panel className="wsr-page__panel">
-                        <span>Контактное лицо: Калугина Ксения Евгеньевна <br /></span>
-                        <span>Тел.:  8 (499) 577-00-56 <br /></span>
-                        <span>E-mail: mail@wsr.msk.ru <br /></span>
-                        <span>Адрес: Москва, Дмитровское ш., д. 51 <br /></span>
-                      </Panel>
+                      <ListGroup className="wsr-file-list">
+                        <ListGroupItem href="/sck"><MdFileDownload className="ri-down"/>Информационное письмо от Союза WorldSkills Russia<WsrSizeLabel size="10 кб" extension=".doc"/></ListGroupItem>
+                        <ListGroupItem href="/sck"><MdFileDownload className="ri-down"/>Положение об аккредитации СЦК<WsrSizeLabel size="15 кб" extension=".doc"/></ListGroupItem>
+                        <ListGroupItem href="/sck"><MdFileDownload className="ri-down"/>Форма заявки на прохождение аккредитации в качестве СЦК<WsrSizeLabel size="11 кб" extension=".doc"/></ListGroupItem>
+                        <ListGroupItem href="/sck"><MdFileDownload className="ri-down"/>Документы по соответсвию деятельности<WsrSizeLabel size="20 кб" extension=".doc"/></ListGroupItem>
+                        <ListGroupItem href="/sck"><MdFileDownload className="ri-down"/>Обязательства СЦК перед Союзом WorldSkills Russia<WsrSizeLabel size="10 кб" extension=".doc"/></ListGroupItem>
+                        <ListGroupItem href="/sck"><MdFileDownload className="ri-down"/>Договор<WsrSizeLabel size="130 кб" extension=".doc"/></ListGroupItem>
+                        <ListGroupItem href="/sck"><MdFileDownload className="ri-down"/>Положительные результаты и статус СЦК<WsrSizeLabel size="10 кб" extension=".doc"/></ListGroupItem>
+                      </ListGroup>
                     </WsrPage>
                   </Col>
                   <Col sm={ 3 } md={ 3 } lg={ 3 }>
-                    <WsrBlockTitle title="WSR в Москве" />
+                    <WsrBlockTitle title="Сцк" />
                     <WsrBlockBlank className="wsr-block-select">
                       <ListGroup>
-                        <LinkContainer to="/about/rkc"><ListGroupItem>Об РКЦ</ListGroupItem></LinkContainer>
-                        <LinkContainer to="/about/history"><ListGroupItem>История WorldSkills</ListGroupItem></LinkContainer>
-                        <LinkContainer to="/about/active"><ListGroupItem>Активные мероприятия</ListGroupItem></LinkContainer>
+                        <LinkContainer to="/sck"><ListGroupItem>СЦК</ListGroupItem></LinkContainer>
+                        <LinkContainer to="/sck/locations"><ListGroupItem>Базовые площадки в Москве</ListGroupItem></LinkContainer>
                       </ListGroup>
                     </WsrBlockBlank>
                   </Col>
@@ -146,6 +112,6 @@ class Rkc extends Component {
     }
 }
 
-export default Rkc;
+export default Sck;
 
 /* */

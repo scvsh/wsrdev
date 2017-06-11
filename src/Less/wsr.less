@@ -8,6 +8,7 @@
 
 body {
 	overflow-x: hidden;
+	transition: 100ms ease-in;
 }
 
 .App {
@@ -1049,11 +1050,90 @@ h6 {
 	margin-bottom: 0px;
 }
 
+.wsr-location-table {
+	margin-bottom: 0px;
+}
+
 .table-striped > thead > tr > th{
 	opacity: 0.8;
 	font-weight: 100 !important;
 	background-color: #f9f9f9;
 }
+
+
+
+/*-------------------------------------------------------------------------------------------*/
+
+/***************************************** SCK STYLES ****************************************/
+
+/*-------------------------------------------------------------------------------------------*/
+
+.ri-down {
+	margin-right: 1em;
+	transform: scale(1.2);
+}
+
+.ri-contacts {
+	opacity: 0.6;
+	margin-right: 0.5em;
+	vertical-align: middle;
+}
+
+.wsr-expert__name {
+	font-weight: 300;
+	color: @brand-secondary;
+	margin-bottom: 10px;
+}
+
+.wsr-file-list a {
+	color: @brand-secondary;
+	font-weight: 300;
+}
+
+.wsr-file-list a:hover {
+	color: @brand-primary;
+}
+
+
+.wsr-file-list a:hover {
+	color: @brand-primary;
+}
+
+.wsr-file-list__file-size {
+	display: none;
+	vertical-align: middle;
+	transition: 100ms ease-in;
+	margin-left: 1em;
+}
+
+.wsr-file-list a:hover .wsr-file-list__file-size {
+	display: inline-block;
+}
+
+
+.wsr-location-label {
+	opacity: 0;
+	background-color: @brand-secondary;
+	cursor: pointer;
+
+}
+.wsr-location-table tr:hover .wsr-location-label {
+	opacity: 1;
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 Should we change this at all?

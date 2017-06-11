@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "./css/wsr.css";
-import { MdDateRange, MdArrowForward, MdSearch, MdVpnKey } from "react-icons/lib/md";
+import { MdDateRange, MdArrowForward, MdSearch, MdVpnKey, MdMail, MdPhone } from "react-icons/lib/md";
 import TextTruncate from "react-text-truncate";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom"
 
 import MetaTags from 'react-meta-tags';
-import { InputGroup, Form, FormGroup, FormControl, Image, Panel, Label, Button, Grid, Row, Col, Nav, NavItem, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
+import { Popover, OverlayTrigger, InputGroup, Form, FormGroup, FormControl, Image, Panel, Label, Button, Grid, Row, Col, Nav, NavItem, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
 
 
 export class WsrMeta extends React.Component {
@@ -132,8 +132,8 @@ export class WsrMainMenu extends React.Component {
                         <WsrMenuTitle />
                         <Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left">
                           <span className="skew-left">
-                                                             <MdVpnKey className="ri-big" />
-                                                              Личный кабинет                                                                                                    </span>
+                                                                         <MdVpnKey className="ri-big" />
+                                                                          Личный кабинет                                                                                                    </span>
                         </Button>
                         <Nav className="wsr-menu" bsStyle="pills" stacked>
                           <LinkContainer to="/about">
@@ -146,17 +146,21 @@ export class WsrMainMenu extends React.Component {
                               { "Эксперты".toUpperCase() }
                             </NavItem>
                           </LinkContainer>
-                          <NavItem className="wsr-menu-item" eventKey={ 3 }>
-                            { "СЦК".toUpperCase() }
-                          </NavItem>
+                          <LinkContainer to="/sck">
+                            <NavItem className="wsr-menu-item" eventKey={ 3 }>
+                              { "СЦК".toUpperCase() }
+                            </NavItem>
+                          </LinkContainer>
                           <LinkContainer to="/competence">
                             <NavItem className="wsr-menu-item" eventKey={ 4 }>
                               { "Компетенции".toUpperCase() }
                             </NavItem>
                           </LinkContainer>
-                          <NavItem className="wsr-menu-item" eventKey={ 5 } href="/home">
+                          <LinkContainer to="/projects">
+                          <NavItem className="wsr-menu-item" eventKey={ 5 }>
                             { "Проекты".toUpperCase() }
                           </NavItem>
+                          </LinkContainer>
                           <NavItem className="wsr-menu-item" eventKey={ 6 } href="/home">
                             { "Партнёры".toUpperCase() }
                           </NavItem>
@@ -167,9 +171,9 @@ export class WsrMainMenu extends React.Component {
                         <Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left">
                           { " " }
                           <span className="skew-left">
-                                                                                                                                                                        <MdSearch className="ri-big" />
-                                                                                                                                                                        Поиск
-                                                                                                                                                                    </span>
+                                                                                                                                                                                    <MdSearch className="ri-big" />
+                                                                                                                                                                                    Поиск
+                                                                                                                                                                                </span>
                           { " " }
                         </Button>
                       </Row>
@@ -219,12 +223,12 @@ export class WsrBlock extends React.Component {
               <Row className="row-eq-height">
                 <Col sm={ 9 } md={ 7 } className="wsr_block__container">
                   <h5 className="text-left wsr-block__heading">
-                                                                <TextTruncate
+                                                                            <TextTruncate
                         line={ 4 }
                         truncateText="…"
                         text={ _props.heading }
                         />
-                                                            </h5>
+                                                                        </h5>
                   <div className="wsr-block__description">
                     <TextTruncate className="wsr-block__description" line={ 3 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
                                                                                                                                                    <MdArrowForward className="wsr-block__date-icon" />
@@ -252,12 +256,12 @@ export class WsrNewsItem extends React.Component {
             <Row className="wsr_block-menu__item">
               <Col md={ 12 }>
                 <h5 className="text-left wsr-block__heading">
-                                                            <TextTruncate
+                                                                        <TextTruncate
                         line={ 4 }
                         truncateText="…"
                         text={ _props.heading }
                         />
-                                                        </h5>
+                                                                    </h5>
                 <div className="wsr-block__description">
                   <TextTruncate className="wsr-block__description" line={ 2 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
                                                                                                                                                  <MdArrowForward className="wsr-block__date-icon" />
@@ -318,8 +322,8 @@ export class WsrBlockTitle extends React.Component {
         return (
             <div className="wsr-block__title">
               <span>
-                                                        { _props.title }
-                                                    </span>
+                                                                    { _props.title }
+                                                                </span>
             </div>
         );
     }
@@ -405,8 +409,8 @@ export class WsrPage extends React.Component {
               <Row>
                 <Col sm={ 9 } md={ 12 } className="wsr_page__container">
                   <h3 className="text-left wsr-page__heading">
-                                                                { _props.heading }
-                                                            </h3>
+                                                                            { _props.heading }
+                                                                        </h3>
                   <div className="wsr-page__description">
                     { _props.description ? " <p> { _props.description } </p> " : false }
                     { _props.children }
@@ -426,6 +430,19 @@ export class WsrTierLabel extends React.Component {
               { _props.tier === "primary" ? "Основной состав" : "Запасной состав" }
             </Label>
 
+        );
+    }
+}
+
+
+export class WsrSizeLabel extends React.Component {
+    render() {
+        let _props = this.props;
+        return (
+            <Label className="wsr-file-list__file-size pull-right">
+              { _props.size }
+              { _props.extension }
+            </Label>
         );
     }
 }
@@ -492,12 +509,12 @@ export class WsrExpertSearch extends React.Component {
     render() {
         let _props = this.props;
         let listCategories = _props.categories.map((category, index) => <option key={ index } value="select">
-                                                                        { category }
-                                                                      </option>
+                                                                          { category }
+                                                                        </option>
         );
         let listCompetences = _props.competences.map((competence, index) => <option key={ index } value="select">
-                                                                        { competence }
-                                                                      </option>
+                                                                              { competence }
+                                                                            </option>
         );
         return (
             <Row>
@@ -519,7 +536,7 @@ export class WsrExpertSearch extends React.Component {
                   </FormGroup>
                 </Col>
                 <Col lg={ 4 }>
-                  <FormGroup >
+                  <FormGroup>
                     <WsrBlockTitle title="Поиск" />
                     <InputGroup>
                       <FormControl className="wsr-input-search" type="text" placeholder="Например, Столярное дело" />
@@ -538,4 +555,37 @@ export class WsrExpertSearch extends React.Component {
     }
 }
 
+export class WsrLocationItem extends React.Component {
+    render() {
+        let _props = this.props;
+        const popoverBottom = (
+              <Popover id="popover-positioned-bottom" >
+                <strong>{ _props.metro } </strong><br /> { _props.detailedAddress }
+              </Popover>
+            );
+        return (
+            <tr>
+              <td>
+                { _props.competence }</td>
+              <td>
+                <Row className="wsr-expert__name">{ _props.expert }</Row>
+                <Row>
+                  <MdPhone className="ri-contacts" />{ _props.phone }
+                </Row>
+                <Row>
+                  <MdMail className="ri-contacts" />{ _props.mail }
+                </Row>
+              </td>
+              <td>
+                { _props.address }
+                 <OverlayTrigger trigger="click"  rootClose placement="bottom" overlay={popoverBottom}>
+                <Row>
+                <Label className="wsr-location-label">Как доехать?</Label>
+                </Row>
+                </OverlayTrigger>
+              </td>
+            </tr>
+        );
+    }
+}
 

@@ -3,6 +3,7 @@
 /*------------------- ------------------------------------------------------------------------*/
 body {
   overflow-x: hidden;
+  transition: 100ms ease-in;
 }
 .App {
   height: 100%;
@@ -834,10 +835,57 @@ h6 {
 .wsr-expert-table {
   margin-bottom: 0px;
 }
+.wsr-location-table {
+  margin-bottom: 0px;
+}
 .table-striped > thead > tr > th {
   opacity: 0.8;
   font-weight: 100 !important;
   background-color: #f9f9f9;
+}
+/*-------------------------------------------------------------------------------------------*/
+/***************************************** SCK STYLES ****************************************/
+/*-------------------------------------------------------------------------------------------*/
+.ri-down {
+  margin-right: 1em;
+  transform: scale(1.2);
+}
+.ri-contacts {
+  opacity: 0.6;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+.wsr-expert__name {
+  font-weight: 300;
+  color: #002b4a;
+  margin-bottom: 10px;
+}
+.wsr-file-list a {
+  color: #002b4a;
+  font-weight: 300;
+}
+.wsr-file-list a:hover {
+  color: #CE112D;
+}
+.wsr-file-list a:hover {
+  color: #CE112D;
+}
+.wsr-file-list__file-size {
+  display: none;
+  vertical-align: middle;
+  transition: 100ms ease-in;
+  margin-left: 1em;
+}
+.wsr-file-list a:hover .wsr-file-list__file-size {
+  display: inline-block;
+}
+.wsr-location-label {
+  opacity: 0;
+  background-color: #002b4a;
+  cursor: pointer;
+}
+.wsr-location-table tr:hover .wsr-location-label {
+  opacity: 1;
 }
 /*
 Should we change this at all?
