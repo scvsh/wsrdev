@@ -6,7 +6,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom"
 
 import MetaTags from 'react-meta-tags';
-import { Popover, OverlayTrigger, InputGroup, Form, FormGroup, FormControl, Image, Panel, Label, Button, Grid, Row, Col, Nav, NavItem, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
+import { Thumbnail, Media, Popover, OverlayTrigger, InputGroup, Form, FormGroup, FormControl, Image, Panel, Label, Button, Grid, Row, Col, Nav, NavItem, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
 
 
 export class WsrMeta extends React.Component {
@@ -161,12 +161,16 @@ export class WsrMainMenu extends React.Component {
                             { "Проекты".toUpperCase() }
                           </NavItem>
                           </LinkContainer>
+                          <LinkContainer to="/partners">
                           <NavItem className="wsr-menu-item" eventKey={ 6 } href="/home">
                             { "Партнёры".toUpperCase() }
                           </NavItem>
+                          </LinkContainer>
+                          <LinkContainer to="/press/photo-gallery">
                           <NavItem className="wsr-menu-item" eventKey={ 3 } href="/home">
                             { "Пресс-центр".toUpperCase() }
                           </NavItem>
+                          </LinkContainer>
                         </Nav>
                         <Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left">
                           { " " }
@@ -585,6 +589,57 @@ export class WsrLocationItem extends React.Component {
                 </OverlayTrigger>
               </td>
             </tr>
+        );
+    }
+}
+
+export class WsrPartner extends React.Component {
+    render() {
+        let _props = this.props;
+
+        return (
+          <div className={ "wsr-block " + _props.type }>
+              <Row>
+                <Col sm={ 9 } md={ 12 } className="wsr_partner__container ">
+                  <div className="wsr-page__description">
+                    
+                    <Media>
+               <Media.Left className="wsr-partner-logo">
+                  <img width={100} src={_props.logo} alt=""/>
+                </Media.Left>
+                <Media.Body className="wsr-partner-description">
+                  <Media.Heading>{_props.title}</Media.Heading>
+                  <TextTruncate className="wsr-block__description" line={ 3 } truncateText="…" text={ _props.description } textTruncateChild={<a href="#"><MdArrowForward className="wsr-block__date-icon" /></a>} />
+                </Media.Body>
+              </Media>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+
+            
+        );
+    }
+}
+
+
+export class WsrGalleryItem extends React.Component {
+    render() {
+        let _props = this.props;
+
+        return (      
+                      <Col xs={6} md={4}>
+                        <LinkContainer className="wsr-photo-gallery-item" to={ _props.album }>
+                          <Thumbnail src={ _props.thumbnail } alt={ _props.title } >
+                            <div className="wsr-photo-gallery-item__description">
+                            <h5 className="wsr-block__heading">{ _props.title }</h5>
+                            <p>{ _props.description }</p>
+                            </div>
+                          </Thumbnail>
+                          </LinkContainer>  
+                         
+                        </Col>   
+                                
         );
     }
 }

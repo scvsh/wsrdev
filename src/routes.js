@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+import ScrollToTop from "./router-scroll"
 import App from "./App"
 import Rkc from "./rkc"
 import History from "./history"
@@ -9,13 +10,17 @@ import Sck from "./sck"
 import Locations from "./locations"
 import Projects from "./projects"
 import RegionExpert from "./region-expert"
+import Partners from "./partners"
+import PhotoGallery from "./photo-gallery"
+
 
 
 
 const Routes = () => (
     <Router>
-      <div>
+        <ScrollToTop>
         <Route exact path="/" component={ App } />
+        
         <Route exact path="/about" render={ () => ( <Redirect to="/about/rkc" /> ) } />
         <Route path="/about/rkc" component={ Rkc } />
         <Route path="/about/history" component={ History } />
@@ -26,7 +31,10 @@ const Routes = () => (
         <Route path="/sck/locations" component={ Locations } />
         <Route exact path="/projects" component={ Projects } />
         <Route path="/projects/region-expert" component={ RegionExpert } />
-      </div>
+        <Route exact path="/partners" component={ Partners } />
+        <Route path="/press/photo-gallery" component={ PhotoGallery } />
+      
+      </ScrollToTop>
     </Router>
 )
 

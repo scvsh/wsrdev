@@ -345,6 +345,7 @@ p {
 .wsr_block__container {
   padding-right: 0px;
   padding-left: 20px;
+  font-size: 0.9em;
 }
 .wsr-block__image-container {
   padding-right: 0px;
@@ -392,7 +393,6 @@ h5 {
   opacity: 0.8;
 }
 .wsr-block__description {
-  font-size: 0.9em;
   opacity: 0.8;
   padding-top: 0.2em;
 }
@@ -886,6 +886,36 @@ h6 {
 }
 .wsr-location-table tr:hover .wsr-location-label {
   opacity: 1;
+}
+/*-------------------------------------------------------------------------------------------*/
+/***************************************** PARTNER STYLES *************************************/
+/*-------------------------------------------------------------------------------------------*/
+.wsr_partner__container {
+  padding: 2em;
+}
+.wsr-partner-logo {
+  vertical-align: middle;
+}
+.wsr-partner-description {
+  padding-left: 1em;
+  border-left: 1px solid #e6e6e6;
+}
+/*-------------------------------------------------------------------------------------------*/
+/************************************ PHOTOGALLERY STYLES *************************************/
+/*-------------------------------------------------------------------------------------------*/
+.wsr-photo-gallery-row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.wsr-photo-gallery-item {
+  padding: 0;
+}
+.wsr-photo-gallery-item img {
+  border-radius: 3px 3px 0px 0px;
+  width: 100%;
+}
+.wsr-photo-gallery-item__description {
+  padding: 0px 15px 10px 15px;
 }
 /*
 Should we change this at all?
