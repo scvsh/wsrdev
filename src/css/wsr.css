@@ -1086,6 +1086,9 @@ Should we change this at all?
   }
 }
 @media (max-width: 480px) {
+  .wsr-header__image {
+    display: none;
+  }
   .wsr-title-descriptor {
     font-size: 1.2vw;
   }
