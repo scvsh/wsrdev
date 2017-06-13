@@ -730,7 +730,7 @@ export class WsrChampionshipSideMenu extends React.Component {
                   <LinkContainer to="/championship/partners">
                     <MenuItem eventKey="1.2">Партнёрство</MenuItem>
                   </LinkContainer>
-                  <LinkContainer to="/championship/">
+                  <LinkContainer to="/press/photo-gallery">
                     <MenuItem eventKey="1.3">Фотогалерея</MenuItem>
                   </LinkContainer>
                 </NavDropdown>

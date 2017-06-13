@@ -887,6 +887,9 @@ h6 {
   color: #002b4a;
   margin-bottom: 10px;
 }
+.wsr-file-list {
+  margin-top: 2em;
+}
 .wsr-file-list a {
   color: #002b4a;
   font-weight: 300;
