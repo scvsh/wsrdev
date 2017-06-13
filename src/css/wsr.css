@@ -1060,6 +1060,9 @@ Should we change this at all?
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
+  .wsr-header__image {
+    display: none;
+  }
   .wsr-title-descriptor {
     font-size: 1.2vw;
   }
