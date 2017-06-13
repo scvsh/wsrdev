@@ -3,49 +3,17 @@ import "../bootswatch/cosmo/bootstrap.css";
 import "./css/wsr.css";
 import "./css/fonts.css";
 import { LinkContainer } from "react-router-bootstrap";
-import Gallery from 'react-photo-gallery';
-import Lightbox from 'react-images';
+/* import Gallery from 'react-photo-gallery';
+   import Lightbox from 'react-images'; */
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { Panel, Thumbnail, ListGroupItem, ListGroup, Button, Grid, Row, Col, Nav, NavItem, Carousel, Image } from "react-bootstrap";
+import { ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrGalleryItem, WsrPartner, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
-
-/* Import Icons */
-
-import { MdApps } from "react-icons/lib/md";
+import { WsrCarousel, WsrGalleryItem, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 /* Main app */
-
-const PHOTO_SET = [
-  {
-    src: 'http://wsr.msk.ru/images/public/fotos/fotogallary/vserossijskie_otborochnye_sorevnovaniya_worldskills_v_moskve_mart_2017/1.jpg',
-    sizes:[
-      '(min-width: 480px) 50vw',
-      '(min-width: 1024px) 33.3vw',
-      '100vw'
-    ],
-    width: 4,
-    height: 3,
-    alt: 'image 1',
-  },
-  {
-    src: 'http://example.com/example/img2.jpg',
-    srcset: [
-      'http://wsr.msk.ru/images/public/fotos/fotogallary/vserossijskie_otborochnye_sorevnovaniya_worldskills_v_moskve_mart_2017/2.jpg'
-    ],
-    sizes:[
-      '(min-width: 480px) 50vw',
-      '(min-width: 1024px) 33.3vw',
-      '100vw'
-    ],
-    width: 4,
-    height: 3,
-    alt: 'image 2',
-  }
-];
 
 class PhotoGallery extends Component {
 
@@ -53,38 +21,7 @@ class PhotoGallery extends Component {
         return (
             <div className="App">
               { /* Header carousel */ }
-              <Carousel wrap={ false } className="wsr-header__carousel" indicators={ false } controls={ false }>
-                <Carousel.Item>
-                  { /* Carousel menu */ }
-                  <Grid bsClass="containter-fluid">
-                    <Row>
-                      <Col xs={ 2 } md={ 5 } lg={ 3 } className="wsr-carousel-menu__bg pull-right">
-                        <Button bsClass="wsr-skewed-btn skew-left text-right">
-                          <span className="skew-right">
-                                                                                        <MdApps className="ri-big" />
-                                                                                            Архив мероприятий
-                                                                                      </span>
-                        </Button>
-                        <Nav className="wsr-carousel-menu text-right pull-right" bsStyle="pills" stacked activeKey={ 1 }>
-                          <NavItem className="wsr-carousel-menu-item " eventKey={ 1 } href="/home">
-                            V ОЧМ «Московские мастера»
-                          </NavItem>
-                          <NavItem className="wsr-carousel-menu-item " eventKey={ 2 } href="/home">
-                            Всероссийские отборочные соревнования
-                          </NavItem>
-                          <NavItem className="wsr-carousel-menu-item " eventKey={ 3 } href="/home">
-                            Демонстрационный экзамен по стандартам WorldSkills
-                          </NavItem>
-                          <NavItem className="wsr-carousel-menu-item " eventKey={ 4 } href="/home">
-                            Juniorskills
-                          </NavItem>
-                        </Nav>
-                      </Col>
-                    </Row>
-                  </Grid>
-                  <img className="wsr-carousel-image" alt="900x500" src="/Images/gallery03.jpg" />
-                </Carousel.Item>
-              </Carousel>
+              <WsrCarousel />
               { /* Left sidebar */ }
               <WsrMainMenu/>
               { /* Main content */ }

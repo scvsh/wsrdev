@@ -6,15 +6,11 @@ import { LinkContainer } from "react-router-bootstrap";
 
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { Link, Panel, Thumbnail, ListGroupItem, ListGroup, Button, Grid, Row, Col, Nav, NavItem, Carousel, Image } from "react-bootstrap";
+import { ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrSizeLabel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
-
-/* Import Icons */
-
-import { MdApps, MdFileDownload } from "react-icons/lib/md";
+import { WsrCarousel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 /* Main app */
 
@@ -23,38 +19,7 @@ class Projects extends Component {
 				return (
 						<div className="App">
 							{ /* Header carousel */ }
-							<Carousel wrap={ false } className="wsr-header__carousel" indicators={ false } controls={ false }>
-								<Carousel.Item>
-									{ /* Carousel menu */ }
-									<Grid bsClass="containter-fluid">
-										<Row>
-											<Col xs={ 2 } md={ 5 } lg={ 3 } className="wsr-carousel-menu__bg pull-right">
-												<Button bsClass="wsr-skewed-btn skew-left text-right">
-													<span className="skew-right">
-																																												<MdApps className="ri-big" />
-																																														Архив мероприятий
-																																											</span>
-												</Button>
-												<Nav className="wsr-carousel-menu text-right pull-right" bsStyle="pills" stacked activeKey={ 1 }>
-													<NavItem className="wsr-carousel-menu-item " eventKey={ 1 } href="/home">
-														V ОЧМ «Московские мастера»
-													</NavItem>
-													<NavItem className="wsr-carousel-menu-item " eventKey={ 2 } href="/home">
-														Всероссийские отборочные соревнования
-													</NavItem>
-													<NavItem className="wsr-carousel-menu-item " eventKey={ 3 } href="/home">
-														Демонстрационный экзамен по стандартам WorldSkills
-													</NavItem>
-													<NavItem className="wsr-carousel-menu-item " eventKey={ 4 } href="/home">
-														Juniorskills
-													</NavItem>
-												</Nav>
-											</Col>
-										</Row>
-									</Grid>
-									<img className="wsr-carousel-image" alt="900x500" src="/Images/gallery03.jpg" />
-								</Carousel.Item>
-							</Carousel>
+							<WsrCarousel />
 							{ /* Left sidebar */ }
 							<WsrMainMenu/>
 							{ /* Main content */ }
