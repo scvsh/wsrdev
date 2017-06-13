@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import ScrollToTop from "./router-scroll"
 import App from "./App"
+import DefaultPage from "./default-page"
 import Login from "./login"
 import Rkc from "./rkc"
 import History from "./history"
@@ -27,6 +28,7 @@ const Routes = () => (
     <Router>
         <ScrollToTop>
             <Route exact path="/" component={ App } />
+            <Route exact path="/default" component={ DefaultPage } />
             <Route exact path="/login" component={ Login } />
 
             { /* About */ }

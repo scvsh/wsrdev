@@ -32,6 +32,7 @@ class ExpertCommunity extends Component {
                   <Col lg={ 2 } />
                   <Col lg={ 10 }>
                     <WsrExpertSearch categories={ ["Специалисты строительной сферы", "Творчество и дизайн", "Специалисты, занятые на промышленном производстве", "Сфера услуг", "Обслуживание гражданского транспорта", "RU", "FutureSkills (FS)", "Презентационная (FS)", "Презентационная", "JuniorSkills", "Презентационная (JS)"] } competences={ ["Камнетёсное дело", "Облицовка плиткой", "Столярное дело", "Плотницкое дело", "Кирпичная кладка", "Холодильная техника и системы кондиционирования", "Сантехника и отопление", "Сухое строительство и штукатурные работы", "Малярные и декоративные работы", "Ландшафтный дизайн", "Электромонтаж", "Производство мебели"] } />
+                    <Row className="wsr-row-negative">
                     <Col lg={ 8 }>
                     
                       <Accordion className="wsr-expert-panel" defaultActiveKey="1">
@@ -122,6 +123,7 @@ class ExpertCommunity extends Component {
                         </Panel>
                       </Accordion>
                     </Col>
+
                     <Col lg={4}>
                     <WsrBlockTitle title="Важная информация" />
                     <WsrBlock type="wsr-block-important" heading="Демонстрационный экзамен, летняя сессия: изменения по компетенции
@@ -133,6 +135,7 @@ class ExpertCommunity extends Component {
                                                                                                                    Адрес проведения: г. Москва, Дмитровское шоссе, д.51, корпус 1 (РКЦ WSR в городе Москве)."
                       date="10.05.2017" image="/Images/thumb01.jpg" />
                     </Col>
+                    </Row>
                   </Col>
                 </Row>
                 { /* Bottom Gallery */ }

@@ -201,9 +201,8 @@ export class WsrCarouselCaption extends React.Component {
         let _props = this.props;
         return (
 
-            <Grid bsClass="containter-fluid">
-              <Row>
-                <Col xs={ 2 } md={ 5 } lg={ 3 } className="wsr-carousel-menu__bg pull-right">
+              <Col xsOffset={1} xs={11} className="wsr-col-inherit">
+                <Col xs={ 2 } sm={3} md={ 3 } lg={ 3 } className="wsr-carousel-menu__bg pull-right">
                   <Button bsClass="wsr-skewed-btn skew-left text-right">
                     <span className="skew-right">
                                                                                                                 <MdApps className="ri-big" />
@@ -212,25 +211,25 @@ export class WsrCarouselCaption extends React.Component {
                   </Button>
                   <Nav className="wsr-carousel-menu text-right pull-right" bsStyle="pills" stacked activeKey={ 1 }>
                     <LinkContainer exact to="/championship">
-                      <NavItem className="wsr-carousel-menu-item " eventKey={ 1 } href="/home">
+                      <NavItem className="wsr-carousel-menu-item " eventKey={ 1 }>
                         V ОЧМ «Московские мастера»
                       </NavItem>
                     </LinkContainer>
                     <LinkContainer exact to="/qualification">
-                      <NavItem className="wsr-carousel-menu-item " eventKey={ 2 } href="/home">
+                      <NavItem className="wsr-carousel-menu-item " eventKey={ 2 }>
                         Всероссийские отборочные соревнования
                       </NavItem>
                     </LinkContainer>
-                    <NavItem className="wsr-carousel-menu-item " eventKey={ 3 } href="/home">
+                    <NavItem className="wsr-carousel-menu-item " eventKey={ 3 }>
                       Демонстрационный экзамен по стандартам WorldSkills
                     </NavItem>
-                    <NavItem className="wsr-carousel-menu-item " eventKey={ 4 } href="/home">
+                    <NavItem className="wsr-carousel-menu-item " eventKey={ 4 } >
                       Juniorskills
                     </NavItem>
                   </Nav>
                 </Col>
-              </Row>
-            </Grid>
+                </Col>
+
         );
     }
 }
@@ -239,13 +238,12 @@ export class WsrCarousel extends React.Component {
     render() {
         let _props = this.props;
         return (
-            <Carousel wrap={ false } className="wsr-header__carousel" indicators={ false } controls={ false }>
-              <Carousel.Item>
-                <WsrCarouselCaption/>
-                { /* Carousel menu */ }
-                <img className="wsr-carousel-image" alt={ _props.alt } src="/Images/carousel/gallery02.jpg" />
-              </Carousel.Item>
-            </Carousel>
+          <Row className="wsr-header__image">
+
+            <WsrCarouselCaption />
+
+          </Row>
+
         );
     }
 }
@@ -285,6 +283,7 @@ export class WsrBlock extends React.Component {
             <div className={ "wsr-block " + _props.type }>
               <Row className="row-eq-height">
                 <Col sm={ 9 } md={ 7 } className="wsr_block__container">
+                <LinkContainer className="text-left wsr-block__heading" to={ _props.link ? _props.link : "/" }>
                   <h5 className="text-left wsr-block__heading">
                                                                                                     <TextTruncate
                         line={ 4 }
@@ -292,8 +291,9 @@ export class WsrBlock extends React.Component {
                         text={ _props.heading }
                         />
                                                                                                 </h5>
+                                                                                                </LinkContainer>
                   <div className="wsr-block__description">
-                    <TextTruncate className="wsr-block__description" line={ 3 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
+                    <TextTruncate className="wsr-block__description" line={ 2 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
                                                                                                                                                    <MdArrowForward className="wsr-block__date-icon" />
                                                                                                                                                  </a> } />
                   </div>
@@ -580,7 +580,7 @@ export class WsrExpertSearch extends React.Component {
                                                                             </option>
         );
         return (
-            <Row>
+            <Row className="wsr-row-negative">
               <Form>
                 <Col lg={ 4 }>
                   <FormGroup controlId="formControlsSelect">

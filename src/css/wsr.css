@@ -78,12 +78,23 @@ li .active > a:any-link {
   background-color: #CE112D;
   right: 0px;
   position: absolute;
-  height: 100%;
+  height: inherit;
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 28% 100%);
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 28% 100%);
   padding-left: 0;
+  max-height: 400px;
   padding-right: 0;
-  width: 20%;
+}
+.wsr-col-inherit {
+  height: inherit;
+}
+.wsr-header__image {
+  background-image: url(/Images/carousel/gallery02.jpg);
+  height: 50vh;
+  max-height: 400px;
+  width: 100%;
+  background-size: cover;
+  margin-bottom: 20px;
 }
 .wsr-header__carousel {
   margin-bottom: 20px;
@@ -154,9 +165,6 @@ li .active > a:any-link {
   height: 9vw;
   margin-left: 2em;
   transition: 250ms ease-out;
-}
-.wsr-title-logo:hover img {
-  transform: scale(1.1);
 }
 .wsr-skewed-btn span {
   color: white;
@@ -649,9 +657,11 @@ h5 {
   font-size: 0.9em;
   opacity: 1;
 }
+.wsr-page .thumbnail {
+  margin-top: 2em;
+}
 .wsr-page__description p {
   opacity: 0.8;
-  padding-bottom: 2em;
   padding-top: 2em;
   margin-bottom: 0;
 }
@@ -859,6 +869,10 @@ h6 {
 /*-------------------------------------------------------------------------------------------*/
 /***************************************** SCK STYLES ****************************************/
 /*-------------------------------------------------------------------------------------------*/
+.wsr-row-negative {
+  margin-left: -15px;
+  margin-right: -15px;
+}
 .ri-down {
   margin-right: 1em;
   transform: scale(1.2);
@@ -984,7 +998,7 @@ Should we change this at all?
 */
 @media (min-width: 1200px) {
   .wsr-title-descriptor {
-    font-size: 0.75vw;
+    font-size: 0.7vw;
   }
   .wsr-title-primary {
     font-size: 0.75vw;
@@ -1003,7 +1017,7 @@ Should we change this at all?
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .wsr-title-descriptor {
-    font-size: 1.2vw;
+    font-size: 1.1vw;
   }
   .wsr-title-primary {
     font-size: 1.2vw;
