@@ -58,7 +58,9 @@ export class WsrMainMenu extends React.Component {
     render() {
         return (
             <Grid bsClass="containter-fluid">
+
               <Row>
+
                 <Navbar inverse collapseOnSelect className="navbar-fixed-top">
                   <Navbar.Header>
                     <Navbar.Brand>
@@ -126,6 +128,7 @@ export class WsrMainMenu extends React.Component {
                   </Navbar.Collapse>
                 </Navbar>
                 <Col xs={ 5 } md={ 5 } lg={ 3 }>
+                
                   <div dir="rtl" className="wsr-affix">
                     <div className="wsr-affix">
                       <Row dir="ltr">
