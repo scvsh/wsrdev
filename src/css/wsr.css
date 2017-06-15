@@ -72,6 +72,7 @@ li .active > a:any-link {
   pointer-events: none;
   -webkit-clip-path: polygon(72% 5%, 50% 100%, 0px 100%, 0px 0px, 100% 0px);
   clip-path: polygon(72% 5%, 50% 100%, 0px 100%, 0px 0px, 100% 0px);
+  clip-path: url("#clipPolygon");
 }
 .wsr-carousel-menu__bg {
   z-index: 100500;
@@ -437,6 +438,10 @@ h5 {
   margin: 0;
   padding-top: 10px;
   margin-bottom: 10px;
+  cursor: pointer;
+}
+.wsr-block__title:hover {
+  opacity: 0.5;
 }
 .wsr-block__title span {
   font-weight: 100;
@@ -990,6 +995,73 @@ li.wsr-side-menu__item:focus > a {
 .wsr-side-menu > li.active > a:focus {
   background-color: #CE112D;
   color: white;
+}
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+}
+.loader {
+  color: #999999;
+  font-size: 4px;
+  text-indent: -99999em;
+  margin: 55px auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 0 0 0 1em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  content: '';
+}
+.loader:before {
+  width: 5.3em;
+  height: 10.3em;
+  background: #f5f5f5;
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 5.2em 5.1em;
+  transform-origin: 5.2em 5.1em;
+  -webkit-animation: load2 2s infinite ease 1.5s;
+  animation: load2 2s infinite ease 1.5s;
+}
+.loader:after {
+  width: 5.3em;
+  height: 10.3em;
+  background: #f5f5f5;
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 5.1em;
+  -webkit-transform-origin: 0px 5.1em;
+  transform-origin: 0px 5.1em;
+  -webkit-animation: load2 2s infinite ease;
+  animation: load2 2s infinite ease;
+}
+@-webkit-keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 /*
 Should we change this at all?

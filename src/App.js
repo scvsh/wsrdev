@@ -7,11 +7,11 @@ import "./css/fonts.css";
 import OwlCarousel from 'react-owl-carousel';
 
 /* Import React-Boorstrap components*/
-import { Grid, Row, Col, Image} from "react-bootstrap";
+import { Form, FormGroup, FormControl, ControlLabel, Checkbox, Button, Modal, Grid, Row, Col, Image} from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlock, WsrBlockBlank, WsrNewsItem, WsrPartnersItem, WsrNumbersItem, WsrFooter,} from "./wsr-components.js";
+import { WsrSpinner, WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlock, WsrBlockBlank, WsrNewsItem, WsrPartnersItem, WsrNumbersItem, WsrFooter,} from "./wsr-components.js";
 
 
 /* Main app */
@@ -20,6 +20,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+
               
               { /* Header carousel */ }
               <WsrCarousel />
@@ -49,7 +50,9 @@ class App extends Component {
                                                                                        «Ландшафтный дизайн»" description="25 апреля 2017 года состоится консультация по процедуре введения новых компетенций. Необходима предварительная регистрация на период времени с 11:00 до 16:00. Консультация проходит в течение часа.
                                                                                                                    Адрес проведения: г. Москва, Дмитровское шоссе, д.51, корпус 1 (РКЦ WSR в городе Москве)."
                       date="10.05.2017" image="/Images/thumb01.jpg" link="/default"/>
+                      <WsrSpinner />
                   </Col>
+
                   { /* Block numbers */ }
                   <Col xs={ 12 } sm={ 3 } md={ 3 }>
                     <WsrBlockTitle title="РКЦ в цифрах" />
@@ -78,8 +81,59 @@ class App extends Component {
                         date="26.04.2017" />
                     </WsrBlockBlank>
                   </Col>
+                  <Modal show={ false }>
+                  <Modal.Dialog >
+                    <Modal.Header>
+                      <Modal.Title className="text-center">Модальное окно</Modal.Title>
+                    </Modal.Header>
+
+                    <Modal.Body>
+                     <Form horizontal>
+                        <FormGroup controlId="formHorizontalEmail">
+                          <Col componentClass={ControlLabel} sm={2}>
+                            Почта
+                          </Col>
+                          <Col sm={10}>
+                            <FormControl type="email" placeholder="Введите адрес" />
+                          </Col>
+                        </FormGroup>
+
+                        <FormGroup controlId="formHorizontalPassword">
+                          <Col componentClass={ControlLabel} sm={2}>
+                            Пароль
+                          </Col>
+                          <Col sm={10}>
+                            <FormControl type="password" placeholder="Ввведите пароль" />
+                          </Col>
+                        </FormGroup>
+
+                        <FormGroup>
+                          <Col xs={6} smOffset={2} sm={5}>
+                            <Checkbox>Запомнить этот браузер</Checkbox>
+                          </Col>
+                          <Col  xs={6} sm={5}>
+                            <FormControl.Static className="text-right wsr-forgot-password">
+                                Забыли пароль?
+                              </FormControl.Static>
+                          </Col>
+                              
+                        </FormGroup>
+
+                        <FormGroup>
+                          <Col smOffset={2} sm={10}>
+                            <Button type="submit">
+                              Войти
+                            </Button>
+                          </Col>
+                        </FormGroup>
+                      </Form>
+                    </Modal.Body>
+
+                  </Modal.Dialog>
+                  </Modal>
                   { /* Block partners */ }
                   <Col xs={ 12 } sm={ 0 } md={ 2 }>
+                  
                     <WsrBlockTitle title="Партнёры" />
                     <WsrBlockBlank type="wsr-block-partners">
                       <WsrPartnersItem>
@@ -108,6 +162,7 @@ class App extends Component {
                         </div>
                       </WsrPartnersItem>
                     </WsrBlockBlank>
+
                   </Col>
                 </Row>
                 { /* Bottom Gallery */ }

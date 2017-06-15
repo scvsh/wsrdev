@@ -58,7 +58,12 @@ export class WsrMainMenu extends React.Component {
     render() {
         return (
             <Grid bsClass="containter-fluid">
-
+            <svg width="0" height="0" >
+            <clipPath id="clipPolygon" clipPathUnits="objectBoundingBox">
+              <polygon points="0 1,0.5 1,0.72 0.05,1 0,0 0">
+              </polygon>
+            </clipPath>
+          </svg>
               <Row>
 
                 <Navbar inverse collapseOnSelect className="navbar-fixed-top">
@@ -329,7 +334,7 @@ export class WsrNewsItem extends React.Component {
                         />
                                                                                             </h5>
                 <div className="wsr-block__description">
-                  <TextTruncate className="wsr-block__description" line={ 2 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
+                  <TextTruncate className="wsr-block__description" line={ 4 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
                                                                                                                                                  <MdArrowForward className="wsr-block__date-icon" />
                                                                                                                                                </a> } />
                 </div>
@@ -349,9 +354,8 @@ export class WsrNumbersItem extends React.Component {
         return (
             <Col className="wsr-numbers__item" md={ 6 } xs={ 12 }>
               <h1>{ _props.number }</h1>
-              <TextTruncate className="wsr-numbers__description" line={ 10 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
-                                                                                                                                                <MdArrowForward className="wsr-block__date-icon" />
-                                                                                                                                              </a> } />
+              <p className="wsr-numbers__description">{ _props.description } </p>
+              
             </Col>
         );
     }
@@ -386,11 +390,15 @@ export class WsrBlockTitle extends React.Component {
     render() {
         let _props = this.props;
         return (
+          
             <div className="wsr-block__title">
+            <LinkContainer className="wsr-block__title" to={ _props.link ? _props.link : "/" }>
               <span>
                                                                                             { _props.title }
                                                                                         </span>
+                                                                                        </LinkContainer>
             </div>
+            
         );
     }
 }
@@ -853,6 +861,18 @@ export class WsrBecomePartnerForm extends React.Component {
             </Form>
 
 
+        );
+    }
+}
+
+
+
+export class WsrSpinner extends React.Component {
+
+    render() {
+        let _props = this.props;
+        return (
+            <div className="loader">Загрузка...</div>
         );
     }
 }
