@@ -59,7 +59,7 @@ export class WsrMainMenu extends React.Component {
         return (
             <Grid bsClass="containter-fluid">
             <svg width="0" height="0" >
-            <clipPath id="clipPolygon" clipPathUnits="objectBoundingBox">
+            <clipPath id="ClipAffix" clipPathUnits="objectBoundingBox">
               <polygon points="0 1,0.5 1,0.72 0.05,1 0,0 0">
               </polygon>
             </clipPath>
@@ -208,8 +208,10 @@ export class WsrCarouselCaption extends React.Component {
     render() {
         let _props = this.props;
         return (
-
+          
+          
               <Col xsOffset={1} xs={11} className="wsr-col-inherit">
+              
                 <Col xs={ 2 } sm={3} md={ 3 } lg={ 3 } className="wsr-carousel-menu__bg pull-right">
                   <Button bsClass="wsr-skewed-btn skew-left text-right">
                     <span className="skew-right">
@@ -247,6 +249,12 @@ export class WsrCarousel extends React.Component {
         let _props = this.props;
         return (
           <Row className="wsr-header__image">
+          <svg width="0" height="0" >
+            <clipPath id="ClipRight" clipPathUnits="objectBoundingBox">
+              <polygon points="0.28 1, 1 1,1 0,0 0">
+              </polygon>
+            </clipPath>
+          </svg>
 
             <WsrCarouselCaption />
 
@@ -290,6 +298,12 @@ export class WsrBlock extends React.Component {
         return (
             <div className={ "wsr-block " + _props.type }>
               <Row className="row-eq-height">
+              <svg width="0" height="0" >
+            <clipPath id="ClipBlock" clipPathUnits="objectBoundingBox">
+              <polygon points="0 1, 1 1,1 0,0.12 0">
+              </polygon>
+            </clipPath>
+          </svg>
                 <Col sm={ 9 } md={ 7 } className="wsr_block__container">
                 <LinkContainer className="text-left wsr-block__heading" to={ _props.link ? _props.link : "/" }>
                   <h5 className="text-left wsr-block__heading">

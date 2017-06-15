@@ -72,7 +72,7 @@ li .active > a:any-link {
   pointer-events: none;
   -webkit-clip-path: polygon(72% 5%, 50% 100%, 0px 100%, 0px 0px, 100% 0px);
   clip-path: polygon(72% 5%, 50% 100%, 0px 100%, 0px 0px, 100% 0px);
-  clip-path: url("#clipPolygon");
+  clip-path: url("#ClipAffix");
 }
 .wsr-carousel-menu__bg {
   z-index: 100500;
@@ -82,6 +82,7 @@ li .active > a:any-link {
   height: inherit;
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 28% 100%);
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 28% 100%);
+  clip-path: url("#ClipRight");
   padding-left: 0;
   max-height: 400px;
   padding-right: 0;
@@ -1088,6 +1089,7 @@ Should we change this at all?
     border-radius: 0 3px 3px 0;
     -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
     clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
+    clip-path: url("#ClipBlock");
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -1107,6 +1109,7 @@ Should we change this at all?
     border-radius: 0 3px 3px 0;
     -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
     clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
+    clip-path: url("#ClipBlock");
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1126,6 +1129,7 @@ Should we change this at all?
     border-radius: 0 3px 3px 0;
     -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
     clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
+    clip-path: url("#ClipBlock");
   }
   .wsr-carousel-menu__bg {
     display: none;
