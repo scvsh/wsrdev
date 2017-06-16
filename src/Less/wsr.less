@@ -108,6 +108,7 @@ li .active > a:any-link {
 	max-height: 400px;
 	padding-right: 0;
 }
+
 .wsr-col-inherit {
 	height: inherit;
 }
@@ -119,10 +120,7 @@ li .active > a:any-link {
 	width: 100%;
 	background-size: cover;
 	margin-bottom: 20px;
-
 }
-
-
 
 .wsr-header__carousel {
 	margin-bottom: 20px;
@@ -196,7 +194,6 @@ li .active > a:any-link {
 	display: flex;
 	justify-content: center;
 	pointer-events: all;
-
 }
 
 .wsr-title-logo img {
@@ -207,8 +204,6 @@ li .active > a:any-link {
 }
 
 .wsr-title-logo:hover img {
-	
-	
 }
 
 .wsr-skewed-btn span {
@@ -556,7 +551,6 @@ h5 {
 	opacity: 0.5;
 }
 
-
 .wsr-block__title span {
 	font-weight: 100;
 	font-size: 1.1em;
@@ -592,7 +586,6 @@ h5 {
 	box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);
 	width: 100%;
 	z-index: 103;
-
 }
 
 .wsr-partner-container {
@@ -697,13 +690,16 @@ h5 {
 }
 
 .wsr-footer__divider {
-	margin-bottom: 15px;
-	margin-left: 15px;
+	margin: 2em;
 	height: 1px;
 	border-bottom: 2px dotted white;
 	opacity: 0.1;
 }
 
+.wsr-social-icons {
+	font-size: 1.5em;
+	color: white;
+}
 /*-------------------------------------------------------------------------------------------*/
 
 /************************************* SIDEBAR STYLES *****************************************/
@@ -1061,7 +1057,6 @@ h6 {
 
 .wsr-expert-panel {
 	margin-top: 5px;
-
 }
 
 .wsr-expert-panel .panel-heading {
@@ -1137,6 +1132,7 @@ h6 {
 .wsr-file-list {
 	margin-top: 2em;
 }
+
 .wsr-file-list a {
 	color: @brand-secondary;
 	font-weight: 300;
@@ -1229,6 +1225,7 @@ h6 {
 .form-horizontal .control-label {
 	color: @brand-primary;
 }
+
 .wsr-login-block {
 	padding-right: 25px;
 	padding-left: 25px;
@@ -1245,113 +1242,158 @@ h6 {
 	border: none;
 }
 
-
 .wsr-side-menu > li:active {
 	color: white;
 	background-color: @brand-primary;
 }
 
-.wsr-side-menu > li  {
+.wsr-side-menu > li {
 	border-bottom: 1px solid #dddddd;
 }
 
 .wsr-side-menu > li > a:hover {
-	background-color: #f5f5f5;	
+	background-color: #f5f5f5;
 }
 
-.wsr-side-menu > li > a:hover, .wsr-side-menu > li > a:focus {
+.wsr-side-menu > li > a:hover,
+.wsr-side-menu > li > a:focus {
 	color: #333;
 }
 
-li.wsr-side-menu__item .active, li.wsr-side-menu__item:focus > a {
-	background-color: @brand-primary;	
+li.wsr-side-menu__item .active,
+li.wsr-side-menu__item:focus > a {
+	background-color: @brand-primary;
 }
 
-
-.wsr-side-menu > li.active > a, .wsr-side-menu > li.active > a:hover, .wsr-side-menu > li.active > a:focus {
+.wsr-side-menu > li.active > a,
+.wsr-side-menu > li.active > a:hover,
+.wsr-side-menu > li.active > a:focus {
 	background-color: @brand-primary;
 	color: white;
 }
 
+/*-------------------------------------------------------------------------------------------*/
 
+/************************************ SPINNER LOADER STYLES **********************************/
 
-
-
-
-
-
-
-
-
-
-
+/*-------------------------------------------------------------------------------------------*/
 
 .loader,
 .loader:before,
 .loader:after {
-  border-radius: 50%;
+	border-radius: 50%;
 }
+
 .loader {
-  color: @gray-light;
-  font-size: 4px;
-  text-indent: -99999em;
-  margin: 55px auto;
-  position: relative;
-  width: 10em;
-  height: 10em;
-  box-shadow: inset 0 0 0 1em;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
+	color: @gray-light;
+	font-size: 4px;
+	text-indent: -99999em;
+	margin: 55px auto;
+	position: relative;
+	width: 10em;
+	height: 10em;
+	box-shadow: inset 0 0 0 1em;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
 }
+
 .loader:before,
 .loader:after {
-  position: absolute;
-  content: '';
+	position: absolute;
+	content: '';
 }
+
 .loader:before {
-  width: 5.3em;
-  height: 10.3em;
-  background: #f5f5f5;
-  border-radius: 10.2em 0 0 10.2em;
-  top: -0.1em;
-  left: -0.1em;
-  -webkit-transform-origin: 5.2em 5.1em;
-  transform-origin: 5.2em 5.1em;
-  -webkit-animation: load2 2s infinite ease 1.5s;
-  animation: load2 2s infinite ease 1.5s;
+	width: 5.3em;
+	height: 10.3em;
+	background: #f5f5f5;
+	border-radius: 10.2em 0 0 10.2em;
+	top: -0.1em;
+	left: -0.1em;
+	-webkit-transform-origin: 5.2em 5.1em;
+	transform-origin: 5.2em 5.1em;
+	-webkit-animation: load2 2s infinite ease 1.5s;
+	animation: load2 2s infinite ease 1.5s;
 }
+
 .loader:after {
-  width: 5.3em;
-  height: 10.3em;
-  background: #f5f5f5;
-  border-radius: 0 10.2em 10.2em 0;
-  top: -0.1em;
-  left: 5.1em;
-  -webkit-transform-origin: 0px 5.1em;
-  transform-origin: 0px 5.1em;
-  -webkit-animation: load2 2s infinite ease;
-  animation: load2 2s infinite ease;
+	width: 5.3em;
+	height: 10.3em;
+	background: #f5f5f5;
+	border-radius: 0 10.2em 10.2em 0;
+	top: -0.1em;
+	left: 5.1em;
+	-webkit-transform-origin: 0px 5.1em;
+	transform-origin: 0px 5.1em;
+	-webkit-animation: load2 2s infinite ease;
+	animation: load2 2s infinite ease;
 }
+
 @-webkit-keyframes load2 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+
 }
+
 @keyframes load2 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+
+}
+
+
+
+
+
+
+
+
+.wsr-contact__name {
+	font-weight: 300;
+	color: @brand-secondary;
+	margin-bottom: 10px;
+}
+
+.wsr-contact__phone, .wsr-contact__email{
+	white-space: nowrap;
+}
+
+
+
+
+.Cal__Header__root {
+	background-color: @brand-secondary !important;
+}
+
+.Cal__Weekdays__root {
+	background-color: lighten(@brand-secondary, 10%) !important;
+}
+.Cal__Day__selection {
+	background-color: @brand-primary !important;
+}
+
+.Cal__Header__date {
+	font-family: "Gotham Pro" !important;
+	font-size: 1em;
+}
+
+.Cal__Month__rows {
+	background: white !important;
 }
 
 
@@ -1393,7 +1435,6 @@ Should we change this at all?
 		-webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
 		clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
 		clip-path: url("#ClipBlock");
-
 	}
 
 }
@@ -1458,6 +1499,7 @@ Should we change this at all?
 	.wsr-header__image {
 		display: none;
 	}
+
 	.wsr-title-descriptor {
 		font-size: 1.2vw;
 	}
@@ -1492,6 +1534,7 @@ Should we change this at all?
 	.wsr-header__image {
 		display: none;
 	}
+
 	.wsr-title-descriptor {
 		font-size: 1.2vw;
 	}

@@ -10,11 +10,14 @@ import Competence from "./competence"
 import ExpertCommunity from "./expert-community"
 import Sck from "./sck"
 import Locations from "./locations"
+import Archive from "./archive"
 import Projects from "./projects"
 import RegionExpert from "./region-expert"
 import Partners from "./partners"
 import BecomePartner from "./become-a-partner"
 import PhotoGallery from "./photo-gallery"
+import Contact from "./contact"
+import Important from "./important"
 import Championship from "./championship"
 import ChampionshipHistory from "./championship-history"
 import ChampionshipPartners from "./championship-partners"
@@ -53,6 +56,10 @@ const Routes = () => (
             
             { /* Press */ }
 
+            <Route exact path="/press" render={ () => ( <Redirect to="/press/contact" /> ) } />
+            <Route exact path="/press/contact" component={ Contact } />
+            <Route path="/press/contact" component={ Contact } />
+            <Route path="/press/important" component={ Important } />
             <Route path="/press/photo-gallery" component={ PhotoGallery } />
 
             { /* Championship */ }
@@ -65,6 +72,8 @@ const Routes = () => (
             { /* Qualification */ }
             <Route exact path="/qualification" component={ Qualification } />
             <Route path="/qualification/competence" component={ QualificationCompetence } />
+
+            <Route path="/archive" component={ Archive } />
         </ScrollToTop>
     </Router>
 )

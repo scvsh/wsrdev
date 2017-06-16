@@ -47,13 +47,13 @@ class PhotoGallery extends Component {
 
                   </Col>
                   <Col sm={ 3 } md={ 3 } lg={ 3 }>
-                    <WsrBlockTitle title={'\u00A0'} />
+                   <WsrBlockTitle title={'\u00A0'} />
                     <WsrBlockBlank className="wsr-block-select">
                       <ListGroup>
-                        <LinkContainer to="/press/video-gallery"><ListGroupItem>Важная информация</ListGroupItem></LinkContainer>
-                        <LinkContainer exact to="/press/photo-gallery"><ListGroupItem>Фотогалерея</ListGroupItem></LinkContainer>
+                        <LinkContainer to="/press/contact"><ListGroupItem>Контакты</ListGroupItem></LinkContainer>
+                        <LinkContainer exact to="/press/important"><ListGroupItem>Важная информация</ListGroupItem></LinkContainer>
+                        <LinkContainer to="/press/photo-gallery"><ListGroupItem>Фотогалерея</ListGroupItem></LinkContainer>
                         <LinkContainer to="/press/video-gallery"><ListGroupItem>Видеогалерея</ListGroupItem></LinkContainer>
-                        <LinkContainer to="/press/video-gallery"><ListGroupItem>Контакты</ListGroupItem></LinkContainer>
 
     
                       </ListGroup>

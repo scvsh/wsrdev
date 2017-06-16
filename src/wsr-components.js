@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./css/wsr.css";
 import { MdApps, MdDateRange, MdArrowForward, MdSearch, MdVpnKey, MdMail, MdPhone } from "react-icons/lib/md";
+import { FaVk, FaFacebook, FaInstagram, FaYoutube } from "react-icons/lib/fa";
 import TextTruncate from "react-text-truncate";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom"
@@ -178,7 +179,7 @@ export class WsrMainMenu extends React.Component {
                               { "Партнёры".toUpperCase() }
                             </NavItem>
                           </LinkContainer>
-                          <LinkContainer to="/press/photo-gallery">
+                          <LinkContainer to="/press">
                             <NavItem className="wsr-menu-item" eventKey={ 3 } href="/home">
                               { "Пресс-центр".toUpperCase() }
                             </NavItem>
@@ -214,10 +215,12 @@ export class WsrCarouselCaption extends React.Component {
               
                 <Col xs={ 2 } sm={3} md={ 3 } lg={ 3 } className="wsr-carousel-menu__bg pull-right">
                   <Button bsClass="wsr-skewed-btn skew-left text-right">
+                    <LinkContainer className="skew-right" to="/archive">
                     <span className="skew-right">
                                                                                                                 <MdApps className="ri-big" />
                                                                                                                     Архив мероприятий
                                                                                                               </span>
+                                                                                                              </LinkContainer>
                   </Button>
                   <Nav className="wsr-carousel-menu text-right pull-right" bsStyle="pills" stacked activeKey={ 1 }>
                     <LinkContainer exact to="/championship">
@@ -432,7 +435,23 @@ export class WsrFooter extends React.Component {
     render() {
         let _props = this.props;
         return (
+                    
             <Row className="wsr-footer">
+
+            <Row>
+            <Col xs={ 0 } sm={ 10 } md={ 2 } />
+              <Col xs={ 12 } md={ 5 }>
+              <h7 className="wsr-footer__heading">Региональный координационный центр WorldSkills Russia по городу Москва </h7>
+              </Col>
+              <Col xs={ 12 } md={ 5 } pullRight>
+              <div className="text-right wsr-social-icons">
+               <FaVk /> <FaFacebook /> <FaInstagram/> <FaYoutube/>
+               </div>
+               </Col>
+              </Row>
+             
+            
+            <Row className="wsr_block-menu__divider"></Row>
               <div className="wsr_footer__divider" />
               <Col xs={ 0 } sm={ 10 } md={ 2 } />
               <Col xs={ 12 } md={ 1 }>

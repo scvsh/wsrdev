@@ -554,11 +554,14 @@ h5 {
   font-size: 0.7em;
 }
 .wsr-footer__divider {
-  margin-bottom: 15px;
-  margin-left: 15px;
+  margin: 2em;
   height: 1px;
   border-bottom: 2px dotted white;
   opacity: 0.1;
+}
+.wsr-social-icons {
+  font-size: 1.5em;
+  color: white;
 }
 /*-------------------------------------------------------------------------------------------*/
 /************************************* SIDEBAR STYLES *****************************************/
@@ -997,6 +1000,9 @@ li.wsr-side-menu__item:focus > a {
   background-color: #CE112D;
   color: white;
 }
+/*-------------------------------------------------------------------------------------------*/
+/************************************ SPINNER LOADER STYLES **********************************/
+/*-------------------------------------------------------------------------------------------*/
 .loader,
 .loader:before,
 .loader:after {
@@ -1063,6 +1069,31 @@ li.wsr-side-menu__item:focus > a {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+.wsr-contact__name {
+  font-weight: 300;
+  color: #002b4a;
+  margin-bottom: 10px;
+}
+.wsr-contact__phone,
+.wsr-contact__email {
+  white-space: nowrap;
+}
+.Cal__Header__root {
+  background-color: #002b4a !important;
+}
+.Cal__Weekdays__root {
+  background-color: #00497d !important;
+}
+.Cal__Day__selection {
+  background-color: #CE112D !important;
+}
+.Cal__Header__date {
+  font-family: "Gotham Pro" !important;
+  font-size: 1em;
+}
+.Cal__Month__rows {
+  background: white !important;
 }
 /*
 Should we change this at all?

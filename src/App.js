@@ -34,7 +34,7 @@ class App extends Component {
                 <Row>
                   <Col xs={ 0 } sm={ 4 } md={ 3 } lg={ 2 } />
                   <Col xs={ 12 } sm={ 5 } md={ 4 } lg={ 5 }>
-                    <WsrBlockTitle title="Важная информация" />
+                    <WsrBlockTitle link="/press/important" title="Важная информация" />
                     <WsrBlock type="wsr-block-important" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
 На международном чемпионата China International Skills Competition 2017 (CISC-2017)"
                       date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
