@@ -57,7 +57,6 @@ const Routes = () => (
             { /* Press */ }
 
             <Route exact path="/press" render={ () => ( <Redirect to="/press/contact" /> ) } />
-            <Route exact path="/press/contact" component={ Contact } />
             <Route path="/press/contact" component={ Contact } />
             <Route path="/press/important" component={ Important } />
             <Route path="/press/photo-gallery" component={ PhotoGallery } />
