@@ -440,69 +440,79 @@ export class WsrFooter extends React.Component {
 
             <Row>
             <Col xs={ 0 } sm={ 10 } md={ 2 } />
-              <Col xs={ 12 } md={ 5 }>
-              <h7 className="wsr-footer__heading">Региональный координационный центр WorldSkills Russia по городу Москва </h7>
+              <Col xs={ 12 } md={ 10 }>
+              <span className="wsr-footer__heading">
+              <a className="wsr-footer__social-icons" href="https://www.facebook.com/groups/wsrmoscow/">
+              <FaFacebook /></a> 
+              <a className="wsr-footer__social-icons" href="https://vk.com/wsrmoscow">
+              <FaVk /></a>
+              <a className="wsr-footer__social-icons" href="https://www.instagram.com/wsrmoscow_/">
+              <FaInstagram/></a>
+              <a className="wsr-footer__social-icons" href="https://www.youtube.com/channel/UCoAA0xPF2lp2o_RsAuawwMQ">
+              <FaYoutube/></a>
+              <i>© 2017 Региональный координационный центр WorldSkills Russia по городу Москва</i> </span>
               </Col>
-              <Col xs={ 12 } md={ 5 } pullRight>
+              <Col xs={ 12 } md={ 5 } className="pull-right">
               <div className="text-right wsr-social-icons">
-               <FaVk /> <FaFacebook /> <FaInstagram/> <FaYoutube/>
+               
                </div>
                </Col>
               </Row>
              
             
-            <Row className="wsr_block-menu__divider"></Row>
-              <div className="wsr_footer__divider" />
+            <Row className="wsr-footer__divider"></Row>
+            <Row className="wsr-footer__menu">
               <Col xs={ 0 } sm={ 10 } md={ 2 } />
               <Col xs={ 12 } md={ 1 }>
-                <h7 className="wsr-footer__heading">
+                <h7 className="wsr-footer__title">
                   { "Wsr в Москве".toUpperCase() }
                 </h7>
-                <p>Об РКЦ</p>
-                <p>История WorldSkills</p>
-                <p>Активные мероприятия</p>
+                <a href="">Об РКЦ</a>
+                <a href="">История WorldSkills</a>
+                <a href="">Активные мероприятия</a>
               </Col>
               <Col xs={ 12 } sm={ 2 } md={ 1 }>
-                <h7 className="wsr-footer__heading">
+                <h7 className="wsr-footer__title">
                   { "Эксперты".toUpperCase() }
                 </h7>
-                <p>Информация для экспертов</p>
+                <a href="">Информация для экспертов</a>
               </Col>
               <Col xs={ 12 } sm={ 2 } md={ 1 }>
-                <h7 className="wsr-footer__heading">
+                <h7 className="wsr-footer__title">
                   { "СЦК".toUpperCase() }
                 </h7>
               </Col>
               <Col xs={ 12 } sm={ 2 } md={ 2 }>
-                <h7 className="wsr-footer__heading">
+                <h7 className="wsr-footer__title">
                   { "Компетенции".toUpperCase() }
                 </h7>
               </Col>
               <Col xs={ 12 } sm={ 2 } md={ 2 }>
-                <h7 className="wsr-footer__heading">
+                <h7 className="wsr-footer__title">
                   { "Проекты".toUpperCase() }
                 </h7>
-                <p>Региональный эксперт WSR</p>
-                <p>Эксперт ДЭ</p>
-                <p>Обучение становлению СЦК</p>
-                <p>Обучение экспертов WorldSkills</p>
+                <a href="">Региональный эксперт WSR</a>
+                <a href="">Эксперт ДЭ</a>
+                <a href="">Обучение становлению СЦК</a>
+                <a href="">Обучение экспертов WorldSkills</a>
               </Col>
               <Col xs={ 12 } sm={ 2 } md={ 1 }>
-                <h7 className="wsr-footer__heading">
+                <h7 className="wsr-footer__title">
                   { "Партнёры".toUpperCase() }
                 </h7>
-                <p>Наши партнёры</p>
-                <p>Стать партнёром</p>
+                <a href="">Наши партнёры</a>
+                <a href="">Стать партнёром</a>
               </Col>
               <Col xs={ 12 } sm={ 2 } md={ 2 }>
-                <h7 className="wsr-footer__heading">
+                <h7 className="wsr-footer__title">
                   { "Пресс-центр".toUpperCase() }
                 </h7>
-                <p>Новости</p>
-                <p>Важная информация</p>
-                <p>Фотогалерея</p>
-                <p>Видеогалерея</p>
+                <a href="">Новости</a>
+                <a href="">Важная информация</a>
+                <a href="">Фотогалерея</a>
+                <a href="">Видеогалерея</a>
               </Col>
+              </Row>
             </Row>
         );
     }

@@ -54,7 +54,7 @@ class Archive extends Component {
                   </Col>
                   <Col sm={ 3 } md={ 3 } lg={ 3 }>
                     <WsrBlockTitle title={ 'Календарь' } />
-                    <InfiniteCalendar locale={ { locale: require('date-fns/locale/ru'), headerFormat: 'dddd, D MMM', weekdays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], blank: 'Aucune date selectionnee', todayLabel: { long: 'Сегодня', short: 'Сег.' } } } width={ window.innerWidth / 3.25 } height={ window.innerHeight  } selected={ today } disabledDays={ [0, 6] }
+                    <InfiniteCalendar locale={ { locale: require('date-fns/locale/ru'), headerFormat: 'dddd, D MMM', weekdays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], blank: 'Не выбрана дата', todayLabel: { long: 'Сегодня', short: 'Сег.' } } } width={ window.innerWidth / 3.25 } height={ window.innerHeight  } selected={ today } disabledDays={ [0, 6] }
                       minDate={ lastWeek } />
                   </Col>
                 </Row>

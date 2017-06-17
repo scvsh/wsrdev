@@ -541,27 +541,40 @@ h5 {
 }
 .wsr-footer__heading {
   color: white;
-  font-weight: bold;
   font-size: 0.8em;
-  cursor: pointer;
   margin-bottom: 1em;
   display: block;
 }
-.wsr-footer p {
+.wsr-footer__title {
+  color: white;
+  font-size: 0.8em;
+  margin-bottom: 1em;
+  display: block;
+  font-weight: bold;
+}
+.wsr-footer__heading i {
+  opacity: 0.8;
+  font-style: normal;
+}
+.wsr-footer__menu a {
   cursor: pointer;
   color: white;
   opacity: 0.5;
   font-size: 0.7em;
+  display: block;
+  padding-bottom: 1em;
 }
 .wsr-footer__divider {
-  margin: 2em;
+  margin-left: 15px;
   height: 1px;
   border-bottom: 2px dotted white;
   opacity: 0.1;
+  margin-bottom: 1em;
 }
-.wsr-social-icons {
+.wsr-footer__social-icons {
   font-size: 1.5em;
-  color: white;
+  padding: 0 1em 0 0em;
+  color: white !important;
 }
 /*-------------------------------------------------------------------------------------------*/
 /************************************* SIDEBAR STYLES *****************************************/
