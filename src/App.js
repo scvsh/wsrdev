@@ -81,56 +81,7 @@ class App extends Component {
                         date="26.04.2017" />
                     </WsrBlockBlank>
                   </Col>
-                  <Modal show={ false }>
-                  <Modal.Dialog >
-                    <Modal.Header>
-                      <Modal.Title className="text-center">Модальное окно</Modal.Title>
-                    </Modal.Header>
-
-                    <Modal.Body>
-                     <Form horizontal>
-                        <FormGroup controlId="formHorizontalEmail">
-                          <Col componentClass={ControlLabel} sm={2}>
-                            Почта
-                          </Col>
-                          <Col sm={10}>
-                            <FormControl type="email" placeholder="Введите адрес" />
-                          </Col>
-                        </FormGroup>
-
-                        <FormGroup controlId="formHorizontalPassword">
-                          <Col componentClass={ControlLabel} sm={2}>
-                            Пароль
-                          </Col>
-                          <Col sm={10}>
-                            <FormControl type="password" placeholder="Ввведите пароль" />
-                          </Col>
-                        </FormGroup>
-
-                        <FormGroup>
-                          <Col xs={6} smOffset={2} sm={5}>
-                            <Checkbox>Запомнить этот браузер</Checkbox>
-                          </Col>
-                          <Col  xs={6} sm={5}>
-                            <FormControl.Static className="text-right wsr-forgot-password">
-                                Забыли пароль?
-                              </FormControl.Static>
-                          </Col>
-                              
-                        </FormGroup>
-
-                        <FormGroup>
-                          <Col smOffset={2} sm={10}>
-                            <Button type="submit">
-                              Войти
-                            </Button>
-                          </Col>
-                        </FormGroup>
-                      </Form>
-                    </Modal.Body>
-
-                  </Modal.Dialog>
-                  </Modal>
+                  
                   { /* Block partners */ }
                   <Col xs={ 12 } sm={ 0 } md={ 2 }>
                   

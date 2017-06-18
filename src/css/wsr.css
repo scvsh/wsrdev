@@ -15,6 +15,9 @@ body {
 h2 h3 {
   font-weight: normal !important;
 }
+hr {
+  margin-top: 2em;
+}
 .btn-default {
   background-color: #CE112D;
   border-color: #CE112D;
@@ -256,16 +259,13 @@ li .active > a:any-link {
 .wsr-thumbnail {
   border: none;
 }
-h4 {
-  font-weight: bold;
-}
 .wsr-media {
   margin-top: 0;
 }
 .thumbnail .caption {
   padding: 0px;
 }
-p {
+.wsr-block__date {
   opacity: .7;
 }
 .label {
@@ -404,13 +404,6 @@ p {
   color: #CE112D;
   margin-top: 0;
   padding-top: 20px;
-}
-.wsr-block__heading h2,
-h3 {
-  font-weight: normal;
-}
-.wsr-block__heading h4,
-h5 {
   font-weight: 300;
 }
 .wsr-block__heading:hover {
@@ -663,29 +656,44 @@ h5 {
 /*-------------------------------------------------------------------------------------------*/
 /************************************ PAGE MENU STYLES ***************************************/
 /*-------------------------------------------------------------------------------------------*/
-.wsr-page__heading {
-  cursor: pointer;
-  color: #CE112D;
-  margin-top: 0;
-  padding-top: 2em;
-  font-weight: normal !important;
-}
 .wsr_page__container {
   padding-right: 25px;
   padding-left: 25px;
   padding-bottom: 2em;
+  padding-top: 2em;
 }
-.wsr-page__description {
+.wsr-page__content li {
+  padding: .5em 0.5em .5em 0.5em;
+}
+.wsr-page__content ul {
+  padding-bottom: 0.5em;
+  padding-left: 2em;
+}
+.wsr-page__content img {
+  padding: 4px;
+  margin-bottom: 21px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.wsr-page__content img:hover {
+  border-color: #CE112D;
+}
+.wsr-page__content {
   font-size: 0.9em;
   opacity: 1;
 }
 .wsr-page .thumbnail {
   margin-top: 2em;
-}
-.wsr-page__description p {
-  opacity: 0.8;
-  padding-top: 2em;
-  margin-bottom: 0;
 }
 .wsr-page {
   border-top: 3px solid #CE112D;
@@ -697,7 +705,7 @@ h4,
 h5,
 h6 {
   color: #CE112D;
-  margin-bottom: 0px;
+  font-weight: normal;
 }
 .wsr-page a {
   color: #CE112D;

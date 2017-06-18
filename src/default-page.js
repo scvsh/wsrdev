@@ -6,7 +6,7 @@ import { LinkContainer } from "react-router-bootstrap";
 
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { Panel, Thumbnail, Grid, Row, Col, Image } from "react-bootstrap";
+import { Form, FormGroup, FormControl, ControlLabel, Checkbox, Modal, Button, Thumbnail, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
@@ -15,6 +15,20 @@ import { WsrNewsItem, WsrCarousel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlock
 /* Main app */
 
 class DefaultPage extends Component {
+
+      constructor(props) {
+        super(props);
+        this.state = { showModal: false };
+      }
+
+      closeModal = () => {
+        this.setState({ showModal: false });
+      }
+
+      openModal = () => {
+        this.setState({ showModal: true });
+      }
+
     render() {
         return (
             <div className="App">
@@ -27,25 +41,111 @@ class DefaultPage extends Component {
                 <Row>
                   <Col xs={ 0 } sm={ 4 } md={ 3 } lg={ 2 } />
                   <Col xs={ 12 } sm={ 5 } md={ 6 } lg={ 7 }>
-                    <WsrBlockTitle title="Важная информация" />
-                    <WsrPage type="wsr-page" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="" date="10.05.2017">
-                      <p>Национальная сборная WorldSkills Russia попала в командный рейтинг международного чемпионата Китая, завоевав 2 золотые, 5 серебряных и 4 бронзовые медали. Результаты соревнований по профессиональному мастерству были объявлены 9 июня в Шанхае на торжественной церемонии закрытия международного чемпионата China International Skills Competition 2017 (CISC-2017).
-                      </p>
-                      <p>Российские конкурсанты завоевали две золотые медали: по электронике и технологиям моды. Серебряные медали в копилку российской сборной добавили участники соревнований CISC-2017 по компетенциям: кузовной ремонт, кондитерское дело, мобильная робототехника, хлебопечение, а также графический дизайн. Серебряную медаль по компетенции «Графический дизайн» в копилку команды принесла участница Сборной команды WorldSkills Москвы - Анна Беликова (на фото слева), занявшая на Национальном чемпионате 2016 по компетенции «Графический дизайн» второе место (серебряная медаль).
-                      </p>
-                      <Thumbnail href="#" alt="171x180" src="/Images/thumb06.jpg" />
+                    <WsrBlockTitle title="Набор тегов базовой страницы" />
+                    <WsrPage type="wsr-page" heading="" description="" date="10.05.2017">
+                      <h3>Заголовки</h3>
+                      <hr />
+                      <h1>h1. Это очень большой заголовок</h1>
+                      <h2>h2. Это большой заголовок</h2>
+                      <h3>h3. Это средний заголовок</h3>
+                      <h4>h4. Это небольшой заголовок</h4>
+                      <h5>h5. Это маленький заголовок</h5>
+                      <h6>h6. Это крошечный заголовок</h6>
+                      <hr />
+                      <h3>Параграф</h3>
                       <p>
-                        Обладателями бронзовых медалей стали члены национальной сборной WorldSkills Russia по сварочным технологиям, промышленной автоматике, парикмахерскому искусству и по компетенции «Программные решения для бизнеса».
+                        Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's
+                        the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the
+                        kids. They called me Mr Glass.
                       </p>
+                      <h3>Изображение</h3>
+                      <img src="/Images/about/2.jpg" alt=""></img>
+                      <hr />
+                      <h3>Ссылки</h3>
                       <p>
-                        Медальоны за профессионализм были присуждены участникам соревнований по компетенциям «Мехатроника», «Прикладная эстетика», «Ресторанный сервис», «Информационные кабельные сети» и «Ремонт и обслуживание легковых автомобилей». Такую награду присуждают конкурсантам, которые качественно и полностью выполнили задание, но не дотянули до медали.
+                        Now that we know who you are, I know who I am. I'm not a <a href="">mistake!</a> It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's
+                        the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the
+                        kids. They called me Mr Glass.
                       </p>
-                      <p>
-                      Российская национальная сборная приняла участие в чемпионате Китая в составе 23 человек. Конкурсантов сопровождал 21 международный эксперт WorldSkills Russia.
-                      </p>
-                      <Panel className="wsr-page__panel">
-                        <span>Источник новости: worldskills.ru</span>
-                      </Panel>
+                      <hr />
+                      <h3>Стили текста</h3>
+                      <b>b. Жирный</b> <br />
+                      <em>em. Курсивный</em><br />
+                      <cite>cite. Цитата в параграфе</cite><br />
+                      <pre>pre. Текстовая панель</pre><br />
+                      <hr />
+                      <h3>Список</h3>
+                      <ul>
+                        <li>Элемент списка с большим содержанием</li>
+                        <li>Элемент списка</li>
+                        <li>Элемент списка
+                          <ul>
+                            <li>Вложенный элемент списка</li>
+                            <li>Вложенный элемент списка</li>
+                            <li>Вложенный элемент списка</li>
+                          </ul>
+                        </li>
+                        <li>Элемент списка</li>
+                        <li>Элемент списка</li>
+                        <li>Элемент списка</li>
+                      </ul>
+                      <hr />
+                      <h3>Цитата</h3>
+                      <blockquote>Those people who think they know everything are a great annoyance to those of us who do.<cite>Isaac Asimov</cite></blockquote>
+                      <Button onClick={this.openModal}>
+                      Открыть модальное окно
+                      </Button>
+
+
+                      <Modal show={this.state.showModal} onHide={this.closeModal}>
+                    <Modal.Header closeButton>
+                      <Modal.Title className="text-center">Модальное окно</Modal.Title>
+                    </Modal.Header>
+
+                    <Modal.Body>
+                     <Form horizontal>
+                        <FormGroup controlId="formHorizontalEmail">
+                          <Col componentClass={ControlLabel} sm={2}>
+                            Почта
+                          </Col>
+                          <Col sm={10}>
+                            <FormControl type="email" placeholder="Введите адрес" />
+                          </Col>
+                        </FormGroup>
+
+                        <FormGroup controlId="formHorizontalPassword">
+                          <Col componentClass={ControlLabel} sm={2}>
+                            Пароль
+                          </Col>
+                          <Col sm={10}>
+                            <FormControl type="password" placeholder="Ввведите пароль" />
+                          </Col>
+                        </FormGroup>
+
+                        <FormGroup>
+                          <Col xs={6} smOffset={2} sm={5}>
+                            <Checkbox>Запомнить этот браузер</Checkbox>
+                          </Col>
+                          <Col  xs={6} sm={5}>
+                            <FormControl.Static className="text-right wsr-forgot-password">
+                                Забыли пароль?
+                              </FormControl.Static>
+                          </Col>
+                              
+                        </FormGroup>
+
+                        <FormGroup>
+                          <Col smOffset={2} sm={10}>
+                            <Button type="submit">
+                              Войти
+                            </Button>
+                          </Col>
+                        </FormGroup>
+                      </Form>
+                    </Modal.Body>
+                  </Modal>
+
+
                     </WsrPage>
                   </Col>
                   <Col sm={ 3 } md={ 3 } lg={ 3 }>

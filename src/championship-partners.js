@@ -38,12 +38,12 @@ class Championship extends Component {
                         <br/>
                         <br/><a href="http://www.prosv.ru/">Издательство «Просвещение»</a> поддержало компетенцию «Преподаватель младших классов».
                       </p>
-                      <Thumbnail href="#" alt="171x180" src="/Images/championship/1.jpg" />
+                      <Image href="#" alt="171x180" src="/Images/championship/1.jpg" />
                       <p>
 <a href="http://ru.dmgmori.com/">Компания DMG MORI</a> Россия поддержала компетенцию «Фрезерные работы на станках с ЧПУ».                        <br/>
 <br/><br/>   <a href="http://www.mkn.de/cms/mkn/en/mkn/"> Компания MKN (Maschinenfabrik Kurt Neubauer GmbH&Co) </a>являлась партнером чемпионата по компетенции «Поварское дело».
                   </p>
-                  <Thumbnail href="#" alt="171x180" src="/Images/championship/2.jpg" />
+                  <Image href="#" alt="171x180" src="/Images/championship/2.jpg" />
                     </WsrPage>
                   </Col>
                   <Col sm={ 3 } md={ 3 } lg={ 3 }>

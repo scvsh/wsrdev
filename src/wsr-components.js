@@ -525,10 +525,10 @@ export class WsrPage extends React.Component {
             <div className={ "wsr-block " + _props.type }>
               <Row>
                 <Col sm={ 9 } md={ 12 } className="wsr_page__container">
-                  <h3 className="text-left wsr-page__heading">
-                                                                                                    { _props.heading }
+                  <h3>
+                                                                                                    { _props.heading ? _props.heading : "" }
                                                                                                 </h3>
-                  <div className="wsr-page__description">
+                  <div className="wsr-page__content">
                     { _props.description ? " <p> { _props.description } </p> " : false }
                     { _props.children }
                   </div>
