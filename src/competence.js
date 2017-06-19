@@ -37,10 +37,10 @@ class Competence extends Component {
                         <WsrBlockTitle title="Категории" />
                         <WsrBlockBlank className="wsr-block-select">
                           <Nav bsStyle="pills" className="wsr-competence-category" stacked>
-                            <NavItem eventKey="1" href="">
+                            <NavItem eventKey="1">
                               Специалисты строительной сферы
                             </NavItem>
-                            <NavItem eventKey="2" href="">
+                            <NavItem eventKey="2">
                               Творчество и дизайн
                             </NavItem>
                             <NavItem eventKey="3">

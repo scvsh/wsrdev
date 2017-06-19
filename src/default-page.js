@@ -72,7 +72,7 @@ class DefaultPage extends Component {
                       <b>b. Жирный</b> <br />
                       <em>em. Курсивный</em><br />
                       <cite>cite. Цитата в параграфе</cite><br />
-                      <pre>pre. Текстовая панель</pre><br />
+                      <pre>pre. Текстовая панель</pre>
                       <hr />
                       <h3>Список</h3>
                       <ul>

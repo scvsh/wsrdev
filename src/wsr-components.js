@@ -39,7 +39,7 @@ export class WsrMenuTitle extends React.Component {
     render() {
         return (
             <Link to="/">
-              <div className="wsr-title" href="/">
+              <div className="wsr-title">
                 <div className="wsr-title-descriptor">
                   Региональный координационный центр
                 </div>
@@ -175,12 +175,12 @@ export class WsrMainMenu extends React.Component {
                             </NavItem>
                           </LinkContainer>
                           <LinkContainer to="/partners">
-                            <NavItem className="wsr-menu-item" eventKey={ 6 } href="/home">
+                            <NavItem className="wsr-menu-item" eventKey={ 6 }>
                               { "Партнёры".toUpperCase() }
                             </NavItem>
                           </LinkContainer>
                           <LinkContainer to="/press">
-                            <NavItem className="wsr-menu-item" eventKey={ 3 } href="/home">
+                            <NavItem className="wsr-menu-item" eventKey={ 3 }>
                               { "Пресс-центр".toUpperCase() }
                             </NavItem>
                           </LinkContainer>
@@ -342,7 +342,7 @@ export class WsrNewsItem extends React.Component {
         let _props = this.props;
         return (
             <Row className="wsr_block-menu__item">
-              <Col md={ 12 }>
+              <Col md={ 12 } className="wsr_block-news__wrapper">
                 <h5 className="text-left wsr-block__heading">
                                                                                                 <TextTruncate
                         line={ 4 }
@@ -592,7 +592,7 @@ export class WsrTeamMember extends React.Component {
 export class WsrCompetenceCategory extends React.Component {
     render() {
         let _props = this.props;
-        let listItems = _props.competences.map((competence, index) => <NavItem key={ index } eventKey={ index + 1 + "c" } href="">
+        let listItems = _props.competences.map((competence, index) => <NavItem key={ index } eventKey={ index + 1 + "c" } >
                                                                         { competence }
                                                                       </NavItem>
         );
@@ -609,7 +609,7 @@ export class WsrCompetenceCategory extends React.Component {
 export class WsrCompetence extends React.Component {
     render() {
         let _props = this.props;
-        let listItems = _props.competences.map((competence, index) => <NavItem key={ index } eventKey={ index + 1 + "c" } href="">
+        let listItems = _props.competences.map((competence, index) => <NavItem key={ index } eventKey={ index + 1 + "c" }>
                                                                         { competence }
                                                                       </NavItem>
         );

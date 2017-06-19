@@ -28,6 +28,7 @@ class Archive extends Component {
     render() {
         var today = new Date();
         var lastWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7);
+        var lastYear = new Date(today.getFullYear() - 1, today.getMonth(), today.getDate() );
         return (
             <div className="App">
               { /* Header carousel */ }
@@ -54,8 +55,8 @@ class Archive extends Component {
                   </Col>
                   <Col sm={ 3 } md={ 3 } lg={ 3 }>
                     <WsrBlockTitle title={ 'Календарь' } />
-                    <InfiniteCalendar locale={ { locale: require('date-fns/locale/ru'), headerFormat: 'dddd, D MMM', weekdays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], blank: 'Не выбрана дата', todayLabel: { long: 'Сегодня', short: 'Сег.' } } } width={ window.innerWidth / 3.25 } height={ window.innerHeight  } selected={ today } disabledDays={ [0, 6] }
-                      minDate={ lastWeek } />
+                    <InfiniteCalendar selected={new Date(2017, 6, 25)} locale={ { locale: require('date-fns/locale/ru'), headerFormat: 'dddd, D MMM', weekdays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], blank: 'Не выбрана дата', todayLabel: { long: 'Сегодня', short: 'Сег.' } } } width={ window.innerWidth / 3.25 } height={ window.innerHeight  }  disabledDays={ [0, 7] }
+                      minDate={ lastYear } />
                   </Col>
                 </Row>
                 { /* Bottom Gallery */ }

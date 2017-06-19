@@ -54,14 +54,16 @@ class History extends Component {
                         С каждым годом все больше специалистов разнообразных рабочих профессий из различных регионов стремятся принять участие в соревнованиях.
                         <br/>
                       </p>
-                      <Nav bsStyle="tabs" activeKey="1" onSelect={ this.handleSelect }>
-                        <NavItem active eventKey="1" href="/home">2012 год</NavItem>
-                        <NavItem eventKey="2" href="/home">2013</NavItem>
-                        <NavItem eventKey="3" href="/home">2014</NavItem>
-                        <NavItem eventKey="4" href="/home">2015</NavItem>
-                        <NavItem eventKey="5" href="/home">2016</NavItem>
-                        <NavItem eventKey="6" href="/home">2017</NavItem>
+                      <div className ="wsr-page__tabs">
+                      <Nav bsStyle="tabs" className="wsr-page__tabs" activeKey="1" onSelect={ this.handleSelect }>
+                        <NavItem active eventKey="1">2012 год</NavItem>
+                        <NavItem eventKey="2">2013</NavItem>
+                        <NavItem eventKey="3">2014</NavItem>
+                        <NavItem eventKey="4">2015</NavItem>
+                        <NavItem eventKey="5">2016</NavItem>
+                        <NavItem eventKey="6">2017</NavItem>
                       </Nav>
+                      </div>
                       <p>На I Московском чемпионате были представлены 6 компетенций и 1 участник от города Москва.
                       </p>
                       <Row className="wsr-page__gallery">

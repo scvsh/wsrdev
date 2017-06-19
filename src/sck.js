@@ -36,13 +36,13 @@ class Sck extends Component {
                       <p>Специализированный центр компетенций (СЦК) — это центр развития профессий и профессиональных сообществ WorldSkills, ресурсный центр, обладающий современным оборудованием и технологиями, отвечающими требованиям WorldSkills, а также наличием экспертов для осуществления обучения и оценки соответствующей квалификации по стандартам WorldSkills.
                       </p>
                       <ListGroup className="wsr-file-list">
-                        <ListGroupItem href="/sck"><MdFileDownload className="ri-down"/>Информационное письмо от Союза WorldSkills Russia<WsrSizeLabel size="10 кб" extension=".doc"/></ListGroupItem>
-                        <ListGroupItem href="/sck"><MdFileDownload className="ri-down"/>Положение об аккредитации СЦК<WsrSizeLabel size="15 кб" extension=".doc"/></ListGroupItem>
-                        <ListGroupItem href="/sck"><MdFileDownload className="ri-down"/>Форма заявки на прохождение аккредитации в качестве СЦК<WsrSizeLabel size="11 кб" extension=".doc"/></ListGroupItem>
-                        <ListGroupItem href="/sck"><MdFileDownload className="ri-down"/>Документы по соответсвию деятельности<WsrSizeLabel size="20 кб" extension=".doc"/></ListGroupItem>
-                        <ListGroupItem href="/sck"><MdFileDownload className="ri-down"/>Обязательства СЦК перед Союзом WorldSkills Russia<WsrSizeLabel size="10 кб" extension=".doc"/></ListGroupItem>
-                        <ListGroupItem href="/sck"><MdFileDownload className="ri-down"/>Договор<WsrSizeLabel size="130 кб" extension=".doc"/></ListGroupItem>
-                        <ListGroupItem href="/sck"><MdFileDownload className="ri-down"/>Положительные результаты и статус СЦК<WsrSizeLabel size="10 кб" extension=".doc"/></ListGroupItem>
+                        <ListGroupItem href="#"><MdFileDownload className="ri-down"/>Информационное письмо от Союза WorldSkills Russia<WsrSizeLabel size="10 кб" extension=".doc"/></ListGroupItem>
+                        <ListGroupItem href="#"><MdFileDownload className="ri-down"/>Положение об аккредитации СЦК<WsrSizeLabel size="15 кб" extension=".doc"/></ListGroupItem>
+                        <ListGroupItem href="#"><MdFileDownload className="ri-down"/>Форма заявки на прохождение аккредитации в качестве СЦК<WsrSizeLabel size="11 кб" extension=".doc"/></ListGroupItem>
+                        <ListGroupItem href="#"><MdFileDownload className="ri-down"/>Документы по соответсвию деятельности<WsrSizeLabel size="20 кб" extension=".doc"/></ListGroupItem>
+                        <ListGroupItem href="#"><MdFileDownload className="ri-down"/>Обязательства СЦК перед Союзом WorldSkills Russia<WsrSizeLabel size="10 кб" extension=".doc"/></ListGroupItem>
+                        <ListGroupItem href="#"><MdFileDownload className="ri-down"/>Договор<WsrSizeLabel size="130 кб" extension=".doc"/></ListGroupItem>
+                        <ListGroupItem href="#"><MdFileDownload className="ri-down"/>Положительные результаты и статус СЦК<WsrSizeLabel size="10 кб" extension=".doc"/></ListGroupItem>
                       </ListGroup>
                     </WsrPage>
                   </Col>

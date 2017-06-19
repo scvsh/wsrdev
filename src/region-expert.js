@@ -37,7 +37,7 @@ class RegionExpert extends Component {
                         <br />
                         <br /> Старт группы по обучению по программе «Региональный эксперт» состоится 13-14 июня 2017г</p>
                       <ListGroup className="wsr-file-list">
-                        <ListGroupItem href="/sck">
+                        <ListGroupItem href="#">
                           <MdFileDownload className="ri-down" />Форма заявки на обучение по программе «Региональный эксперт»
                           <WsrSizeLabel size="10 кб" extension=".doc" />
                         </ListGroupItem>
@@ -51,7 +51,7 @@ class RegionExpert extends Component {
                         <span>Стоимость для одного слушателя: 50 000 руб. (с учетом НДС)<br /></span>
                       </Panel>
                       <ListGroup className="wsr-file-list">
-                        <ListGroupItem href="/sck">
+                        <ListGroupItem href="#">
                           <MdFileDownload className="ri-down" />Программа обучения «Региональный эксперт WorldSkills Russia»
                           <WsrSizeLabel size="10 кб" extension=".doc" />
                         </ListGroupItem>
