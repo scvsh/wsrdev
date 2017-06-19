@@ -215,12 +215,12 @@ export class WsrCarouselCaption extends React.Component {
               
                 <Col xs={ 2 } sm={3} md={ 3 } lg={ 3 } className="wsr-carousel-menu__bg pull-right">
                   <Button bsClass="wsr-skewed-btn skew-left text-right">
-                    <LinkContainer className="skew-right" to="/archive">
+                    
                     <span className="skew-right">
                                                                                                                 <MdApps className="ri-big" />
                                                                                                                     Архив мероприятий
                                                                                                               </span>
-                                                                                                              </LinkContainer>
+                                                                                                              
                   </Button>
                   <Nav className="wsr-carousel-menu text-right pull-right" bsStyle="pills" stacked activeKey={ 1 }>
                     <LinkContainer exact to="/championship">
