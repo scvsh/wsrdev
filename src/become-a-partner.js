@@ -37,7 +37,7 @@ class BecomePartner extends Component {
                         перспективного и социально важного движения WorldSkills Russia!
                       </p>
                       <ListGroup className="wsr-file-list">
-                        <ListGroupItem>
+                        <ListGroupItem href="#">
                           <MdFileDownload className="ri-down" />Партнерство и Сотрудничество
                           <WsrSizeLabel size="10 кб" extension=".doc" />
                         </ListGroupItem>

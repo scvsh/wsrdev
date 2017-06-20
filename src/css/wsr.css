@@ -63,6 +63,12 @@ li .active > a:any-link {
 .wsr-affix-container {
   direction: ltr;
 }
+.wsr-carousel-red {
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .wsr-affix {
   overflow-y: auto;
   background-color: #002b4a;
@@ -89,12 +95,15 @@ li .active > a:any-link {
   padding-left: 0;
   max-height: 400px;
   padding-right: 0;
+  height: 300px;
+}
+.red-stage .owl-stage-outer {
+  height: 300px;
 }
 .wsr-col-inherit {
   height: inherit;
 }
 .wsr-header__image {
-  background-image: url(/Images/carousel/gallery02.jpg);
   height: 50vh;
   max-height: 400px;
   width: 100%;
@@ -105,7 +114,7 @@ li .active > a:any-link {
   margin-bottom: 20px;
 }
 .wsr-carousel-menu {
-  padding-top: 10%;
+  padding-top: 1em;
   font-family: 'Gotham Pro';
   font-weight: 300;
   font-style: normal;
@@ -367,7 +376,7 @@ li .active > a:any-link {
   transition: 300ms ease-out;
 }
 .wsr_block__container {
-  padding-right: 0px;
+  padding-right: 20px;
   padding-left: 20px;
   font-size: 0.9em;
 }
@@ -433,6 +442,7 @@ li .active > a:any-link {
   padding-top: 10px;
   margin-bottom: 10px;
   cursor: pointer;
+  display: block;
 }
 .wsr-block__title:hover {
   opacity: 0.5;
@@ -1229,8 +1239,14 @@ Should we change this at all?
   .wsr-header__carousel {
     padding-top: 50px;
   }
+  .wsr-block__title {
+    margin-top: 3em;
+  }
 }
 @media (max-width: 480px) {
+  .wsr-block__title {
+    margin-top: 3em;
+  }
   .wsr-header__image {
     display: none;
   }
