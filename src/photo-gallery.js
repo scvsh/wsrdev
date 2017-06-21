@@ -32,14 +32,14 @@ class PhotoGallery extends Component {
                     <WsrBlockTitle title="Альбомы" />
                   
                       <Row className="wsr-photo-gallery-row">
-                        <WsrGalleryItem album="press/photo-gallery/album1/" title="Сборная команда WorldSkills Москвы — 2017" thumbnail="/Images/photo-gallery/album1/1.jpg" description="Альбом сборной"/>
-                        <WsrGalleryItem album="press/photo-gallery/album2/" title="Финал V Национального чемпионата «Молодые профессионалы» (WorldSkills Russia), май 2017" thumbnail="/Images/photo-gallery/album2/1.jpg" description="Альбом сборной"/>
-                        <WsrGalleryItem album="press/photo-gallery/album3/" title="Всероссийские отборочные соревнования WorldSkills в Москве, март 2017" thumbnail="/Images/photo-gallery/album3/1.jpg" description="Альбом сборной"/>
+                        <WsrGalleryItem album="album/" title="Сборная команда WorldSkills Москвы — 2017" thumbnail="/Images/photo-gallery/album1/1.jpg" description="Альбом сборной"/>
+                        <WsrGalleryItem album="album/" title="Финал V Национального чемпионата «Молодые профессионалы» (WorldSkills Russia), май 2017" thumbnail="/Images/photo-gallery/album2/1.jpg" description="Альбом сборной"/>
+                        <WsrGalleryItem album="album/" title="Всероссийские отборочные соревнования WorldSkills в Москве, март 2017" thumbnail="/Images/photo-gallery/album3/1.jpg" description="Альбом сборной"/>
                       </Row>
                       <Row className="wsr-photo-gallery-row">  
-                        <WsrGalleryItem album="press/photo-gallery/album4/" title="Демонстрационный экзамен по стандартам WS, январь-февраль 2017" thumbnail="/Images/photo-gallery/album4/1.jpg" description="Альбом сборной"/>
-                        <WsrGalleryItem album="press/photo-gallery/album5/" title="Региональные отборочные соревнования WS в Москве, февраль 2017" thumbnail="/Images/photo-gallery/album5/1.jpg" description="Альбом сборной"/>
-                        <WsrGalleryItem album="press/photo-gallery/album6/" title="Сборы Сборной команды WS Москва, январь 2017" thumbnail="/Images/photo-gallery/album6/1.jpg" description="Альбом сборной"/>
+                        <WsrGalleryItem album="album/" title="Демонстрационный экзамен по стандартам WS, январь-февраль 2017" thumbnail="/Images/photo-gallery/album4/1.jpg" description="Альбом сборной"/>
+                        <WsrGalleryItem album="album/" title="Региональные отборочные соревнования WS в Москве, февраль 2017" thumbnail="/Images/photo-gallery/album5/1.jpg" description="Альбом сборной"/>
+                        <WsrGalleryItem album="album/" title="Сборы Сборной команды WS Москва, январь 2017" thumbnail="/Images/photo-gallery/album6/1.jpg" description="Альбом сборной"/>
                       </Row>
                   
 

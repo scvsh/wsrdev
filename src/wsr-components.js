@@ -173,8 +173,8 @@ export class WsrMainMenu extends React.Component {
                           <div>
                             <Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left">
                               <span className="skew-left">
-                                                                                                                         <MdVpnKey className="ri-big" />
-                                                                                                                          Личный кабинет                                                                                             </span>
+                                                                                                                         <MdSearch className="ri-big" />
+                                                                                                                          Поиск                                                                                           </span>
                             </Button>
                           </div>
                         </LinkContainer>
@@ -215,14 +215,7 @@ export class WsrMainMenu extends React.Component {
                             </NavItem>
                           </LinkContainer>
                         </Nav>
-                        <Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left">
-                          { " " }
-                          <span className="skew-left">
-                                                                                                                                                                                                                                    <MdSearch className="ri-big" />
-                                                                                                                                                                                                                                    Поиск
-                                                                                                                                                                                                                                </span>
-                          { " " }
-                        </Button>
+                        
                       </Row>
                     </div>
                     <WsrMenuBg />
@@ -257,12 +250,14 @@ export class WsrCarouselCaption extends React.Component {
 
             <Col xsOffset={ 1 } xs={ 11 } className="wsr-col-inherit wsr-carousel-red">
               <Col xs={ 2 } sm={ 3 } md={ 4 } lg={ 3 } className="wsr-carousel-menu__bg pull-right">
-                <Button bsClass="wsr-skewed-btn skew-left text-right">
-                  <span className="skew-right">
+              <Button bsClass="wsr-skewed-btn skew-left text-right">
+                  <LinkContainer to="/archive"><span className="skew-right">
                                                                                                                                         <MdApps className="ri-big" />
                                                                                                                                             Архив мероприятий
                                                                                                                                       </span>
+                </LinkContainer>
                 </Button>
+
                 <Nav ref="red-stage-nav" className="wsr-carousel-menu text-right pull-right" bsStyle="pills" stacked activeKey={ this.state.activeNav }>
                   <LinkContainer exact to="/championship" eventKey={ 1 }>
                     <NavItem className="wsr-carousel-menu-item ">
@@ -341,30 +336,6 @@ export class WsrCarousel extends React.Component {
     }
 }
 
-export class WsrCarouselBackup extends React.Component {
-
-    render() {
-        let _props = this.props;
-        return (
-            <Row className="wsr-header__image">
-              <OwlCarousel ref="car" options={ options } events={ events }>
-                <div><img src="/Images/carousel/gallery01.jpg" alt="The Last of us" /></div>
-                <div><img src="/Images/carousel/gallery02.jpg" alt="GTA V" /></div>
-                <div><img src="/Images/carousel/gallery03.jpg" alt="Mirror Edge" /></div>
-                <div><img src="/Images/carousel/gallery03.jpg" alt="Mirror Edge" /></div>
-              </OwlCarousel>
-              <svg width="0" height="0">
-                <clipPath id="ClipRight" clipPathUnits="objectBoundingBox">
-                  <polygon points="0.28 1, 1 1,1 0,0 0">
-                  </polygon>
-                </clipPath>
-              </svg>
-              <WsrCarouselCaption />
-            </Row>
-
-        );
-    }
-}
 
 export class WsrImage extends Component {
     render() {
@@ -862,6 +833,23 @@ export class WsrGalleryItem extends React.Component {
         );
     }
 }
+
+export class WsrGalleryPhoto extends React.Component {
+    render() {
+        let _props = this.props;
+
+        return (
+            <Col xs={ 6 } md={ 4 }>
+              <LinkContainer className="wsr-photo-gallery-photo" to={ _props.album }>
+                <Thumbnail src={ _props.thumbnail } alt={ _props.title }>
+                </Thumbnail>
+              </LinkContainer>
+            </Col>
+
+        );
+    }
+}
+
 
 
 export class WsrChampionshipSideMenu extends React.Component {

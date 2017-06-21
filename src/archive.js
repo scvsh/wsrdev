@@ -40,7 +40,7 @@ class Archive extends Component {
                 <Row>
                   <Col xs={ 0 } sm={ 4 } md={ 3 } lg={ 2 } />
                   <Col xs={ 12 } sm={ 5 } md={ 6 } lg={ 6 }>
-                    <WsrBlockTitle link="/press/important" title="События" />
+                    <WsrBlockTitle link="/press/important" title="Мероприятия" />
                     <WsrBlock type="wsr-block-important" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
             На международном чемпионата China International Skills Competition 2017 (CISC-2017)" date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
                     <WsrBlock type="wsr-block-important" heading="Старт группы по обучению по программе «Региональный эксперт WorldSkills» перенесен на 13-14 июня!" description="Старт группы по обучению по программе «Региональный эксперт WorldSkills» состоится на 13-14 июня 2017г.

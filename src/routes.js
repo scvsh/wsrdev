@@ -16,6 +16,7 @@ import RegionExpert from "./region-expert"
 import Partners from "./partners"
 import BecomePartner from "./become-a-partner"
 import PhotoGallery from "./photo-gallery"
+import Album from "./album"
 import Contact from "./contact"
 import Important from "./important"
 import Championship from "./championship"
@@ -60,6 +61,7 @@ const Routes = () => (
             <Route path="/press/contact" component={ Contact } />
             <Route path="/press/important" component={ Important } />
             <Route path="/press/photo-gallery" component={ PhotoGallery } />
+            <Route path="/press/album" component={ Album } />
 
             { /* Championship */ }
 
