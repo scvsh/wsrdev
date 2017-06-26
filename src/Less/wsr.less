@@ -1,10 +1,16 @@
 @import "./variables.less";
+@import "./responsive-font.less";
 
 /*-------------------------------------------------------------------------------------------*/
 
 /*********************************** COMMON STYLES *****************************************/
 
-/*------------------- ------------------------------------------------------------------------*/
+/*------------------- ------------------------------------------------------------------------*/:focus {
+	outline: none;
+	outline-color: white;
+	outline-style: auto;
+	outline-width: 1px;
+}
 
 body {
 	overflow-x: hidden;
@@ -27,8 +33,6 @@ hr {
 	margin-top: 2em;
 }
 
-
-
 .btn-default {
 	background-color: @brand-primary;
 	border-color: @brand-primary;
@@ -42,6 +46,10 @@ a:any-link {
 
 a:any-link {
 	color: #333333;
+}
+
+.last {
+	padding-right: 0;
 }
 
 .wsr-menu a:any-link {
@@ -69,12 +77,21 @@ li .active > a:any-link {
 	font-weight: normal;
 }
 
+.wsr-menu > li.active {
+	border-left: 0.2vw solid white;
+}
+
 .wsr-menu > li.active > a:hover {
-	color: @brand-secondary !important;
+	color: white !important;
+	opacity: 0.8;
 }
 
 .row {
 	margin: 0;
+}
+
+.full-size {
+	padding: 0;
 }
 
 /*-------------------------------------------------------------------------------------------*/
@@ -86,8 +103,6 @@ li .active > a:any-link {
 	direction: ltr;
 }
 
-
-
 .wsr-carousel-red {
 	height: 300px;
 	position: absolute;
@@ -98,6 +113,8 @@ li .active > a:any-link {
 .wsr-affix {
 	overflow-y: auto;
 	background-color: @brand-secondary;
+	background-image: url(/Images/overlay.png);
+	background-size: cover;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -112,7 +129,6 @@ li .active > a:any-link {
 
 .wsr-carousel-menu__bg {
 	z-index: 100500;
-	background-color: @brand-primary;
 	right: 0px;
 	position: absolute;
 	height: inherit;
@@ -120,14 +136,80 @@ li .active > a:any-link {
 	clip-path: polygon(0 0, 100% 0%, 100% 100%, 28% 100%);
 	clip-path: url("#ClipRight");
 	padding-left: 0;
-	max-height: 400px;
 	padding-right: 0;
+	height: inherit;
+}
+
+.wsr-carousel-menu {
+	position: absolute;
+	top: 0;
+	right: -10%;
+	height: 100%;
+	.responsive_limited(25vw, 400px, 500px, 12px, width);
+	background-image: url(/Images/overlay_red.png);
+	transform: skew(15deg);
+	font-weight: 300;
+	background-size: cover;
+}
+
+.wsr-carousel-menu__nav > li {
+	text-align: left;
+	color: #002b4a;
+	padding-right: 35%;
+	.responsive_limited(3vh, 7px, 15px, 12px, margin-top);
+	background-color: white;
+	-webkit-transform: translateX(-2%);
+	-ms-transform: translateX(-2%);
+	transform: translateX(-2%);
+	border-radius: 0.2em;
+	-webkit-transition: 200ms ease-out;
+	transition: 200ms ease-out;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.wsr-carousel-menu__nav > li > a {
+	.responsive_limited(1.6vh, 5px, 13px, 12px, padding-top);
+	.responsive_limited(1.6vh, 5px, 13px, 12px, padding-bottom);
+	padding-left: 1vw;
+	display: block;
+	transform: skew(-15deg);
+	.responsive_limited(1.6vh, 7px, 13px, 12px, font-size);
+	color: @brand-secondary;
+}
+
+.wsr-carousel-menu__nav > li > a:hover,
+.wsr-carousel-menu__nav > li > a:focus {
+	color: @brand-primary;
+	background-color: transparent;
+}
+
+.wsr-carousel-menu__nav > li:hover,
+.wsr-carousel-menu__nav > li.active {
+	transform: translateX(-4%);
+	border-left: .2em solid @brand-primary;
+	color: @brand-primary;
+}
+
+.wsr-carousel-menu__nav > li.active > a {
+	color: @brand-primary;
+	background-color: transparent;
+}
+
+.red-stage .owl-stage-outer {
 	height: 300px;
 }
 
-.red-stage .owl-stage-outer{
-	height: 300px;
+.top_gal {
+	.responsive_limited(50vh, 100px, 400px, 200px, height);
 }
+
+.top_gal img {
+	min-width: 100%;
+	height: inherit;
+	object-fit: cover;
+}
+
 .wsr-col-inherit {
 	height: inherit;
 }
@@ -135,6 +217,7 @@ li .active > a:any-link {
 .wsr-header__image {
 	//background-image: url(/Images/carousel/gallery02.jpg);
 	height: 50vh;
+	df
 	max-height: 400px;
 	width: 100%;
 	background-size: cover;
@@ -143,17 +226,6 @@ li .active > a:any-link {
 
 .wsr-header__carousel {
 	margin-bottom: 20px;
-}
-
-.wsr-carousel-menu {
-	padding-top: 1em;
-	font-family: 'Gotham Pro';
-	font-weight: 300;
-	font-style: normal;
-	font-size: .8em;
-	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-	clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-	pointer-events: all;
 }
 
 .wsr-carousel-menu-item a {
@@ -165,10 +237,8 @@ li .active > a:any-link {
 	color: @brand-primary !important;
 }
 
-.wsr-carousel-menu > li > a {
-	padding: 1em 1.5em;
-	padding-left: 20%;
-	color: white;
+.wsr-carousel-menu > li.active {
+	//background-image: url("data:image/svg+xml,%3Csvg version=!string!id=!string!xmlns=!string!xmlns:xlink=!string!x=!string!y=!string!width=!string!height=!string!viewBox=!string!style=!string!xml:space=!string!%3E %3Cstyle type=!string!%3E .st0%7Bfill:%23FFFFFF;%7D %3C/style%3E %3Cpolygon class=!string!points=!string!/%3E %3C/svg%3E ");
 }
 
 .wsr-affix-background {
@@ -184,8 +254,8 @@ li .active > a:any-link {
 }
 
 .wsr-title {
-	padding-left: 5%;
-	padding-top: 2em;
+	padding-left: 1.5vw;
+	padding-top: 4vh;
 	color: white;
 	pointer-events: none;
 }
@@ -195,20 +265,21 @@ li .active > a:any-link {
 	font-weight: 100;
 	font-style: normal;
 	color: #838d9d;
-	font-size: 80%;
 	pointer-events: all;
+	.responsive_limited(1.45vh, 7px, 13px, 12px, font-size);
 }
 
 .wsr-title-primary {
 	font-family: 'Gotham Pro';
 	font-weight: 300;
 	font-style: normal;
-	font-size: 80%;
 	pointer-events: all;
+	padding-top: 0.5vh;
+	.responsive_limited(1.53vh, 10px, 14px, 13px, font-size);
 }
 
 .wsr-title-logo {
-	padding-top: 10%;
+	padding-top: 3vh;
 	width: 50%;
 	display: flex;
 	justify-content: center;
@@ -216,55 +287,85 @@ li .active > a:any-link {
 }
 
 .wsr-title-logo img {
-	width: 9vw;
-	height: 9vw;
 	margin-left: 2em;
 	transition: 250ms ease-out;
+	.responsive_limited(15vh, 10px, 100px, 13px, height);
 }
 
 .wsr-title-logo:hover img {
+	-webkit-filter: drop-shadow(0px 0px 6.61px #FFFFFF);
+	filter: drop-shadow(0px 0px 6.61px #FFFFFF)
 }
 
-.wsr-skewed-btn span {
+.wsr-skewed-btn div {
+	width: 100%;
 	color: white;
 	opacity: 1;
-	text-align: left;
-	padding-left: 1.5em;
-	font-size: .9em;
-	padding-bottom: 20px;
+	padding-left: 1.5vw;
+	vertical-align: middle;
+	.responsive_limited(2vh, 10px, 14px, 13px, font-size);
 }
 
 .skew-right {
-	padding-right: 1em;
+	justify-content: flex-start;
+	padding-right: 1.5vw;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	.responsive_limited(3vh, 7px, 15px, 12px, margin-top);
+}
+
+.skew-right svg {
+	margin-left: 1vw;
+}
+
+.skew-right a,
+.skew-right svg {
+	display: block;
+	transform: skew(-15deg);
+	.responsive_limited(2vh, 10px, 14px, 13px, font-size);
+	color: white;
+	font-weight: normal;
+}
+
+.skew-right:hover a,
+.skew-right svg {
+	text-decoration: none;
+}
+
+.skew-left {
+	
+	margin-top: 3vh;
 }
 
 .wsr-skewed-btn {
 	background-color: transparent;
-	border-top: 1px solid rgba(255, 255, 255, 0.2);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	border-right: 0;
 	border-left: 0;
 	color: white;
 	width: 100%;
-	height: 2.5em;
-	margin-top: 10%;
 	pointer-events: all;
 	transition: 200ms ease-in;
-	
+	padding-left: 0;
+	.responsive_limited(6vh, 10px, 35px, 13px, height); 
 }
 
 .wsr-skewed-btn:hover {
 	border: 0;
-	background-color: rgba(255, 255, 255, 0.3);
+	background-color: rgba(255, 255, 255, 0.3); 
 }
 
 .wsr-menu {
-	padding-top: 10%;
+	.responsive_limited(3vh, 3px, 30px, 13px, padding-top);
+	.responsive_limited(1vh, 1px, 10px, 13px, padding-bottom);
+	padding-bottom: 1vh;
 	font-family: 'Gotham Pro';
 	font-weight: 300;
 	font-style: normal;
-	font-size: .8em;
 	pointer-events: all;
+	.responsive_limited(1.7vh, 5px, 12px, 13px, font-size);
 }
 
 .wsr-menu-item a {
@@ -273,11 +374,77 @@ li .active > a:any-link {
 }
 
 .wsr-menu > li > a {
-	padding: .7em 1.5em;
+	padding: 1vh 1.5vw;
+	.responsive_limited(1vh, 2px, 10px, 13px, padding-top);
+	.responsive_limited(1vh, 2px, 10px, 13px, padding-bottom);
 }
 
 .wsr-menu__container {
 	margin-left: -15px;
+}
+
+.wsr-menu__contacts {
+	padding-left: 1.5vw;
+	pointer-events: all;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.wsr-menu__contacts-divider {
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	.responsive_limited(2vh, 5px, 20px, 13px, margin-top);
+	.responsive_limited(2vh, 5px, 20px, 13px, margin-bottom);
+}
+
+.wsr-menu__contacts div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	.responsive_limited(5vh, 10px, 40px, 13px, height);
+}
+
+.wsr-menu__contacts a {
+	font-weight: 100;
+	color: white;
+	padding-left: 0.7vw;
+	.responsive_limited(2vh, 10px, 14px, 13px, font-size);
+}
+
+.wsr-menu__contacts a:hover,
+.wsr-menu__social a:hover {
+	opacity: 0.8;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.wsr-menu__social a {
+	.responsive_limited(2.5vh, 10px, 25px, 13px, font-size);
+}
+
+.wsr-menu__social {
+	padding: 1vh 0 1vh 1.5vw;
+	pointer-events: all;
+	height: 5vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.wsr-menu__contacts .ri-contacts {
+	margin-right: 0;
+}
+
+a .wsr-footer__social-icons:first-child {
+	padding-left: 0;
+}
+
+.wsr-menu__contacts svg {
+	font-weight: 300;
+	color: white;
+	.responsive_limited(2vh, 5px, 15px, 13px, font-size);
 }
 
 /*-------------------------------------------------------------------------------------------*/
@@ -291,7 +458,7 @@ li .active > a:any-link {
 .ri-big {
 	transform: scale(1.2);
 	opacity: 0.5;
-	margin-right: 5%;
+	margin-right: 0.7vw;
 }
 
 .wsr_annouce-label {
@@ -344,9 +511,11 @@ li .active > a:any-link {
 .thumbnail .caption {
 	padding: 0px;
 }
+
 .wsr-block__date {
 	opacity: .7;
 }
+
 .label {
 	background-color: @brand-primary;
 }
@@ -408,11 +577,18 @@ li .active > a:any-link {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
 	color: @brand-primary;
-	background-color: rgba(255, 255, 255, 1);
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
-.nav > li > a:hover,
-.nav > li > a:focus {
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+	color: @brand-primary;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav-pills > li > a:hover,
+.nav-pills > li > a:focus {
 	background-color: rgba(255, 255, 255, .3);
 	color: white;
 	transition: 300ms ease-out;
@@ -460,13 +636,14 @@ li .active > a:any-link {
 }
 
 .wsr-block {
-	border-radius: 3px;
 	background-color: rgb(255, 255, 255);
 	box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);
 	width: 100%;
 	z-index: 103;
 	margin-bottom: 20px;
 	transition: 300ms ease-out;
+	border-radius: 3px;
+	border: none;
 }
 
 .wsr_block__container {
@@ -507,7 +684,7 @@ li .active > a:any-link {
 
 .wsr-block-announce a {
 	color: @brand-secondary;
-	font-weight: bold;
+	font-weight: 300;
 	opacity: 1;
 }
 
@@ -518,7 +695,6 @@ li .active > a:any-link {
 	padding-top: 20px;
 	font-weight: 300;
 }
-
 
 .wsr-block__heading:hover {
 	opacity: 0.8;
@@ -705,11 +881,10 @@ li .active > a:any-link {
 	font-style: normal;
 }
 
-
 .wsr-footer__menu a {
 	cursor: pointer;
 	color: white;
-	opacity: 0.5;
+	opacity: 0.7;
 	font-size: 0.7em;
 	display: block;
 	padding-bottom: 1em;
@@ -856,15 +1031,13 @@ li .active > a:any-link {
 	padding-top: 2em;
 }
 
-.wsr-page__content li{
+.wsr-page__content li {
 	padding: .5em 0.5em .5em 0.5em;
 }
 
-.wsr-page__content p{
+.wsr-page__content p {
 	padding: 1em 0 1em 0;
 }
-
-
 
 .wsr-page__content ul {
 	padding-bottom: 0.5em;
@@ -884,27 +1057,26 @@ li .active > a:any-link {
 
 .wsr-page__content img {
 	display: block;
-  padding: 4px;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  line-height: 1.42857143;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
-  -webkit-transition: border 0.2s ease-in-out;
-  -o-transition: border 0.2s ease-in-out;
-  transition: border 0.2s ease-in-out;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  max-width: 100%;
-  height: auto;
+	padding: 4px;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	line-height: 1.42857143;
+	background-color: #ffffff;
+	border: 1px solid #dddddd;
+	border-radius: 3px;
+	-webkit-transition: border 0.2s ease-in-out;
+	-o-transition: border 0.2s ease-in-out;
+	transition: border 0.2s ease-in-out;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 .wsr-page__content img:hover {
 	border-color: #CE112D;
 }
-
 
 .wsr-page__content {
 	font-size: 0.9em;
@@ -914,7 +1086,6 @@ li .active > a:any-link {
 .wsr-page .thumbnail {
 	margin-top: 2em;
 }
-
 
 .wsr-page {
 	border-top: 3px solid @brand-primary;
@@ -972,11 +1143,43 @@ h6 {
 .wsr-competence-category > li > a:hover {
 	color: @brand-primary;
 	font-weight: normal;
+	background-color: white;
 }
 
 .wsr-competence-category > li.active > a {
 	color: @brand-primary;
 	font-weight: 300;
+	background-color: white;
+}
+
+.wsr-competence-category > li.active:hover > a {
+	color: @brand-primary;
+	font-weight: 300;
+	background-color: white;
+}
+
+.wsr-competence-category > li.active > a:hover {
+	color: @brand-primary;
+	font-weight: 300;
+	background-color: white;
+}
+
+.wsr-competence-category > li.active > a:focus {
+	color: @brand-primary;
+	font-weight: 300;
+	background-color: white;
+}
+
+.wsr-competence-category > li.active:focus > a {
+	color: @brand-primary;
+	font-weight: 300;
+	background-color: white;
+}
+
+.wsr-competence-category > li > a:focus {
+	color: @brand-primary;
+	font-weight: 100;
+	background-color: white;
 }
 
 .panel-title > a {
@@ -1048,21 +1251,21 @@ h6 {
 	justify-content: center;
 }
 
-.wsr-team__member-photo--primary {
-	border: 2px solid white;
-	outline-offset: 5px;
-	-webkit-box-shadow: 0px 0px 0px 2px @brand-primary;
-	-moz-box-shadow: 0px 0px 0px 2px @brand-primary;
-	box-shadow: 0px 0px 0px 2px @brand-primary;
+.wsr-team__member-photo-wrapper {
+	width: 100%;
+	border: 2px solid;
+	border-radius: 50%;
+	padding: 2px;
 }
 
-.wsr-team__member-photo--secondary {
-	border: 2px solid white;
-	outline-offset: 5px;
-	-webkit-box-shadow: 0px 0px 0px 2px @gray-light;
-	-moz-box-shadow: 0px 0px 0px 2px @gray-light;
-	box-shadow: 0px 0px 0px 2px @gray-light;
+.member-primary {
+	border-color: @brand-primary;
 }
+
+.member-secondary {
+	border-color: @gray-light;
+}
+
 
 .wsr-team__member--primary {
 	display: block;
@@ -1375,7 +1578,7 @@ li.wsr-side-menu__item:focus > a {
 .loader:before,
 .loader:after {
 	position: absolute;
-	content: '';
+	content: '1.1';
 }
 
 .loader:before {
@@ -1430,25 +1633,16 @@ li.wsr-side-menu__item:focus > a {
 
 }
 
-
-
-
-
-
-
-
 .wsr-contact__name {
 	font-weight: 300;
 	color: @brand-secondary;
 	margin-bottom: 10px;
 }
 
-.wsr-contact__phone, .wsr-contact__email{
+.wsr-contact__phone,
+.wsr-contact__email {
 	white-space: nowrap;
 }
-
-
-
 
 .Cal__Header__root {
 	background-color: @brand-secondary !important;
@@ -1457,6 +1651,7 @@ li.wsr-side-menu__item:focus > a {
 .Cal__Weekdays__root {
 	background-color: lighten(@brand-secondary, 10%) !important;
 }
+
 .Cal__Day__selection {
 	background-color: @brand-primary !important;
 }
@@ -1470,15 +1665,6 @@ li.wsr-side-menu__item:focus > a {
 	background: white !important;
 }
 
-
-
-
-
-
-
-
-
-
 /*
 Should we change this at all?
 .form-control:focus {
@@ -1489,11 +1675,9 @@ Should we change this at all?
 */
 @media (min-width:@screen-lg) {
 	.wsr-title-descriptor {
-		font-size: 0.7vw;
 	}
 
 	.wsr-title-primary {
-		font-size: 0.75vw;
 	}
 
 	.wsr-burger__background {
@@ -1515,11 +1699,9 @@ Should we change this at all?
 
 @media (min-width:@screen-md) and (max-width:@screen-md-max) {
 	.wsr-title-descriptor {
-		font-size: 1.1vw;
 	}
 
 	.wsr-title-primary {
-		font-size: 1.2vw;
 	}
 
 	.wsr-burger__background {
@@ -1541,11 +1723,9 @@ Should we change this at all?
 
 @media (min-width:@screen-sm) and (max-width:@screen-sm-max) {
 	.wsr-title-descriptor {
-		font-size: 1.2vw;
 	}
 
 	.wsr-title-primary {
-		font-size: 1.2vw;
 	}
 
 	.wsr-burger__background {
@@ -1575,11 +1755,9 @@ Should we change this at all?
 	}
 
 	.wsr-title-descriptor {
-		font-size: 1.2vw;
 	}
 
 	.wsr-title-primary {
-		font-size: 1.2vw;
 	}
 
 	.wsr-affix {
@@ -1606,11 +1784,9 @@ Should we change this at all?
 		margin-top: 3em;
 	}
 
-
 }
 
 @media (max-width:@screen-xs) {
-
 	.wsr-block__title {
 		margin-top: 3em;
 	}
@@ -1620,11 +1796,9 @@ Should we change this at all?
 	}
 
 	.wsr-title-descriptor {
-		font-size: 1.2vw;
 	}
 
 	.wsr-title-primary {
-		font-size: 1.2vw;
 	}
 
 	.wsr-affix {

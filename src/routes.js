@@ -6,6 +6,8 @@ import DefaultPage from "./default-page"
 import Login from "./login"
 import Rkc from "./rkc"
 import History from "./history"
+import Reglament from "./reglament"
+import Team from "./team"
 import Competence from "./competence"
 import ExpertCommunity from "./expert-community"
 import Sck from "./sck"
@@ -39,6 +41,11 @@ const Routes = () => (
             <Route exact path="/about" render={ () => ( <Redirect to="/about/rkc" /> ) } />
             <Route path="/about/rkc" component={ Rkc } />
             <Route path="/about/history" component={ History } />
+            <Route path="/about/reglament" component={ Reglament } />
+
+            { /* Team */ }
+
+            <Route exact path="/team" component={ Team } />
 
             <Route exact path="/competence" component={ Competence } />
             <Route exact path="/expert" render={ () => ( <Redirect to="/expert/community" /> ) } />

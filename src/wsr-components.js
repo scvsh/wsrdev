@@ -62,7 +62,7 @@ export class WsrMainMenu extends React.Component {
             <Grid bsClass="containter-fluid">
               <svg width="0" height="0">
                 <clipPath id="ClipAffix" clipPathUnits="objectBoundingBox">
-                  <polygon points="0 1,0.5 1,0.72 0.05,1 0,0 0">
+                  <polygon points="0 1,0.5 1,0.67 0.08,1 0,0 0">
                   </polygon>
                 </clipPath>
               </svg>
@@ -78,87 +78,92 @@ export class WsrMainMenu extends React.Component {
                     <Nav>
                       <NavDropdown eventKey={ 1 } title="Wsr в Москве" id="basic-nav-dropdown">
                         <LinkContainer to="/about/rkc">
-                          <MenuItem eventKey={ 1.1 }>Об РКЦ</MenuItem>
+                          <MenuItem eventKey={ 1.1 }>РКЦ Москвы</MenuItem>
                         </LinkContainer>
                         <LinkContainer to="/about/history">
                           <MenuItem eventKey={ 1.2 }>
-                            История WorldSkills
+                            История
                           </MenuItem>
                         </LinkContainer>
                         <LinkContainer to="/about/active">
                           <MenuItem eventKey={ 1.3 }>
-                            Активные мероприятия
+                            Регламентирующие документы
                           </MenuItem>
                         </LinkContainer>
                       </NavDropdown>
                       <LinkContainer to="/expert/community">
-                        <NavItem eventKey={ 2 } title="Эксперты" id="basic-nav">
+                        <NavItem eventKey={ 2 } title="Сборная команда" id="basic-nav">
+                          Сборная команда
+                        </NavItem>
+                      </LinkContainer>
+                      <LinkContainer to="/expert/community">
+                        <NavItem eventKey={ 3 } title="Эксперты" id="basic-nav">
                           Эксперты
                         </NavItem>
                       </LinkContainer>
-                      <NavDropdown eventKey={ 3 } title="СЦК" id="basic-nav-dropdown">
+                      <NavDropdown eventKey={ 4 } title="СЦК" id="basic-nav-dropdown">
                         <LinkContainer to="/sck">
-                          <MenuItem eventKey={ 3.1 }>
+                          <MenuItem eventKey={ 4.1 }>
                             СЦК
                           </MenuItem>
                         </LinkContainer>
                         <LinkContainer to="/sck/locations">
-                          <MenuItem eventKey={ 3.2 }>
+                          <MenuItem eventKey={ 4.2 }>
                             Базовые площадки в Москве
                           </MenuItem>
                         </LinkContainer>
                       </NavDropdown>
                       <LinkContainer to="/competence">
-                        <NavItem eventKey={ 4 } title="Компетенции" id="basic-nav">
+                        <NavItem eventKey={ 5 } title="Компетенции" id="basic-nav">
                           Компетенции
                         </NavItem>
                       </LinkContainer>
-                      <NavDropdown eventKey={ 5 } title="Проекты" id="basic-nav-dropdown">
+                      <NavDropdown eventKey={ 6 } title="Проекты" id="basic-nav-dropdown">
                         <LinkContainer to="/projects/region-expert">
-                          <MenuItem eventKey={ 5.1 }>
+                          <MenuItem eventKey={ 6.1 }>
                             Региональный эксперт WSR
                           </MenuItem>
                         </LinkContainer>
                         <LinkContainer to="/projects/expert-de">
-                          <MenuItem eventKey={ 5.2 }>Эксперт ДЭ</MenuItem>
+                          <MenuItem eventKey={ 6.2 }>Эксперт ДЭ</MenuItem>
                         </LinkContainer>
                         <LinkContainer to="/projects/become-sck">
-                          <MenuItem eventKey={ 5.3 }>
+                          <MenuItem eventKey={ 6.3 }>
                             Обучение становлению СЦК
                           </MenuItem>
                         </LinkContainer>
                         <LinkContainer to="/projects/1c-learn">
-                          <MenuItem eventKey={ 5.4 }>
+                          <MenuItem eventKey={ 6.4 }>
                             Обучение экспертов WorldSkills в 1С:Учебном центре №1
                           </MenuItem>
                         </LinkContainer>
                       </NavDropdown>
-                      <NavDropdown eventKey={ 6 } title="Партнёры" id="basic-nav-dropdown">
+                      <NavDropdown eventKey={ 7 } title="Партнёры" id="basic-nav-dropdown">
                         <LinkContainer to="/partners">
-                          <MenuItem eventKey={ 6.1 }>
+                          <MenuItem eventKey={ 7.1 }>
                             Наши партнёры
                           </MenuItem>
                         </LinkContainer>
                         <LinkContainer to="/partners/become-a-partner">
-                          <MenuItem eventKey={ 6.2 }>
+                          <MenuItem eventKey={ 7.2 }>
                             Стать партнёром
                           </MenuItem>
                         </LinkContainer>
                       </NavDropdown>
-                      <NavDropdown eventKey={ 7 } title="Пресс-центр" id="basic-nav-dropdown">
+                      <NavDropdown eventKey={ 8 } title="Пресс-центр" id="basic-nav-dropdown">
                         <LinkContainer to="/press/contact">
-                          <MenuItem eventKey={ 7.1 }>Контакты</MenuItem>
+                          <MenuItem eventKey={ 8.1 }>Контакты</MenuItem>
                         </LinkContainer>
                         <LinkContainer to="/press/important">
-                          <MenuItem eventKey={ 7.2 }>
+                          <MenuItem eventKey={ 8.2 }>
                             Важная информация
                           </MenuItem>
                         </LinkContainer>
                         <LinkContainer to="/press/photo-gallery">
-                          <MenuItem eventKey={ 7.3 }>Фотогалерея</MenuItem>
+                          <MenuItem eventKey={ 8.3 }>Фотогалерея</MenuItem>
                         </LinkContainer>
                         <LinkContainer to="/press/video-gallery">
-                          <MenuItem eventKey={ 7.4 }>Видеогалерея</MenuItem>
+                          <MenuItem eventKey={ 8.4 }>Видеогалерея</MenuItem>
                         </LinkContainer>
                       </NavDropdown>
                     </Nav>
@@ -171,10 +176,10 @@ export class WsrMainMenu extends React.Component {
                         <WsrMenuTitle />
                         <LinkContainer to="/login">
                           <div>
-                            <Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left">
-                              <span className="skew-left">
+                            <Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left skew-left">
+                              <div>
                                                                                                                          <MdSearch className="ri-big" />
-                                                                                                                          Поиск                                                                                           </span>
+                                                                                                                          Поиск                                                                                           </div>
                             </Button>
                           </div>
                         </LinkContainer>
@@ -182,6 +187,11 @@ export class WsrMainMenu extends React.Component {
                           <LinkContainer to="/about">
                             <NavItem className="wsr-menu-item" eventKey={ 1 }>
                               { "Wsr в Москве".toUpperCase() }
+                            </NavItem>
+                          </LinkContainer>
+                          <LinkContainer to="/team">
+                            <NavItem className="wsr-menu-item" eventKey={ 1 }>
+                              { "Сборная Москвы".toUpperCase() }
                             </NavItem>
                           </LinkContainer>
                           <LinkContainer to="/expert">
@@ -215,6 +225,26 @@ export class WsrMainMenu extends React.Component {
                             </NavItem>
                           </LinkContainer>
                         </Nav>
+                        <hr className="wsr-menu__contacts-divider"/>
+                        <div className="wsr-menu__contacts">
+                        
+                        <div><MdMail className="ri-contacts" /><a href="mailto:mail@wsr.msk.ru">mail@wsr.msk.ru</a></div>
+                        <div><MdPhone className="ri-contacts" /><a href="tel:+74995770056">+7 499 577 00-56</a></div>
+                
+                  
+                  </div>
+                  <hr className="wsr-menu__contacts-divider"/>
+                  <div className="wsr-menu__social">
+                                      <a className="wsr-footer__social-icons" href="https://www.facebook.com/groups/wsrmoscow/">
+                                      <FaFacebook /></a>
+                                      <a className="wsr-footer__social-icons" href="https://vk.com/wsrmoscow">
+                                      <FaVk /></a>
+                                      <a className="wsr-footer__social-icons" href="https://www.instagram.com/wsrmoscow_/">
+                                      <FaInstagram/></a>
+                                      <a className="wsr-footer__social-icons" href="https://www.youtube.com/channel/UCoAA0xPF2lp2o_RsAuawwMQ">
+                                      <FaYoutube/></a>
+                                      
+                                      </div>
                         
                       </Row>
                     </div>
@@ -249,16 +279,8 @@ export class WsrCarouselCaption extends React.Component {
 
 
             <Col xsOffset={ 1 } xs={ 11 } className="wsr-col-inherit wsr-carousel-red">
-              <Col xs={ 2 } sm={ 3 } md={ 4 } lg={ 3 } className="wsr-carousel-menu__bg pull-right">
-              <Button bsClass="wsr-skewed-btn skew-left text-right">
-                  <LinkContainer to="/archive"><span className="skew-right">
-                                                                                                                                        <MdApps className="ri-big" />
-                                                                                                                                            Архив мероприятий
-                                                                                                                                      </span>
-                </LinkContainer>
-                </Button>
-
-                <Nav ref="red-stage-nav" className="wsr-carousel-menu text-right pull-right" bsStyle="pills" stacked activeKey={ this.state.activeNav }>
+              <Col xs={ 2 } sm={ 3 } md={ 4 } lg={ 3 } className="pull-right wsr-carousel-menu">
+                <Nav ref="red-stage-nav" className=" text-right wsr-carousel-menu__nav" activeKey={ 1 }>
                   <LinkContainer exact to="/championship" eventKey={ 1 }>
                     <NavItem className="wsr-carousel-menu-item ">
                       V ОЧМ «Московские мастера»
@@ -280,6 +302,13 @@ export class WsrCarouselCaption extends React.Component {
                     </NavItem>
                   </LinkContainer>
                 </Nav>
+                <Button bsClass="wsr-skewed-btn text-left skew-right">
+                  
+                                                                                                                                        <MdApps className="ri-big" />
+                                                                                                                                            <a>Архив мероприятий</a>
+                                                                                                                                      
+                
+                </Button>
               </Col>
             </Col>
 
@@ -313,18 +342,18 @@ export class WsrCarousel extends React.Component {
         let _props = this.props;
         //setTimeout(this.handleKeyChange, 5000)
         return (
-            <Row>
+            <Row className="top_gal">
               <WsrCarouselCaption ref="redcaption" activeKey={ this.state.activeNav } />
-              <OwlCarousel ref="redstage" rewind={ false } autoplay={ true } className="red-stage" items={ 1 } margin={ 0 }
-                loop={ true } onTranslate={ this.handleKeyChange }>
-                <div><img src="/Images/carousel/gallery02.jpg" alt="The Last of us" /></div>
-                <div><img src="/Images/carousel/gallery01.jpg" alt="GTA V" /></div>
-                <div><img src="/Images/carousel/gallery03.jpg" alt="Mirror Edge" /></div>
-                <div><img src="/Images/carousel/gallery04.jpg" alt="Mirror Edge" /></div>
-              </OwlCarousel>
+              <img src="/Images/carousel/gallery02.jpg" alt="The Last of us" />
               <svg width="0" height="0">
                 <clipPath id="ClipRight" clipPathUnits="objectBoundingBox">
                   <polygon points="0.28 1, 1 1,1 0,0 0">
+                  </polygon>
+                </clipPath>
+              </svg>
+              <svg width="0" height="0">
+                <clipPath id="ClipRightBg" clipPathUnits="objectBoundingBox">
+                  <polygon points="0.3 1, 1 1,1 0,0.02 0">
                   </polygon>
                 </clipPath>
               </svg>
@@ -373,7 +402,7 @@ export class WsrBlock extends React.Component {
               <Row className="row-eq-height">
                 <svg width="0" height="0">
                   <clipPath id="ClipBlock" clipPathUnits="objectBoundingBox">
-                    <polygon points="0 1, 1 1,1 0,0.12 0">
+                    <polygon points="0 1, 1 1,1 0,0.09 0">
                     </polygon>
                   </clipPath>
                 </svg>
@@ -509,7 +538,12 @@ export class WsrFooter extends React.Component {
             <Row className="wsr-footer">
               <Row>
                 <Col xs={ 0 } sm={ 10 } md={ 2 } />
-                <Col xs={ 12 } md={ 10 }>
+                <Col xs={ 12 } md={ 7 }>
+                <span className="wsr-footer__heading"><i>© 2017 Региональный координационный центр WorldSkills Russia по городу Москва</i> </span>
+                  
+                </Col>
+                <Col xs={ 12 } md={ 3 } className="pull-right">
+                  <div className="text-right wsr-social-icons">
                   <span className="wsr-footer__heading">
                                       <a className="wsr-footer__social-icons" href="https://www.facebook.com/groups/wsrmoscow/">
                                       <FaFacebook /></a>
@@ -519,10 +553,7 @@ export class WsrFooter extends React.Component {
                                       <FaInstagram/></a>
                                       <a className="wsr-footer__social-icons" href="https://www.youtube.com/channel/UCoAA0xPF2lp2o_RsAuawwMQ">
                                       <FaYoutube/></a>
-                                      <i>© 2017 Региональный координационный центр WorldSkills Russia по городу Москва</i> </span>
-                </Col>
-                <Col xs={ 12 } md={ 5 } className="pull-right">
-                  <div className="text-right wsr-social-icons">
+                                      </span>
                   </div>
                 </Col>
               </Row>
@@ -635,9 +666,11 @@ export class WsrTeamMember extends React.Component {
         let _props = this.props;
         return (
             <Panel footer={ "Эксперт: " + _props.expert }>
-              <Row className="is-flex">
+              <Row >
                 <Col lg={ 3 }>
-                  <Image className={ _props.tier === "primary" ? "wsr-team__member-photo--primary" : "wsr-team__member-photo--secondary" } src={ _props.photo } circle responsive />
+                <div className= {"wsr-team__member-photo-wrapper " +  (_props.tier === "primary" ? "member-primary" : "member-secondary") }>
+                  <Image src={ _props.photo } circle responsive />
+                </div>
                 </Col>
                 <Col lg={ 9 } className="wsr-team__description">
                   <Row className="is-flex">
@@ -700,7 +733,7 @@ export class WsrExpertSearch extends React.Component {
                                                                             </option>
         );
         return (
-            <Row className="wsr-row-negative">
+            <Row>
               <Form>
                 <Col lg={ 4 }>
                   <FormGroup controlId="formControlsSelect">

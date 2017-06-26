@@ -1,0 +1,67 @@
+/*
+LESS Viewport sized typography mixin with minimum and maximum values.
+Translated from SCSS by @scvsh. Original mixin by @eduardoboucas.
+
+Usage:
+@param {Number}   $responsive  - Viewport-based size
+@param {Number}   $min         - Minimum font size (px)
+@param {Number}   $max         - Maximum font size (px)                 
+@param {Number}   $fallback    - Fallback for viewport-based units
+
+Example:
+
+body {
+  .responsive_font(5vw, 35px, 150px, 50px);
+}
+
+Responsive <body> font-size is 5vw. 
+It scales to minimum of 35px, and maximum of 150px, based on the viewport Width(vw). 
+It falls back to 50px, if the browser does not recognize viewport-based units.
+
+TODO:
+Make the @max and @fallback parameters optional.
+*/
+
+.responsive_limited(@responsive: false; @min: false;  @max: false; @fallback: false; @attribute) when (~"vh" = get-unit(@responsive)) {
+  @i: ~" ";
+  @dimension: 'height';
+  @responsive-unitless: (@responsive / (@responsive - @responsive + 1));
+
+  @min-breakpoint: (@min / @responsive-unitless * 100);
+  @max-breakpoint: (@max / @responsive-unitless * 100);
+
+  @media-min: ~"(max-@{dimension}: @{min-breakpoint})";
+  @media-max: ~"(min-@{dimension}: @{max-breakpoint})";
+
+  @media @media-min {
+    @{attribute}: @min;
+  }
+  @media @media-max {
+    @{attribute}: @max;
+  }
+
+  @{attribute}: @fallback;
+  @{attribute}: @responsive;
+}
+
+.responsive_limited(@responsive: false; @min: false;  @max: false; @fallback: false; @attribute) when not (~"vh" = get-unit(@responsive)) {
+  @i: ~" ";
+  @dimension: 'width';
+  @responsive-unitless: (@responsive / (@responsive - @responsive + 1));
+
+  @min-breakpoint: (@min / @responsive-unitless * 100);
+  @max-breakpoint: (@max / @responsive-unitless * 100);
+
+  @media-min: ~"(max-@{dimension}: @{min-breakpoint})";
+  @media-max: ~"(min-@{dimension}: @{max-breakpoint})";
+
+  @media @media-min {
+    @{attribute}: @min;
+  }
+  @media @media-max {
+    @{attribute}: @max;
+  }
+
+  @{attribute}: @fallback;
+  @{attribute}: @responsive;
+}

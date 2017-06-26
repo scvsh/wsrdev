@@ -79,9 +79,9 @@ class Rkc extends Component {
                     <WsrBlockTitle title="WSR в Москве" />
                     <WsrBlockBlank className="wsr-block-select">
                       <ListGroup>
-                        <LinkContainer to="/about/rkc"><ListGroupItem>Об РКЦ</ListGroupItem></LinkContainer>
-                        <LinkContainer to="/about/history"><ListGroupItem>История WorldSkills</ListGroupItem></LinkContainer>
-                        <LinkContainer to="/about/active"><ListGroupItem>Активные мероприятия</ListGroupItem></LinkContainer>
+                        <LinkContainer to="/about/rkc"><ListGroupItem>РКЦ Москвы</ListGroupItem></LinkContainer>
+                        <LinkContainer to="/about/history"><ListGroupItem>История</ListGroupItem></LinkContainer>
+                        <LinkContainer to="/about/reglament"><ListGroupItem>Регламентирующие документы</ListGroupItem></LinkContainer>
                       </ListGroup>
                     </WsrBlockBlank>
                   </Col>
