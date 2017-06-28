@@ -80,7 +80,7 @@ class Competence extends Component {
                         <Tab.Pane eventKey="0">
                           <Tab.Container id="left-tabs-example" defaultActiveKey="1c">
                             <Row className="clearfix">
-                              <Col sm={ 3 } md={ 3 } lg={ 4 }>
+                              <Col sm={ 3 } md={ 3 } lg={ 3 }>
                                 <WsrBlockTitle title="Компетенции" />
                                 <WsrBlockBlank description="" date="10.05.2017">
                                   <Panel defaultExpanded>
@@ -101,7 +101,7 @@ class Competence extends Component {
                               </Col>
                               <Tab.Content animation>
                                 <Tab.Pane eventKey="1c">
-                                  <Col sm={ 3 } md={ 3 } lg={ 3 }>
+                                  <Col sm={ 3 } md={ 3 } lg={ 4 }>
                                     <WsrBlockTitle title="Сборная Москвы" />
                                     <WsrTeamMember name="Дармограй Тимофей Юрьевич " tier="primary" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
                                     />

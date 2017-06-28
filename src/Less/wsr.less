@@ -275,7 +275,7 @@ li .active > a:any-link {
 	font-style: normal;
 	pointer-events: all;
 	padding-top: 0.5vh;
-	.responsive_limited(1.53vh, 10px, 14px, 13px, font-size);
+	.responsive_limited(1.53vh, 7px, 14px, 13px, font-size);
 }
 
 .wsr-title-logo {
@@ -334,7 +334,6 @@ li .active > a:any-link {
 }
 
 .skew-left {
-	
 	margin-top: 3vh;
 }
 
@@ -349,12 +348,12 @@ li .active > a:any-link {
 	pointer-events: all;
 	transition: 200ms ease-in;
 	padding-left: 0;
-	.responsive_limited(6vh, 10px, 35px, 13px, height); 
+	.responsive_limited(6vh, 10px, 35px, 13px, height);
 }
 
 .wsr-skewed-btn:hover {
 	border: 0;
-	background-color: rgba(255, 255, 255, 0.3); 
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 .wsr-menu {
@@ -727,7 +726,7 @@ a .wsr-footer__social-icons:first-child {
 	padding-top: 10px;
 	margin-bottom: 10px;
 	cursor: pointer;
-	display: block;
+	display: inline-block;
 }
 
 .wsr-block__title:hover {
@@ -1251,11 +1250,39 @@ h6 {
 	justify-content: center;
 }
 
+.wsr-team__member {
+	transition: 300ms ease-out;
+	text-align: center;
+}
+
+.wsr-team__member:hover {
+	box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item .panel {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	margin-bottom: 0;
+}
+
+.list-group-item .panel-default > .panel-heading {
+	background: none;
+}
+
+.wsr-team__avatar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .wsr-team__member-photo-wrapper {
-	width: 100%;
+	width: 80px !important;
+	height: 80px;
 	border: 2px solid;
 	border-radius: 50%;
 	padding: 2px;
+	text-align: center;
 }
 
 .member-primary {
@@ -1266,7 +1293,45 @@ h6 {
 	border-color: @gray-light;
 }
 
+/*-------------------------------------------------------------------------------------------*/
 
+/************************************ AVATAR STAR STYLES ************************************/
+
+.wsr-team__member-star-wrapper {
+	border-color: 2px solid white;
+	border-radius: 50%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: white;
+	margin-top: calc(-1.8em/2);
+	width: 1.7em !important;
+	cursor: pointer;
+}
+
+.ri-star {
+	font-size: 1.7em;
+}
+
+.professional {
+	color: @brand-primary;
+}
+
+.bronze {
+	color: #DCA184;
+}
+
+.silver {
+	color: #B2BCC5;
+}
+
+.gold {
+	color: #FED152;
+}
+
+/*-------------------------------------------------------------------------------------------*/
 .wsr-team__member--primary {
 	display: block;
 	font-weight: 300;
@@ -1289,6 +1354,7 @@ h6 {
 	bottom: 0px;
 	padding: .8em 0 0 0;
 	margin: 0;
+	width: 100%;
 }
 
 .wsr-team-label__primary {
@@ -1297,6 +1363,69 @@ h6 {
 
 .wsr-team-label__secondary {
 	background-color: @gray-light;
+}
+
+.wsr-team__member hr {
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+.row-flex,
+.row-flex > div[class*='col-'] {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex: 1 1 auto;
+}
+
+.row-flex-wrap {
+	-webkit-flex-flow: row wrap;
+	align-content: flex-start;
+	flex: 0;
+	flex-wrap: wrap;
+}
+
+.row-flex > div[class*='col-'],
+.container-flex > div[class*='col-'] {
+	margin: -.2px; /* hack adjust for wrapping */
+}
+
+.container-flex > div[class*='col-'] div,
+.row-flex > div[class*='col-'] div {
+	width: 100%;
+}
+
+.wsr-team__member .panel-body {
+	width: 100%;
+}
+
+.wsr-team__member .panel-title {
+	font-size: 0.8em;
+}
+
+.wsr-team__member-expert {
+	opacity: 0.7;
+}
+
+.flex-col {
+	display: flex;
+	display: -webkit-flex;
+	flex: 1 100%;
+	flex-flow: column nowrap;
+}
+
+.flex-grow {
+	display: flex;
+	-webkit-flex: 2;
+	flex: 2;
 }
 
 /*-------------------------------------------------------------------------------------------*/
@@ -1757,6 +1886,10 @@ Should we change this at all?
 	.wsr-title-descriptor {
 	}
 
+	.top_gal {
+		display: none;
+	}
+
 	.wsr-title-primary {
 	}
 
@@ -1781,14 +1914,18 @@ Should we change this at all?
 	}
 
 	.wsr-block__title {
-		margin-top: 3em;
+		margin-top: 2em;
 	}
 
 }
 
 @media (max-width:@screen-xs) {
 	.wsr-block__title {
-		margin-top: 3em;
+		margin-top: 1em;
+	}
+
+	.top_gal {
+		display: none;
 	}
 
 	.wsr-header__image {

@@ -8,6 +8,7 @@ import Rkc from "./rkc"
 import History from "./history"
 import Reglament from "./reglament"
 import Team from "./team"
+import Experts from "./experts"
 import Competence from "./competence"
 import ExpertCommunity from "./expert-community"
 import Sck from "./sck"
@@ -50,6 +51,7 @@ const Routes = () => (
             <Route exact path="/competence" component={ Competence } />
             <Route exact path="/expert" render={ () => ( <Redirect to="/expert/community" /> ) } />
             <Route path="/expert/community" component={ ExpertCommunity } />
+            <Route path="/experts" component={ Experts } />
 
             { /* Sck */ }
 

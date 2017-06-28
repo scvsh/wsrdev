@@ -6,11 +6,11 @@ import { LinkContainer } from "react-router-bootstrap";
 
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
+import { Tab, Nav, NavItem, Panel, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrCarousel, WsrSizeLabel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrExpert, WsrBlock, WsrCompetence, WsrTeamMember, WsrCarousel, WsrSizeLabel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 /* Import Icons */
 
@@ -27,34 +27,92 @@ class Sck extends Component {
               { /* Left sidebar */ }
               <WsrMainMenu/>
               { /* Main content */ }
-              <Grid bsClass="containter-fluid">
+             <Grid bsClass="containter-fluid">
                 <Row>
-                  <Col xs={ 0 } sm={ 4 } md={ 3 } lg={ 2 } />
-                  <Col xs={ 12 } sm={ 5 } md={ 6 } lg={ 7 }>
-                    <WsrBlockTitle title="СЦК" />
-                    <WsrPage type="wsr-page" heading="Специализированный центр компетенций" description="" date="10.05.2017">
-                      <p>Специализированный центр компетенций (СЦК) — это центр развития профессий и профессиональных сообществ WorldSkills, ресурсный центр, обладающий современным оборудованием и технологиями, отвечающими требованиям WorldSkills, а также наличием экспертов для осуществления обучения и оценки соответствующей квалификации по стандартам WorldSkills.
-                      </p>
-                      <ListGroup className="wsr-file-list">
-                        <ListGroupItem href="#"><MdFileDownload className="ri-down"/>Информационное письмо от Союза WorldSkills Russia<WsrSizeLabel size="10 кб" extension=".doc"/></ListGroupItem>
-                        <ListGroupItem href="#"><MdFileDownload className="ri-down"/>Положение об аккредитации СЦК<WsrSizeLabel size="15 кб" extension=".doc"/></ListGroupItem>
-                        <ListGroupItem href="#"><MdFileDownload className="ri-down"/>Форма заявки на прохождение аккредитации в качестве СЦК<WsrSizeLabel size="11 кб" extension=".doc"/></ListGroupItem>
-                        <ListGroupItem href="#"><MdFileDownload className="ri-down"/>Документы по соответсвию деятельности<WsrSizeLabel size="20 кб" extension=".doc"/></ListGroupItem>
-                        <ListGroupItem href="#"><MdFileDownload className="ri-down"/>Обязательства СЦК перед Союзом WorldSkills Russia<WsrSizeLabel size="10 кб" extension=".doc"/></ListGroupItem>
-                        <ListGroupItem href="#"><MdFileDownload className="ri-down"/>Договор<WsrSizeLabel size="130 кб" extension=".doc"/></ListGroupItem>
-                        <ListGroupItem href="#"><MdFileDownload className="ri-down"/>Положительные результаты и статус СЦК<WsrSizeLabel size="10 кб" extension=".doc"/></ListGroupItem>
-                      </ListGroup>
-                    </WsrPage>
-                  </Col>
-                  <Col sm={ 3 } md={ 3 } lg={ 3 }>
-                    <WsrBlockTitle title="Сцк" />
+                  <Tab.Container id="left-tabs-example" defaultActiveKey="0">
+                    <Row className="clearfix">
+                      <Col xs={ 0 } sm={ 4 } md={ 3 } lg={ 2 } />
+                      <Col xs={ 12 } sm={ 5 } md={ 6 } lg={ 2 }>
+                        <WsrBlockTitle title="Компетенции" />
+                        <WsrBlockBlank className="wsr-block-select">
+                          <Nav bsStyle="pills" className="wsr-competence-category" stacked>
+                            <NavItem eventKey="0">
+                              Камнетёсное дело
+                            </NavItem>
+                            <NavItem eventKey="1">
+                              Облицовка плиткой
+                            </NavItem>
+                            <NavItem eventKey="2">
+                              Столярное дело
+                            </NavItem>
+                            <NavItem eventKey="3">
+                              Плотницкое дело
+                            </NavItem>
+                            <NavItem eventKey="4">
+                              Кирпичная кладка
+                            </NavItem>
+                            <NavItem eventKey="5">
+                              Холодильная техника и системы кондиционирования
+                            </NavItem>
+                            <NavItem eventKey="6">
+                              Сухое строительство и штукатурные работы
+                            </NavItem>
+                            <NavItem eventKey="7">
+                              Малярные и декоративные работы
+                            </NavItem>
+                            <NavItem eventKey="8">
+                              Ландшафтный дизайн
+                            </NavItem>
+                            <NavItem eventKey="9">
+                              Электромонтаж
+                            </NavItem>
+                            <NavItem eventKey="10">
+                              Производство мебели
+                            </NavItem>
+                          </Nav>
+                        </WsrBlockBlank>
+                      </Col>
+                      <Tab.Content animation>
+                        <Tab.Pane eventKey="0">
+                          <Tab.Container id="left-tabs-example" defaultActiveKey="1c">
+                          
+                            <Row className="clearfix">
+
+                              <Col sm={ 3 } md={ 3 } lg={ 5 }>
+                              <WsrBlockTitle title={'\u00A0'} />
+                              <WsrBlock type="wsr-block-important" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
+На международном чемпионата China International Skills Competition 2017 (CISC-2017)"
+                      date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
+                      <WsrBlock type="wsr-block-important" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
+На международном чемпионата China International Skills Competition 2017 (CISC-2017)"
+                      date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
+                      <WsrBlock type="wsr-block-important" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
+На международном чемпионата China International Skills Competition 2017 (CISC-2017)"
+                      date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
+                      <WsrBlock type="wsr-block-important" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
+На международном чемпионата China International Skills Competition 2017 (CISC-2017)"
+                      date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
+                              </Col>
+                              <Col sm={ 2 } md={ 3 } lg={ 3 }>
+                                  <WsrBlockTitle title="Стать СЦК" />
+                    
                     <WsrBlockBlank className="wsr-block-select">
                       <ListGroup>
-                        <LinkContainer to="/sck"><ListGroupItem>СЦК</ListGroupItem></LinkContainer>
-                        <LinkContainer to="/sck/locations"><ListGroupItem>Базовые площадки в Москве</ListGroupItem></LinkContainer>
+                        <LinkContainer exact to="/projects/region-expert"><ListGroupItem>Об аккредитации СЦК</ListGroupItem></LinkContainer>
+                        <LinkContainer exact to="/"><ListGroupItem>Документ №2</ListGroupItem></LinkContainer>
+                        <LinkContainer exact to="/"><ListGroupItem>Документ №3</ListGroupItem></LinkContainer>
+                        <LinkContainer exact to="/"><ListGroupItem><WsrExpert name="Воронков  Никита Александрович" competence="Камнетесное дело" tier="secondary" medal="silver" host=" ООО «Практика реставрации»" responsible="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
+                                    /></ListGroupItem></LinkContainer>
+                        
                       </ListGroup>
                     </WsrBlockBlank>
                   </Col>
+                              </Row>
+                              </Tab.Container>
+                        </Tab.Pane>
+                      </Tab.Content>
+                    </Row>
+                  </Tab.Container>
                 </Row>
                 { /* Bottom Gallery */ }
                 <Row>
