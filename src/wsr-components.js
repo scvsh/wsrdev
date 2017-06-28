@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "./css/wsr.css";
-import { MdStarHalf, MdStarOutline, MdStar, MdStars, MdApps, MdDateRange, MdArrowForward, MdSearch, MdVpnKey, MdMail, MdPhone } from "react-icons/lib/md";
-import { FaGraduationCap, FaStarHalfEmpty, FaStarHalf, FaStarO, FaStar, FaVk, FaFacebook, FaInstagram, FaYoutube } from "react-icons/lib/fa";
+import { MdMore, MdMoreVert, MdKeyboardControl, MdStarHalf, MdStarOutline, MdStar, MdStars, MdApps, MdDateRange, MdArrowForward, MdSearch, MdVpnKey, MdMail, MdPhone } from "react-icons/lib/md";
+import { FaArchive, FaGraduationCap, FaStarHalfEmpty, FaStarHalf, FaStarO, FaStar, FaVk, FaFacebook, FaInstagram, FaYoutube } from "react-icons/lib/fa";
 import TextTruncate from "react-text-truncate";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom"
 import OwlCarousel from 'react-owl-carousel';
 
 import MetaTags from 'react-meta-tags';
-import { Tooltip, Carousel, Thumbnail, Media, Popover, OverlayTrigger, InputGroup, Form, FormGroup, FormControl, Image, Panel, Label, Button, Grid, Row, Col, Nav, NavItem, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
+import { Table, Tooltip, Carousel, Thumbnail, Media, Popover, OverlayTrigger, InputGroup, Form, FormGroup, FormControl, Image, Panel, Label, Button, Grid, Row, Col, Nav, NavItem, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
 
 
 export class WsrMeta extends React.Component {
@@ -406,12 +406,12 @@ export class WsrBlock extends React.Component {
                 <Col sm={ 9 } md={ 7 } className="wsr_block__container">
                   <LinkContainer className="text-left wsr-block__heading" to={ _props.link ? _props.link : "/" }>
                     <h5 className="text-left wsr-block__heading">
-                                                                                                                                        <TextTruncate
+                                                                                                                                                    <TextTruncate
                         line={ 4 }
                         truncateText="…"
                         text={ _props.heading }
                         />
-                                                                                                                                    </h5>
+                                                                                                                                                </h5>
                   </LinkContainer>
                   <div className="wsr-block__description">
                     <TextTruncate className="wsr-block__description" line={ 2 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
@@ -440,12 +440,12 @@ export class WsrNewsItem extends React.Component {
             <Row className="wsr_block-menu__item">
               <Col md={ 12 } className="wsr_block-news__wrapper">
                 <h5 className="text-left wsr-block__heading">
-                                                                                                                                    <TextTruncate
+                                                                                                                                                <TextTruncate
                         line={ 4 }
                         truncateText="…"
                         text={ _props.heading }
                         />
-                                                                                                                                </h5>
+                                                                                                                                            </h5>
                 <div className="wsr-block__description">
                   <TextTruncate className="wsr-block__description" line={ 4 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
                                                                                                                                                  <MdArrowForward className="wsr-block__date-icon" />
@@ -460,6 +460,64 @@ export class WsrNewsItem extends React.Component {
         );
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+export class WsrSckInfo extends React.Component {
+    render() {
+        let _props = this.props;
+        const popoverBottom = (
+        <Popover id="popover-positioned-bottom">
+          <strong>{ _props.metro } </strong>
+          <br />
+          { _props.detailedAddress }
+        </Popover>
+        );
+        return (
+
+            <WsrBlockBlank type="wsr-block__sck-info">
+              <Row>
+              <Col xs={ 8 }>
+                  <h4 className="wsr-block__heading">
+                  { _props.title }
+                                          
+                                          </h4>
+                </Col>
+                <Col xs={ 4 }>
+                   <Image src={ _props.logo } rounded />
+                </Col>
+                
+
+              </Row>
+              <Row className="wsr-block__sck-info-description">
+              <hr />
+                <Col xs={ 6 }>
+                  <div className="name">{ _props.contact } </div>
+                  <div><MdPhone className="ri-contacts" /><a className="contact" href={ "tel:" + _props.phone }>{ _props.phone }</a></div>
+                  <div><MdMail className="ri-contacts" /><a className="contact" href={ "mailto:" + _props.mail }>{ _props.mail }</a></div>
+                </Col>
+                <Col xs={ 6 }>
+                  
+                  <OverlayTrigger trigger={ ['hover', 'focus'] } rootClose placement="bottom" overlay={ popoverBottom }>
+                  <Row>
+                    г. Москва, ул. Поклонная, д. 2<Label className="wsr-location-label">Как доехать?</Label>
+                  </Row>
+                </OverlayTrigger>
+                </Col>
+              </Row>
+            </WsrBlockBlank>
+        );
+    }
+}
+
 
 export class WsrNumbersItem extends React.Component {
     render() {
@@ -505,10 +563,10 @@ export class WsrBlockTitle extends React.Component {
         return (
 
             <div className="wsr-block__title">
-              <LinkContainer className="wsr-block__title" to={ _props.link ? _props.link : "/" }>
-                <span>
-                                                                                                                                { _props.title }
-                                                                                                                            </span>
+              <LinkContainer className="wsr-block__title " to={ _props.link ? _props.link : "/" }>
+                <span className="align-bottom">
+                                                                                                                                            { _props.title }
+                                                                                                                                        { _props.more ? <MdMore className="ri-more"/> : "" } </span>
               </LinkContainer>
             </div>
 
@@ -541,15 +599,15 @@ export class WsrFooter extends React.Component {
                 <Col xs={ 12 } md={ 3 } className="pull-right">
                   <div className="text-right wsr-social-icons">
                     <span className="wsr-footer__heading">
-                                                  <a className="wsr-footer__social-icons" href="https://www.facebook.com/groups/wsrmoscow/">
-                                                  <FaFacebook /></a>
-                                                  <a className="wsr-footer__social-icons" href="https://vk.com/wsrmoscow">
-                                                  <FaVk /></a>
-                                                  <a className="wsr-footer__social-icons" href="https://www.instagram.com/wsrmoscow_/">
-                                                  <FaInstagram/></a>
-                                                  <a className="wsr-footer__social-icons" href="https://www.youtube.com/channel/UCoAA0xPF2lp2o_RsAuawwMQ">
-                                                  <FaYoutube/></a>
-                                                  </span>
+                                                              <a className="wsr-footer__social-icons" href="https://www.facebook.com/groups/wsrmoscow/">
+                                                              <FaFacebook /></a>
+                                                              <a className="wsr-footer__social-icons" href="https://vk.com/wsrmoscow">
+                                                              <FaVk /></a>
+                                                              <a className="wsr-footer__social-icons" href="https://www.instagram.com/wsrmoscow_/">
+                                                              <FaInstagram/></a>
+                                                              <a className="wsr-footer__social-icons" href="https://www.youtube.com/channel/UCoAA0xPF2lp2o_RsAuawwMQ">
+                                                              <FaYoutube/></a>
+                                                              </span>
                   </div>
                 </Col>
               </Row>
@@ -619,8 +677,8 @@ export class WsrPage extends React.Component {
               <Row>
                 <Col sm={ 9 } md={ 12 } className="wsr_page__container">
                   <h3>
-                                                                                                                                        { _props.heading ? _props.heading : "" }
-                                                                                                                                    </h3>
+                                                                                                                                                    { _props.heading ? _props.heading : "" }
+                                                                                                                                                </h3>
                   <div className="wsr-page__content">
                     { _props.description ? " <p> { _props.description } </p> " : false }
                     { _props.children }
@@ -687,7 +745,7 @@ export class WsrTeamMember extends React.Component {
         </Popover>
         );
         return (
-            <Panel className="wsr-team__member " header={  <TextTruncate line={ 1 } truncateText="…" text={  _props.host } /> }>
+            <Panel className="wsr-team__member " header={ <TextTruncate line={ 1 } truncateText="…" text={ _props.host } /> }>
               <Row className="wsr-team__avatar ">
                 <div className={ "wsr-team__member-photo-wrapper " + (_props.tier === "primary" ? "member-primary" : "member-secondary") }>
                   <Image src={ _props.photo } circle responsive />
@@ -700,7 +758,7 @@ export class WsrTeamMember extends React.Component {
                 <span className={ _props.tier === "primary" ? "wsr-team__member--primary" : "wsr-team__member--secondary" }>{ _props.name } <br/><WsrTierLabel competence={ _props.competence } tier={ _props.tier } /></span>
                 <hr />
                 <div className="flex-grow">
-                  <span className="wsr-team__host ">{  <span><div className="wsr-team__member-expert">Эксперт:</div>{_props.expert}</span>}</span>
+                  <span className="wsr-team__host ">{ <span><div className="wsr-team__member-expert">Эксперт:</div>{ _props.expert }</span> }</span>
                 </div>
               </Row>
             </Panel>
@@ -739,7 +797,7 @@ export class WsrExpert extends React.Component {
         </Popover>
         );
         return (
-            <Panel className="wsr-team__member " header={ _props.responsible ? <div className="wsr-team__member-expert">Ответственный за обучение:</div> : ""}>
+            <Panel className="wsr-team__member " header={ _props.responsible ? <div className="wsr-team__member-expert">Ответственный за обучение:</div> : "" }>
               <Row className="wsr-team__avatar ">
                 <div className={ "wsr-team__member-photo-wrapper " + (_props.tier === "primary" ? "member-primary" : "member-secondary") }>
                   <Image src={ _props.photo } circle responsive />
