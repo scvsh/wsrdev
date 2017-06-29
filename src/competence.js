@@ -8,11 +8,11 @@ import { LinkContainer } from "react-router-bootstrap";
 
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { Panel, Tab, ListGroup, Grid, Row, Col, Nav, NavItem, Image } from "react-bootstrap";
+import { ListGroupItem, Panel, Tab, ListGroup, Grid, Row, Col, Nav, NavItem, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrPartner, WsrSckInfo, WsrCarousel, WsrCompetence, WsrTeamMember, WsrMeta, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrExpert, WsrPartner, WsrSckInfo, WsrCarousel, WsrCompetence, WsrTeamMember, WsrMeta, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 
 
@@ -103,9 +103,9 @@ class Competence extends Component {
                                 <Tab.Pane eventKey="1c">
                                   <Col sm={ 3 } md={ 3 } lg={ 4 }>
                                     <WsrBlockTitle title="Сборная Москвы" />
-                                    <WsrTeamMember name="Дармограй Тимофей Юрьевич " tier="primary" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
+                                    <WsrTeamMember name="Дармограй Тимофей Юрьевич " medal="gold" tier="primary" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
                                     />
-                                    <WsrTeamMember name="Воронков Никита Александрович" tier="secondary" host="ООО «Практика реставрации»" expert="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
+                                    <WsrTeamMember name="Воронков Никита Александрович" medal="silver" tier="secondary" host="ООО «Практика реставрации»" expert="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
                                     />
                                     <WsrBlockTitle title="Базовая площадка" />
                                     <WsrSckInfo title="ГАОУ ВО г. Москвы «Московский городской педагогический университет»" logo="/Images/sck/1.svg" contact="Бабалаева Мария Викторовна" phone="+7 963 600 82-12" mail="babalaewa73@inbox.ru" detailedAddress="м. «Кутузовская», последний вагон из центра, далее пешком 3-5 минут в сторону области." />
@@ -116,6 +116,24 @@ class Competence extends Component {
                     website="http://www.cisco.com"
                     logo="/Images/partners/1.png"
                     />
+
+                                   <WsrBlockTitle title="Эксперты" />
+                    
+                    <WsrBlockBlank className="wsr-block-select">
+                      <ListGroup>
+                        
+                        <ListGroupItem><WsrExpert name="Воронков  Никита Александрович" comment="Главный эксперт" certification="regional"   host=" ООО «Практика реставрации»" responsible="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
+                                    />
+                                    </ListGroupItem>
+                                     <ListGroupItem><WsrExpert name="Воронков  Никита Александрович" comment="Сертифицированный эксперт" certification="certified"  host=" ООО «Практика реставрации»" responsible="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
+                                    />
+                                    </ListGroupItem>
+
+                                    
+                        
+                      </ListGroup>
+                    </WsrBlockBlank>
+                  
 
                                   </Col>
                                 </Tab.Pane>

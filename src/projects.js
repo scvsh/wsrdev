@@ -10,7 +10,7 @@ import { ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap
 
 /* Import WSR React components*/
 
-import { WsrCarousel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrBlock, WsrCarousel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 /* Main app */
 
@@ -34,6 +34,19 @@ class Projects extends Component {
 Прохождение образовательных программ <LinkContainer to="/projects/region-expert"><a>«Региональный эксперт»</a></LinkContainer>, <LinkContainer to="/sck"><a>«Обучение в CIS»</a></LinkContainer> или <LinkContainer to="/sck"><a>«Обучение по становлению СЦК»</a></LinkContainer> поможет вам перейти от наблюдений к действиям, став активным участником движения WorldSkills Russia. 
 											</p>
 										</WsrPage>
+										<WsrBlock type="wsr-block-important" heading="V ОЧМ «Московские мастера»" description="Старт группы по обучению по программе «Региональный эксперт WorldSkills» состоится на 13-14 июня 2017г. 
+                                                                                                                   Адрес проведения: г. Москва, Дмитровское шоссе, д.51, корпус 1 (РКЦ WSR в городе Москве)."
+                      date="06.06.2017" image="/Images/thumb03.jpg" />
+                      <WsrBlock type="wsr-block-important" heading="Всероссийские отборочные соревнования" description="Старт группы по обучению по программе «Региональный эксперт WorldSkills» состоится на 13-14 июня 2017г. 
+                                                                                                                   Адрес проведения: г. Москва, Дмитровское шоссе, д.51, корпус 1 (РКЦ WSR в городе Москве)."
+                      date="06.06.2017" image="/Images/thumb03.jpg" />
+                      <WsrBlock type="wsr-block-important" heading="Демонстрационный экзамен по стандартам WorldSkills" description="Старт группы по обучению по программе «Региональный эксперт WorldSkills» состоится на 13-14 июня 2017г. 
+                                                                                                                   Адрес проведения: г. Москва, Дмитровское шоссе, д.51, корпус 1 (РКЦ WSR в городе Москве)."
+                      date="06.06.2017" image="/Images/thumb03.jpg" />
+<WsrBlock type="wsr-block-important" heading="Juniorskillsа" description="Старт группы по обучению по программе «Региональный эксперт WorldSkills» состоится на 13-14 июня 2017г. 
+                                                                                                                   Адрес проведения: г. Москва, Дмитровское шоссе, д.51, корпус 1 (РКЦ WSR в городе Москве)."
+                      date="06.06.2017" image="/Images/thumb03.jpg" />
+
 									</Col>
 									<Col sm={ 3 } md={ 3 } lg={ 3 }>
 										<WsrBlockTitle title="Сцк" />

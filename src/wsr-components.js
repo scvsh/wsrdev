@@ -771,43 +771,44 @@ export class WsrExpert extends React.Component {
 
     render() {
         let _props = this.props;
-        let medals = ["Золотая медаль", "Серебряная медаль", "Бронзовая медаль", "Медаль за профессионализм"];
-        let medal;
+        let certifications = ["Сертифицированный эксперт", "Региональный эксперт", "Эксперт Демонстрационного Экзамена"];
+        let cert;
 
-        switch (_props.medal) {
-        case "gold":
-            medal = 0;
+        switch (_props.certification) {
+        case "certified":
+            cert = 0;
             break;
-        case "silver":
-            medal = 1;
+        case "regional":
+            cert = 1;
             break;
-        case "bronze":
-            medal = 2;
-            break;
-        case "professional":
-            medal = 3;
+        case "demo":
+            cert = 2;
             break;
         }
 
-        let curmed = medals[medal];
+        let curcert = certifications[cert];
 
         let tooltip = (
         <Popover id="popover-positioned-bottom">
-          { curmed }
+          { curcert }
         </Popover>
         );
         return (
-            <Panel className="wsr-team__member " header={ _props.responsible ? <div className="wsr-team__member-expert">Ответственный за обучение:</div> : "" }>
+            <Panel className="wsr-team__member " header={ _props.comment ? <div className="wsr-team__member-expert"> { _props.coment }</div> : "" }>
               <Row className="wsr-team__avatar ">
-                <div className={ "wsr-team__member-photo-wrapper " + (_props.tier === "primary" ? "member-primary" : "member-secondary") }>
+                <div className={ "wsr-team__member-photo-wrapper member-expert " }>
                   <Image src={ _props.photo } circle responsive />
                 </div>
                 <OverlayTrigger trigger={ ['hover', 'focus'] } placement="bottom" overlay={ tooltip }>
-                  <div className={ "wsr-team__member-star-wrapper " + (_props.tier === "primary" ? "member-primary" : "member-secondary") }>
-                    <MdStars className={ "ri-star " + _props.medal } />
+                  <div className={ "wsr-team__member-star-wrapper member-expert " }>
+                    <img className="wsr-expert-status" src= {"/Images/" + _props.certification + ".svg"} />
                   </div>
                 </OverlayTrigger>
-                <span className={ _props.tier === "primary" ? "wsr-team__member--primary" : "wsr-team__member--secondary" }>{ _props.name } <br/><WsrTierLabel competence={ _props.competence } tier={ _props.tier } /></span>
+                <span className="wsr-team__member--expert">{ _props.name } <br/>
+                 <Label className="member-expert">
+                  { _props.competence }
+                </Label>
+                </span>
                 <hr />
                 <div className="flex-grow">
                   <span className="wsr-team__host ">{ _props.host }</span>

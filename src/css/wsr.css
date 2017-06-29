@@ -192,7 +192,7 @@ li .active > a:any-link {
   display: block;
   transform: skew(-15deg);
   font-size: 12px;
-  font-size: 1.6vh;
+  font-size: 2vh;
   color: #002b4a;
 }
 @media (max-height: 312.5px) {
@@ -215,12 +215,12 @@ li .active > a:any-link {
     padding-bottom: 13px;
   }
 }
-@media (max-height: 437.5px) {
+@media (max-height: 350px) {
   .wsr-carousel-menu__nav > li > a {
     font-size: 7px;
   }
 }
-@media (min-height: 812.5px) {
+@media (min-height: 650px) {
   .wsr-carousel-menu__nav > li > a {
     font-size: 13px;
   }
@@ -1211,37 +1211,37 @@ h6 {
 .wsr-competence-category > li > a:hover {
   color: #ce112d;
   font-weight: normal;
-  background-color: white;
+  background-color: transparent;
 }
 .wsr-competence-category > li.active > a {
   color: #ce112d;
   font-weight: 300;
-  background-color: white;
+  background-color: transparent;
 }
 .wsr-competence-category > li.active:hover > a {
   color: #ce112d;
   font-weight: 300;
-  background-color: white;
+  background-color: transparent;
 }
 .wsr-competence-category > li.active > a:hover {
   color: #ce112d;
   font-weight: 300;
-  background-color: white;
+  background-color: transparent;
 }
 .wsr-competence-category > li.active > a:focus {
   color: #ce112d;
   font-weight: 300;
-  background-color: white;
+  background-color: transparent;
 }
 .wsr-competence-category > li.active:focus > a {
   color: #ce112d;
   font-weight: 300;
-  background-color: white;
+  background-color: transparent;
 }
 .wsr-competence-category > li > a:focus {
   color: #ce112d;
   font-weight: 100;
-  background-color: white;
+  background-color: transparent;
 }
 .panel-title > a {
   font-weight: normal;
@@ -1338,9 +1338,49 @@ h6 {
 .member-secondary {
   border-color: #999999;
 }
+.member-expert {
+  border-color: #002b4a;
+}
+span .member-expert {
+  background-color: #002b4a;
+}
 .wsr-block__sck-info {
   padding: 25px;
   border-top: 3px solid #ce112d;
+}
+.wsr-block__sck-info__panel .panel + .panel {
+  margin-top: 0;
+}
+.wsr-block__sck-info__panel > .panel > .panel-heading {
+  background-color: white;
+}
+.wsr-block__sck-info__panel > .panel:first-child > .panel-heading {
+  border-radius: 3px 3px 0 0 ;
+}
+.wsr-block__sck-info__panel > .panel:last-child > .panel-heading {
+  border-radius: 0 0 3px 3px ;
+}
+.wsr-block__sck-info__panel .panel {
+  border: none;
+  border-bottom: 1px solid #dddddd;
+}
+.wsr-block__sck-info__panel > .panel:first-child {
+  border-radius: 3px 3px 0 0 ;
+}
+.wsr-block__sck-info__panel > .panel:last-child {
+  border: none;
+  border-bottom: none;
+  border-radius: 0 0 3px 3px ;
+}
+.wsr-block__sck-info__panel > .panel-heading + .panel-collapse > .panel-body {
+  background-color: #f5f5f5;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.wsr-block__sck-info__panel > .panel > .panel-collapse > .panel-body {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #f5f5f5;
 }
 .wsr-sck-competence > li > a {
   padding-left: 0;
@@ -1401,6 +1441,11 @@ h6 {
 .wsr-team__member--secondary {
   display: block;
   font-weight: 300;
+}
+.wsr-team__member--expert {
+  display: block;
+  font-weight: 300;
+  color: #002b4a;
 }
 .wsr-team__divider {
   width: 100%;
@@ -1493,6 +1538,10 @@ body {
 /*-------------------------------------------------------------------------------------------*/
 .wsr-expert-panel {
   margin-top: 5px;
+}
+.wsr-expert-status {
+  padding: 2px;
+  width: 100%;
 }
 .wsr-expert-panel .panel-heading {
   background-color: white;

@@ -51,7 +51,7 @@ class Sck extends Component {
                         <WsrBlockTitle title="СЦК" />
                         <WsrBlockBlank className="wsr-block-select">
 
-                        <PanelGroup  activeKey={ this.state.activeKey } onSelect={this.handleSelect} accordion>
+                        <PanelGroup  activeKey={ this.state.activeKey } onSelect={this.handleSelect} accordion className="wsr-block__sck-info__panel">
         <Panel header="Преподавание музыки" eventKey="1">
                           <Nav  bsStyle="pills" className="wsr-competence-category wsr-sck-competence" stacked>
                             <NavItem eventKey="1.1">
@@ -173,7 +173,7 @@ class Sck extends Component {
                         <LinkContainer exact to="/"><ListGroupItem>Обязательства СЦК перед Союзом WorldSkills Russia</ListGroupItem></LinkContainer>
                         <LinkContainer exact to="/"><ListGroupItem>Договор</ListGroupItem></LinkContainer>
                         <LinkContainer exact to="/"><ListGroupItem>Положительные результаты и статус СЦК</ListGroupItem></LinkContainer>
-                        <LinkContainer exact to="/"><ListGroupItem><WsrExpert name="Воронков  Никита Александрович" competence="Камнетесное дело" tier="secondary" medal="silver" host=" ООО «Практика реставрации»" responsible="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
+                        <LinkContainer exact to="/"><ListGroupItem><WsrExpert name="Воронков  Никита Александрович" certification="certified" comment="Ответственный за направление" ompetence="Камнетесное дело" tier="secondary" medal="silver" host=" ООО «Практика реставрации»" responsible="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
                                     /></ListGroupItem></LinkContainer>
                         
                       </ListGroup>

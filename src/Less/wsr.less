@@ -174,7 +174,7 @@ li .active > a:any-link {
 	padding-left: 1vw;
 	display: block;
 	transform: skew(-15deg);
-	.responsive_limited(1.6vh, 7px, 13px, 12px, font-size);
+	.responsive_limited(2vh, 7px, 13px, 12px, font-size);
 	color: @brand-secondary;
 }
 
@@ -1152,43 +1152,43 @@ h6 {
 .wsr-competence-category > li > a:hover {
 	color: @brand-primary;
 	font-weight: normal;
-	background-color: white;
+	background-color: transparent;
 }
 
 .wsr-competence-category > li.active > a {
 	color: @brand-primary;
 	font-weight: 300;
-	background-color: white;
+	background-color: transparent;
 }
 
 .wsr-competence-category > li.active:hover > a {
 	color: @brand-primary;
 	font-weight: 300;
-	background-color: white;
+	background-color: transparent;
 }
 
 .wsr-competence-category > li.active > a:hover {
 	color: @brand-primary;
 	font-weight: 300;
-	background-color: white;
+	background-color: transparent;
 }
 
 .wsr-competence-category > li.active > a:focus {
 	color: @brand-primary;
 	font-weight: 300;
-	background-color: white;
+	background-color: transparent;
 }
 
 .wsr-competence-category > li.active:focus > a {
 	color: @brand-primary;
 	font-weight: 300;
-	background-color: white;
+	background-color: transparent;
 }
 
 .wsr-competence-category > li > a:focus {
 	color: @brand-primary;
 	font-weight: 100;
-	background-color: white;
+	background-color: transparent;
 }
 
 .panel-title > a {
@@ -1307,6 +1307,13 @@ h6 {
 	border-color: @gray-light;
 }
 
+.member-expert {
+	border-color: @brand-secondary;
+}
+
+span .member-expert  {
+	background-color: @brand-secondary;
+}
 
 
 
@@ -1319,10 +1326,53 @@ h6 {
 	border-top: 3px solid @brand-primary;
 }
 
+.wsr-block__sck-info__panel .panel + .panel {
+	margin-top: 0;
+}
+
+.wsr-block__sck-info__panel > .panel > .panel-heading {
+	background-color: white;
+}
+
+.wsr-block__sck-info__panel > .panel:first-child > .panel-heading {
+	border-radius: 3px 3px 0 0 ;
+}
+.wsr-block__sck-info__panel > .panel:last-child  > .panel-heading{
+	border-radius: 0 0 3px 3px ;
+}
+
+.wsr-block__sck-info__panel .panel {
+	border:none;
+	border-bottom: 1px solid #dddddd;
+}
+
+
+.wsr-block__sck-info__panel > .panel:first-child {
+	border-radius: 3px 3px 0 0 ;
+}
+
+.wsr-block__sck-info__panel > .panel:last-child {
+	border:none;
+	border-bottom: none;
+	border-radius: 0 0 3px 3px ;
+}
+
+.wsr-block__sck-info__panel > .panel-heading + .panel-collapse > .panel-body {
+	background-color: #f5f5f5;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.wsr-block__sck-info__panel > .panel > .panel-collapse > .panel-body {
+	padding-top: 0;
+	padding-bottom: 0;
+	background-color: #f5f5f5;
+}
+
 .wsr-sck-competence > li > a{
 	padding-left: 0;
-
 }
+
 .wsr-block__sck-info  a.contact{
 	font-weight: 300;
 	color: @brand-primary;
@@ -1404,6 +1454,12 @@ h6 {
 .wsr-team__member--secondary {
 	display: block;
 	font-weight: 300;
+}
+
+.wsr-team__member--expert {
+	display: block;
+	font-weight: 300;
+	color: @brand-secondary;
 }
 
 .wsr-team__divider {
@@ -1524,6 +1580,10 @@ body {
 	margin-top: 5px;
 }
 
+.wsr-expert-status {
+	padding: 2px;
+	width: 100%;
+}
 .wsr-expert-panel .panel-heading {
 	background-color: white;
 	cursor: pointer;
