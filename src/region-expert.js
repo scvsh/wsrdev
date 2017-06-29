@@ -109,7 +109,7 @@ class RegionExpert extends Component {
                     <WsrBlockTitle title="Другие проекты" />
                     <WsrBlockBlank className="wsr-block-select">
                       <ListGroup>
-                        <LinkContainer to="/projects/region-expert">
+                        <LinkContainer to="/experts/region-expert">
                           <ListGroupItem>Региональный эксперт WSR</ListGroupItem>
                         </LinkContainer>
                         <LinkContainer to="/projects/expert-de">

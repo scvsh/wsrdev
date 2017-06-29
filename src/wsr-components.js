@@ -291,12 +291,12 @@ export class WsrCarouselCaption extends React.Component {
                       Всероссийские отборочные соревнования
                     </NavItem>
                   </LinkContainer>
-                  <LinkContainer exact to="/showcase-exam" eventKey={ 3 }>
+                  <LinkContainer exact to="/championship" eventKey={ 3 }>
                     <NavItem className="wsr-carousel-menu-item">
                       Демонстрационный экзамен по стандартам WorldSkills
                     </NavItem>
                   </LinkContainer>
-                  <LinkContainer exact to="/juniorskills" eventKey={ 4 }>
+                  <LinkContainer exact to="/championship" eventKey={ 4 }>
                     <NavItem className="wsr-carousel-menu-item">
                       Juniorskills
                     </NavItem>
@@ -304,7 +304,7 @@ export class WsrCarouselCaption extends React.Component {
                 </Nav>
                 <Button bsClass="wsr-skewed-btn text-left skew-right">
                   <MdApps className="ri-big" />
-                  <a>Архив мероприятий</a>
+                  <a href="/projects">Архив мероприятий</a>
                 </Button>
               </Col>
             </Col>
