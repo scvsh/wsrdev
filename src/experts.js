@@ -36,7 +36,7 @@ class Team extends Component {
 
                   <Col xs={ 0 } sm={ 3 } md={ 2 } lg={ 2 } />
                   <Col xs={ 12 } sm={ 7 } md={ 7 } lg={ 7 } className="full-size">  
-                  <Col xs={ 12 } sm={ 7 } md={ 12 } lg={ 12 }>  
+                  <Col xs={ 12 } sm={ 12 } md={ 12 } lg={ 12 }>  
                   <WsrBlockTitle title="Эксперты" />
                       <WsrPage type="wsr-page" heading="Эксперты" description="" date="10.05.2017">
                       <p>Роль экспертов в организации соревнований WorldSkills Russia очень высока. Эксперт WorldSkills Russia – это человек, обладающий определенными компетенциями: превосходно знает свою профессию, стандарты и регламенты WorldSkills, а также процедуры проведения соревнований. Эксперт участвует в составлении тестового задания и определении критериев оценки участников соревнований WorldSkills Russia.
@@ -82,7 +82,7 @@ class Team extends Component {
                     
                     <WsrBlockBlank className="wsr-block-select">
                       <ListGroup>
-                        <LinkContainer exact to="/projects/region-expert"><ListGroupItem>Региональный эксперт</ListGroupItem></LinkContainer>
+                        <LinkContainer exact to="/experts/region-expert"><ListGroupItem>Региональный эксперт</ListGroupItem></LinkContainer>
                         <LinkContainer exact to="/"><ListGroupItem>Эксперт демонстрационного экзамена</ListGroupItem></LinkContainer>
                         <LinkContainer exact to="/"><ListGroupItem>Обучение в 1С:Учебном центре №1</ListGroupItem></LinkContainer>
                         <LinkContainer exact to="/"><ListGroupItem>Мастер ПО</ListGroupItem></LinkContainer>

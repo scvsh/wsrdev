@@ -1735,6 +1735,7 @@ body {
 .wsr-photo-gallery-item img {
 	border-radius: 3px 3px 0px 0px;
 	width: 100%;
+	
 }
 
 .wsr-photo-gallery-item__description {
@@ -1744,6 +1745,14 @@ body {
 .wsr-photo-gallery-photo {
 	padding: 0;
 }
+
+.wsr-photo-gallery-photo img{
+	min-width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
+
+
 
 /*-------------------------------------------------------------------------------------------*/
 
@@ -1917,6 +1926,10 @@ li.wsr-side-menu__item:focus > a {
 	background: white !important;
 }
 
+.form-horizontal .form-group {
+	margin-left: 0;
+}
+
 /*
 Should we change this at all?
 .form-control:focus {
@@ -1974,6 +1987,10 @@ Should we change this at all?
 }
 
 @media (min-width:@screen-sm) and (max-width:@screen-sm-max) {
+	.panel-body .row.is-flex > [class*='col-'] {
+	display: block;
+}
+
 	.wsr-title-descriptor {
 	}
 
@@ -1998,10 +2015,17 @@ Should we change this at all?
 	.wsr-carousel-menu__bg {
 		display: none;
 	}
+	.panel, .panel-title, .list-group {
+		font-size: 0.8em;
+	}
 
 }
 
 @media (min-width:@screen-xs) and (max-width:@screen-xs-max) {
+	.panel-body .row.is-flex > [class*='col-'] {
+	display: block;
+}
+
 	.wsr-header__image {
 		display: none;
 	}
@@ -2039,10 +2063,17 @@ Should we change this at all?
 	.wsr-block__title {
 		margin-top: 2em;
 	}
+	.panel, .panel-title, .list-group {
+		font-size: 0.8em;
+	}
 
 }
 
 @media (max-width:@screen-xs) {
+	.panel-body .row.is-flex > [class*='col-'] {
+	display: block;
+}
+
 	.wsr-block__title {
 		margin-top: 1em;
 	}

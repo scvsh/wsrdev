@@ -49,8 +49,7 @@ class Important extends Component {
                     <WsrBlock type="wsr-block-important" heading="Старт группы по обучению по программе «Региональный эксперт WorldSkills» перенесен на 13-14 июня!" description="Старт группы по обучению по программе «Региональный эксперт WorldSkills» состоится на 13-14 июня 2017г. 
                                                                                                                    Адрес проведения: г. Москва, Дмитровское шоссе, д.51, корпус 1 (РКЦ WSR в городе Москве)."
                       date="06.06.2017" image="/Images/thumb03.jpg" />
-                      <WsrSpinner />
-
+                    
                    
 
 

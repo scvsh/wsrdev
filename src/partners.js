@@ -27,12 +27,12 @@ class Partners extends Component {
               { /* Main content */ }
               <Grid bsClass="containter-fluid">
                 <Row>
-                  <Col xs={ 0 } sm={ 4 } md={ 3 } lg={ 2 } />
-                  <Col md={7}>
-                  <Tab.Container id="left-tabs-example" defaultActiveKey="0">
+                  <Col xs={ 0 } sm={ 3 } md={ 2 } lg={ 2 } />
+                  <Col sm = {7}  md={7}>
+                  <Tab.Container id="left-tabs-example" defaultActiveKey="10">
                     <Row className="clearfix">
                       
-                      <Col xs={ 12 } sm={ 5 } md={ 2 } lg={ 4 }>
+                      <Col xs={ 12 } sm={ 5 } md={ 5 } lg={ 5 }>
                         <WsrBlockTitle title="Партнёры" />
                         <WsrBlockBlank className="wsr-block-select">
                           <Nav bsStyle="pills" className="wsr-competence-category" stacked>
@@ -73,7 +73,7 @@ class Partners extends Component {
                         <Tab.Pane eventKey="0">
                           <Tab.Container id="left-tabs-example" defaultActiveKey="1c">
                             <Row className="clearfix">
-                              <Col sm={ 3 } md={ 3 } lg={ 8 } className="full-size">
+                              <Col sm={ 7 } md={ 7 } lg={ 7 } className="full-size">
                                 <WsrBlockTitle title="Информация о партнёре" />
                                 <WsrPartner 
                     title="CISCO" 
@@ -93,17 +93,35 @@ class Partners extends Component {
                             </Row>
                           </Tab.Container>
                         </Tab.Pane>
+                        <Tab.Pane eventKey="10">
+                          <Tab.Container id="left-tabs-example" defaultActiveKey="1c">
+                            <Row className="clearfix">
+                              <Col sm={ 7 } md={ 7 } lg={ 7 } className="full-size">
+                                <WsrBlockTitle title="Новости партнёров" />
+
+
+                                <WsrBlock type="" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
+На международном чемпионата China International Skills Competition 2017 (CISC-2017)"
+                      date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
+                      <WsrBlock type="" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
+На международном чемпионата China International Skills Competition 2017 (CISC-2017)"
+                      date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
+                              </Col>
+                              
+                            </Row>
+                          </Tab.Container>
+                        </Tab.Pane>
                       </Tab.Content>
 
                     </Row>
                   </Tab.Container>
                   </Col>
-                  <Col lg={ 3 } className="">
+                  <Col sm={ 2 } md={ 3 } lg={ 3 } className="">
                                   <WsrBlockTitle title="Стать партнёром" />
                     
                     <WsrBlockBlank className="wsr-block-select">
                       <ListGroup>
-                        <LinkContainer exact to="/"><ListGroupItem>Заполнить заявку</ListGroupItem></LinkContainer>
+                        <LinkContainer exact to="/partners/become-a-partner"><ListGroupItem>Заполнить заявку</ListGroupItem></LinkContainer>
                         <LinkContainer exact to="/"><ListGroupItem>Скачать документы</ListGroupItem></LinkContainer>
 
                         <LinkContainer exact to="/"><ListGroupItem><WsrExpert name="Воронков  Никита Александрович" certification="certified" comment="Ответственный за направление" host={<div>

@@ -52,6 +52,7 @@ const Routes = () => (
             <Route exact path="/expert" render={ () => ( <Redirect to="/expert/community" /> ) } />
             <Route path="/expert/community" component={ ExpertCommunity } />
             <Route path="/experts" component={ Experts } />
+            <Route path="/experts/region-expert" component={ RegionExpert } />
 
             { /* Sck */ }
 
@@ -60,7 +61,7 @@ const Routes = () => (
 
             { /* Projects */ }
             <Route exact path="/projects" component={ Projects } />
-            <Route path="/projects/region-expert" component={ RegionExpert } />
+
             <Route exact path="/partners" component={ Partners } />
             <Route  path="/partners/become-a-partner" component={ BecomePartner } />
             
@@ -74,10 +75,10 @@ const Routes = () => (
 
             { /* Championship */ }
 
-            <Route exact path="/championship" component={ Championship } />
-            <Route path="/championship/history" component={ ChampionshipHistory } />
-            <Route path="/championship/partners" component={ ChampionshipPartners } />
-            <Route path="/championship/locations" component={ ChampionshipLocations} />
+            <Route exact path="/projects/championship" component={ Championship } />
+            <Route path="/projects/championship/history" component={ ChampionshipHistory } />
+            <Route path="/projects/championship/partners" component={ ChampionshipPartners } />
+            <Route path="/projects/championship/locations" component={ ChampionshipLocations} />
 
             { /* Qualification */ }
             <Route exact path="/qualification" component={ Qualification } />

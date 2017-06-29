@@ -34,8 +34,8 @@ class Contact extends Component {
               { /* Main content */ }
               <Grid bsClass="containter-fluid">
                 <Row>
-                  <Col xs={ 0 } sm={ 4 } md={ 3 } lg={ 2 } />
-                  <Col xs={ 12 } sm={ 5 } md={ 6 } lg={ 7 }>
+                  <Col xs={ 0 } sm={ 3 } md={ 2 } lg={ 2 } />
+                  <Col xs={ 12 } sm={ 6 } md={ 7 } lg={ 7 }>
                     <WsrBlockTitle title="Контакты" />
                       <WsrPage type="wsr-page" heading="Связаться с нами" description="" date="10.05.2017">
                       <p>Мы ведем активное сотрудничество с сообществом WorldSkills Russia, социальными и бизнес-партнерами, участниками команды Москвы, экспертами и образовательными организациями! 

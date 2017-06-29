@@ -32,8 +32,8 @@ class Competence extends Component {
                 <Row>
                   <Tab.Container id="left-tabs-example" defaultActiveKey="0">
                     <Row className="clearfix">
-                      <Col xs={ 0 } sm={ 4 } md={ 3 } lg={ 2 } />
-                      <Col xs={ 12 } sm={ 5 } md={ 6 } lg={ 3 }>
+                      <Col xs={ 0 } sm={ 4 } md={ 2 } lg={ 2 } />
+                      <Col xs={ 12 } sm={ 5 } md={ 3 } lg={ 3 }>
                         <WsrBlockTitle title="Категории" />
                         <WsrBlockBlank className="wsr-block-select">
                           <Nav bsStyle="pills" className="wsr-competence-category" stacked>
@@ -101,7 +101,7 @@ class Competence extends Component {
                               </Col>
                               <Tab.Content animation>
                                 <Tab.Pane eventKey="1c">
-                                  <Col sm={ 3 } md={ 3 } lg={ 4 }>
+                                  <Col sm={ 4 } md={ 4 } lg={ 4 }>
                                     <WsrBlockTitle title="Сборная Москвы" />
                                     <WsrTeamMember name="Дармограй Тимофей Юрьевич " medal="gold" tier="primary" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
                                     />
@@ -162,7 +162,7 @@ class Competence extends Component {
                               </Col>
                               <Tab.Content animation>
                                 <Tab.Pane eventKey="1c">
-                                  <Col sm={ 3 } md={ 3 } lg={ 3 }>
+                                  <Col sm={ 3 } md={ 4 } lg={ 3 }>
                                     <WsrBlockTitle title="Сборная Москвы" />
                                     <WsrTeamMember name="Дармограй Тимофей Юрьевич " tier="primary" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
                                     />

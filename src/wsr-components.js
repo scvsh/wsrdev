@@ -174,7 +174,7 @@ export class WsrMainMenu extends React.Component {
                     <div className="wsr-affix">
                       <Row dir="ltr">
                         <WsrMenuTitle />
-                        <LinkContainer to="/login">
+                        <LinkContainer to="/">
                           <div>
                             <Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left skew-left">
                               <div>
@@ -414,7 +414,7 @@ export class WsrBlock extends React.Component {
                                                                                                                                                 </h5>
                   </LinkContainer>
                   <div className="wsr-block__description">
-                    <TextTruncate className="wsr-block__description" line={ 2 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
+                    <TextTruncate className="wsr-block__description" line={ _props.lines? _props.lines : 2 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
                                                                                                                                                    <MdArrowForward className="wsr-block__date-icon" />
                                                                                                                                                  </a> } />
                   </div>
@@ -675,7 +675,7 @@ export class WsrPage extends React.Component {
         return (
             <div className={ "wsr-block " + _props.type }>
               <Row>
-                <Col sm={ 9 } md={ 12 } className="wsr_page__container">
+                <Col xs={ 12 } className="wsr_page__container">
                   <h3>
                                                                                                                                                     { _props.heading ? _props.heading : "" }
                                                                                                                                                 </h3>

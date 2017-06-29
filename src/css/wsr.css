@@ -1661,6 +1661,11 @@ body {
 .wsr-photo-gallery-photo {
   padding: 0;
 }
+.wsr-photo-gallery-photo img {
+  min-width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
 /*-------------------------------------------------------------------------------------------*/
 /************************************ LOGIN FORM STYLES *************************************/
 /*-------------------------------------------------------------------------------------------*/
@@ -1799,6 +1804,9 @@ li.wsr-side-menu__item:focus > a {
 .Cal__Month__rows {
   background: white !important;
 }
+.form-horizontal .form-group {
+  margin-left: 0;
+}
 /*
 Should we change this at all?
 .form-control:focus {
@@ -1836,6 +1844,9 @@ Should we change this at all?
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .panel-body .row.is-flex > [class*='col-'] {
+    display: block;
+  }
   .wsr-burger__background {
     display: none;
   }
@@ -1851,8 +1862,16 @@ Should we change this at all?
   .wsr-carousel-menu__bg {
     display: none;
   }
+  .panel,
+  .panel-title,
+  .list-group {
+    font-size: 0.8em;
+  }
 }
 @media (min-width: 480px) and (max-width: 767px) {
+  .panel-body .row.is-flex > [class*='col-'] {
+    display: block;
+  }
   .wsr-header__image {
     display: none;
   }
@@ -1877,8 +1896,16 @@ Should we change this at all?
   .wsr-block__title {
     margin-top: 2em;
   }
+  .panel,
+  .panel-title,
+  .list-group {
+    font-size: 0.8em;
+  }
 }
 @media (max-width: 480px) {
+  .panel-body .row.is-flex > [class*='col-'] {
+    display: block;
+  }
   .wsr-block__title {
     margin-top: 1em;
   }
