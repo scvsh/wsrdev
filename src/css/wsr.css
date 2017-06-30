@@ -644,9 +644,9 @@ li .active > a:any-link {
     font-size: 10px;
   }
 }
-@media (min-height: 1000px) {
+@media (min-height: 800px) {
   .wsr-menu__social a {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 .wsr-menu__social {
@@ -1839,6 +1839,14 @@ Should we change this at all?
 }
 */
 @media (min-width: 1200px) {
+  .wsr-title-descriptor {
+    font-size: 13px;
+    font-size: 1.53vh;
+  }
+  .wsr-title-primary {
+    font-size: 13px;
+    font-size: 1.53vh;
+  }
   .wsr-burger__background {
     display: none;
   }
@@ -1852,7 +1860,35 @@ Should we change this at all?
     clip-path: url("#ClipBlock");
   }
 }
+@media (min-width: 1200px) and (max-height: 326.797385620915px) {
+  .wsr-title-descriptor {
+    font-size: 5px;
+  }
+}
+@media (min-width: 1200px) and (min-height: 653.59477124183px) {
+  .wsr-title-descriptor {
+    font-size: 10px;
+  }
+}
+@media (min-width: 1200px) and (max-height: 326.797385620915px) {
+  .wsr-title-primary {
+    font-size: 5px;
+  }
+}
+@media (min-width: 1200px) and (min-height: 588.235294117647px) {
+  .wsr-title-primary {
+    font-size: 9px;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
+  .wsr-title-descriptor {
+    font-size: 13px;
+    font-size: 1.53vh;
+  }
+  .wsr-title-primary {
+    font-size: 13px;
+    font-size: 1.53vh;
+  }
   .wsr-burger__background {
     display: none;
   }
@@ -1864,11 +1900,39 @@ Should we change this at all?
     -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
     clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
     clip-path: url("#ClipBlock");
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) and (max-height: 457.516339869281px) {
+  .wsr-title-descriptor {
+    font-size: 7px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) and (min-height: 653.59477124183px) {
+  .wsr-title-descriptor {
+    font-size: 10px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) and (max-height: 457.516339869281px) {
+  .wsr-title-primary {
+    font-size: 7px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) and (min-height: 653.59477124183px) {
+  .wsr-title-primary {
+    font-size: 10px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .panel-body .row.is-flex > [class*='col-'] {
     display: block;
+  }
+  .wsr-title-descriptor {
+    font-size: 13px;
+    font-size: 1.53vh;
+  }
+  .wsr-title-primary {
+    font-size: 13px;
+    font-size: 1.53vh;
   }
   .wsr-burger__background {
     display: none;
@@ -1891,6 +1955,26 @@ Should we change this at all?
     font-size: 0.8em;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) and (max-height: 457.516339869281px) {
+  .wsr-title-descriptor {
+    font-size: 7px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) and (min-height: 653.59477124183px) {
+  .wsr-title-descriptor {
+    font-size: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) and (max-height: 457.516339869281px) {
+  .wsr-title-primary {
+    font-size: 7px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) and (min-height: 588.235294117647px) {
+  .wsr-title-primary {
+    font-size: 9px;
+  }
+}
 @media (min-width: 480px) and (max-width: 767px) {
   .panel-body .row.is-flex > [class*='col-'] {
     display: block;
@@ -1900,6 +1984,10 @@ Should we change this at all?
   }
   .top_gal {
     display: none;
+  }
+  .wsr-title-primary {
+    font-size: 13px;
+    font-size: 1.53vh;
   }
   .wsr-affix {
     display: none;
@@ -1923,6 +2011,16 @@ Should we change this at all?
   .panel-title,
   .list-group {
     font-size: 0.8em;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) and (max-height: 457.516339869281px) {
+  .wsr-title-primary {
+    font-size: 7px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) and (min-height: 588.235294117647px) {
+  .wsr-title-primary {
+    font-size: 9px;
   }
 }
 @media (max-width: 480px) {

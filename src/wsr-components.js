@@ -169,7 +169,7 @@ export class WsrMainMenu extends React.Component {
                     </Nav>
                   </Navbar.Collapse>
                 </Navbar>
-                <Col xs={ 5 } sm={ 4 } md={ 3 } lg={ 3 }>
+                <Col xs={ 5 } sm={ 5 } md={ 4 } lg={ 3 }>
                   <div dir="rtl" className="wsr-affix">
                     <div className="wsr-affix">
                       <Row dir="ltr">
