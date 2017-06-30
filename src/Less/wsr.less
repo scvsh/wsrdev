@@ -15,6 +15,7 @@
 body {
 	overflow-x: hidden;
 	transition: 100ms ease-in;
+	width: 100vw;
 }
 
 .App {
@@ -150,6 +151,7 @@ li .active > a:any-link {
 	transform: skew(15deg);
 	font-weight: 300;
 	background-size: cover;
+	z-index: 4000;
 }
 
 .wsr-carousel-menu__nav > li {
@@ -169,8 +171,8 @@ li .active > a:any-link {
 }
 
 .wsr-carousel-menu__nav > li > a {
-	.responsive_limited(1.6vh, 5px, 13px, 12px, padding-top);
-	.responsive_limited(1.6vh, 5px, 13px, 12px, padding-bottom);
+	.responsive_limited(1.6vh, 5px, 7px, 12px, padding-top);
+	.responsive_limited(1.6vh, 5px, 7px, 12px, padding-bottom);
 	padding-left: 1vw;
 	display: block;
 	transform: skew(-15deg);
@@ -178,9 +180,13 @@ li .active > a:any-link {
 	color: @brand-secondary;
 }
 
-.wsr-carousel-menu__nav > li > a:hover,
-.wsr-carousel-menu__nav > li > a:focus {
+.wsr-carousel-menu__nav > li > a:hover {
 	color: @brand-primary;
+	background-color: transparent;
+}
+
+.wsr-carousel-menu__nav > li > a:focus {
+	color: inherit;
 	background-color: transparent;
 }
 
@@ -196,17 +202,25 @@ li .active > a:any-link {
 	background-color: transparent;
 }
 
+.owl-height {
+	height: 500px;
+}
 .red-stage .owl-stage-outer {
-	height: 300px;
+	height: 100%;
+	overflow: inherit;
+}
+
+.owl-carousel {
+	height: inherit;
 }
 
 .top_gal {
-	.responsive_limited(50vh, 100px, 400px, 200px, height);
+	.responsive_limited(50vh, 100px, 300px, 200px, height);
 }
 
 .top_gal img {
 	min-width: 100%;
-	height: inherit;
+	.responsive_limited(50vh, 100px, 300px, 200px, height);
 	object-fit: cover;
 }
 
@@ -1964,10 +1978,14 @@ Should we change this at all?
 
 @media (min-width:@screen-md) and (max-width:@screen-md-max) {
 	.wsr-title-descriptor {
+		.responsive_limited(1.45vh, 7px, 7px, 12px, font-size);
 	}
 
 	.wsr-title-primary {
+		.responsive_limited(1.53vh, 7px, 8px, 13px, font-size);
 	}
+
+
 
 	.wsr-burger__background {
 		display: none;

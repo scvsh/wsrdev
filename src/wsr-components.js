@@ -41,11 +41,11 @@ export class WsrMenuTitle extends React.Component {
         return (
             <Link to="/">
               <div className="wsr-title">
-                <div className="wsr-title-descriptor">
+                <div className="wsr-title-primary">
                   Региональный координационный центр
                 </div>
-                <div className="wsr-title-primary">
-                  WorldSkills Russia по городу Москва
+                <div className="wsr-title-descriptor">
+                  WorldSkills Russia по городу Москвe
                 </div>
                 <div className="wsr-title-logo">
                   <img alt="" src="/Images/wsr-msk-logo.svg" />
@@ -280,27 +280,19 @@ export class WsrCarouselCaption extends React.Component {
 
             <Col xsOffset={ 1 } xs={ 11 } className="wsr-col-inherit wsr-carousel-red">
               <Col xs={ 2 } sm={ 3 } md={ 4 } lg={ 3 } className="pull-right wsr-carousel-menu">
-                <Nav ref="red-stage-nav" className=" text-right wsr-carousel-menu__nav" activeKey={ 1 }>
-                  <LinkContainer exact to="/championship" eventKey={ 1 }>
-                    <NavItem className="wsr-carousel-menu-item ">
+                <Nav ref="red-stage-nav" className=" text-right wsr-carousel-menu__nav" activeKey={  this.state.activeNav  }>
+                    <NavItem className="wsr-carousel-menu-item " eventKey={ 1 }>
                       V ОЧМ «Московские мастера»
                     </NavItem>
-                  </LinkContainer>
-                  <LinkContainer exact to="/qualification" eventKey={ 2 }>
-                    <NavItem className="wsr-carousel-menu-item">
+                    <NavItem className="wsr-carousel-menu-item" eventKey={ 2 }>
                       Всероссийские отборочные соревнования
                     </NavItem>
-                  </LinkContainer>
-                  <LinkContainer exact to="/championship" eventKey={ 3 }>
-                    <NavItem className="wsr-carousel-menu-item">
+                    <NavItem className="wsr-carousel-menu-item" eventKey={ 3 }>
                       Демонстрационный экзамен по стандартам WorldSkills
                     </NavItem>
-                  </LinkContainer>
-                  <LinkContainer exact to="/championship" eventKey={ 4 }>
-                    <NavItem className="wsr-carousel-menu-item">
+                    <NavItem className="wsr-carousel-menu-item" eventKey={ 4 }>
                       Juniorskills
                     </NavItem>
-                  </LinkContainer>
                 </Nav>
                 <Button bsClass="wsr-skewed-btn text-left skew-right">
                   <MdApps className="ri-big" />
@@ -341,7 +333,13 @@ export class WsrCarousel extends React.Component {
         return (
             <Row className="top_gal">
               <WsrCarouselCaption ref="redcaption" activeKey={ this.state.activeNav } />
-              <img src="/Images/carousel/gallery02.jpg" alt="The Last of us" />
+              <OwlCarousel ref="redstage" rewind={ false } autoplay={ true } className="red-stage" items={ 1 } margin={ 0 }
+                loop={ true } onTranslate={ this.handleKeyChange }>
+                <div><img src="/Images/carousel/gallery02.jpg" alt="The Last of us" /></div>
+                <div><img src="/Images/carousel/gallery01.jpg" alt="GTA V" /></div>
+                <div><img src="/Images/carousel/gallery03.jpg" alt="Mirror Edge" /></div>
+                <div><img src="/Images/carousel/gallery04.jpg" alt="Mirror Edge" /></div>
+              </OwlCarousel>
               <svg width="0" height="0">
                 <clipPath id="ClipRight" clipPathUnits="objectBoundingBox">
                   <polygon points="0.28 1, 1 1,1 0,0 0">
