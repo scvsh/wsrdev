@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./css/wsr.css";
-import { MdMore, MdMoreVert, MdKeyboardControl, MdStarHalf, MdStarOutline, MdStar, MdStars, MdApps, MdDateRange, MdArrowForward, MdSearch, MdVpnKey, MdMail, MdPhone } from "react-icons/lib/md";
+import { MdInput, MdMore, MdMoreVert, MdKeyboardControl, MdStarHalf, MdStarOutline, MdStar, MdStars, MdApps, MdDateRange, MdArrowForward, MdSearch, MdVpnKey, MdMail, MdPhone } from "react-icons/lib/md";
 import { FaArchive, FaGraduationCap, FaStarHalfEmpty, FaStarHalf, FaStarO, FaStar, FaVk, FaFacebook, FaInstagram, FaYoutube } from "react-icons/lib/fa";
 import TextTruncate from "react-text-truncate";
 import { LinkContainer } from "react-router-bootstrap";
@@ -873,7 +873,7 @@ export class WsrExpertSearch extends React.Component {
                     </FormControl>
                   </FormGroup>
                 </Col>
-                <Col md={ 4 } lg={ 4 }>
+                <Col md={ 4 } lg={ 3 }>
                   <FormGroup controlId="formControlsSelect">
                     <WsrBlockTitle title="Компетенция" />
                     <FormControl componentClass="select" placeholder="select">
@@ -892,6 +892,16 @@ export class WsrExpertSearch extends React.Component {
                         </Button>
                       </InputGroup.Button>
                     </InputGroup>
+                  </FormGroup>
+                </Col>
+                <Col md={ 1 } lg={ 1 } >
+                  <FormGroup>
+                    <WsrBlockTitle title="Экспорт" />
+
+                        <Button block className="wsr-btn-search">
+                          <MdInput className="ri-search" />
+                          </Button>
+
                   </FormGroup>
                 </Col>
               </Form>
