@@ -51,7 +51,7 @@ class Sck extends Component {
                         <WsrBlockTitle title="СЦК" />
                         <WsrBlockBlank className="wsr-block-select">
 
-                        <PanelGroup  activeKey={ this.state.activeKey } onSelect={this.handleSelect} accordion className="wsr-block__sck-info__panel">
+                        <PanelGroup accordion className="wsr-block__sck-info__panel">
         <Panel header="Преподавание музыки" eventKey="1">
                           <Nav  bsStyle="pills" className="wsr-competence-category wsr-sck-competence" stacked>
                             <NavItem eventKey="1.1">
