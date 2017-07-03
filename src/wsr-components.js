@@ -62,12 +62,38 @@ export class WsrMenuTitle extends React.Component {
 }
 
 export class WsrMainMenu extends React.Component {
+  constructor(props) {
+        super(props);
+        this.handleScroll = this.handleScroll.bind(this);
+        this.state = {
+            scroll: 0.08,
+            anchor: 180
+        };
+    }
+    componentDidMount() {
+    //window.addEventListener('scroll', this.handleScroll);
+  }
+
+    componentWillUnmount() {
+   // window.removeEventListener('scroll', this.handleScroll);
+  }
+
+    handleScroll() {
+       let anchor = 180;
+       let value = document.body.scrollTop;
+       let cornerstate = value > anchor ? 1/(value/anchor)*0.08 - (value/anchor*0.02) :  0.08;
+          
+          this.setState({
+              scroll: cornerstate
+          });
+      }
+
     render() {
         return (
             <Grid bsClass="containter-fluid">
               <svg width="0" height="0">
                 <clipPath id="ClipAffix" clipPathUnits="objectBoundingBox">
-                  <polygon points="0 1,0.5 1,0.67 0.08,1 0,0 0">
+                  <polygon points={"0 1,0.5 1,0.67 " + 0.08 + ",1 0,0 0"}>
                   </polygon>
                 </clipPath>
               </svg>
@@ -1043,16 +1069,15 @@ export class WsrPartner extends React.Component {
                 <Col sm={ 9 } md={ 12 } className="wsr_partner__container ">
                   <div className="wsr-page__description">
                     <Media>
-                      <Media.Left className="wsr-partner-logo">
-                        <img width={ 100 } src={ _props.logo } alt="" />
-                      </Media.Left>
                       <Media.Body className="wsr-partner-description">
                         <Media.Heading>
-                          { _props.title }
+                          <a href="http://www.cisco.com/">{ _props.title }</a>
                         </Media.Heading>
+                        { _props.children }
                         <TextTruncate className="wsr-block__description" line={ 3 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
                                                                                                                                                        <MdArrowForward className="wsr-block__date-icon" />
-                                                                                                                                                     </a> } />
+                                                                                                                                                     </a>
+                                                                                                                                                      } />
                       </Media.Body>
                     </Media>
                   </div>

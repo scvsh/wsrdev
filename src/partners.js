@@ -11,7 +11,7 @@ import {   Panel, NavItem, Tab, Nav, ListGroupItem, ListGroup, Grid, Row, Col, I
 
 /* Import WSR React components*/
 
-import { WsrBlock, WsrSckInfo, WsrExpert, WsrCompetence, WsrTeamMember, WsrPartnersItem, WsrCarousel, WsrPartner, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrTierLabel, WsrBlock, WsrSckInfo, WsrExpert, WsrCompetence, WsrTeamMember, WsrPartnersItem, WsrCarousel, WsrPartner, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 
 /* Main app */
@@ -37,13 +37,13 @@ class Partners extends Component {
                         <WsrBlockBlank className="wsr-block-select">
                           <Nav bsStyle="pills" className="wsr-competence-category" stacked>
                             <NavItem eventKey="0">
-                              <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_01.svg" responsive />
+                              <div className="center-block wsr-parther-logo--news">
+                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_02.svg" responsive />
                         </div>
                             </NavItem>
                             <NavItem eventKey="1">
-                              <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_02.svg" responsive />
+                              <div className="center-block ">
+                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_01.svg" responsive />
                         </div>
                             </NavItem>
                             <NavItem eventKey="2">
@@ -52,7 +52,7 @@ class Partners extends Component {
                         </div>
                             </NavItem>
                             <NavItem eventKey="3">
-                               <div className="center-block">
+                               <div className="center-block wsr-parther-logo--news">
                           <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_04.svg" responsive />
                         </div>
                             </NavItem>
@@ -66,26 +66,8 @@ class Partners extends Component {
                           <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_06.svg" responsive />
                         </div>
                             </NavItem>
-                            <NavItem eventKey="6">
-                              <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_07.svg" responsive />
-                        </div>
-                            </NavItem>
-                            <NavItem eventKey="7">
-                              <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_08.svg" responsive />
-                        </div>
-                            </NavItem>
-                            <NavItem eventKey="8">
-                              <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_09.svg" responsive />
-                        </div>
-                            </NavItem>
-                            <NavItem eventKey="9">
-                              <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_10.svg" responsive />
-                        </div>
-                            </NavItem>
+                            
+                            
                           </Nav>
                         </WsrBlockBlank>               
                       </Col>
@@ -100,7 +82,8 @@ class Partners extends Component {
                     description="Cisco — американская транснациональная компания, разрабатывающая и продающая сетевое оборудование, предназначенное в основном для крупных организаций и телекоммуникационных предприятий. Одна из крупнейших в мире компаний, специализирующихся в области высоких технологий. Одной из особенностей бизнес-модели компании стала многоуровневая разветвлённая система сертификации инженеров по компьютерным сетям. Благодаря тому, что экзамены этой системы проверяют знание не только продукции Cisco, но и знание сетевых технологий и протоколов, многие организации, даже работающие на сетевом оборудовании других фирм, признают ценность профессиональных сертификатов Cisco. В частности, сертификация на уровне эксперта (CCIE) является одной из самых известных и уважаемых в компьютерной индустрии."
                     website="http://www.cisco.com"
                     logo="/Images/partners/1.png"
-                    />
+                    ><WsrTierLabel competence="Камнетёстное дело" tier="primary"/>
+                    </WsrPartner>
 
                                  <WsrBlock type="wsr-block-important" heading="Старт группы по обучению по программе «Региональный эксперт WorldSkills» перенесен на 13-14 июня!" description="Старт группы по обучению по программе «Региональный эксперт WorldSkills» состоится на 13-14 июня 2017г. 
                                                                                                                    Адрес проведения: г. Москва, Дмитровское шоссе, д.51, корпус 1 (РКЦ WSR в городе Москве)."

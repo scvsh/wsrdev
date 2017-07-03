@@ -27,7 +27,7 @@ class App extends Component {
               
                   { /* Left sidebar */ }
                   
-                  <WsrMainMenu/>
+                  <WsrMainMenu />
                 
               { /* Main content */ }
               <Grid bsClass="containter-fluid">

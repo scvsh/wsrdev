@@ -66,6 +66,11 @@ class Team extends Component {
                                         <WsrMedal tier="secondary" medal="silver"/>
                                         <WsrMedal tier="secondary" medal="silver"/>
                                       </WsrTeamMemberItem>
+                                      <WsrTeamMemberItem  name="Дармограй Тимофей Юрьевич" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
+                                        <WsrMedal tier="primary" medal="gold"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                      </WsrTeamMemberItem>
                                     </WsrTeamMember>
                                   </Col>
                                   <Col xs={12} sm={ 6 } md={ 6 } lg={ 4 }>
@@ -73,8 +78,63 @@ class Team extends Component {
                                       <WsrTeamMemberItem  name="Юсупов Набихон Маннонович" competence="Кирпичная кладка" tier="secondary"  host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg" >
                                         <WsrMedal tier="secondary" medal="bronze"/>
                                       </WsrTeamMemberItem>
+                                      <WsrTeamMemberItem  name="Юсупов Набихон Маннонович" competence="Кирпичная кладка" tier="secondary"  host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg" >
+                                        <WsrMedal tier="secondary" medal="bronze"/>
+                                      </WsrTeamMemberItem>
+                                      <WsrTeamMemberItem  name="Юсупов Набихон Маннонович" competence="Кирпичная кладка" tier="secondary"  host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg" >
+                                        <WsrMedal tier="secondary" medal="bronze"/>
+                                      </WsrTeamMemberItem>
+                                      <WsrTeamMemberItem  name="Юсупов Набихон Маннонович" competence="Кирпичная кладка" tier="secondary"  host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg" >
+                                        <WsrMedal tier="secondary" medal="bronze"/>
+                                      </WsrTeamMemberItem>
+                                      <WsrTeamMemberItem  name="Юсупов Набихон Маннонович" competence="Кирпичная кладка" tier="secondary"  host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg" >
+                                        <WsrMedal tier="secondary" medal="bronze"/>
+                                      </WsrTeamMemberItem>
                                     </WsrTeamMember>
                                   </Col>    
+                                        
+                          </Row>
+                          <WsrBlockTitle title="Строительная сфера" />
+                    <Row>
+                                  <Col xs={12} sm={ 6 } md={ 6 } lg={ 4 }>
+                                    <WsrTeamMember competence="Камнетесное дело" expert="Шкребтиенко Сергей Олегович"> 
+                                      <WsrTeamMemberItem  name="Дармограй Тимофей Юрьевич" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
+                                        <WsrMedal tier="primary" medal="gold"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                      </WsrTeamMemberItem>
+                                      <WsrTeamMemberItem  name="Дармограй Тимофей Юрьевич" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
+                                        <WsrMedal tier="primary" medal="gold"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                      </WsrTeamMemberItem>
+                                      <WsrTeamMemberItem  name="Дармограй Тимофей Юрьевич" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
+                                        <WsrMedal tier="primary" medal="gold"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                      </WsrTeamMemberItem>
+                                    </WsrTeamMember>
+                                  </Col>
+                                  <Col xs={12} sm={ 6 } md={ 6 } lg={ 4 }>
+                                    <WsrTeamMember competence="Камнетесное дело" expert="Калединцев Сергей Юрьевич"> 
+                                      <WsrTeamMemberItem  name="Юсупов Набихон Маннонович" competence="Кирпичная кладка" tier="secondary"  host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg" >
+                                        <WsrMedal tier="secondary" medal="bronze"/>
+                                      </WsrTeamMemberItem>
+                                      <WsrTeamMemberItem  name="Юсупов Набихон Маннонович" competence="Кирпичная кладка" tier="secondary"  host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg" >
+                                        <WsrMedal tier="secondary" medal="bronze"/>
+                                      </WsrTeamMemberItem>
+                                      <WsrTeamMemberItem  name="Юсупов Набихон Маннонович" competence="Кирпичная кладка" tier="secondary"  host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg" >
+                                        <WsrMedal tier="secondary" medal="bronze"/>
+                                      </WsrTeamMemberItem>
+                                      <WsrTeamMemberItem  name="Юсупов Набихон Маннонович" competence="Кирпичная кладка" tier="secondary"  host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg" >
+                                        <WsrMedal tier="secondary" medal="bronze"/>
+                                      </WsrTeamMemberItem>
+                                      <WsrTeamMemberItem  name="Юсупов Набихон Маннонович" competence="Кирпичная кладка" tier="secondary"  host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg" >
+                                        <WsrMedal tier="secondary" medal="bronze"/>
+                                      </WsrTeamMemberItem>
+                                    </WsrTeamMember>
+
+                                  </Col>
                                   <Col xs={12} sm={ 6 } md={ 6 } lg={ 4 }>
                                     <WsrTeamMember competence="Камнетесное дело" expert="Шкребтиенко Сергей Олегович"> 
                                       <WsrTeamMemberItem  name="Воронков  Никита Александрович" competence="Камнетесное дело" tier="secondary"  host=" ООО «Практика реставрации»" expert="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg" >
@@ -84,15 +144,7 @@ class Team extends Component {
                                       </WsrTeamMemberItem>
                                     </WsrTeamMember>
                                   </Col>    
-                                  <Col xs={12} sm={ 6 } md={ 6 } lg={ 4 }>
-                                    <WsrTeamMember competence="Камнетесное дело" expert="Шкребтиенко Сергей Олегович"> 
-                                      <WsrTeamMemberItem  name="Воронков  Никита Александрович" competence="Камнетесное дело" tier="secondary"  host=" ООО «Практика реставрации»" expert="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg" >
-                                        <WsrMedal tier="secondary" medal="gold"/>
-                                        <WsrMedal tier="secondary" medal="silver"/>
-                                        <WsrMedal tier="secondary" medal="silver"/>
-                                      </WsrTeamMemberItem>
-                                    </WsrTeamMember>
-                                  </Col>                         
+                                        
                           </Row>
 
                                   </Col>

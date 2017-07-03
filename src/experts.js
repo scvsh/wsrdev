@@ -4,9 +4,11 @@ import "./css/wsr.css";
 import "./css/fonts.css";
 import { LinkContainer } from "react-router-bootstrap";
 
+
+import TextTruncate from "react-text-truncate";
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
+import { Media, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
@@ -14,7 +16,7 @@ import { WsrCertification, WsrExpert, WsrExpertSearch, WsrTeamMember, WsrCarouse
 
 /* Import Icons */
 
-import { MdFileDownload } from "react-icons/lib/md";
+import { MdArrowForward, MdFileDownload } from "react-icons/lib/md";
 
 /* Main app */
 
@@ -40,11 +42,25 @@ class Team extends Component {
                   <WsrBlockTitle title="Эксперты" />
                       <WsrPage type="wsr-page" heading="Эксперты" description="" date="10.05.2017">
                       <p>Роль экспертов в организации соревнований WorldSkills Russia очень высока. Эксперт WorldSkills Russia – это человек, обладающий определенными компетенциями: превосходно знает свою профессию, стандарты и регламенты WorldSkills, а также процедуры проведения соревнований. Эксперт участвует в составлении тестового задания и определении критериев оценки участников соревнований WorldSkills Russia.
-                      <ul>
-                        <li><WsrCertification certification="certified"/>Сертифицированный эксперт</li>
-                        <li><WsrCertification certification="regional"/>Региональный эксперт</li>
-                        <li><WsrCertification certification="demo"/>Эксперт Демонстрационного Экзамена</li>
-                      </ul>
+                    
+                       <WsrCertification certification="certified"/>Сертифицированный эксперт
+                        <WsrCertification certification="regional"/>Региональный эксперт
+                        <WsrCertification certification="demo"/>Эксперт Демонстрационного Экзамена
+
+                         <Media>
+                      <Media.Left className="wsr-partner-logo">
+                        <img width={ 100 } src="/Images/wsr-logo-regional.svg" alt="" />
+                      </Media.Left>
+                      <Media.Body className="wsr-partner-description">
+                        <Media.Heading>
+                          Региональный эксперт
+                        </Media.Heading>
+                        <TextTruncate className="wsr-block__description" line={ 3 } truncateText="…" text="Региональный эксперт" textTruncateChild={ <a href="#">
+                                                                                                                                                       <MdArrowForward className="wsr-block__date-icon" />
+                                                                                                                                                     </a> } />
+                      </Media.Body>
+                    </Media>
+                      
 
                       </p>
                       
@@ -54,7 +70,7 @@ class Team extends Component {
                     <WsrExpertSearch export categories={ ["Все категории", "Специалисты строительной сферы", "Творчество и дизайн", "Специалисты, занятые на промышленном производстве", "Сфера услуг", "Обслуживание гражданского транспорта", "RU", "FutureSkills (FS)", "Презентационная (FS)", "Презентационная", "JuniorSkills", "Презентационная (JS)"] } competences={ ["Все компетенции", "Камнетёсное дело", "Облицовка плиткой", "Столярное дело", "Плотницкое дело", "Кирпичная кладка", "Холодильная техника и системы кондиционирования", "Сантехника и отопление", "Сухое строительство и штукатурные работы", "Малярные и декоративные работы", "Ландшафтный дизайн", "Электромонтаж", "Производство мебели"] } />
 
                     <WsrBlockTitle title="Строительная сфера" />
-                    <Row className="row-flex row-flex-wrap">
+                    <Row>
                                   <Col xs={12} sm={ 6 } md={ 4 } lg={ 6 }>
                                     <WsrExpert name="Дармограй Тимофей Юрьевич" certification="certified" head={true} competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
                                     >

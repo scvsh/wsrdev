@@ -796,6 +796,7 @@ a .wsr-footer__social-icons:first-child {
     font-weight: bold;
     font-size: 15px;
     border-radius: 3px 3px 0 0;
+    border-bottom: 0px;
 }
 
 .wsr-team__member__star-container {
@@ -886,6 +887,17 @@ a .wsr-footer__social-icons:first-child {
 	padding: 5%;
 }
 
+.wsr-parther-logo--news:after {
+	content: '';
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	background-color: @brand-primary;
+	position: absolute;
+	top: ~"calc(50% - 0.5em)";
+	left: -0.5em;
+	border: 2px solid whitesmoke;
+}
 /*-------------------------------------------------------------------------------------------*/
 
 /********************************** BLOCK-NUMBERS STYLES *************************************/
@@ -1576,9 +1588,12 @@ body {
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	flex: 1 1 auto;
+	flex: 1 1 ;
 }
 
+.row-flex--start {
+	align-items: flex-start;
+}
 .row-flex-wrap {
 	-webkit-flex-flow: row wrap;
 	align-content: flex-start;
@@ -1597,9 +1612,19 @@ body {
 }
 
 .wsr-team__member {
-	display: grid;
+	//display: grid;
 }
 
+.media-heading {
+	font-weight: 300;
+}
+.media-heading a {
+	color: @brand-primary;
+}
+
+.media-heading a:hover {
+	opacity: 0.8;
+}
 .wsr-team__member .panel-body {
 	width: 100%;
 }
@@ -1782,7 +1807,7 @@ body {
 
 
 .wsr_partner__container {
-	padding: 2em;
+	padding: 20px;
 }
 
 .wsr-partner-logo {
@@ -1790,8 +1815,8 @@ body {
 }
 
 .wsr-partner-description {
-	padding-left: 1em;
-	border-left: 1px solid @gray-lighter;
+	//padding-left: 1em;
+	//border-left: 1px solid @gray-lighter;
 }
 
 /*-------------------------------------------------------------------------------------------*/
