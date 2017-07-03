@@ -60,7 +60,7 @@ class App extends Component {
                   { /* Block numbers */ }
                   <Col xs={ 12 } sm={ 3 } md={ 3 }>
                     <WsrBlockTitle title="РКЦ в цифрах" />
-                    <WsrBlockBlank type="wsr-block-news">
+                    <WsrBlockBlank type="wsr-block-numbers">
                       <Row>
                         <WsrNumbersItem number="1457" description="Человек входят
                                                                                        в состав сборной команды WS Москвы" />

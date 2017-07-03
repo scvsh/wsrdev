@@ -162,19 +162,20 @@ class Sck extends Component {
                   </Col>
 
                   <Col sm = {2}  md={3} lg={ 3 } className="">
+                  <WsrBlockTitle title="Координатор" />
+                                  <WsrBlockBlank className="wsr-block-select">
+                      
+                      <LinkContainer exact to="/"><WsrExpert phone="+7 912 351 25-12" mail="coords@wsrmsk.ru" name="Воронков  Никита Александрович" certification="certified"  tier="secondary" medal="silver" host=" ООО «Практика реставрации»" responsible="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
+                                    /></LinkContainer>
+                    
+                        
+                      
+                    </WsrBlockBlank>
                                   <WsrBlockTitle title="Стать СЦК" />
                     
                     <WsrBlockBlank className="wsr-block-select">
                       <ListGroup>
-                        <LinkContainer exact to="/"><ListGroupItem>Информационное письмо от Союза WorldSkills Russia</ListGroupItem></LinkContainer>
-                        <LinkContainer exact to="/"><ListGroupItem>Положение об аккредитации СЦК</ListGroupItem></LinkContainer>
-                        <LinkContainer exact to="/"><ListGroupItem>Форма заявки на прохождение аккредитации в качестве СЦК</ListGroupItem></LinkContainer>
-                        <LinkContainer exact to="/"><ListGroupItem>Документы по соответсвию деятельности</ListGroupItem></LinkContainer>
-                        <LinkContainer exact to="/"><ListGroupItem>Обязательства СЦК перед Союзом WorldSkills Russia</ListGroupItem></LinkContainer>
-                        <LinkContainer exact to="/"><ListGroupItem>Договор</ListGroupItem></LinkContainer>
-                        <LinkContainer exact to="/"><ListGroupItem>Положительные результаты и статус СЦК</ListGroupItem></LinkContainer>
-                        <LinkContainer exact to="/"><ListGroupItem><WsrExpert name="Воронков  Никита Александрович" certification="certified" comment="Ответственный за направление" ompetence="Камнетесное дело" tier="secondary" medal="silver" host=" ООО «Практика реставрации»" responsible="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
-                                    /></ListGroupItem></LinkContainer>
+                        <LinkContainer exact to="/about/reglament"><ListGroupItem>Как стать СЦК?</ListGroupItem></LinkContainer>
                         
                       </ListGroup>
                     </WsrBlockBlank>

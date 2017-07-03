@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./css/wsr.css";
-import { MdInput, MdMore, MdMoreVert, MdKeyboardControl, MdStarHalf, MdStarOutline, MdStar, MdStars, MdApps, MdDateRange, MdArrowForward, MdSearch, MdVpnKey, MdMail, MdPhone } from "react-icons/lib/md";
+import { MdPlace, MdInput, MdMore, MdMoreVert, MdKeyboardControl, MdStarHalf, MdStarOutline, MdStar, MdStars, MdApps, MdDateRange, MdArrowForward, MdSearch, MdVpnKey, MdMail, MdPhone } from "react-icons/lib/md";
 import { FaArchive, FaGraduationCap, FaStarHalfEmpty, FaStarHalf, FaStarO, FaStar, FaVk, FaFacebook, FaInstagram, FaYoutube } from "react-icons/lib/fa";
 import TextTruncate from "react-text-truncate";
 import { LinkContainer } from "react-router-bootstrap";
@@ -39,17 +39,22 @@ export class WsrMenuBg extends React.Component {
 export class WsrMenuTitle extends React.Component {
     render() {
         return (
+           
             <Link to="/">
               <div className="wsr-title">
+              { /* 
                 <div className="wsr-title-primary">
                   Региональный координационный центр
                 </div>
                 <div className="wsr-title-descriptor">
                   WorldSkills Russia по городу Москвe
                 </div>
+                
+                */}
                 <div className="wsr-title-logo">
-                  <img alt="" src="/Images/wsr-msk-logo.svg" />
+                  <img alt="" src="/Images/wsr-msk-logo2.svg" />
                 </div>
+              
               </div>
             </Link>
         );
@@ -174,14 +179,10 @@ export class WsrMainMenu extends React.Component {
                     <div className="wsr-affix">
                       <Row dir="ltr">
                         <WsrMenuTitle />
-                        <LinkContainer to="/">
-                          <div>
-                            <Button bsClass=" wsr-skewed-btn__account wsr-skewed-btn text-left skew-left">
-                              <div>
-                                <MdSearch className="ri-big" /> Поиск </div>
-                            </Button>
-                          </div>
-                        </LinkContainer>
+                        
+                        
+                        <hr className="wsr-menu__logo-divider" />
+                       
                         <Nav className="wsr-menu" bsStyle="pills" stacked>
                           <LinkContainer to="/about">
                             <NavItem className="wsr-menu-item" eventKey={ 1 }>
@@ -224,13 +225,20 @@ export class WsrMainMenu extends React.Component {
                             </NavItem>
                           </LinkContainer>
                         </Nav>
+
+                      <Row className="">
+
+                      </Row>
                         <hr className="wsr-menu__contacts-divider" />
                         <div className="wsr-menu__contacts">
                           <div>
                             <MdMail className="ri-contacts" /><a href="mailto:mail@wsr.msk.ru">mail@wsr.msk.ru</a></div>
                           <div>
                             <MdPhone className="ri-contacts" /><a href="tel:+74995770056">+7 499 577 00-56</a></div>
+                            <div>
+                            <MdSearch className="ri-contacts" /> <a href="/">Поиск </a></div>  
                         </div>
+
                         <hr className="wsr-menu__contacts-divider" />
                         <div className="wsr-menu__social">
                           <a className="wsr-footer__social-icons" href="https://www.facebook.com/groups/wsrmoscow/">
@@ -245,6 +253,11 @@ export class WsrMainMenu extends React.Component {
                           <a className="wsr-footer__social-icons" href="https://www.youtube.com/channel/UCoAA0xPF2lp2o_RsAuawwMQ">
                             <FaYoutube/>
                           </a>
+                        </div>
+                        <hr className="wsr-menu__contacts-divider" />
+                        <div className="wsr-menu__social wsr-menu__sponsors">
+                        <img src="Images/wsr-msk-logo-dogm.svg"></img>
+                        <img src="Images/wsr-msk-logo-wsr.svg"></img>
                         </div>
                       </Row>
                     </div>
@@ -445,7 +458,7 @@ export class WsrNewsItem extends React.Component {
                         />
                                                                                                                                             </h5>
                 <div className="wsr-block__description">
-                  <TextTruncate className="wsr-block__description" line={ 4 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
+                  <TextTruncate className="wsr-block__description" line={ 8 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
                                                                                                                                                  <MdArrowForward className="wsr-block__date-icon" />
                                                                                                                                                </a> } />
                 </div>
@@ -498,17 +511,20 @@ export class WsrSckInfo extends React.Component {
               <Row className="wsr-block__sck-info-description">
               <hr />
                 <Col xs={ 6 }>
-                  <div className="name">{ _props.contact } </div>
-                  <div><MdPhone className="ri-contacts" /><a className="contact" href={ "tel:" + _props.phone }>{ _props.phone }</a></div>
-                  <div><MdMail className="ri-contacts" /><a className="contact" href={ "mailto:" + _props.mail }>{ _props.mail }</a></div>
+                  <div className="name">{ "Ответственный: " + _props.contact } </div>
+                  
                 </Col>
                 <Col xs={ 6 }>
                   
-                  <OverlayTrigger trigger={ ['hover', 'focus'] } rootClose placement="bottom" overlay={ popoverBottom }>
+                  
                   <Row>
-                    г. Москва, ул. Поклонная, д. 2<Label className="wsr-location-label">Как доехать?</Label>
+                  <OverlayTrigger trigger={ ['hover', 'focus'] } rootClose placement="bottom" overlay={ popoverBottom }>
+                   <div> <MdPlace className="ri-contacts" />г. Москва, ул. Поклонная, д. 2<Label className="wsr-location-label">Как доехать?</Label></div>
+                  </OverlayTrigger>
+                  <div><MdPhone className="ri-contacts" /><a className="contact" href={ "tel:" + _props.phone }>{ _props.phone }</a></div>
+                  <div><MdMail className="ri-contacts" /><a className="contact" href={ "mailto:" + _props.mail }>{ _props.mail }</a></div>
                   </Row>
-                </OverlayTrigger>
+                
                 </Col>
               </Row>
             </WsrBlockBlank>
@@ -713,10 +729,40 @@ export class WsrSizeLabel extends React.Component {
     }
 }
 
-export class WsrTeamMember extends React.Component {
 
+export class WsrTeamMemberItem extends React.Component {
     render() {
         let _props = this.props;
+        return (
+            <Row className="wsr-team__avatar ">
+              <Col sm={4}>
+              <Row className="wsr-team__avatar__container">
+                <div className={ "wsr-team__member-photo-wrapper " + (_props.tier === "primary" ? "member-primary" : "member-secondary") }>
+                  <Image src={ _props.photo } circle responsive />
+                </div>
+                </Row>
+                <Row className="wsr-team__member__star-container row-flex"> 
+                { _props.children}
+                </Row>
+                </Col>
+                <Col xs={8}>
+                <span className={ _props.tier === "primary" ? "wsr-team__member--primary" : "wsr-team__member--secondary" }>{ _props.name } <br/></span>
+                <hr />
+                <div className="flex-grow">
+                  <span className="wsr-team__host ">{ <span><div className="wsr-team__member-expert"></div>{ _props.host }</span> }</span>
+                </div>
+                </Col>
+                
+                
+
+              </Row>
+        );
+    }
+}
+
+export class WsrMedal extends React.Component {
+    render() {
+      let _props = this.props;
         let medals = ["Золотая медаль", "Серебряная медаль", "Бронзовая медаль", "Медаль за профессионализм"];
         let medal;
 
@@ -742,23 +788,27 @@ export class WsrTeamMember extends React.Component {
           { curmed }
         </Popover>
         );
+
         return (
-            <Panel className="wsr-team__member " header={ <TextTruncate line={ 1 } truncateText="…" text={ _props.host } /> }>
-              <Row className="wsr-team__avatar ">
-                <div className={ "wsr-team__member-photo-wrapper " + (_props.tier === "primary" ? "member-primary" : "member-secondary") }>
-                  <Image src={ _props.photo } circle responsive />
-                </div>
-                <OverlayTrigger trigger={ ['hover', 'focus'] } placement="bottom" overlay={ tooltip }>
+            <OverlayTrigger trigger={ ['hover', 'focus'] } placement="bottom" overlay={ tooltip }>
                   <div className={ "wsr-team__member-star-wrapper " + (_props.tier === "primary" ? "member-primary" : "member-secondary") }>
                     <MdStars className={ "ri-star " + _props.medal } />
                   </div>
-                </OverlayTrigger>
-                <span className={ _props.tier === "primary" ? "wsr-team__member--primary" : "wsr-team__member--secondary" }>{ _props.name } <br/><WsrTierLabel competence={ _props.competence } tier={ _props.tier } /></span>
-                <hr />
-                <div className="flex-grow">
-                  <span className="wsr-team__host ">{ <span><div className="wsr-team__member-expert">Эксперт:</div>{ _props.expert }</span> }</span>
-                </div>
-              </Row>
+            </OverlayTrigger>
+        );
+    }
+}
+
+export class WsrTeamMember extends React.Component {
+
+    render() {
+        
+        let _props = this.props;
+        return (
+            <Panel className="wsr-team__member " header={ <TextTruncate line={ 1 } truncateText="…" text={ _props.competence } /> }  footer={ <TextTruncate line={ 1 } truncateText="…" text={ "Эксперт: " +_props.expert } /> } >
+              {_props.children }
+
+
             </Panel>
         );
     }
@@ -792,26 +842,36 @@ export class WsrExpert extends React.Component {
         </Popover>
         );
         return (
-            <Panel className="wsr-team__member " header={ _props.comment ? <div className="wsr-team__member-expert"> { _props.coment }</div> : "" }>
+
+            <Panel className="wsr-team__member "  header={ _props.head ? <TextTruncate line={ 1 } truncateText="…" text={ _props.competence } /> : false }>
               <Row className="wsr-team__avatar ">
-                <div className={ "wsr-team__member-photo-wrapper member-expert " }>
+              <Col sm={4}>
+              <Row className="wsr-team__avatar__container">
+                <div className={ "wsr-team__member-photo-wrapper " + (_props.tier === "primary" ? "member-primary" : "member-secondary") }>
                   <Image src={ _props.photo } circle responsive />
                 </div>
-                <OverlayTrigger trigger={ ['hover', 'focus'] } placement="bottom" overlay={ tooltip }>
-                  <div className={ "wsr-team__member-star-wrapper member-expert " }>
-                    <img className="wsr-expert-status" src= {"/Images/" + _props.certification + ".svg"} />
-                  </div>
-                </OverlayTrigger>
-                <span className="wsr-team__member--expert">{ _props.name } <br/>
-                 <Label className="member-expert">
-                  { _props.competence }
-                </Label>
-                </span>
+                </Row>
+                <Row className="wsr-team__member__star-container row-flex"> 
+                { _props.children}
+                </Row>
+                </Col>
+                <Col xs={8}>
+                <span className={ _props.tier === "primary" ? "wsr-team__member--primary" : "wsr-team__member--secondary" }>{ _props.name } <br/></span>
                 <hr />
                 <div className="flex-grow">
-                  <span className="wsr-team__host ">{ _props.host }</span>
+                  <span className="wsr-team__host ">{ <span><div className="wsr-team__member-expert"></div>{ _props.host }</span> }</span>
                 </div>
+                
+                { _props.phone ?  <div><hr /><MdPhone className="ri-contacts" /><a className="coordinator-contact" href={ "tel:" + _props.phone }>{ _props.phone }</a></div> : ""}
+                { _props.mail ? <div><MdMail className="ri-contacts" /><a className="coordinator-contact" href={ "mailto:" + _props.mail }>{ _props.mail }</a></div> : ""}
+                </Col>
+                
+                
+
               </Row>
+
+
+              
             </Panel>
         );
     }
@@ -873,7 +933,7 @@ export class WsrExpertSearch extends React.Component {
                     </FormControl>
                   </FormGroup>
                 </Col>
-                <Col md={ 4 } lg={ 3 }>
+                <Col md={ 3 } lg={ 3 }>
                   <FormGroup controlId="formControlsSelect">
                     <WsrBlockTitle title="Компетенция" />
                     <FormControl componentClass="select" placeholder="select">
@@ -896,7 +956,7 @@ export class WsrExpertSearch extends React.Component {
                 </Col>
                 <Col md={ 1 } lg={ 1 } >
                   <FormGroup>
-                    <WsrBlockTitle title="Экспорт" />
+                    <WsrBlockTitle title={'\u00A0'} />
 
                         <Button block className="wsr-btn-search">
                           <MdInput className="ri-search" />

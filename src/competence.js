@@ -12,7 +12,7 @@ import { ListGroupItem, Panel, Tab, ListGroup, Grid, Row, Col, Nav, NavItem, Ima
 
 /* Import WSR React components*/
 
-import { WsrExpert, WsrPartner, WsrSckInfo, WsrCarousel, WsrCompetence, WsrTeamMember, WsrMeta, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrTeamMemberItem, WsrMedal, WsrExpert, WsrPartner, WsrSckInfo, WsrCarousel, WsrCompetence, WsrTeamMember, WsrMeta, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 
 
@@ -33,7 +33,7 @@ class Competence extends Component {
                   <Tab.Container id="left-tabs-example" defaultActiveKey="0">
                     <Row className="clearfix">
                       <Col xs={ 0 } sm={ 4 } md={ 2 } lg={ 2 } />
-                      <Col xs={ 12 } sm={ 5 } md={ 3 } lg={ 3 }>
+                      <Col xs={ 12 } sm={ 5 } md={ 3 } lg={ 2 }>
                         <WsrBlockTitle title="Категории" />
                         <WsrBlockBlank className="wsr-block-select">
                           <Nav bsStyle="pills" className="wsr-competence-category" stacked>
@@ -101,12 +101,27 @@ class Competence extends Component {
                               </Col>
                               <Tab.Content animation>
                                 <Tab.Pane eventKey="1c">
-                                  <Col sm={ 4 } md={ 4 } lg={ 4 }>
+                                  <Col sm={ 4 } md={ 4 } lg={ 5 }>
                                     <WsrBlockTitle title="Сборная Москвы" />
-                                    <WsrTeamMember name="Дармограй Тимофей Юрьевич " medal="gold" tier="primary" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
-                                    />
-                                    <WsrTeamMember name="Воронков Никита Александрович" medal="silver" tier="secondary" host="ООО «Практика реставрации»" expert="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
-                                    />
+                                    
+                                    <WsrTeamMember competence="Камнетесное дело" expert="Шкребтиенко Сергей Олегович"> 
+                                      <WsrTeamMemberItem  name="Дармограй Тимофей Юрьевич" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
+                                        <WsrMedal tier="primary" medal="gold"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                      </WsrTeamMemberItem>
+                                      <WsrTeamMemberItem  name="Дармограй Тимофей Юрьевич" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
+                                        <WsrMedal tier="primary" medal="gold"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                      </WsrTeamMemberItem>
+                                      <WsrTeamMemberItem  name="Дармограй Тимофей Юрьевич" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
+                                        <WsrMedal tier="primary" medal="gold"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                      </WsrTeamMemberItem>
+                                    </WsrTeamMember>
+                                  
                                     <WsrBlockTitle title="Базовая площадка" />
                                     <WsrSckInfo title="ГАОУ ВО г. Москвы «Московский городской педагогический университет»" logo="/Images/sck/1.svg" contact="Бабалаева Мария Викторовна" phone="+7 963 600 82-12" mail="babalaewa73@inbox.ru" detailedAddress="м. «Кутузовская», последний вагон из центра, далее пешком 3-5 минут в сторону области." />
                                  <WsrBlockTitle title="Партнёр" />

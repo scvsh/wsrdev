@@ -45,7 +45,7 @@ class Team extends Component {
 
                     </WsrPage>  
                     </Col>
-                    <WsrExpertSearch export categories={ ["Специалисты строительной сферы", "Творчество и дизайн", "Специалисты, занятые на промышленном производстве", "Сфера услуг", "Обслуживание гражданского транспорта", "RU", "FutureSkills (FS)", "Презентационная (FS)", "Презентационная", "JuniorSkills", "Презентационная (JS)"] } competences={ ["Все компетенции", "Камнетёсное дело", "Облицовка плиткой", "Столярное дело", "Плотницкое дело", "Кирпичная кладка", "Холодильная техника и системы кондиционирования", "Сантехника и отопление", "Сухое строительство и штукатурные работы", "Малярные и декоративные работы", "Ландшафтный дизайн", "Электромонтаж", "Производство мебели"] } />
+                    <WsrExpertSearch export categories={ ["Все категории", "Специалисты строительной сферы", "Творчество и дизайн", "Специалисты, занятые на промышленном производстве", "Сфера услуг", "Обслуживание гражданского транспорта", "RU", "FutureSkills (FS)", "Презентационная (FS)", "Презентационная", "JuniorSkills", "Презентационная (JS)"] } competences={ ["Все компетенции", "Камнетёсное дело", "Облицовка плиткой", "Столярное дело", "Плотницкое дело", "Кирпичная кладка", "Холодильная техника и системы кондиционирования", "Сантехника и отопление", "Сухое строительство и штукатурные работы", "Малярные и декоративные работы", "Ландшафтный дизайн", "Электромонтаж", "Производство мебели"] } />
 
                     <WsrBlockTitle title="Строительная сфера" />
                     <Row className="row-flex row-flex-wrap">
@@ -78,17 +78,28 @@ class Team extends Component {
 
                                   </Col>
                                   <Col sm={ 2 } md={ 3 } lg={ 3 }>
-                                  <WsrBlockTitle title="Стать экспертом" />
+                                  <WsrBlockTitle title="Координатор" />
+                                  <WsrBlockBlank className="wsr-block-select">
+                      
+                      <LinkContainer exact to="/"><WsrExpert phone="+7 912 351 25-12" mail="coords@wsrmsk.ru" name="Воронков  Никита Александрович" certification="certified"  tier="secondary" medal="silver" host=" ООО «Практика реставрации»" responsible="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
+                                    /></LinkContainer>
                     
-                    <WsrBlockBlank className="wsr-block-select">
+                        
+                      
+                    </WsrBlockBlank>
+                    
+                    <WsrBlockTitle title="Стать экспертом" />
+                    <WsrBlockBlank className="wsr-block-select ">
                       <ListGroup>
                         <LinkContainer exact to="/experts/region-expert"><ListGroupItem>Региональный эксперт</ListGroupItem></LinkContainer>
                         <LinkContainer exact to="/"><ListGroupItem>Эксперт демонстрационного экзамена</ListGroupItem></LinkContainer>
-                        <LinkContainer exact to="/"><ListGroupItem>Обучение в 1С:Учебном центре №1</ListGroupItem></LinkContainer>
                         <LinkContainer exact to="/"><ListGroupItem>Мастер ПО</ListGroupItem></LinkContainer>
-                        <LinkContainer exact to="/"><ListGroupItem><WsrExpert name="Воронков  Никита Александрович" certification="certified" competence="Камнетесное дело" tier="secondary" medal="silver" host=" ООО «Практика реставрации»" responsible="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
-                                    /></ListGroupItem></LinkContainer>
-                        
+                   
+                      </ListGroup>
+                       </WsrBlockBlank>
+                       <WsrBlockBlank className="wsr-block-select ">
+                      <ListGroup>
+                        <LinkContainer exact to="/"><ListGroupItem>Обучение в 1С:Учебном центре №1</ListGroupItem></LinkContainer>
                       </ListGroup>
                     </WsrBlockBlank>
                   </Col>

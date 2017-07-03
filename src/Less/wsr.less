@@ -19,6 +19,7 @@ body {
 }
 
 .App {
+	overflow-y: scroll;
 	height: 100%;
 	font-family: 'Gotham Pro';
 	font-weight: normal;
@@ -205,6 +206,7 @@ li .active > a:any-link {
 .owl-height {
 	height: 500px;
 }
+
 .red-stage .owl-stage-outer {
 	height: 100%;
 	overflow: inherit;
@@ -274,7 +276,6 @@ li .active > a:any-link {
 	pointer-events: none;
 }
 
-
 .wsr-title-descriptor {
 	font-family: 'Gotham Pro';
 	font-weight: 100;
@@ -294,17 +295,17 @@ li .active > a:any-link {
 }
 
 .wsr-title-logo {
-	padding-top: 3vh;
+	//padding-top: 3vh;
 	width: 50%;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	pointer-events: all;
 }
 
 .wsr-title-logo img {
-	margin-left: 2em;
+	//margin-left: 2em;
 	transition: 250ms ease-out;
-	.responsive_limited(15vh, 10px, 100px, 13px, height);
+	.responsive_limited(17vh, 10px, 100px, 13px, height);
 }
 
 .wsr-title-logo:hover img {
@@ -389,8 +390,14 @@ li .active > a:any-link {
 
 .wsr-menu > li > a {
 	padding: 1vh 1.5vw;
-	.responsive_limited(1vh, 2px, 10px, 13px, padding-top);
-	.responsive_limited(1vh, 2px, 10px, 13px, padding-bottom);
+	.responsive_limited(0.7vh, 2px, 10px, 13px, padding-top);
+	.responsive_limited(0.7vh, 2px, 10px, 13px, padding-bottom);
+}
+
+.wsr-menu__sponsors img {
+	opacity: 0.7;
+	.responsive_limited(7vh, 5px, 50px, 13px, width);
+	.responsive_limited(2.5vh, 3px, 20px, 13px, padding-right);
 }
 
 .wsr-menu__container {
@@ -403,6 +410,12 @@ li .active > a:any-link {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+}
+
+.wsr-menu__logo-divider {
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	.responsive_limited(4vh, 5px, 20px, 13px, margin-top);
+	margin-bottom: 0;
 }
 
 .wsr-menu__contacts-divider {
@@ -766,17 +779,68 @@ a .wsr-footer__social-icons:first-child {
 	padding: 0;
 }
 
-.wsr-block-news {
+.wsr-block-numbers {
 	padding-right: 15px;
 }
 
-.wsr_block-news__wrapper {
+.wsr-team__avatar:not(:first-child) {
+	margin-top: 1em;
+	padding-top: 1em;
+	border-top: 1px solid #dddddd;
+
+}
+.wsr-team__member .panel-heading {
+	height: 2.5em;
+	color: white;
+    background-color: @brand-primary;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 3px 3px 0 0;
+}
+
+.wsr-team__member__star-container {
+	justify-content: center;
+	//padding-top: 1em;
+}
+.coordinator-contact {
+	font-size: 0.8em;
+}
+.wsr_block-numbers__wrapper {
 	padding-left: 20px;
+}
+
+.wsr-block-numbers h5 {
+	color: @brand-secondary;
+	margin-bottom: 0;
+}
+
+.wsr-team__member a.contant {
+	font-size: 0.8em;
+}
+.wsr-block-news {
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.wsr-block-news:hover {
+	box-shadow: none;
+}
+
+.wsr_block-news__wrapper {
+	//padding-left: 20px;
 }
 
 .wsr-block-news h5 {
 	color: @brand-secondary;
 	margin-bottom: 0;
+}
+
+.wsr_block-menu__item:first-child h5 {
+	padding-top: 0;
+}
+
+.wsr-block-news .wsr_block-menu__divider {
+	margin-left: 0;
 }
 
 .wsr-block-news a {
@@ -1219,6 +1283,7 @@ h6 {
 .wsr-competence-category > li:first-child {
 	//border-top: 1px solid #dddddd;
 }
+
 .wsr-competence-category > li:last-child {
 	border-bottom: none;
 }
@@ -1252,6 +1317,7 @@ h6 {
 	flex-wrap: wrap;
 }
 
+/*
 .row.is-flex > [class*='col-'] {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -1265,7 +1331,7 @@ h6 {
 	justify-content: center;
 	padding-left: 5px;
 }
-
+*/
 .wsr-team__description > .row.is-flex {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -1281,7 +1347,6 @@ h6 {
 
 .wsr-team__member {
 	transition: 300ms ease-out;
-	text-align: center;
 }
 
 .wsr-team__member:hover {
@@ -1301,13 +1366,13 @@ h6 {
 
 .wsr-team__avatar {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
 }
 
 .wsr-team__member-photo-wrapper {
-	width: 80px !important;
-	height: 80px;
+	//width: 80px !important;
+	//height: 80px;
 	border: 2px solid;
 	border-radius: 50%;
 	padding: 2px;
@@ -1325,16 +1390,15 @@ h6 {
 .member-expert {
 	border-color: @brand-secondary;
 }
-
-span .member-expert  {
-	background-color: @brand-secondary;
+.wsr-team__avatar__container {
+	display: flex;
+	flex-direction:row;
+	justify-content:center;
 }
 
-
-
-
-
-
+span .member-expert {
+	background-color: @brand-secondary;
+}
 
 .wsr-block__sck-info {
 	padding: 25px;
@@ -1350,26 +1414,26 @@ span .member-expert  {
 }
 
 .wsr-block__sck-info__panel > .panel:first-child > .panel-heading {
-	border-radius: 3px 3px 0 0 ;
+	border-radius: 3px 3px 0 0;
 }
-.wsr-block__sck-info__panel > .panel:last-child  > .panel-heading{
-	border-radius: 0 0 3px 3px ;
+
+.wsr-block__sck-info__panel > .panel:last-child  > .panel-heading {
+	border-radius: 0 0 3px 3px;
 }
 
 .wsr-block__sck-info__panel .panel {
-	border:none;
+	border: none;
 	border-bottom: 1px solid #dddddd;
 }
 
-
 .wsr-block__sck-info__panel > .panel:first-child {
-	border-radius: 3px 3px 0 0 ;
+	border-radius: 3px 3px 0 0;
 }
 
 .wsr-block__sck-info__panel > .panel:last-child {
-	border:none;
+	border: none;
 	border-bottom: none;
-	border-radius: 0 0 3px 3px ;
+	border-radius: 0 0 3px 3px;
 }
 
 .wsr-block__sck-info__panel > .panel-heading + .panel-collapse > .panel-body {
@@ -1384,19 +1448,18 @@ span .member-expert  {
 	background-color: #f5f5f5;
 }
 
-.wsr-sck-competence > li > a{
+.wsr-sck-competence > li > a {
 	padding-left: 0;
 }
 
-.wsr-block__sck-info  a.contact{
-	font-weight: 300;
-	color: @brand-primary;
+.wsr-block__sck-info  a.contact {
+	//font-weight: 300;
+	//color: @brand-primary;
 }
 
-.wsr-block__sck-info  div.name{
+.wsr-block__sck-info  div.name {
 	margin-bottom: 1em;
 }
-
 
 .wsr-block__sck-info h4 {
 	padding-top: 0;
@@ -1406,20 +1469,10 @@ span .member-expert  {
 	font-size: 0.8em;
 }
 
-
 .wsr-block__sck-info hr {
 	margin-top: 1em;
 	margin-bottom: 1em;
-	
 }
-
-
-
-
-
-
-
-
 
 /*-------------------------------------------------------------------------------------------*/
 
@@ -1486,7 +1539,7 @@ span .member-expert  {
 	display: block;
 	font-size: 0.8em;
 	bottom: 0px;
-	padding: .8em 0 0 0;
+	padding: .5em 0 0 0;
 	margin: 0;
 	width: 100%;
 }
@@ -1501,7 +1554,7 @@ span .member-expert  {
 
 .wsr-team__member hr {
 	width: 100%;
-	margin-top: 1em;
+	margin-top: 0.5em;
 	margin-bottom: 0;
 }
 
@@ -1534,14 +1587,19 @@ body {
 
 .container-flex > div[class*='col-'] div,
 .row-flex > div[class*='col-'] div {
-	width: 100%;
+	//width: 100%;
+}
+
+.wsr-team__member {
+	display: grid;
 }
 
 .wsr-team__member .panel-body {
 	width: 100%;
 }
 
-.wsr-team__member .panel-title {
+.wsr-team__member .panel-title,
+.panel-footer {
 	font-size: 0.8em;
 }
 
@@ -1599,6 +1657,7 @@ body {
 	padding: 2px;
 	width: 100%;
 }
+
 .wsr-expert-panel .panel-heading {
 	background-color: white;
 	cursor: pointer;
@@ -1750,7 +1809,6 @@ body {
 .wsr-photo-gallery-item img {
 	border-radius: 3px 3px 0px 0px;
 	width: 100%;
-	
 }
 
 .wsr-photo-gallery-item__description {
@@ -1761,13 +1819,11 @@ body {
 	padding: 0;
 }
 
-.wsr-photo-gallery-photo img{
+.wsr-photo-gallery-photo img {
 	min-width: 100%;
-  height: inherit;
-  object-fit: cover;
+	height: inherit;
+	object-fit: cover;
 }
-
-
 
 /*-------------------------------------------------------------------------------------------*/
 
@@ -2007,8 +2063,8 @@ Should we change this at all?
 
 @media (min-width:@screen-sm) and (max-width:@screen-sm-max) {
 	.panel-body .row.is-flex > [class*='col-'] {
-	display: block;
-}
+		display: block;
+	}
 
 	.wsr-title-descriptor {
 		.responsive_limited(1.53vh, 7px, 10px, 13px, font-size);
@@ -2036,7 +2092,10 @@ Should we change this at all?
 	.wsr-carousel-menu__bg {
 		display: none;
 	}
-	.panel, .panel-title, .list-group {
+
+	.panel,
+	.panel-title,
+	.list-group {
 		font-size: 0.8em;
 	}
 
@@ -2044,8 +2103,8 @@ Should we change this at all?
 
 @media (min-width:@screen-xs) and (max-width:@screen-xs-max) {
 	.panel-body .row.is-flex > [class*='col-'] {
-	display: block;
-}
+		display: block;
+	}
 
 	.wsr-header__image {
 		display: none;
@@ -2085,7 +2144,10 @@ Should we change this at all?
 	.wsr-block__title {
 		margin-top: 2em;
 	}
-	.panel, .panel-title, .list-group {
+
+	.panel,
+	.panel-title,
+	.list-group {
 		font-size: 0.8em;
 	}
 
@@ -2093,8 +2155,8 @@ Should we change this at all?
 
 @media (max-width:@screen-xs) {
 	.panel-body .row.is-flex > [class*='col-'] {
-	display: block;
-}
+		display: block;
+	}
 
 	.wsr-block__title {
 		margin-top: 1em;

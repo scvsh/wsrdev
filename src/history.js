@@ -86,7 +86,7 @@ class History extends Component {
                     <WsrBlockBlank className="wsr-block-select">
                       <ListGroup>
                         <LinkContainer to="/about/rkc"><ListGroupItem>РКЦ Москвы</ListGroupItem></LinkContainer>
-                        <LinkContainer to="/about/history"><ListGroupItem>История</ListGroupItem></LinkContainer>
+                        <LinkContainer to="/about/history"><ListGroupItem>История WSR в Москве</ListGroupItem></LinkContainer>
                         <LinkContainer to="/about/reglament"><ListGroupItem>Регламентирующие документы</ListGroupItem></LinkContainer>
                       </ListGroup>
                     </WsrBlockBlank>
