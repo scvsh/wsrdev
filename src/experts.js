@@ -10,7 +10,7 @@ import { ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap
 
 /* Import WSR React components*/
 
-import { WsrExpert, WsrExpertSearch, WsrTeamMember, WsrCarousel, WsrSizeLabel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrCertification, WsrExpert, WsrExpertSearch, WsrTeamMember, WsrCarousel, WsrSizeLabel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 /* Import Icons */
 
@@ -40,6 +40,12 @@ class Team extends Component {
                   <WsrBlockTitle title="Эксперты" />
                       <WsrPage type="wsr-page" heading="Эксперты" description="" date="10.05.2017">
                       <p>Роль экспертов в организации соревнований WorldSkills Russia очень высока. Эксперт WorldSkills Russia – это человек, обладающий определенными компетенциями: превосходно знает свою профессию, стандарты и регламенты WorldSkills, а также процедуры проведения соревнований. Эксперт участвует в составлении тестового задания и определении критериев оценки участников соревнований WorldSkills Russia.
+                      <ul>
+                        <li><WsrCertification certification="certified"/>Сертифицированный эксперт</li>
+                        <li><WsrCertification certification="regional"/>Региональный эксперт</li>
+                        <li><WsrCertification certification="demo"/>Эксперт Демонстрационного Экзамена</li>
+                      </ul>
+
                       </p>
                       
 
@@ -49,29 +55,45 @@ class Team extends Component {
 
                     <WsrBlockTitle title="Строительная сфера" />
                     <Row className="row-flex row-flex-wrap">
-                                  <Col xs={12} sm={ 6 } md={ 4 } lg={ 4 }>
-                                    <WsrExpert name="Дармограй Тимофей Юрьевич" certification="certified" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
-                                    />
+                                  <Col xs={12} sm={ 6 } md={ 4 } lg={ 6 }>
+                                    <WsrExpert name="Дармограй Тимофей Юрьевич" certification="certified" head={true} competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
+                                    >
+                                    <WsrCertification certification="certified" />
+                                    <WsrCertification certification="regional" />
+                                    </WsrExpert>
                                   </Col>
-                                  <Col xs={12} sm={ 6 } md={ 4 } lg={ 4 }>
-                                    <WsrExpert name="Воронков  Никита Александрович" certification="certified" competence="Камнетесное дело" tier="secondary" medal="silver" host=" ООО «Практика реставрации»" expert="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
-                                    />
+                                  <Col xs={12} sm={ 6 } md={ 4 } lg={ 6 }>
+                                    <WsrExpert name="Воронков  Никита Александрович" certification="certified" head={true}  competence="Камнетесное дело" tier="secondary" medal="silver" host=" ООО «Практика реставрации»" expert="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
+                                    >
+                                    <WsrCertification certification="certified" />
+                                    <WsrCertification certification="regional" />
+                                    <WsrCertification certification="demo" />
+                                    </WsrExpert>
                                   </Col>
-                                  <Col xs={12} sm={ 6 } md={ 4 } lg={ 4 }>
-                                    <WsrExpert name="Юсупов Набихон Маннонович" certification="certified" competence="Кирпичная кладка" tier="primary" medal="bronze" host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg"
-                                    />
+                                  <Col xs={12} sm={ 6 } md={ 4 } lg={ 6 }>
+                                    <WsrExpert name="Юсупов Набихон Маннонович" certification="certified" head={true}  competence="Кирпичная кладка" tier="primary" medal="bronze" host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg"
+                                    >
+                                    <WsrCertification certification="certified" />
+                                    <WsrCertification certification="demo" />
+                                    </WsrExpert>
                                   </Col>    
-                                  <Col xs={12} sm={ 6 } md={ 4 } lg={ 4 }>
-                                    <WsrExpert name="Моренкова Анастасия Андреевна" certification="regional" competence="Кирпичная кладка" tier="secondary" medal="professional" host="Колледж архитектуры и строительства № 7 " expert="Федорова Елена Викторовна" photo="/Images/competence/4.jpg"
-                                    />
+                                  <Col xs={12} sm={ 6 } md={ 4 } lg={ 6 }>
+                                    <WsrExpert name="Моренкова Анастасия Андреевна" certification="regional" head={true}  competence="Кирпичная кладка" tier="secondary" medal="professional" host="Колледж архитектуры и строительства № 7 " expert="Федорова Елена Викторовна" photo="/Images/competence/4.jpg"
+                                    >
+                                    <WsrCertification certification="demo" />
+                                    </WsrExpert>
                                   </Col>    
-                                  <Col xs={12} sm={ 6 } md={ 4 } lg={ 4 }>
-                                    <WsrExpert name="Солосовский Николай Дмитриевич" certification="regional" competence="Краснодеревщик" tier="primary" medal="gold" host="Колледж архитектуры и строительства № 7" expert="Кошелев Кирилл Александрович" photo="/Images/competence/5.jpg"
-                                    />
+                                  <Col xs={12} sm={ 6 } md={ 4 } lg={ 6 }>
+                                    <WsrExpert name="Солосовский Николай Дмитриевич" certification="regional" head={true}  competence="Краснодеревщик" tier="primary" medal="gold" host="Колледж архитектуры и строительства № 7" expert="Кошелев Кирилл Александрович" photo="/Images/competence/5.jpg"
+                                    >
+                                    <WsrCertification certification="demo" />
+                                    </WsrExpert>
                                   </Col>                         
-                                  <Col xs={12} sm={ 6 } md={ 4 } lg={ 4 }>
-                                    <WsrExpert name="Ткачёв Александр Дмитриевич " certification="demo" competence="Камнетесное дело" tier="secondary" medal="professional" host="Образовательный комплекс градостроительства «Столица»" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/6.jpg"
-                                    />
+                                  <Col xs={12} sm={ 6 } md={ 4 } lg={ 6 }>
+                                    <WsrExpert name="Ткачёв Александр Дмитриевич " certification="demo" head={true}  competence="Камнетесное дело" tier="secondary" medal="professional" host="Образовательный комплекс градостроительства «Столица»" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/6.jpg"
+                                    >
+                                    <WsrCertification certification="demo" />
+                                    </WsrExpert>
                                   </Col>   
                        
                           </Row>

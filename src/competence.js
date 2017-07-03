@@ -12,7 +12,7 @@ import { ListGroupItem, Panel, Tab, ListGroup, Grid, Row, Col, Nav, NavItem, Ima
 
 /* Import WSR React components*/
 
-import { WsrTeamMemberItem, WsrMedal, WsrExpert, WsrPartner, WsrSckInfo, WsrCarousel, WsrCompetence, WsrTeamMember, WsrMeta, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrCertification, WsrTeamMemberItem, WsrMedal, WsrExpert, WsrPartner, WsrSckInfo, WsrCarousel, WsrCompetence, WsrTeamMember, WsrMeta, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 
 
@@ -134,20 +134,16 @@ class Competence extends Component {
 
                                    <WsrBlockTitle title="Эксперты" />
                     
-                    <WsrBlockBlank className="wsr-block-select">
-                      <ListGroup>
-                        
-                        <ListGroupItem><WsrExpert name="Воронков  Никита Александрович" comment="Главный эксперт" certification="regional"   host=" ООО «Практика реставрации»" responsible="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
-                                    />
-                                    </ListGroupItem>
-                                     <ListGroupItem><WsrExpert name="Воронков  Никита Александрович" comment="Сертифицированный эксперт" certification="certified"  host=" ООО «Практика реставрации»" responsible="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
-                                    />
-                                    </ListGroupItem>
-
-                                    
-                        
-                      </ListGroup>
-                    </WsrBlockBlank>
+                    <WsrExpert name="Дармограй Тимофей Юрьевич" certification="certified" head={true} competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
+                                    >
+                                    <WsrCertification certification="certified" />
+                                    <WsrCertification certification="regional" />
+                                    </WsrExpert>
+                                    <WsrExpert name="Дармограй Тимофей Юрьевич" certification="certified" head={true} competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
+                                    >
+                                    <WsrCertification certification="certified" />
+                                    <WsrCertification certification="regional" />
+                                    </WsrExpert>
                   
 
                                   </Col>

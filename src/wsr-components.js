@@ -219,7 +219,7 @@ export class WsrMainMenu extends React.Component {
                               { "Партнёры".toUpperCase() }
                             </NavItem>
                           </LinkContainer>
-                          <LinkContainer to="/press">
+                          <LinkContainer to="/press/important">
                             <NavItem className="wsr-menu-item" eventKey={ 3 }>
                               { "Пресс-центр".toUpperCase() }
                             </NavItem>
@@ -745,7 +745,7 @@ export class WsrTeamMemberItem extends React.Component {
                 { _props.children}
                 </Row>
                 </Col>
-                <Col xs={8}>
+                <Col sm={8}>
                 <span className={ _props.tier === "primary" ? "wsr-team__member--primary" : "wsr-team__member--secondary" }>{ _props.name } <br/></span>
                 <hr />
                 <div className="flex-grow">
@@ -814,10 +814,10 @@ export class WsrTeamMember extends React.Component {
     }
 }
 
-
-export class WsrExpert extends React.Component {
+export class WsrCertification extends React.Component {
 
     render() {
+        
         let _props = this.props;
         let certifications = ["Сертифицированный эксперт", "Региональный эксперт", "Эксперт Демонстрационного Экзамена"];
         let cert;
@@ -841,6 +841,22 @@ export class WsrExpert extends React.Component {
           { curcert }
         </Popover>
         );
+
+        return (
+            <OverlayTrigger trigger={ ['hover', 'focus'] } placement="bottom" overlay={ tooltip }>
+                  <div className={ "wsr-team__member-star-wrapper member-expert " }>
+                    <img className="wsr-expert-status" src= {"/Images/" + _props.certification + ".svg"} />
+                  </div>
+                </OverlayTrigger>
+        );
+    }
+}
+
+export class WsrExpert extends React.Component {
+
+    render() {
+        let _props = this.props;
+
         return (
 
             <Panel className="wsr-team__member "  header={ _props.head ? <TextTruncate line={ 1 } truncateText="…" text={ _props.competence } /> : false }>
@@ -852,7 +868,7 @@ export class WsrExpert extends React.Component {
                 </div>
                 </Row>
                 <Row className="wsr-team__member__star-container row-flex"> 
-                { _props.children}
+                
                 </Row>
                 </Col>
                 <Col xs={8}>
@@ -864,6 +880,11 @@ export class WsrExpert extends React.Component {
                 
                 { _props.phone ?  <div><hr /><MdPhone className="ri-contacts" /><a className="coordinator-contact" href={ "tel:" + _props.phone }>{ _props.phone }</a></div> : ""}
                 { _props.mail ? <div><MdMail className="ri-contacts" /><a className="coordinator-contact" href={ "mailto:" + _props.mail }>{ _props.mail }</a></div> : ""}
+                { _props.children ? <div> <hr /> <Row className="wsr-expert__cert-container row-flex"> 
+                { _props.children }
+                </Row> </div> : "" }
+                
+
                 </Col>
                 
                 

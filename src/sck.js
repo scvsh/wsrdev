@@ -167,9 +167,7 @@ class Sck extends Component {
                       
                       <LinkContainer exact to="/"><WsrExpert phone="+7 912 351 25-12" mail="coords@wsrmsk.ru" name="Воронков  Никита Александрович" certification="certified"  tier="secondary" medal="silver" host=" ООО «Практика реставрации»" responsible="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
                                     /></LinkContainer>
-                    
-                        
-                      
+
                     </WsrBlockBlank>
                                   <WsrBlockTitle title="Стать СЦК" />
                     
