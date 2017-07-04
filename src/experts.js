@@ -42,27 +42,50 @@ class Team extends Component {
                   <WsrBlockTitle title="Эксперты" />
                       <WsrPage type="wsr-page" heading="Эксперты" description="" date="10.05.2017">
                       <p>Роль экспертов в организации соревнований WorldSkills Russia очень высока. Эксперт WorldSkills Russia – это человек, обладающий определенными компетенциями: превосходно знает свою профессию, стандарты и регламенты WorldSkills, а также процедуры проведения соревнований. Эксперт участвует в составлении тестового задания и определении критериев оценки участников соревнований WorldSkills Russia.
-                    
-                       <WsrCertification certification="certified"/>Сертифицированный эксперт
-                        <WsrCertification certification="regional"/>Региональный эксперт
-                        <WsrCertification certification="demo"/>Эксперт Демонстрационного Экзамена
-
+                    </p>
+                       
                          <Media>
-                      <Media.Left className="wsr-partner-logo">
-                        <img width={ 100 } src="/Images/wsr-logo-regional.svg" alt="" />
+                      <Media.Left className="wsr-partner-logo wsr-certification-explanation">
+                        <img  width={ 100 } src="/Images/certified.svg" alt="" />
                       </Media.Left>
-                      <Media.Body className="wsr-partner-description">
+                      <Media.Body className="wsr-certification-description">
+                        <Media.Heading>
+                          Сертифицированный эксперт
+                        </Media.Heading>
+                        <TextTruncate className="wsr-block__description" line={ 3 } truncateText="…" text="Краткое описание" textTruncateChild={ <a href="#">
+                                                                                                                                                       <MdArrowForward className="wsr-block__date-icon" />
+                                                                                                                                                     </a> } />
+                      </Media.Body>
+                    </Media>
+                    <Media>
+                      <Media.Left className="wsr-partner-logo wsr-certification-explanation">
+                        <img width={ 100 } src="/Images/regional.svg" alt="" />
+                      </Media.Left>
+                      <Media.Body className="wsr-certification-description">
                         <Media.Heading>
                           Региональный эксперт
                         </Media.Heading>
-                        <TextTruncate className="wsr-block__description" line={ 3 } truncateText="…" text="Региональный эксперт" textTruncateChild={ <a href="#">
+                        <TextTruncate className="wsr-block__description" line={ 3 } truncateText="…" text="Краткое описание" textTruncateChild={ <a href="#">
+                                                                                                                                                       <MdArrowForward className="wsr-block__date-icon" />
+                                                                                                                                                     </a> } />
+                      </Media.Body>
+                    </Media>
+                    <Media>
+                      <Media.Left className="wsr-partner-logo wsr-certification-explanation">
+                        <img  width={ 100 } src="/Images/demo.svg" alt="" />
+                      </Media.Left>
+                      <Media.Body className="wsr-certification-description">
+                        <Media.Heading>
+                          Эксперт Демонстрационного экзамена
+                        </Media.Heading>
+                        <TextTruncate className="wsr-block__description" line={ 3 } truncateText="…" text="Краткое описание" textTruncateChild={ <a href="#">
                                                                                                                                                        <MdArrowForward className="wsr-block__date-icon" />
                                                                                                                                                      </a> } />
                       </Media.Body>
                     </Media>
                       
 
-                      </p>
+                      
                       
 
                     </WsrPage>  
@@ -70,16 +93,16 @@ class Team extends Component {
                     <WsrExpertSearch export categories={ ["Все категории", "Специалисты строительной сферы", "Творчество и дизайн", "Специалисты, занятые на промышленном производстве", "Сфера услуг", "Обслуживание гражданского транспорта", "RU", "FutureSkills (FS)", "Презентационная (FS)", "Презентационная", "JuniorSkills", "Презентационная (JS)"] } competences={ ["Все компетенции", "Камнетёсное дело", "Облицовка плиткой", "Столярное дело", "Плотницкое дело", "Кирпичная кладка", "Холодильная техника и системы кондиционирования", "Сантехника и отопление", "Сухое строительство и штукатурные работы", "Малярные и декоративные работы", "Ландшафтный дизайн", "Электромонтаж", "Производство мебели"] } />
 
                     <WsrBlockTitle title="Строительная сфера" />
-                    <Row>
+                    <Row className="row-flex row-flex-wrap">
                                   <Col xs={12} sm={ 6 } md={ 4 } lg={ 6 }>
-                                    <WsrExpert name="Дармограй Тимофей Юрьевич" certification="certified" head={true} competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
+                                    <WsrExpert name="Дармограй Тимофей Юрьевич" certification="certified" head={true} competence="Камнетесное дело" tier="member-expert " medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
                                     >
                                     <WsrCertification certification="certified" />
                                     <WsrCertification certification="regional" />
                                     </WsrExpert>
                                   </Col>
                                   <Col xs={12} sm={ 6 } md={ 4 } lg={ 6 }>
-                                    <WsrExpert name="Воронков  Никита Александрович" certification="certified" head={true}  competence="Камнетесное дело" tier="secondary" medal="silver" host=" ООО «Практика реставрации»" expert="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
+                                    <WsrExpert name="Воронков  Никита Александрович" certification="certified" head={true}  competence="Камнетесное дело" tier="member-expert " medal="silver" host=" ООО «Практика реставрации»" expert="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
                                     >
                                     <WsrCertification certification="certified" />
                                     <WsrCertification certification="regional" />
@@ -87,14 +110,14 @@ class Team extends Component {
                                     </WsrExpert>
                                   </Col>
                                   <Col xs={12} sm={ 6 } md={ 4 } lg={ 6 }>
-                                    <WsrExpert name="Юсупов Набихон Маннонович" certification="certified" head={true}  competence="Кирпичная кладка" tier="primary" medal="bronze" host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg"
+                                    <WsrExpert name="Юсупов Набихон Маннонович" certification="certified" head={true}  competence="Кирпичная кладка" tier="member-expert " medal="bronze" host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg"
                                     >
                                     <WsrCertification certification="certified" />
                                     <WsrCertification certification="demo" />
                                     </WsrExpert>
                                   </Col>    
                                   <Col xs={12} sm={ 6 } md={ 4 } lg={ 6 }>
-                                    <WsrExpert name="Моренкова Анастасия Андреевна" certification="regional" head={true}  competence="Кирпичная кладка" tier="secondary" medal="professional" host="Колледж архитектуры и строительства № 7 " expert="Федорова Елена Викторовна" photo="/Images/competence/4.jpg"
+                                    <WsrExpert name="Моренкова Анастасия Андреевна" certification="regional" head={true}  competence="Кирпичная кладка" tier="member-expert " medal="professional" host="Колледж архитектуры и строительства № 7 " expert="Федорова Елена Викторовна" photo="/Images/competence/4.jpg"
                                     >
                                     <WsrCertification certification="demo" />
                                     </WsrExpert>

@@ -982,6 +982,15 @@ a .wsr-footer__social-icons:first-child {
   border-radius: 3px 3px 0 0;
   border-bottom: 0px;
 }
+.wsr-team__expert .panel-heading {
+  height: 2.5em;
+  color: white;
+  background-color: #002b4a;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 3px 3px 0 0;
+  border-bottom: 0px;
+}
 .wsr-team__member__star-container {
   justify-content: center;
 }
@@ -1524,6 +1533,28 @@ span .member-expert {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+.wsr-certification-explanation img {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0;
+  webkit-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: inherit;
+  height: auto;
+  width: 2em;
+}
+.wsr-certification-description {
+  padding-left: 1em;
+  margin-left: 1em;
+  border-left: 1px solid #dddddd;
+}
 /*-------------------------------------------------------------------------------------------*/
 /************************************ AVATAR STAR STYLES ************************************/
 .wsr-team__member-star-wrapper {
@@ -1603,7 +1634,7 @@ body {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex: 1 1 ;
+  flex: 1 1 auto;
 }
 .row-flex--start {
   align-items: flex-start;
@@ -1618,6 +1649,9 @@ body {
 .container-flex > div[class*='col-'] {
   margin: -0.2px;
   /* hack adjust for wrapping */
+}
+.wsr-team__member {
+  flex-grow: 1;
 }
 .media-heading {
   font-weight: 300;

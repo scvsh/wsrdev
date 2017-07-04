@@ -71,7 +71,7 @@ export class WsrMainMenu extends React.Component {
         };
     }
     componentDidMount() {
-    //window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
   }
 
     componentWillUnmount() {
@@ -82,10 +82,9 @@ export class WsrMainMenu extends React.Component {
        let anchor = 180;
        let value = document.body.scrollTop;
        let cornerstate = value > anchor ? 1/(value/anchor)*0.08 - (value/anchor*0.02) :  0.08;
-          
-          this.setState({
-              scroll: cornerstate
-          });
+       let el = document.querySelector('#clipmask');
+      
+       console.log(el);
       }
 
     render() {
@@ -93,7 +92,7 @@ export class WsrMainMenu extends React.Component {
             <Grid bsClass="containter-fluid">
               <svg width="0" height="0">
                 <clipPath id="ClipAffix" clipPathUnits="objectBoundingBox">
-                  <polygon points={"0 1,0.5 1,0.67 " + 0.08 + ",1 0,0 0"}>
+                  <polygon id="clipmask" points={"0 1,0.5 1,0.67 " + 0.08 + ",1 0,0 0"}>
                   </polygon>
                 </clipPath>
               </svg>
@@ -885,11 +884,11 @@ export class WsrExpert extends React.Component {
 
         return (
 
-            <Panel className="wsr-team__member "  header={ _props.head ? <TextTruncate line={ 1 } truncateText="…" text={ _props.competence } /> : false }>
+            <Panel className="wsr-team__member wsr-team__expert"  header={ _props.head ? <TextTruncate line={ 1 } truncateText="…" text={ _props.competence } /> : false }>
               <Row className="wsr-team__avatar ">
               <Col sm={4}>
               <Row className="wsr-team__avatar__container">
-                <div className={ "wsr-team__member-photo-wrapper " + (_props.tier === "primary" ? "member-primary" : "member-secondary") }>
+                <div className={ "wsr-team__member-photo-wrapper " + _props.tier }>
                   <Image src={ _props.photo } circle responsive />
                 </div>
                 </Row>
@@ -898,7 +897,7 @@ export class WsrExpert extends React.Component {
                 </Row>
                 </Col>
                 <Col xs={8}>
-                <span className={ _props.tier === "primary" ? "wsr-team__member--primary" : "wsr-team__member--secondary" }>{ _props.name } <br/></span>
+                <span className="wsr-team__member--expert">{ _props.name } <br/></span>
                 <hr />
                 <div className="flex-grow">
                   <span className="wsr-team__host ">{ <span><div className="wsr-team__member-expert"></div>{ _props.host }</span> }</span>
