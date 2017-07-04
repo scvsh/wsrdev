@@ -13,6 +13,7 @@ import Competence from "./competence"
 import ExpertCommunity from "./expert-community"
 import Sck from "./sck"
 import Locations from "./locations"
+import BecomeSck from "./become-sck"
 import Archive from "./archive"
 import Projects from "./projects"
 import RegionExpert from "./region-expert"
@@ -58,6 +59,7 @@ const Routes = () => (
 
             <Route exact path="/sck" component={ Sck } />
             <Route path="/sck/locations" component={ Locations } />
+            <Route path="/sck/become-sck" component={ BecomeSck } />
 
             { /* Projects */ }
             <Route exact path="/projects" component={ Projects } />

@@ -75,16 +75,19 @@ export class WsrMainMenu extends React.Component {
   }
 
     componentWillUnmount() {
-   // window.removeEventListener('scroll', this.handleScroll);
+   window.removeEventListener('scroll', this.handleScroll);
   }
 
     handleScroll() {
        let anchor = 180;
        let value = document.body.scrollTop;
        let cornerstate = value > anchor ? 1/(value/anchor)*0.08 - (value/anchor*0.02) :  0.08;
-       let el = document.querySelector('#clipmask');
-      
-       console.log(el);
+       let status = cornerstate == 0.08 ? 0.08 : 0;
+
+       this.setState ({
+        scroll: status
+       });
+       
       }
 
     render() {
@@ -92,7 +95,7 @@ export class WsrMainMenu extends React.Component {
             <Grid bsClass="containter-fluid">
               <svg width="0" height="0">
                 <clipPath id="ClipAffix" clipPathUnits="objectBoundingBox">
-                  <polygon id="clipmask" points={"0 1,0.5 1,0.67 " + 0.08 + ",1 0,0 0"}>
+                  <polygon id="clipmask" points={"0 1,0.5 1,0.67 " + this.state.scroll + ",1 0,0 0"}>
                   </polygon>
                 </clipPath>
               </svg>
@@ -601,7 +604,7 @@ export class WsrBlockTitle extends React.Component {
         let _props = this.props;
         return (
 
-            <div className="wsr-block__title">
+            <div className= { "wsr-block__title " + _props.className } >
               <LinkContainer className="wsr-block__title " to={ _props.link ? _props.link : "/" }>
                 <span className="align-bottom">
                                                                                                                                             { _props.title }

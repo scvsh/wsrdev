@@ -169,11 +169,10 @@ class Sck extends Component {
                                     /></LinkContainer>
 
                     </WsrBlockBlank>
-                                  <WsrBlockTitle title="Стать СЦК" />
                     
                     <WsrBlockBlank className="wsr-block-select">
                       <ListGroup>
-                        <LinkContainer exact to="/about/reglament"><ListGroupItem>Как стать СЦК?</ListGroupItem></LinkContainer>
+                        <LinkContainer exact to="/sck/become-sck"><ListGroupItem>Стать СЦК</ListGroupItem></LinkContainer>
                         
                       </ListGroup>
                     </WsrBlockBlank>

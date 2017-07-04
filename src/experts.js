@@ -12,7 +12,7 @@ import { Media, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bo
 
 /* Import WSR React components*/
 
-import { WsrCertification, WsrExpert, WsrExpertSearch, WsrTeamMember, WsrCarousel, WsrSizeLabel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrTierLabel, WsrCertification, WsrExpert, WsrExpertSearch, WsrTeamMember, WsrCarousel, WsrSizeLabel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 /* Import Icons */
 
@@ -40,49 +40,58 @@ class Team extends Component {
                   <Col xs={ 12 } sm={ 7 } md={ 7 } lg={ 7 } className="full-size">  
                   <Col xs={ 12 } sm={ 12 } md={ 12 } lg={ 12 }>  
                   <WsrBlockTitle title="Эксперты" />
-                      <WsrPage type="wsr-page" heading="Эксперты" description="" date="10.05.2017">
-                      <p>Роль экспертов в организации соревнований WorldSkills Russia очень высока. Эксперт WorldSkills Russia – это человек, обладающий определенными компетенциями: превосходно знает свою профессию, стандарты и регламенты WorldSkills, а также процедуры проведения соревнований. Эксперт участвует в составлении тестового задания и определении критериев оценки участников соревнований WorldSkills Russia.
-                    </p>
-                       
-                         <Media>
-                      <Media.Left className="wsr-partner-logo wsr-certification-explanation">
+
+<WsrPage type="wsr-page" heading="" description="" date="10.05.2017">
+                  <Col md={4}>
+                  <Media className="wsr-certification-explanation__media">
+                      <Media.Left className="wsr-certification-explanation">
                         <img  width={ 100 } src="/Images/certified.svg" alt="" />
                       </Media.Left>
                       <Media.Body className="wsr-certification-description">
                         <Media.Heading>
                           Сертифицированный эксперт
                         </Media.Heading>
-                        <TextTruncate className="wsr-block__description" line={ 3 } truncateText="…" text="Краткое описание" textTruncateChild={ <a href="#">
-                                                                                                                                                       <MdArrowForward className="wsr-block__date-icon" />
-                                                                                                                                                     </a> } />
-                      </Media.Body>
+                        <p className="wsr-expert-description">
+                        Прошедшие процедуру сертификации Союза, представляющие Союз «Ворлдскиллс Россия» на чемпионатах любого уровня  
+                        </p>              
+                        <WsrTierLabel competence="Образец Сертификата" tier="primary"/>                                                                                            
+                        </Media.Body>
                     </Media>
-                    <Media>
-                      <Media.Left className="wsr-partner-logo wsr-certification-explanation">
+                  </Col>
+                      
+                       
+                       <Col md={4}>  
+                    <Media className="wsr-certification-explanation__media">
+                      <Media.Left className="wsr-certification-explanation">
                         <img width={ 100 } src="/Images/regional.svg" alt="" />
                       </Media.Left>
                       <Media.Body className="wsr-certification-description">
                         <Media.Heading>
                           Региональный эксперт
                         </Media.Heading>
-                        <TextTruncate className="wsr-block__description" line={ 3 } truncateText="…" text="Краткое описание" textTruncateChild={ <a href="#">
-                                                                                                                                                       <MdArrowForward className="wsr-block__date-icon" />
-                                                                                                                                                     </a> } />
+                      <p className="wsr-expert-description">
+                         Прошедшие двух/трёхдневную программу обучения, сдавшие тестирование по итогам обучения. Имеют право проведения региональных (корпоративных) чемпионатов, а также оценки заданий демонстрационного экзамена (образец Сертификата)
+                        </p>  
+                        <WsrTierLabel competence="Образец Сертификата" tier="primary"/> 
                       </Media.Body>
                     </Media>
-                    <Media>
-                      <Media.Left className="wsr-partner-logo wsr-certification-explanation">
+                    </Col>
+                    <Col md={4}>  
+                    <Media className="wsr-certification-explanation__media">
+                      <Media.Left className="wsr-certification-explanation">
                         <img  width={ 100 } src="/Images/demo.svg" alt="" />
                       </Media.Left>
                       <Media.Body className="wsr-certification-description">
                         <Media.Heading>
                           Эксперт Демонстрационного экзамена
                         </Media.Heading>
-                        <TextTruncate className="wsr-block__description" line={ 3 } truncateText="…" text="Краткое описание" textTruncateChild={ <a href="#">
-                                                                                                                                                       <MdArrowForward className="wsr-block__date-icon" />
-                                                                                                                                                     </a> } />
+                       <p className="wsr-expert-description">
+                         Прошедшие однодневную программу обучения, успешно сдавшие тестирование. Допущены к оценке заданий демонстрационного экзамена (образец Сертификата)
+                        </p>  
+                        <WsrTierLabel competence="Образец Сертификата" tier="primary"/> 
                       </Media.Body>
                     </Media>
+                    </Col>
                       
 
                       

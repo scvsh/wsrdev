@@ -73,7 +73,7 @@ class App extends Component {
                       </Row>
                     </WsrBlockBlank>
                     { /* Block News */ }
-                    <WsrBlockTitle title="Новости" more/>
+                    <WsrBlockTitle title="Новости" className="wsr-block__title--news"  more/>
                     <WsrBlockBlank type="wsr-block-news">
                       <WsrNewsItem heading="Консультация по процедуре аккредитации СЦК (Специализированного центра компетенций)" description="26 апреля 2017 года состоится консультация по процедуре аккредитации СЦК (Специализированного центра компетенций). "
                         date="26.04.2017" />
