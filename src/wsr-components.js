@@ -23,6 +23,17 @@ export class WsrMeta extends React.Component {
     }
 }
 
+export class WsrProject extends React.Component {
+    render() {
+        return (
+            <div className="wrapper">
+              <MetaTags>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+              </MetaTags>
+            </div>
+        );
+    }
+}
 
 
 
@@ -463,7 +474,7 @@ export class WsrBlock extends React.Component {
                   </p>
                 </Col>
                 <Col sm={ 3 } md={ 5 } className="wsr-block__image-container">
-                  <WsrImage className="wsr-block__image" src={ _props.image } height="200px" width="100%" mode="fill" />
+                  <WsrImage className="wsr-block__image" src={ _props.image } height={ _props.height ? _props.height : 200 } width="100%" mode="fill" />
                 </Col>
               </Row>
             </div>
