@@ -8,7 +8,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import TextTruncate from "react-text-truncate";
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { Media, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
+import { Label, Media, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
@@ -54,7 +54,7 @@ class Team extends Component {
                         <p className="wsr-expert-description">
                         Прошедшие процедуру сертификации Союза, представляющие Союз «Ворлдскиллс Россия» на чемпионатах любого уровня  
                         </p>              
-                        <WsrTierLabel competence="Образец Сертификата" tier="primary"/>                                                                                            
+                        <Label><a href="">Образец Сертификата</a></Label>                                                                                            
                         </Media.Body>
                     </Media>
                   </Col>
@@ -70,9 +70,9 @@ class Team extends Component {
                           Региональный эксперт
                         </Media.Heading>
                       <p className="wsr-expert-description">
-                         Прошедшие двух/трёхдневную программу обучения, сдавшие тестирование по итогам обучения. Имеют право проведения региональных (корпоративных) чемпионатов, а также оценки заданий демонстрационного экзамена (образец Сертификата)
+                         Прошедшие двух/трёхдневную программу обучения, сдавшие тестирование по итогам обучения. Имеют право проведения региональных (корпоративных) чемпионатов, а также оценки заданий демонстрационного экзамена
                         </p>  
-                        <WsrTierLabel competence="Образец Сертификата" tier="primary"/> 
+                        <Label><a href="/">Образец Сертификата</a></Label> 
                       </Media.Body>
                     </Media>
                     </Col>
@@ -86,9 +86,9 @@ class Team extends Component {
                           Эксперт Демонстрационного экзамена
                         </Media.Heading>
                        <p className="wsr-expert-description">
-                         Прошедшие однодневную программу обучения, успешно сдавшие тестирование. Допущены к оценке заданий демонстрационного экзамена (образец Сертификата)
+                         Прошедшие однодневную программу обучения, успешно сдавшие тестирование. Допущены к оценке заданий демонстрационного экзамена
                         </p>  
-                        <WsrTierLabel competence="Образец Сертификата" tier="primary"/> 
+                        <Label><a href="">Образец Сертификата</a></Label> 
                       </Media.Body>
                     </Media>
                     </Col>
@@ -102,7 +102,7 @@ class Team extends Component {
                     <WsrExpertSearch export categories={ ["Все категории", "Специалисты строительной сферы", "Творчество и дизайн", "Специалисты, занятые на промышленном производстве", "Сфера услуг", "Обслуживание гражданского транспорта", "RU", "FutureSkills (FS)", "Презентационная (FS)", "Презентационная", "JuniorSkills", "Презентационная (JS)"] } competences={ ["Все компетенции", "Камнетёсное дело", "Облицовка плиткой", "Столярное дело", "Плотницкое дело", "Кирпичная кладка", "Холодильная техника и системы кондиционирования", "Сантехника и отопление", "Сухое строительство и штукатурные работы", "Малярные и декоративные работы", "Ландшафтный дизайн", "Электромонтаж", "Производство мебели"] } />
 
                     <WsrBlockTitle title="Строительная сфера" />
-                    <Row className="row-flex-wrap">
+                    <Row className="row-flex row-flex-wrap">
                                   <Col xs={12} sm={ 6 } md={ 4 } lg={ 6 }>
                                     <WsrExpert name="Дармограй Тимофей Юрьевич" certification="certified" head={true} competence="Камнетесное дело" tier="member-expert " medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
                                     >
