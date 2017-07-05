@@ -8,7 +8,7 @@ import { LinkContainer } from "react-router-bootstrap";
 
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { ListGroupItem, Panel, Tab, ListGroup, Grid, Row, Col, Nav, NavItem, Image } from "react-bootstrap";
+import { Button, ListGroupItem, Panel, Tab, ListGroup, Grid, Row, Col, Nav, NavItem, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
@@ -75,6 +75,9 @@ class Competence extends Component {
                             </NavItem>
                           </Nav>
                         </WsrBlockBlank>
+                        <Button block className="btn-export ">
+                           Скачать списком 
+                          </Button>
                       </Col>
                       <Tab.Content animation>
                         <Tab.Pane eventKey="0">
@@ -98,6 +101,7 @@ class Competence extends Component {
                                     Всего 12 компетенций
                                   </Panel>
                                 </WsrBlockBlank>
+                                
                               </Col>
                               <Tab.Content animation>
                                 <Tab.Pane eventKey="1c">
@@ -124,15 +128,12 @@ class Competence extends Component {
                                   
                                     <WsrBlockTitle title="Базовая площадка" />
                                     <WsrSckInfo title="ГАОУ ВО г. Москвы «Московский городской педагогический университет»" logo="/Images/sck/1.svg" contact="Бабалаева Мария Викторовна" phone="+7 963 600 82-12" mail="babalaewa73@inbox.ru" detailedAddress="м. «Кутузовская», последний вагон из центра, далее пешком 3-5 минут в сторону области." />
-                                 <WsrBlockTitle title="Партнёр" />
-                                  <WsrPartner 
-                    title="CISCO" 
-                    description="Cisco — американская транснациональная компания, разрабатывающая и продающая сетевое оборудование, предназначенное в основном для крупных организаций и телекоммуникационных предприятий. Одна из крупнейших в мире компаний, специализирующихся в области высоких технологий. Одной из особенностей бизнес-модели компании стала многоуровневая разветвлённая система сертификации инженеров по компьютерным сетям. Благодаря тому, что экзамены этой системы проверяют знание не только продукции Cisco, но и знание сетевых технологий и протоколов, многие организации, даже работающие на сетевом оборудовании других фирм, признают ценность профессиональных сертификатов Cisco. В частности, сертификация на уровне эксперта (CCIE) является одной из самых известных и уважаемых в компьютерной индустрии."
-                    website="http://www.cisco.com"
-                    logo="/Images/partners/1.png"
-                    />
+                                 
 
-                                   <WsrBlockTitle title="Эксперты" />
+
+
+
+                                   <WsrBlockTitle  title="Эксперты" />
                     
                     <WsrExpert name="Дармограй Тимофей Юрьевич" certification="certified" head={true} competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
                                     >
@@ -144,7 +145,25 @@ class Competence extends Component {
                                     <WsrCertification certification="certified" />
                                     <WsrCertification certification="regional" />
                                     </WsrExpert>
-                  
+
+                                    <WsrBlockTitle  title="Партнёры" />
+                                  <WsrBlockBlank type="wsr-block-partners--horizontal">
+                                  <Col sm={6} md={4}>
+                                  
+                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_01.svg" responsive />
+                        
+                                  </Col>
+                                  <Col sm={6} md={4}>
+                                  
+                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_02.svg" responsive />
+                        
+                                  </Col>
+                                  <Col sm={6} md={4}>
+                                  
+                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_03.svg" responsive />
+                        
+                                  </Col>
+                                  </WsrBlockBlank>
 
                                   </Col>
                                 </Tab.Pane>

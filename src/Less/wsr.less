@@ -35,6 +35,10 @@ hr {
 	margin-top: 2em;
 }
 
+.btn-export {
+	padding: 10px 0px;
+	font-weight: 300;
+}
 .btn-default {
 	background-color: @brand-primary;
 	border-color: @brand-primary;
@@ -395,8 +399,8 @@ li .active > a:any-link {
 }
 
 .wsr-menu__sponsors img {
-	opacity: 0.7;
-	.responsive_limited(7vh, 5px, 50px, 13px, width);
+	.responsive_limited(2.5vh, 3px, 20px, 13px, padding-top);
+	.responsive_limited(10vh, 5px, 50px, 13px, width);
 	.responsive_limited(2.5vh, 3px, 20px, 13px, padding-right);
 }
 
@@ -453,7 +457,7 @@ li .active > a:any-link {
 .wsr-menu__social {
 	padding: 1vh 0 1vh 1.5vw;
 	pointer-events: all;
-	height: 5vh;
+	height: 2.5vh;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -890,6 +894,17 @@ a .wsr-footer__social-icons:first-child {
 	z-index: 103;
 }
 
+.wsr-block-partners--horizontal {
+	border-radius: 3px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	z-index: 103;
+	display: flex;
+	padding-top: 2em;
+	padding-bottom: 2em;
+
+}
 .wsr-partner-container {
 	width: 80%;
 	vertical-align: middle;
@@ -1615,10 +1630,12 @@ span .member-expert {
 
 .wsr-team-label__primary {
 	background-color: @brand-primary;
+	line-height: 3em;
 }
 
 .wsr-team-label__secondary {
 	background-color: @gray-light;
+	line-height: 3em;
 }
 
 .wsr-team__member hr {
@@ -1714,6 +1731,7 @@ body {
 	background-color: @gray-light;
 	transition: 100ms ease-in;
 	border: 1px solid @gray-light;
+	font-weight: 300;
 }
 
 .wsr-btn-search:hover {

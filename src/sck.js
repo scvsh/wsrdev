@@ -6,7 +6,7 @@ import { LinkContainer } from "react-router-bootstrap";
 
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { PanelGroup, Tab, Nav, NavItem, Panel, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
+import { Button, PanelGroup, Tab, Nav, NavItem, Panel, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
@@ -109,6 +109,9 @@ class Sck extends Component {
 
                           
                         </WsrBlockBlank>
+                        <Button block className="btn-export ">
+                           Скачать списком 
+                          </Button>
                       </Col>
                       <Tab.Content animation>
                       <Tab.Pane eventKey="0">
@@ -175,7 +178,9 @@ class Sck extends Component {
                         <LinkContainer exact to="/sck/become-sck"><ListGroupItem>Стать СЦК</ListGroupItem></LinkContainer>
                         
                       </ListGroup>
+                      
                     </WsrBlockBlank>
+                    
                   </Col>
 
                 </Row>

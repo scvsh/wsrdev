@@ -172,6 +172,7 @@ class Team extends Component {
                         <LinkContainer exact to="/"><ListGroupItem>Обучение в 1С:Учебном центре №1</ListGroupItem></LinkContainer>
                       </ListGroup>
                     </WsrBlockBlank>
+                    
                   </Col>
                   
                   

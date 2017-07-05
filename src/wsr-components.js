@@ -604,7 +604,7 @@ export class WsrBlockTitle extends React.Component {
         let _props = this.props;
         return (
 
-            <div className= { "wsr-block__title " + _props.className } >
+            <div className= { "wsr-block__title " + _props.className ? _props.className : "" } >
               <LinkContainer className="wsr-block__title " to={ _props.link ? _props.link : "/" }>
                 <span className="align-bottom">
                                                                                                                                             { _props.title }
@@ -737,7 +737,7 @@ export class WsrTierLabel extends React.Component {
         let _props = this.props;
         return (
             <Label className={ _props.tier === "primary" ? "wsr-team-label__primary" : "wsr-team-label__secondary" }>
-              { _props.competence }
+              { _props.tier == "primary" ? "Основной состав" : "Запасной состав" }
             </Label>
 
         );
@@ -769,16 +769,18 @@ export class WsrTeamMemberItem extends React.Component {
                   <Image src={ _props.photo } circle responsive />
                 </div>
                 </Row>
-                <Row className="wsr-team__member__star-container row-flex"> 
-                { _props.children}
-                </Row>
+
                 </Col>
                 <Col sm={8}>
                 <span className={ _props.tier === "primary" ? "wsr-team__member--primary" : "wsr-team__member--secondary" }>{ _props.name } <br/></span>
+                <WsrTierLabel tier={ _props.tier } />
                 <hr />
                 <div className="flex-grow">
                   <span className="wsr-team__host ">{ <span><div className="wsr-team__member-expert"></div>{ _props.host }</span> }</span>
                 </div>
+                 <Row className="wsr-expert__cert-container row-flex"> 
+                { _props.children }
+                </Row>
                 </Col>
                 
                 
@@ -908,7 +910,8 @@ export class WsrExpert extends React.Component {
                 
                 { _props.phone ?  <div><hr /><MdPhone className="ri-contacts" /><a className="coordinator-contact" href={ "tel:" + _props.phone }>{ _props.phone }</a></div> : ""}
                 { _props.mail ? <div><MdMail className="ri-contacts" /><a className="coordinator-contact" href={ "mailto:" + _props.mail }>{ _props.mail }</a></div> : ""}
-                { _props.children ? <div> <hr /> <Row className="wsr-expert__cert-container row-flex"> 
+                { _props.children ? <div> <hr /> 
+                  <Row className="wsr-expert__cert-container row-flex"> 
                 { _props.children }
                 </Row> </div> : "" }
                 
@@ -974,7 +977,7 @@ export class WsrExpertSearch extends React.Component {
         return (
             <Row>
               <Form>
-                <Col md={ 4 } lg={ 4 }>
+                <Col md={ 8 } lg={ 3 }>
                   <FormGroup controlId="formControlsSelect">
                     <WsrBlockTitle title="Категория" />
                     <FormControl componentClass="select" placeholder="select">
@@ -982,7 +985,7 @@ export class WsrExpertSearch extends React.Component {
                     </FormControl>
                   </FormGroup>
                 </Col>
-                <Col md={ 3 } lg={ 3 }>
+                <Col md={ 4 } lg={ 3 }>
                   <FormGroup controlId="formControlsSelect">
                     <WsrBlockTitle title="Компетенция" />
                     <FormControl componentClass="select" placeholder="select">
@@ -990,7 +993,7 @@ export class WsrExpertSearch extends React.Component {
                     </FormControl>
                   </FormGroup>
                 </Col>
-                <Col md={ 4 } lg={ 4 }>
+                <Col md={ 8 } lg={ 4 }>
                   <FormGroup>
                     <WsrBlockTitle title="Поиск" />
                     <InputGroup>
@@ -1003,12 +1006,12 @@ export class WsrExpertSearch extends React.Component {
                     </InputGroup>
                   </FormGroup>
                 </Col>
-                <Col md={ 1 } lg={ 1 } >
+                <Col md={ 4 } lg={ 2 } >
                   <FormGroup>
                     <WsrBlockTitle title={'\u00A0'} />
 
-                        <Button block className="wsr-btn-search">
-                          <MdInput className="ri-search" />
+                        <Button block className="btn-export ">
+                           Выгрузить
                           </Button>
 
                   </FormGroup>
