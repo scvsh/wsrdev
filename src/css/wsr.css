@@ -1700,6 +1700,7 @@ body {
   display: -webkit-flex;
   display: flex;
   flex: 1 0 auto;
+  flex-basis: 30%;
 }
 .row-flex--start {
   align-items: flex-start;
@@ -2044,6 +2045,10 @@ Should we change this at all?
 }
 */
 @media (min-width: 1200px) {
+  .row-flex,
+  .row-flex > div[class*='col-'] {
+    flex-basis: 30%;
+  }
   .wsr-title-descriptor {
     font-size: 13px;
     font-size: 1.53vh;
@@ -2088,6 +2093,10 @@ Should we change this at all?
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+  .row-flex,
+  .row-flex > div[class*='col-'] {
+    flex-basis: 30%;
+  }
   .wsr-title-descriptor {
     font-size: 13px;
     font-size: 1.53vh;
@@ -2138,6 +2147,10 @@ Should we change this at all?
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .row-flex,
+  .row-flex > div[class*='col-'] {
+    flex-basis: 50%;
+  }
   .panel-body .row.is-flex > [class*='col-'] {
     display: block;
   }
@@ -2199,6 +2212,10 @@ Should we change this at all?
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
+  .row-flex,
+  .row-flex > div[class*='col-'] {
+    flex-basis: 100%;
+  }
   .panel-body .row.is-flex > [class*='col-'] {
     display: block;
   }
@@ -2247,6 +2264,10 @@ Should we change this at all?
   }
 }
 @media (max-width: 480px) {
+  .row-flex,
+  .row-flex > div[class*='col-'] {
+    flex-basis: 100%;
+  }
   .panel-body .row.is-flex > [class*='col-'] {
     display: block;
   }

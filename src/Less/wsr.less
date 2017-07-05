@@ -1675,6 +1675,7 @@ body {
 	display: -webkit-flex;
 	display: flex;
 	flex: 1 0 auto;
+	flex-basis:30%;
 }
 
 .row-flex--start {
@@ -2126,6 +2127,10 @@ Should we change this at all?
 }
 */
 @media (min-width:@screen-lg) {
+	.row-flex,
+	.row-flex > div[class*='col-'] {
+	flex-basis:30%;
+}
 	.wsr-title-descriptor {
 		.responsive_limited(1.53vh, 5px, 10px, 13px, font-size);
 	}
@@ -2154,6 +2159,10 @@ Should we change this at all?
 }
 
 @media (min-width:@screen-md) and (max-width:@screen-md-max) {
+	.row-flex,
+	.row-flex > div[class*='col-'] {
+	flex-basis:30%;
+}
 	.wsr-title-descriptor {
 		.responsive_limited(1.53vh, 7px, 10px, 13px, font-size);
 	}
@@ -2190,6 +2199,10 @@ Should we change this at all?
 }
 
 @media (min-width:@screen-sm) and (max-width:@screen-sm-max) {
+	.row-flex,
+	.row-flex > div[class*='col-'] {
+	flex-basis:50%;
+}
 	.panel-body .row.is-flex > [class*='col-'] {
 		display: block;
 	}
@@ -2240,6 +2253,11 @@ Should we change this at all?
 }
 
 @media (min-width:@screen-xs) and (max-width:@screen-xs-max) {
+	.row-flex,
+	.row-flex > div[class*='col-'] {
+	flex-basis:100%;
+}
+
 	.panel-body .row.is-flex > [class*='col-'] {
 		display: block;
 	}
@@ -2292,6 +2310,11 @@ Should we change this at all?
 }
 
 @media (max-width:@screen-xs) {
+	.row-flex,
+	.row-flex > div[class*='col-'] {
+	flex-basis:100%;
+}
+
 	.panel-body .row.is-flex > [class*='col-'] {
 		display: block;
 	}
