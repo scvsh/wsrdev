@@ -25,16 +25,48 @@ export class WsrMeta extends React.Component {
 
 export class WsrProject extends React.Component {
     render() {
+        let _props = this.props;
         return (
-            <div className="wrapper">
-              <MetaTags>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-              </MetaTags>
+            <div className={ "wsr-block " + _props.type }>
+              <Row className="row-eq-height">
+                <svg width="0" height="0">
+                  <clipPath id="ClipBlock" clipPathUnits="objectBoundingBox">
+                    <polygon points="0 1, 1 1,1 0,0.09 0">
+                    </polygon>
+                  </clipPath>
+                </svg>
+                <Col sm={ 9 } md={ 7 } className="wsr_block__container wsr_block__flex-container">
+                  <LinkContainer className="text-left wsr-block__heading" to={ _props.link ? _props.link : "/" }>
+                    <h4 className="text-left wsr-block__heading">
+                                                                                                                                                    <TextTruncate
+                        line={ 4 }
+                        truncateText="…"
+                        text={ _props.heading }
+                        />
+                                                                                                                                                </h4>
+                  </LinkContainer>
+                  <div className="wsr-block__description">
+                    <TextTruncate className="wsr-block__description" line={ _props.lines? _props.lines : 2 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
+                                                                                                                                                   <MdArrowForward className="wsr-block__date-icon" />
+                                                                                                                                                 </a> } />
+                  </div>
+                 
+                  <p className="wsr-block__date">
+                    <MdDateRange className="wsr-block__date-icon" />
+                    { _props.date }
+                  </p>
+                   <Button block className="btn-more ">
+                           Подробнее
+                          </Button>
+                </Col>
+                <Col sm={ 3 } md={ 5 } className="wsr-block__image-container">
+                  <WsrImage className="wsr-block__image" src={ _props.image } height={ _props.height ? _props.height : 200 } width="100%" mode="fill" />
+                </Col>
+              </Row>
             </div>
         );
     }
 }
-
 
 
 export class WsrMenuBg extends React.Component {

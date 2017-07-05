@@ -39,6 +39,14 @@ hr {
 	padding: 10px 0px;
 	font-weight: 300;
 }
+
+.btn-more {
+	padding: 10px 0px;
+	font-weight: 300;
+	margin-top: auto;
+	margin-bottom: 20px;
+}
+
 .btn-default {
 	background-color: @brand-primary;
 	border-color: @brand-primary;
@@ -679,8 +687,9 @@ a .wsr-footer__social-icons:first-child {
 
 .wsr-block-project--large {
 	height: 415px;
+	border-left: 3px solid @brand-primary;
 }
-	
+
 .wsr-block-project__image--large {
 	height: 415px;
 }
@@ -689,6 +698,12 @@ a .wsr-footer__social-icons:first-child {
 	padding-right: 20px;
 	padding-left: 20px;
 	font-size: 0.9em;
+}
+
+.wsr_block__flex-container {
+	height: 415px;
+	display: flex;
+	flex-direction: column;
 }
 
 .wsr-block__image-container {
@@ -803,33 +818,33 @@ a .wsr-footer__social-icons:first-child {
 	margin-top: 1em;
 	padding-top: 1em;
 	border-top: 1px solid #dddddd;
-
 }
-
 
 .wsr-team__member .panel-heading {
 	height: 2.5em;
 	color: white;
-    background-color: @brand-primary;
-    font-weight: bold;
-    font-size: 15px;
-    border-radius: 3px 3px 0 0;
-    border-bottom: 0px;
+	background-color: @brand-primary;
+	font-weight: bold;
+	font-size: 15px;
+	border-radius: 3px 3px 0 0;
+	border-bottom: 0px;
 }
+
 .wsr-team__expert .panel-heading {
 	height: 2.5em;
 	color: white;
-    background-color: @brand-secondary;
-    font-weight: bold;
-    font-size: 15px;
-    border-radius: 3px 3px 0 0;
-    border-bottom: 0px;
+	background-color: @brand-secondary;
+	font-weight: bold;
+	font-size: 15px;
+	border-radius: 3px 3px 0 0;
+	border-bottom: 0px;
 }
 
 .wsr-team__member__star-container {
 	justify-content: center;
 	//padding-top: 1em;
 }
+
 .wsr-expert__cert-container {
 	justify-content: flex-start;
 	padding-top: 1.5em;
@@ -840,6 +855,7 @@ a .wsr-footer__social-icons:first-child {
 .coordinator-contact {
 	font-size: 0.8em;
 }
+
 .wsr_block-numbers__wrapper {
 	padding-left: 20px;
 }
@@ -852,6 +868,7 @@ a .wsr-footer__social-icons:first-child {
 .wsr-team__member a.contant {
 	font-size: 0.8em;
 }
+
 .wsr-block-news {
 	background-color: transparent;
 	box-shadow: none;
@@ -862,7 +879,6 @@ a .wsr-footer__social-icons:first-child {
 .wsr-block-news:hover {
 	box-shadow: none;
 }
-
 
 .wsr_block-news__wrapper {
 	//padding-left: 20px;
@@ -911,8 +927,8 @@ a .wsr-footer__social-icons:first-child {
 	display: flex;
 	padding-top: 2em;
 	padding-bottom: 2em;
-
 }
+
 .wsr-partner-container {
 	width: 80%;
 	vertical-align: middle;
@@ -940,6 +956,7 @@ a .wsr-footer__social-icons:first-child {
 	left: -0.5em;
 	border: 2px solid whitesmoke;
 }
+
 /*-------------------------------------------------------------------------------------------*/
 
 /********************************** BLOCK-NUMBERS STYLES *************************************/
@@ -1450,10 +1467,11 @@ h6 {
 .member-expert {
 	border-color: @brand-secondary;
 }
+
 .wsr-team__avatar__container {
 	display: flex;
-	flex-direction:row;
-	justify-content:center;
+	flex-direction: row;
+	justify-content: center;
 }
 
 span .member-expert {
@@ -1534,38 +1552,40 @@ span .member-expert {
 	margin-bottom: 1em;
 }
 
-.wsr-certification-explanation img  {
-	padding: 0; 
-    margin-top: 0; 
-    margin-bottom: 0;
-    line-height: 1.42857143;
-    background-color: #ffffff;
-    border: none; 
-     border-radius: 0; 
-    webkit-transition: border 0.2s ease-in-out; 
-    transition: border 0.2s ease-in-out;
-    margin-left: auto;
-    margin-right: auto; 
-    display: block; 
-    max-width: inherit; 
-    height: auto;
-    width: 2em;
+.wsr-certification-explanation img {
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 1.42857143;
+	background-color: #ffffff;
+	border: none;
+	border-radius: 0;
+	webkit-transition: border 0.2s ease-in-out;
+	transition: border 0.2s ease-in-out;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	max-width: inherit;
+	height: auto;
+	width: 2em;
 }
 
 .wsr-certification-description {
 	padding-left: 1em;
 	margin-left: 1em;
 	border-left: 1px solid #dddddd;
+}
 
+.wsr-expert-description {
+	margin-bottom: 0;
 }
- .wsr-expert-description {
- 	margin-bottom: 0;
-}
+
 .wsr-certification-explanation__media {
 	padding-bottom: 1.5em;
 	word-break: break-word;
-    word-wrap: break-word;
+	word-wrap: break-word;
 }
+
 /*-------------------------------------------------------------------------------------------*/
 
 /************************************ AVATAR STAR STYLES ************************************/
@@ -1670,6 +1690,7 @@ body {
 .row-flex--start {
 	align-items: flex-start;
 }
+
 .row-flex-wrap {
 	-webkit-flex-flow: row wrap;
 	align-content: flex-start;
@@ -1694,6 +1715,7 @@ body {
 .media-heading {
 	font-weight: 300;
 }
+
 .media-heading a {
 	color: @brand-primary;
 }
@@ -1701,6 +1723,7 @@ body {
 .media-heading a:hover {
 	opacity: 0.8;
 }
+
 .wsr-team__member .panel-body {
 	width: 100%;
 }
@@ -2086,6 +2109,7 @@ li.wsr-side-menu__item:focus > a {
 
 .Cal__Header__root {
 	background-color: @brand-secondary !important;
+	background-image: url(/Images/overlay.png);
 }
 
 .Cal__Weekdays__root {
@@ -2166,11 +2190,13 @@ Should we change this at all?
 		clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
 		clip-path: url("#ClipBlock");
 	}
+
 	.wsr-certification-explanation__media {
-    	font-size: 0.8em;
+		font-size: 0.8em;
 	}
-	.wsr-certification-explanation__media h4{
-    	font-size: 1.2em;
+
+	.wsr-certification-explanation__media h4 {
+		font-size: 1.2em;
 	}
 
 }
@@ -2212,11 +2238,13 @@ Should we change this at all?
 	.list-group {
 		font-size: 0.8em;
 	}
+
 	.wsr-certification-explanation__media {
-    	font-size: 0.8em;
+		font-size: 0.8em;
 	}
-	.wsr-certification-explanation__media h4{
-    	font-size: 1.2em;
+
+	.wsr-certification-explanation__media h4 {
+		font-size: 1.2em;
 	}
 
 }

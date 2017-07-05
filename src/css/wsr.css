@@ -53,6 +53,12 @@ hr {
   padding: 10px 0px;
   font-weight: 300;
 }
+.btn-more {
+  padding: 10px 0px;
+  font-weight: 300;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
 .btn-default {
   background-color: #ce112d;
   border-color: #ce112d;
@@ -895,6 +901,7 @@ a .wsr-footer__social-icons:first-child {
 }
 .wsr-block-project--large {
   height: 415px;
+  border-left: 3px solid #ce112d;
 }
 .wsr-block-project__image--large {
   height: 415px;
@@ -903,6 +910,11 @@ a .wsr-footer__social-icons:first-child {
   padding-right: 20px;
   padding-left: 20px;
   font-size: 0.9em;
+}
+.wsr_block__flex-container {
+  height: 415px;
+  display: flex;
+  flex-direction: column;
 }
 .wsr-block__image-container {
   padding-right: 0px;
@@ -1998,6 +2010,7 @@ li.wsr-side-menu__item:focus > a {
 }
 .Cal__Header__root {
   background-color: #002b4a !important;
+  background-image: url(/Images/overlay.png);
 }
 .Cal__Weekdays__root {
   background-color: #00497d !important;
