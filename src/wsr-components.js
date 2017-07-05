@@ -649,9 +649,9 @@ export class WsrBlockTitle extends React.Component {
 
             <div className= { "wsr-block__title " + _props.className ? _props.className : "" } >
               <LinkContainer className="wsr-block__title " to={ _props.link ? _props.link : "/" }>
-                <span className="align-bottom">
+                <a className="align-bottom">
                                                                                                                                             { _props.title }
-                                                                                                                                        { _props.more ? <MdMore className="ri-more"/> : "" } </span>
+                                                                                                                                        { _props.more ? <MdMore className="ri-more"/> : "" } </a>
               </LinkContainer>
             </div>
 
