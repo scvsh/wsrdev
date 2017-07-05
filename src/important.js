@@ -100,7 +100,7 @@ class Important extends Component {
                 { /* Footer */ }
                 <WsrFooter/>
               </Grid>
-            </div>
+            </div> 
         );
     }
 }
