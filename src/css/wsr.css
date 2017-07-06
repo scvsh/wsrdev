@@ -321,7 +321,12 @@ li .active > a:any-link {
   color: #ce112d !important;
 }
 .wsr-affix-background {
-  background-image: url(/Images/menu.svg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: inherit;
+  transition: none;
+  background-image: url(/Images/menu.png);
   background-size: cover;
   height: 100%;
   user-select: none;
@@ -380,6 +385,10 @@ li .active > a:any-link {
   display: flex;
   justify-content: flex-start;
   pointer-events: all;
+}
+.wsr-logo-mobile {
+  margin-right: 0.5em;
+  color: #ce112d;
 }
 .wsr-title-logo img {
   transition: 250ms ease-out;
@@ -502,7 +511,7 @@ li .active > a:any-link {
   padding-top: 3vh;
   padding-bottom: 13px;
   padding-bottom: 1vh;
-  font-family: 'Gotham Pro';
+  font-family: 'Gotham Pro', Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
   pointer-events: all;
@@ -544,6 +553,7 @@ li .active > a:any-link {
   font-weight: 700;
 }
 .wsr-menu > li > a {
+  color: #838d9d;
   padding: 1vh 1.5vw;
   padding-top: 13px;
   padding-top: 0.7vh;
@@ -667,14 +677,14 @@ li .active > a:any-link {
   align-items: center;
   justify-content: flex-start;
   height: 13px;
-  height: 5vh;
+  height: 4vh;
 }
-@media (max-height: 200px) {
+@media (max-height: 250px) {
   .wsr-menu__contacts div {
     height: 10px;
   }
 }
-@media (min-height: 800px) {
+@media (min-height: 1000px) {
   .wsr-menu__contacts div {
     height: 40px;
   }
@@ -847,11 +857,16 @@ a .wsr-footer__social-icons:first-child {
   font-weight: bold;
   color: white;
 }
-.nav-pills > li.active > a,
-.nav-pills > li.active > a:hover,
-.nav-pills > li.active > a:focus {
-  color: #ce112d;
+.wsr-main-menu__nav > li.active > a,
+.wsr-main-menu__nav > li.active > a:hover,
+.wsr-main-menu__nav > li.active > a:focus {
   background-color: rgba(0, 0, 0, 0.3);
+}
+.wsr-main-menu__nav > li > a:hover,
+.wsr-main-menu__nav > li > a:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  transition: 300ms ease-out;
 }
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
@@ -1024,6 +1039,12 @@ a .wsr-footer__social-icons:first-child {
   font-size: 15px;
   border-radius: 3px 3px 0 0;
   border-bottom: 0px;
+}
+.primary .panel-heading {
+  background-color: #ce112d;
+}
+.secondary .panel-heading {
+  background-color: #999999;
 }
 .wsr-team__expert .panel-heading {
   height: 2.5em;
@@ -1388,6 +1409,15 @@ h6 {
 /*-------------------------------------------------------------------------------------------*/
 /************************************ TAB SELECTOR STYLES ************************************/
 /*-------------------------------------------------------------------------------------------*/
+.wsr-competence__icon-wrapper {
+  align-items: flex-end;
+}
+.wsr-competence__icon-wrapper div {
+  display: block !important;
+}
+.wsr-competence__icon-wrapper div > h3 {
+  margin-bottom: 0;
+}
 .wsr-competence-category > li {
   border-bottom: 1px solid #dddddd;
 }
@@ -1503,6 +1533,14 @@ h6 {
   box-shadow: none;
   margin-bottom: 0;
 }
+.panel-default {
+  border: none;
+  box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+.panel-default:hover {
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.3);
+}
 .list-group-item .panel-default > .panel-heading {
   background: none;
 }
@@ -1516,6 +1554,10 @@ h6 {
   border-radius: 50%;
   padding: 2px;
   text-align: center;
+  width: 80%;
+}
+.wsr-team__member-photo-wrapper img {
+  width: 100%;
 }
 .member-primary {
   border-color: #ce112d;
@@ -1657,6 +1699,7 @@ span .member-expert {
 .wsr-team__member--secondary {
   display: block;
   font-weight: 300;
+  color: #555555;
 }
 .wsr-team__member--expert {
   display: block;
@@ -1734,6 +1777,10 @@ body {
 .wsr-team__member .panel-title,
 .panel-footer {
   font-size: 0.8em;
+}
+.panel-footer {
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 .wsr-team__member-expert {
   opacity: 0.7;
@@ -1855,6 +1902,11 @@ body {
   opacity: 0;
   background-color: #002b4a;
   cursor: pointer;
+}
+.wsr-date-label {
+  align-self: flex-start;
+  display: inline-block;
+  margin-bottom: 1em;
 }
 .wsr-location-table tr:hover .wsr-location-label {
   opacity: 1;
@@ -2049,6 +2101,9 @@ Should we change this at all?
   .row-flex > div[class*='col-'] {
     flex-basis: 30%;
   }
+  .wsr-row__contacts > div[class*='col-'] {
+    flex-basis: 50% !important;
+  }
   .wsr-title-descriptor {
     font-size: 13px;
     font-size: 1.53vh;
@@ -2096,6 +2151,9 @@ Should we change this at all?
   .row-flex,
   .row-flex > div[class*='col-'] {
     flex-basis: 30%;
+  }
+  .wsr-row__contacts > div[class*='col-'] {
+    flex-basis: 50% !important;
   }
   .wsr-title-descriptor {
     font-size: 13px;
@@ -2212,6 +2270,10 @@ Should we change this at all?
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
+  .containter-fluid {
+    margin-left: 15px;
+    margin-top: 15px;
+  }
   .row-flex,
   .row-flex > div[class*='col-'] {
     flex-basis: 100%;
@@ -2264,6 +2326,10 @@ Should we change this at all?
   }
 }
 @media (max-width: 480px) {
+  .containter-fluid {
+    margin-left: 15px;
+    margin-top: 15px;
+  }
   .row-flex,
   .row-flex > div[class*='col-'] {
     flex-basis: 100%;
@@ -2294,5 +2360,17 @@ Should we change this at all?
   }
   .wsr-header__carousel {
     padding-top: 50px;
+  }
+}
+_:-ms-lang(x),
+_:-webkit-full-screen,
+.wsr-affix {
+  background-color: transparent;
+  background-image: none;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .wsr-affix {
+    background-color: transparent;
+    background-image: none;
   }
 }

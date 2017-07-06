@@ -87,7 +87,7 @@ class Competence extends Component {
                                 <WsrBlockTitle title="Компетенции" />
                                 <WsrBlockBlank description="" date="10.05.2017">
                                   <Panel defaultExpanded>
-                                    <Row className="is-flex">
+                                    <Row className="is-flex wsr-competence__icon-wrapper">
                                       <Col lg={ 3 }>
                                         <Image src="/Images/icon_1.svg" />
                                       </Col>
@@ -125,6 +125,7 @@ class Competence extends Component {
                                         <WsrMedal tier="primary" medal="silver"/>
                                       </WsrTeamMemberItem>
                                     </WsrTeamMember>
+                                    
                                   
                                     <WsrBlockTitle title="Базовая площадка" />
                                     <WsrSckInfo title="ГАОУ ВО г. Москвы «Московский городской педагогический университет»" logo="/Images/sck/1.svg" contact="Бабалаева Мария Викторовна" phone="+7 963 600 82-12" mail="babalaewa73@inbox.ru" detailedAddress="м. «Кутузовская», последний вагон из центра, далее пешком 3-5 минут в сторону области." />

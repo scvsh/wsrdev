@@ -7,7 +7,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { MdPhone, MdMail } from "react-icons/lib/md";
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import {   Panel, NavItem, Tab, Nav, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
+import {  Label, Panel, NavItem, Tab, Nav, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
@@ -82,7 +82,7 @@ class Partners extends Component {
                     description="Cisco — американская транснациональная компания, разрабатывающая и продающая сетевое оборудование, предназначенное в основном для крупных организаций и телекоммуникационных предприятий. Одна из крупнейших в мире компаний, специализирующихся в области высоких технологий. Одной из особенностей бизнес-модели компании стала многоуровневая разветвлённая система сертификации инженеров по компьютерным сетям. Благодаря тому, что экзамены этой системы проверяют знание не только продукции Cisco, но и знание сетевых технологий и протоколов, многие организации, даже работающие на сетевом оборудовании других фирм, признают ценность профессиональных сертификатов Cisco. В частности, сертификация на уровне эксперта (CCIE) является одной из самых известных и уважаемых в компьютерной индустрии."
                     website="http://www.cisco.com"
                     logo="/Images/partners/1.png"
-                    ><WsrTierLabel competence="Камнетёстное дело" tier="primary"/>
+                    ><Label><a href="/">Камнетесное дело</a></Label> 
                     </WsrPartner>
 
                                  <WsrBlock type="wsr-block-important" heading="Старт группы по обучению по программе «Региональный эксперт WorldSkills» перенесен на 13-14 июня!" description="Старт группы по обучению по программе «Региональный эксперт WorldSkills» состоится на 13-14 июня 2017г. 

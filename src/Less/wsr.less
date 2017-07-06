@@ -268,10 +268,14 @@ li .active > a:any-link {
 	color: @brand-primary !important;
 }
 
-
-
 .wsr-affix-background {
-	background-image: url(/Images/menu.svg);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: inherit;
+	transition: none;
+	background-image: url(/Images/menu.png);
 	background-size: cover;
 	height: 100%;
 	user-select: none;
@@ -312,6 +316,11 @@ li .active > a:any-link {
 	display: flex;
 	justify-content: flex-start;
 	pointer-events: all;
+}
+
+.wsr-logo-mobile {
+	margin-right: 0.5em;
+	color: @brand-primary;
 }
 
 .wsr-title-logo img {
@@ -387,7 +396,7 @@ li .active > a:any-link {
 	.responsive_limited(3vh, 3px, 30px, 13px, padding-top);
 	.responsive_limited(1vh, 1px, 10px, 13px, padding-bottom);
 	padding-bottom: 1vh;
-	font-family: 'Gotham Pro';
+	font-family: 'Gotham Pro', Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	font-style: normal;
 	pointer-events: all;
@@ -400,6 +409,7 @@ li .active > a:any-link {
 }
 
 .wsr-menu > li > a {
+	color: #838d9d;
 	padding: 1vh 1.5vw;
 	.responsive_limited(0.7vh, 2px, 10px, 13px, padding-top);
 	.responsive_limited(0.7vh, 2px, 10px, 13px, padding-bottom);
@@ -440,7 +450,7 @@ li .active > a:any-link {
 	flex-direction: row;
 	align-items: center;
 	justify-content: flex-start;
-	.responsive_limited(5vh, 10px, 40px, 13px, height);
+	.responsive_limited(4vh, 10px, 40px, 13px, height);
 }
 
 .wsr-menu__contacts a {
@@ -615,11 +625,17 @@ a .wsr-footer__social-icons:first-child {
 	color: white;
 }
 
-.nav-pills > li.active > a,
-.nav-pills > li.active > a:hover,
-.nav-pills > li.active > a:focus {
-	color: @brand-primary;
+.wsr-main-menu__nav > li.active > a,
+.wsr-main-menu__nav > li.active > a:hover,
+.wsr-main-menu__nav > li.active > a:focus {
 	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.wsr-main-menu__nav > li > a:hover,
+.wsr-main-menu__nav > li > a:focus {
+	background-color: rgba(255, 255, 255, .3);
+	color: white;
+	transition: 300ms ease-out;
 }
 
 .nav-pills > li.active > a,
@@ -833,6 +849,14 @@ a .wsr-footer__social-icons:first-child {
 	border-bottom: 0px;
 }
 
+.primary .panel-heading {
+	background-color: @brand-primary;
+}
+
+.secondary .panel-heading {
+	background-color: @gray-light;
+}
+
 .wsr-team__expert .panel-heading {
 	height: 2.5em;
 	color: white;
@@ -881,7 +905,6 @@ a .wsr-footer__social-icons:first-child {
 .wsr-block-news:hover {
 	box-shadow: none;
 }
-
 
 .wsr-block-news h5 {
 	color: @brand-secondary;
@@ -1295,6 +1318,17 @@ h6 {
 
 /*-------------------------------------------------------------------------------------------*/
 
+.wsr-competence__icon-wrapper {
+	align-items: flex-end;
+}
+
+.wsr-competence__icon-wrapper div {
+	display: block !important;
+}
+
+.wsr-competence__icon-wrapper div > h3 {
+	margin-bottom: 0;
+}
 
 .wsr-competence-category > li {
 	border-bottom: 1px solid #dddddd;
@@ -1355,7 +1389,6 @@ h6 {
 	border-left: 3px solid @brand-primary;
 	transition: 100ms ease-in;
 }
-
 
 .wsr-competence-category > li:last-child {
 	border-bottom: none;
@@ -1433,6 +1466,16 @@ h6 {
 	margin-bottom: 0;
 }
 
+.panel-default {
+	border: none;
+	box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);
+	border-radius: 3px;
+}
+
+.panel-default:hover {
+	box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.3)
+}
+
 .list-group-item .panel-default > .panel-heading {
 	background: none;
 }
@@ -1448,6 +1491,11 @@ h6 {
 	border-radius: 50%;
 	padding: 2px;
 	text-align: center;
+	width: 80%;
+}
+
+.wsr-team__member-photo-wrapper img {
+	width: 100%;
 }
 
 .member-primary {
@@ -1523,7 +1571,6 @@ span .member-expert {
 .wsr-sck-competence > li > a {
 	padding-left: 0;
 }
-
 
 .wsr-block__sck-info  div.name {
 	margin-bottom: 1em;
@@ -1624,6 +1671,7 @@ span .member-expert {
 .wsr-team__member--secondary {
 	display: block;
 	font-weight: 300;
+	color: @gray;
 }
 
 .wsr-team__member--expert {
@@ -1675,7 +1723,7 @@ body {
 	display: -webkit-flex;
 	display: flex;
 	flex: 1 0 auto;
-	flex-basis:30%;
+	flex-basis: 30%;
 }
 
 .row-flex--start {
@@ -1693,8 +1741,6 @@ body {
 .container-flex > div[class*='col-'] {
 	margin: -.2px; /* hack adjust for wrapping */
 }
-
-
 
 .wsr-team__member {
 	flex-grow: 1;
@@ -1719,6 +1765,11 @@ body {
 .wsr-team__member .panel-title,
 .panel-footer {
 	font-size: 0.8em;
+}
+
+.panel-footer {
+	border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 
 .wsr-team__member-expert {
@@ -1880,6 +1931,11 @@ body {
 	background-color: @brand-secondary;
 	cursor: pointer;
 }
+.wsr-date-label {
+	align-self: flex-start;
+	display: inline-block;
+	margin-bottom: 1em;
+}
 
 .wsr-location-table tr:hover .wsr-location-label {
 	opacity: 1;
@@ -1901,8 +1957,6 @@ body {
 .wsr-partner-logo {
 	vertical-align: middle;
 }
-
-
 
 /*-------------------------------------------------------------------------------------------*/
 
@@ -2129,8 +2183,13 @@ Should we change this at all?
 @media (min-width:@screen-lg) {
 	.row-flex,
 	.row-flex > div[class*='col-'] {
-	flex-basis:30%;
-}
+		flex-basis: 30%;
+	}
+
+	.wsr-row__contacts > div[class*='col-'] {
+		flex-basis: 50% !important;
+	}
+
 	.wsr-title-descriptor {
 		.responsive_limited(1.53vh, 5px, 10px, 13px, font-size);
 	}
@@ -2161,8 +2220,13 @@ Should we change this at all?
 @media (min-width:@screen-md) and (max-width:@screen-md-max) {
 	.row-flex,
 	.row-flex > div[class*='col-'] {
-	flex-basis:30%;
-}
+		flex-basis: 30%;
+	}
+
+	.wsr-row__contacts > div[class*='col-'] {
+		flex-basis: 50% !important;
+	}
+
 	.wsr-title-descriptor {
 		.responsive_limited(1.53vh, 7px, 10px, 13px, font-size);
 	}
@@ -2201,8 +2265,9 @@ Should we change this at all?
 @media (min-width:@screen-sm) and (max-width:@screen-sm-max) {
 	.row-flex,
 	.row-flex > div[class*='col-'] {
-	flex-basis:50%;
-}
+		flex-basis: 50%;
+	}
+
 	.panel-body .row.is-flex > [class*='col-'] {
 		display: block;
 	}
@@ -2253,10 +2318,14 @@ Should we change this at all?
 }
 
 @media (min-width:@screen-xs) and (max-width:@screen-xs-max) {
+	.containter-fluid {
+		margin-left: 15px;
+		margin-top: 15px;
+	}
 	.row-flex,
 	.row-flex > div[class*='col-'] {
-	flex-basis:100%;
-}
+		flex-basis: 100%;
+	}
 
 	.panel-body .row.is-flex > [class*='col-'] {
 		display: block;
@@ -2310,10 +2379,14 @@ Should we change this at all?
 }
 
 @media (max-width:@screen-xs) {
+	.containter-fluid {
+		margin-left: 15px;
+		margin-top: 15px;
+	}
 	.row-flex,
 	.row-flex > div[class*='col-'] {
-	flex-basis:100%;
-}
+		flex-basis: 100%;
+	}
 
 	.panel-body .row.is-flex > [class*='col-'] {
 		display: block;
@@ -2357,4 +2430,19 @@ Should we change this at all?
 		padding-top: 50px;
 	}
 
+}
+
+
+
+_:-ms-lang(x), _:-webkit-full-screen, 
+.wsr-affix { 
+	background-color:transparent; 
+	background-image: none;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+   .wsr-affix{
+   	background-color:transparent; 
+	background-image: none;
+   }
 }

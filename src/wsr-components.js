@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./css/wsr.css";
-import { MdPlace, MdInput, MdMore, MdMoreVert, MdKeyboardControl, MdStarHalf, MdStarOutline, MdStar, MdStars, MdApps, MdDateRange, MdArrowForward, MdSearch, MdVpnKey, MdMail, MdPhone } from "react-icons/lib/md";
+import { MdStar, MdAccountCircle, MdPlace, MdInput, MdMore, MdMoreVert, MdKeyboardControl, MdStarHalf, MdStarOutline, MdStars, MdApps, MdDateRange, MdArrowForward, MdSearch, MdVpnKey, MdMail, MdPhone } from "react-icons/lib/md";
 import { FaArchive, FaGraduationCap, FaStarHalfEmpty, FaStarHalf, FaStarO, FaStar, FaVk, FaFacebook, FaInstagram, FaYoutube } from "react-icons/lib/fa";
 import TextTruncate from "react-text-truncate";
 import { LinkContainer } from "react-router-bootstrap";
@@ -30,10 +30,12 @@ export class WsrProject extends React.Component {
             <div className={ "wsr-block " + _props.type }>
               <Row className="row-eq-height">
                 <svg width="0" height="0">
+                <defs>
                   <clipPath id="ClipBlock" clipPathUnits="objectBoundingBox">
                     <polygon points="0 1, 1 1,1 0,0.09 0">
                     </polygon>
                   </clipPath>
+                  </defs>
                 </svg>
                 <Col sm={ 9 } md={ 7 } className="wsr_block__container wsr_block__flex-container">
                   <LinkContainer className="text-left wsr-block__heading" to={ _props.link ? _props.link : "/" }>
@@ -44,12 +46,15 @@ export class WsrProject extends React.Component {
                         text={ _props.heading }
                         />
                                                                                                                                                 </h4>
+
                   </LinkContainer>
+                  <Label className="wsr-date-label"><a href="/">{ _props.startdate + " — " + _props.enddate }</a></Label> 
                   <div className="wsr-block__description">
                     <TextTruncate className="wsr-block__description" line={ _props.lines? _props.lines : 2 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
                                                                                                                                                    <MdArrowForward className="wsr-block__date-icon" />
                                                                                                                                                  </a> } />
                   </div>
+
                  
                   <p className="wsr-block__date">
                     <MdDateRange className="wsr-block__date-icon" />
@@ -71,7 +76,9 @@ export class WsrProject extends React.Component {
 
 export class WsrMenuBg extends React.Component {
     render() {
-        return <div className="wsr-affix-background" />;
+        return (
+          <div className="wsr-affix-background"/>
+        ); 
     }
 }
 
@@ -105,48 +112,24 @@ export class WsrMenuTitle extends React.Component {
 }
 
 export class WsrMainMenu extends React.Component {
-  constructor(props) {
-        super(props);
-        this.handleScroll = this.handleScroll.bind(this);
-        this.state = {
-            scroll: 0.08,
-            anchor: 180
-        };
-    }
-    componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-    componentWillUnmount() {
-   window.removeEventListener('scroll', this.handleScroll);
-  }
-
-    handleScroll() {
-       let anchor = 180;
-       let value = document.body.scrollTop;
-       let cornerstate = value > anchor ? 1/(value/anchor)*0.08 - (value/anchor*0.02) :  0.08;
-       let status = cornerstate == 0.08 ? 0.08 : 0;
-
-       this.setState ({
-        scroll: status
-       });
-       
-      }
+  
 
     render() {
         return (
             <Grid bsClass="containter-fluid">
               <svg width="0" height="0">
+              <defs>
                 <clipPath id="ClipAffix" clipPathUnits="objectBoundingBox">
-                  <polygon id="clipmask" points={"0 1,0.5 1,0.67 " + this.state.scroll + ",1 0,0 0"}>
+                  <polygon id="clipmask" points={"0 1,0.5 1,0.67 " + 0.08 + ",1 0,0 0"}>
                   </polygon>
                 </clipPath>
+                </defs>
               </svg>
               <Row>
                 <Navbar inverse collapseOnSelect className="navbar-fixed-top">
                   <Navbar.Header>
                     <Navbar.Brand>
-                      <a href="#">РКЦ WorldSkills Russia</a>
+                      <a href="#"> <MdStar className="wsr-logo-mobile" />РКЦ WorldSkills Russia</a>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                   </Navbar.Header>
@@ -254,7 +237,7 @@ export class WsrMainMenu extends React.Component {
                         
                         <hr className="wsr-menu__logo-divider" />
                        
-                        <Nav className="wsr-menu" bsStyle="pills" stacked>
+                        <Nav className="wsr-menu wsr-main-menu__nav" stacked>
                           <LinkContainer to="/about">
                             <NavItem className="wsr-menu-item" eventKey={ 1 }>
                               { "Wsr в Москве".toUpperCase() }
@@ -308,6 +291,9 @@ export class WsrMainMenu extends React.Component {
                             <MdPhone className="ri-contacts" /><a href="tel:+74995770056">+7 499 577 00-56</a></div>
                             <div>
                             <MdSearch className="ri-contacts" /> <a href="/">Поиск </a></div>  
+                            <div>
+                            <MdAccountCircle className="ri-contacts" /> <a href="/">Личный кабинет </a></div>  
+
                         </div>
 
                         <hr className="wsr-menu__contacts-divider" />
@@ -425,16 +411,20 @@ export class WsrCarousel extends React.Component {
                 <div><img src="/Images/carousel/gallery04.jpg" alt="Mirror Edge" /></div>
               </OwlCarousel>
               <svg width="0" height="0">
+              <defs>
                 <clipPath id="ClipRight" clipPathUnits="objectBoundingBox">
                   <polygon points="0.28 1, 1 1,1 0,0 0">
                   </polygon>
                 </clipPath>
+                </defs>
               </svg>
               <svg width="0" height="0">
+              <defs>
                 <clipPath id="ClipRightBg" clipPathUnits="objectBoundingBox">
                   <polygon points="0.3 1, 1 1,1 0,0.02 0">
                   </polygon>
                 </clipPath>
+                </defs>
               </svg>
             </Row>
 
@@ -480,10 +470,12 @@ export class WsrBlock extends React.Component {
             <div className={ "wsr-block " + _props.type }>
               <Row className="row-eq-height">
                 <svg width="0" height="0">
+                <defs>
                   <clipPath id="ClipBlock" clipPathUnits="objectBoundingBox">
                     <polygon points="0 1, 1 1,1 0,0.09 0">
                     </polygon>
                   </clipPath>
+                  </defs>
                 </svg>
                 <Col sm={ 9 } md={ 7 } className="wsr_block__container">
                   <LinkContainer className="text-left wsr-block__heading" to={ _props.link ? _props.link : "/" }>
@@ -809,14 +801,14 @@ export class WsrTeamMemberItem extends React.Component {
               <Col sm={4}>
               <Row className="wsr-team__avatar__container">
                 <div className={ "wsr-team__member-photo-wrapper " + (_props.tier === "primary" ? "member-primary" : "member-secondary") }>
-                  <Image src={ _props.photo } circle responsive />
+                  <Image src={ _props.photo ? _props.photo : "/Images/avatar.png"} circle responsive />
                 </div>
                 </Row>
 
                 </Col>
                 <Col sm={8}>
                 <span className={ _props.tier === "primary" ? "wsr-team__member--primary" : "wsr-team__member--secondary" }>{ _props.name } <br/></span>
-                <WsrTierLabel tier={ _props.tier } />
+                
                 <hr />
                 <div className="flex-grow">
                   <span className="wsr-team__host ">{ <span><div className="wsr-team__member-expert"></div>{ _props.host }</span> }</span>
@@ -878,7 +870,7 @@ export class WsrTeamMember extends React.Component {
         
         let _props = this.props;
         return (
-            <Panel className="wsr-team__member " header={ <TextTruncate line={ 1 } truncateText="…" text={ _props.competence } /> }  footer={ <TextTruncate line={ 1 } truncateText="…" text={ "Эксперт: " +_props.expert } /> } >
+            <Panel className={ "wsr-team__member " +  _props.tier } header={ <Row><Col xs={6}><TextTruncate line={ 1 } truncateText="…" text={ _props.competence } /> </Col><Col xs={6} className="full-size text-right pull-right">{ _props.tier == "primary" ? "Основной состав" : "Запасной состав" }</Col></Row>}  footer={ <TextTruncate line={ 1 } truncateText="…" text={ "Эксперт: " +_props.expert } /> } >
               {_props.children }
 
 
