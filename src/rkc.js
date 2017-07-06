@@ -6,7 +6,7 @@ import { LinkContainer } from "react-router-bootstrap";
 
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { Panel, Thumbnail, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
+import { Clearfix, Panel, Thumbnail, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
@@ -30,23 +30,25 @@ class Rkc extends Component {
                    <Col xs={ 12 } sm={ 7 } md={ 7 } lg={ 7 } className="full-size">  
                   <Col xs={ 12 } sm={ 12 } md={ 12 } lg={ 12 } className="full-size">  
                     <WsrBlockTitle title="Контакты" />
-                    <Row className="row-flex row-flex-wrap wsr-row__contacts">
+                    <Row>
 
-                                  <Col xs={12} sm={ 6 } md={ 4 } lg={ 6 }>
+                                  <Col xs={12} sm={ 6 } md={ 6 } lg={ 6 }>
                                     <WsrExpert name="Калугина Ксения Евгеньевна" phone="+7 499 577 00-56" mail="direct@wsr.msk.ru" certification="certified"  competence="Камнетесное дело" tier="primary" medal="gold" host="Руководитель РКЦ WorldSkills Russia по городу Москва" expert="Шкребтиенко Сергей Олегович" photo="/Images/avatar.png"
                                     />
                                     
                                   </Col>
-                                  <Col xs={12} sm={ 6 } md={ 4 } lg={ 6 }>
+                                  
+                                  <Col xs={12} sm={ 6 } md={ 6 } lg={ 6 }>
                                     <WsrExpert name="Лабуза Иван" phone="+7 499 577 00-56" mail="partner@wsr.msk.ru" certification="certified"  competence="Камнетесное дело" tier="primary" medal="gold" host="Руководитель направления по работе с партнерами" expert="Шкребтиенко Сергей Олегович" photo="/Images/avatar.png"
                                     />
                                   </Col>
-                                  
-                                  <Col xs={12} sm={ 6 } md={ 4 } lg={ 6 }>
+                                  <Clearfix/>
+                                  <Col xs={12} sm={ 6 } md={ 6 } lg={ 6 }>
                                     <WsrExpert name="Шпитонова Пелагея" phone="+7 499 577 00-56" mail="mail@wsr.msk.ru" certification="certified"  competence="Камнетесное дело" tier="primary" medal="gold" host="Руководитель организационного отдела" expert="Шкребтиенко Сергей Олегович" photo="/Images/avatar.png"
                                     />
                                   </Col>
-                                  <Col xs={12} sm={ 6 } md={ 4 } lg={ 6 }>
+                                  
+                                  <Col xs={12} sm={ 6 } md={ 6 } lg={ 6 }>
                                     
                                     <WsrExpert name="Тарасова Наталия" phone="+7 499 577 00-56" mail="media@wsr.msk.ru" certification="certified"  competence="Камнетесное дело" tier="primary" medal="gold" host="Руководитель медиапроектов" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
                                     />

@@ -926,7 +926,7 @@ export class WsrExpert extends React.Component {
 
             <Panel className="wsr-team__member wsr-team__expert"  header={ _props.head ? <TextTruncate line={ 1 } truncateText="…" text={ _props.competence } /> : false }>
               <Row className="wsr-team__avatar ">
-              <Col sm={4}>
+              <Col xs={3} sm={4}>
               <Row className="wsr-team__avatar__container">
                 <div className={ "wsr-team__member-photo-wrapper " + _props.tier }>
                   <Image src={ _props.photo } circle responsive />
@@ -936,7 +936,7 @@ export class WsrExpert extends React.Component {
                 
                 </Row>
                 </Col>
-                <Col xs={8}>
+                <Col xs={9} sm={8}>
                 <span className="wsr-team__member--expert">{ _props.name } <br/></span>
                 <hr />
                 <div className="flex-grow">
