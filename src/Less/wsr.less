@@ -1769,7 +1769,7 @@ body {
 
 .panel-footer {
 	border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
+	border-bottom-left-radius: 3px;
 }
 
 .wsr-team__member-expert {
@@ -1931,6 +1931,7 @@ body {
 	background-color: @brand-secondary;
 	cursor: pointer;
 }
+
 .wsr-date-label {
 	align-self: flex-start;
 	display: inline-block;
@@ -2322,6 +2323,7 @@ Should we change this at all?
 		margin-left: 15px;
 		margin-top: 15px;
 	}
+
 	.row-flex,
 	.row-flex > div[class*='col-'] {
 		flex-basis: 100%;
@@ -2383,6 +2385,7 @@ Should we change this at all?
 		margin-left: 15px;
 		margin-top: 15px;
 	}
+
 	.row-flex,
 	.row-flex > div[class*='col-'] {
 		flex-basis: 100%;
@@ -2432,17 +2435,45 @@ Should we change this at all?
 
 }
 
+/*-------------------------------------------------------------------------------------------*/
 
+/******************************** CRIPPLED BROWSER MEDICATION ********************************/
 
-_:-ms-lang(x), _:-webkit-full-screen, 
-.wsr-affix { 
-	background-color:transparent; 
+/*-------------------------------------------------------------------------------------------*/
+@media all and (-ms-high-contrast:none), (-ms-high-contrast:active) {
+	.wsr-affix {
+		background-color: transparent;
+		background-image: none;
+	}
+
+	.top_gal img {
+		height: 100% !important;
+	}
+
+	.wsr-menu > li > a {
+		display: inline-block;
+	}
+
+	.wsr-menu__contacts-divider {
+		width: 20%;
+	}
+
+}
+
+_:-ms-lang(x),_:-webkit-full-screen, .wsr-affix {
+	background-color: transparent;
 	background-image: none;
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-   .wsr-affix{
-   	background-color:transparent; 
-	background-image: none;
-   }
+_:-ms-lang(x),_:-webkit-full-screen,.top_gal img {
+	height: 100% !important;
+}
+
+_:-ms-lang(x),_:-webkit-full-screen,.wsr-menu > li > a {
+	display: inline-block;
+}
+
+_:-ms-lang(x),_:-webkit-full-screen,.wsr-menu__contacts-divider {
+	width: 20%;
+	direction: ltr;
 }
