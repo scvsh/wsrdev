@@ -2181,6 +2181,10 @@ Should we change this at all?
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
 }
 */
+.wsr-row__contacts > div[class*='col-'] {
+		flex-basis: 50%;
+	}
+
 @media (min-width:@screen-lg) {
 	.row-flex,
 	.row-flex > div[class*='col-'] {
@@ -2328,7 +2332,9 @@ Should we change this at all?
 	.row-flex > div[class*='col-'] {
 		flex-basis: 100%;
 	}
-
+	.wsr-row__contacts > div[class*='col-'] {
+		flex-basis: 100% !important;
+	}
 	.panel-body .row.is-flex > [class*='col-'] {
 		display: block;
 	}
@@ -2384,6 +2390,9 @@ Should we change this at all?
 	.containter-fluid {
 		margin-left: 15px;
 		margin-top: 15px;
+	}
+	.wsr-row__contacts > div[class*='col-'] {
+		flex-basis: 100% !important;
 	}
 
 	.row-flex,
