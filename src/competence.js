@@ -108,7 +108,7 @@ class Competence extends Component {
                                   <Col sm={ 4 } md={ 4 } lg={ 5 }>
                                     <WsrBlockTitle title="Сборная Москвы" />
                                     
-                                    <WsrTeamMember competence="Камнетесное дело" expert="Шкребтиенко Сергей Олегович"> 
+                                    <WsrTeamMember tier="primary" competence="Камнетесное дело" expert="Шкребтиенко Сергей Олегович"> 
                                       <WsrTeamMemberItem  name="Дармограй Тимофей Юрьевич" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
                                         <WsrMedal tier="primary" medal="gold"/>
                                         <WsrMedal tier="primary" medal="silver"/>
