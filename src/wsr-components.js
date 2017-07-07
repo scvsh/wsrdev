@@ -132,12 +132,9 @@ constructor(props) {
   }
 
     handleScroll() {
-      function posTop() {
-            return typeof window.pageYOffset != 'undefined' ? window.pageYOffset: document.documentElement.scrollTop? document.documentElement.scrollTop: document.body.scrollTop? document.body.scrollTop:0;
-        }
-
+      
       let anchor = 180;
-       let value = posTop();
+       let value = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
        if (this.scrollIcon !== null) {
           this.scrollIcon.setAttribute('points', '0 1,0.5 1,0.67 ' + ( value > anchor ? 1/(value/anchor)*0.08 - (value/anchor*0.02) :  0.08 ) + ',1 0,0 0');
       }
