@@ -4,10 +4,12 @@ import "./css/wsr.css";
 import "./css/fonts.css";
 import { LinkContainer } from "react-router-bootstrap";
 
+import { FaCalendar } from "react-icons/lib/fa";
+
 import InfiniteCalendar from 'react-infinite-calendar';
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
+import { Button, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
@@ -30,7 +32,7 @@ class Projects extends Component {
               { /* Main content */ }
               <Grid bsClass="containter-fluid">
                 <Row>
-                  <Col xs={ 0 } sm={ 3 } md={ 2 } lg={ 2 } />
+                  <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
                   <Col xs={ 12 } sm={ 9 } md={ 4 } lg={ 4 }>
                     <WsrBlockTitle title="Проекты" />
                     <WsrProject startdate="10.05.2017" enddate="19.05.2017" height={415} type="wsr-block-project--large" link="/projects/championship" lines={ 8 } heading="V ОЧМ «Московские мастера»" description="V Открытый чемпионат профессионального мастерства «Московские мастера» по стандартам WorldSkills Russia пройдет в период с 18 по 27 октября, закрытие чемпионата состоится 10 ноября 2016 года. В Чемпионате Москвы 2016 года заявлено: 75 компетенций, серия региональных отборочных соревнований по 15 компетенциям, а также 1 экспериментальная компетенция, которая ранее нигде представлена не была, 32 специализированных центра компетенций (СЦК). Для соревнований организовано 817 рабочих мест, из них 222 отведено для участников из других регионов."
@@ -43,7 +45,7 @@ class Projects extends Component {
                     <WsrProject startdate="09.05.2017" enddate="05.07.2017" height={415} type="wsr-block-project--large" heading="Juniorskills" link="/projects/championship" lines={ 8 } description="JuniorSkills – программа ранней профориентации, основ профессиональной подготовки и состязаний школьников в профессиональном мастерстве была инициирована в 2014 году Фондом Олега Дерипаска «Вольное Дело» в партнерстве с WorldSkills Russia при поддержке Агентства стратегических инициатив, Министерства образования и науки РФ, Министерства промышленности и торговли РФ."
                       date="06.06.2017" image="/Images/thumb04.jpg" />
                   </Col>
-                  <Col sm={ 3 } md={ 3 } lg={ 3 }>
+                  <Col sm={ 3 } md={ 4 } lg={ 3 }>
                     <WsrBlockTitle title={ 'Мероприятия' } />
                      <WsrBlock type="wsr-block-announce" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
             На международном чемпионата China International Skills Competition 2017 (CISC-2017)" date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
@@ -52,10 +54,17 @@ class Projects extends Component {
              <WsrBlock type="wsr-block-announce" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
             На международном чемпионата China International Skills Competition 2017 (CISC-2017)" date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
                   </Col>
-                  <Col sm={ 3 } md={ 3 } lg={ 3 }>
+                  <Col xs={0} sm={ 0 } md={ 1 } lg={ 3 }>
                     <WsrBlockTitle title={ 'Календарь' } />
+                    <div className="wsr-full-calendar">
                     <InfiniteCalendar selected={ new Date(2017, 6, 25) } locale={ { locale: require('date-fns/locale/ru'), headerFormat: 'dddd, D MMM', weekdays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], blank: 'Не выбрана дата', todayLabel: { long: 'Сегодня', short: 'Сег.' } } } width={ "100%" } height={ window.innerHeight } disabledDays={ [0, 7] }
                       minDate={ lastYear } />
+                      </div>
+                      <div className="wsr-compact-calendar">
+                      <Button block className="wsr-btn-search">
+                          <FaCalendar className="ri-search" />
+                        </Button>
+                        </div>
                   </Col>
                 </Row>
                 { /* Bottom Gallery */ }

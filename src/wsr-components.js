@@ -6,6 +6,7 @@ import TextTruncate from "react-text-truncate";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom"
 import OwlCarousel from 'react-owl-carousel';
+import Waypoint from 'react-waypoint';
 
 import MetaTags from 'react-meta-tags';
 import { Table, Tooltip, Carousel, Thumbnail, Media, Popover, OverlayTrigger, InputGroup, Form, FormGroup, FormControl, Image, Panel, Label, Button, Grid, Row, Col, Nav, NavItem, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
@@ -111,21 +112,52 @@ export class WsrMenuTitle extends React.Component {
     }
 }
 
+
+
+
 export class WsrMainMenu extends React.Component {
   
+constructor(props) {
+        super(props);
+        this.handleScroll = this.handleScroll.bind(this);
+        this.state = {
+            scroll: 0.08,
+            anchor: 180
+        };
+    }
+    componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+    componentWillUnmount() {
+   window.removeEventListener('scroll', this.handleScroll);
+  }
+
+    handleScroll() {
+       let anchor = 180;
+       let value = document.body.scrollTop;
+       let cornerstate = value > anchor ? 1/(value/anchor)*0.08 - (value/anchor*0.02) :  0.08;
+       let status = cornerstate == 0.08 ? 0.08 : 0;
+
+       this.setState ({
+        scroll: cornerstate
+       });
+       
+      }
 
     render() {
         return (
+
             <Grid bsClass="containter-fluid">
+              <Row>
               <svg width="0" height="0">
               <defs>
                 <clipPath id="ClipAffix" clipPathUnits="objectBoundingBox">
-                  <polygon id="clipmask" points={"0 1,0.5 1,0.67 " + 0.08 + ",1 0,0 0"}>
+                  <polygon id="clipmask" points={"0 1,0.5 1,0.67 " + this.state.scroll  + ",1 0,0 0"}>
                   </polygon>
                 </clipPath>
                 </defs>
               </svg>
-              <Row>
                 <Navbar inverse collapseOnSelect className="navbar-fixed-top">
                   <Navbar.Header>
                     <Navbar.Brand>
@@ -144,87 +176,46 @@ export class WsrMainMenu extends React.Component {
                             История
                           </MenuItem>
                         </LinkContainer>
-                        <LinkContainer to="/about/active">
+                        <LinkContainer to="/about/reglament">
                           <MenuItem eventKey={ 1.3 }>
                             Регламентирующие документы
                           </MenuItem>
                         </LinkContainer>
                       </NavDropdown>
-                      <LinkContainer to="/expert/community">
+                      <LinkContainer to="/team">
                         <NavItem eventKey={ 2 } title="Сборная команда" id="basic-nav">
                           Сборная команда
                         </NavItem>
                       </LinkContainer>
-                      <LinkContainer to="/expert/community">
+                      <LinkContainer to="/experts">
                         <NavItem eventKey={ 3 } title="Эксперты" id="basic-nav">
                           Эксперты
                         </NavItem>
                       </LinkContainer>
-                      <NavDropdown eventKey={ 4 } title="СЦК" id="basic-nav-dropdown">
                         <LinkContainer to="/sck">
-                          <MenuItem eventKey={ 4.1 }>
+                          <NavItem eventKey={ 4 }>
                             СЦК
-                          </MenuItem>
+                          </NavItem>
                         </LinkContainer>
-                        <LinkContainer to="/sck/locations">
-                          <MenuItem eventKey={ 4.2 }>
-                            Базовые площадки в Москве
-                          </MenuItem>
-                        </LinkContainer>
-                      </NavDropdown>
                       <LinkContainer to="/competence">
                         <NavItem eventKey={ 5 } title="Компетенции" id="basic-nav">
                           Компетенции
                         </NavItem>
                       </LinkContainer>
-                      <NavDropdown eventKey={ 6 } title="Проекты" id="basic-nav-dropdown">
-                        <LinkContainer to="/projects/region-expert">
-                          <MenuItem eventKey={ 6.1 }>
-                            Региональный эксперт WSR
-                          </MenuItem>
-                        </LinkContainer>
-                        <LinkContainer to="/projects/expert-de">
-                          <MenuItem eventKey={ 6.2 }>Эксперт ДЭ</MenuItem>
-                        </LinkContainer>
-                        <LinkContainer to="/projects/become-sck">
-                          <MenuItem eventKey={ 6.3 }>
-                            Обучение становлению СЦК
-                          </MenuItem>
-                        </LinkContainer>
-                        <LinkContainer to="/projects/1c-learn">
-                          <MenuItem eventKey={ 6.4 }>
-                            Обучение экспертов WorldSkills в 1С:Учебном центре №1
-                          </MenuItem>
-                        </LinkContainer>
-                      </NavDropdown>
-                      <NavDropdown eventKey={ 7 } title="Партнёры" id="basic-nav-dropdown">
+                      <LinkContainer to="/projects">
+                        <NavItem eventKey={ 6 } title="Компетенции" id="basic-nav">
+                          Проекты
+                        </NavItem>
+                      </LinkContainer>
+                      
                         <LinkContainer to="/partners">
-                          <MenuItem eventKey={ 7.1 }>
-                            Наши партнёры
-                          </MenuItem>
-                        </LinkContainer>
-                        <LinkContainer to="/partners/become-a-partner">
-                          <MenuItem eventKey={ 7.2 }>
-                            Стать партнёром
-                          </MenuItem>
-                        </LinkContainer>
-                      </NavDropdown>
-                      <NavDropdown eventKey={ 8 } title="Пресс-центр" id="basic-nav-dropdown">
-                        <LinkContainer to="/press/contact">
-                          <MenuItem eventKey={ 8.1 }>Контакты</MenuItem>
+                          <NavItem eventKey={ 7 }>
+                            Партнёры
+                          </NavItem>
                         </LinkContainer>
                         <LinkContainer to="/press/important">
-                          <MenuItem eventKey={ 8.2 }>
-                            Важная информация
-                          </MenuItem>
+                          <NavItem eventKey={ 8 }>Пресс-центр</NavItem>
                         </LinkContainer>
-                        <LinkContainer to="/press/photo-gallery">
-                          <MenuItem eventKey={ 8.3 }>Фотогалерея</MenuItem>
-                        </LinkContainer>
-                        <LinkContainer to="/press/video-gallery">
-                          <MenuItem eventKey={ 8.4 }>Видеогалерея</MenuItem>
-                        </LinkContainer>
-                      </NavDropdown>
                     </Nav>
                   </Navbar.Collapse>
                 </Navbar>

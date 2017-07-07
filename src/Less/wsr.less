@@ -5,7 +5,8 @@
 
 /*********************************** COMMON STYLES *****************************************/
 
-/*------------------- ------------------------------------------------------------------------*/:focus {
+/*------------------- ------------------------------------------------------------------------*/
+body:focus {
 	outline: none;
 	outline-color: white;
 	outline-style: auto;
@@ -13,14 +14,14 @@
 }
 
 body {
-	overflow-x: hidden;
+	 max-width: 100%;
+  	overflow-x: hidden;
 	transition: 100ms ease-in;
 	width: 100vw;
 	font-family: 'Gotham Pro', Helvetica, Arial, sans-serif;
 }
 
 .App {
-	overflow-y: scroll;
 	height: 100%;
 	font-family: 'Gotham Pro', Helvetica, Arial, sans-serif;
 	font-weight: normal;
@@ -1805,6 +1806,7 @@ body {
 }
 
 .wsr-btn-search:hover {
+	color: white;
 	background-color: @brand-primary;
 	border: 1px solid @brand-primary;
 }
@@ -2219,6 +2221,13 @@ Should we change this at all?
 		-webkit-clip-path: url("#ClipBlock");
 		transform: translateZ(0);
 	}
+	.wsr-compact-calendar {
+		display: none;
+	}
+
+	.wsr-full-calendar {
+		display: block;
+	}
 
 }
 
@@ -2263,6 +2272,12 @@ Should we change this at all?
 
 	.wsr-certification-explanation__media h4 {
 		font-size: 1.2em;
+	}
+	.wsr-compact-calendar {
+		display: block;
+	}
+	.wsr-full-calendar {
+		display: none;
 	}
 
 }
@@ -2318,6 +2333,12 @@ Should we change this at all?
 
 	.wsr-certification-explanation__media h4 {
 		font-size: 1.2em;
+	}
+	.wsr-compact-calendar {
+		display: block;
+	}
+	.wsr-full-calendar {
+		display: none;
 	}
 
 }
@@ -2383,6 +2404,12 @@ Should we change this at all?
 	.list-group {
 		font-size: 0.8em;
 	}
+	.wsr-compact-calendar {
+		display: none;
+	}
+	.wsr-full-calendar {
+		display: block;
+	}
 
 }
 
@@ -2440,6 +2467,12 @@ Should we change this at all?
 
 	.wsr-header__carousel {
 		padding-top: 50px;
+	}
+	.wsr-compact-calendar {
+		display: none;
+	}
+	.wsr-full-calendar {
+		display: block;
 	}
 
 }
