@@ -45,7 +45,7 @@ class Projects extends Component {
                     <WsrProject startdate="09.05.2017" enddate="05.07.2017" height={415} type="wsr-block-project--large" heading="Juniorskills" link="/projects/championship" lines={ 8 } description="JuniorSkills – программа ранней профориентации, основ профессиональной подготовки и состязаний школьников в профессиональном мастерстве была инициирована в 2014 году Фондом Олега Дерипаска «Вольное Дело» в партнерстве с WorldSkills Russia при поддержке Агентства стратегических инициатив, Министерства образования и науки РФ, Министерства промышленности и торговли РФ."
                       date="06.06.2017" image="/Images/thumb04.jpg" />
                   </Col>
-                  <Col sm={ 3 } md={ 4 } lg={ 3 }>
+                  <Col sm={ 9 } md={ 4 } lg={ 3 }>
                     <WsrBlockTitle title={ 'Мероприятия' } />
                      <WsrBlock type="wsr-block-announce" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
             На международном чемпионата China International Skills Competition 2017 (CISC-2017)" date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
@@ -54,7 +54,7 @@ class Projects extends Component {
              <WsrBlock type="wsr-block-announce" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
             На международном чемпионата China International Skills Competition 2017 (CISC-2017)" date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
                   </Col>
-                  <Col xs={0} sm={ 0 } md={ 1 } lg={ 3 }>
+                  <Col xs={0} sm={ 1 } md={ 1 } lg={ 3 }>
                     <WsrBlockTitle title={ 'Календарь' } />
                     <div className="wsr-full-calendar">
                     <InfiniteCalendar selected={ new Date(2017, 6, 25) } locale={ { locale: require('date-fns/locale/ru'), headerFormat: 'dddd, D MMM', weekdays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], blank: 'Не выбрана дата', todayLabel: { long: 'Сегодня', short: 'Сег.' } } } width={ "100%" } height={ window.innerHeight } disabledDays={ [0, 7] }
