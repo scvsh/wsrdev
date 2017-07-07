@@ -6,8 +6,6 @@ import TextTruncate from "react-text-truncate";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom"
 import OwlCarousel from 'react-owl-carousel';
-import Waypoint from 'react-waypoint';
-
 import MetaTags from 'react-meta-tags';
 import { Table, Tooltip, Carousel, Thumbnail, Media, Popover, OverlayTrigger, InputGroup, Form, FormGroup, FormControl, Image, Panel, Label, Button, Grid, Row, Col, Nav, NavItem, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
 
@@ -134,14 +132,15 @@ constructor(props) {
   }
 
     handleScroll() {
-       let anchor = 180;
-       let value = document.body.scrollTop;
-       let cornerstate = value > anchor ? 1/(value/anchor)*0.08 - (value/anchor*0.02) :  0.08;
-       let status = cornerstate == 0.08 ? 0.08 : 0;
+      function posTop() {
+            return typeof window.pageYOffset != 'undefined' ? window.pageYOffset: document.documentElement.scrollTop? document.documentElement.scrollTop: document.body.scrollTop? document.body.scrollTop:0;
+        }
 
-       this.setState ({
-        scroll: cornerstate
-       });
+      let anchor = 180;
+       let value = posTop();
+       if (this.scrollIcon !== null) {
+          this.scrollIcon.setAttribute('points', '0 1,0.5 1,0.67 ' + ( value > anchor ? 1/(value/anchor)*0.08 - (value/anchor*0.02) :  0.08 ) + ',1 0,0 0');
+      }
        
       }
 
@@ -150,10 +149,10 @@ constructor(props) {
 
             <Grid bsClass="containter-fluid">
               <Row>
-              <svg width="0" height="0">
+              <svg  width="0" height="0">
               <defs>
                 <clipPath id="ClipAffix" clipPathUnits="objectBoundingBox">
-                  <polygon id="clipmask" points={"0 1,0.5 1,0.67 " + this.state.scroll  + ",1 0,0 0"}>
+                  <polygon ref={(ref) => this.scrollIcon = ref} id="clipmask" points={"0 1,0.5 1,0.67 " + this.state.scroll  + ",1 0,0 0"}>
                   </polygon>
                 </clipPath>
                 </defs>
