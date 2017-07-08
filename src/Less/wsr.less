@@ -14,8 +14,8 @@ body:focus {
 }
 
 body {
-	 max-width: 100%;
-  	overflow-x: hidden;
+	max-width: 100%;
+	overflow-x: hidden;
 	transition: 100ms ease-in;
 	width: 100vw;
 	font-family: 'Gotham Pro', Helvetica, Arial, sans-serif;
@@ -28,15 +28,6 @@ body {
 	font-style: normal;
 	background-color: @background-gray;
 }
-
-a {
-	color: #333333;
-}
-
-a:hover {
-	text-decoration: none;
-}
-
 
 h2 h3 {
 	font-weight: normal !important;
@@ -811,6 +802,8 @@ a .wsr-footer__social-icons:first-child {
 	margin-bottom: 10px;
 	cursor: pointer;
 	display: inline-block;
+	color: #333333;
+	text-decoration: none;
 }
 
 .wsr-block__title--news {
@@ -828,6 +821,14 @@ a .wsr-footer__social-icons:first-child {
 }
 
 .wsr-block__title:hover {
+	text-decoration: none;
+	color: #333333;
+	opacity: 0.5;
+}
+
+.wsr-block__title:focus {
+	text-decoration: none;
+	color: #333333;
 	opacity: 0.5;
 }
 
@@ -2193,8 +2194,8 @@ Should we change this at all?
 }
 */
 .wsr-row__contacts > div[class*='col-'] {
-		flex-basis: 50%;
-	}
+	flex-basis: 50%;
+}
 
 @media (min-width:@screen-lg) {
 	.row-flex,
@@ -2230,6 +2231,7 @@ Should we change this at all?
 		-webkit-clip-path: url("#ClipBlock");
 		transform: translateZ(0);
 	}
+
 	.wsr-compact-calendar {
 		display: none;
 	}
@@ -2282,9 +2284,11 @@ Should we change this at all?
 	.wsr-certification-explanation__media h4 {
 		font-size: 1.2em;
 	}
+
 	.wsr-compact-calendar {
 		display: block;
 	}
+
 	.wsr-full-calendar {
 		display: none;
 	}
@@ -2343,9 +2347,11 @@ Should we change this at all?
 	.wsr-certification-explanation__media h4 {
 		font-size: 1.2em;
 	}
+
 	.wsr-compact-calendar {
 		display: block;
 	}
+
 	.wsr-full-calendar {
 		display: none;
 	}
@@ -2362,9 +2368,11 @@ Should we change this at all?
 	.row-flex > div[class*='col-'] {
 		flex-basis: 100%;
 	}
+
 	.wsr-row__contacts > div[class*='col-'] {
 		flex-basis: 100% !important;
 	}
+
 	.panel-body .row.is-flex > [class*='col-'] {
 		display: block;
 	}
@@ -2413,9 +2421,11 @@ Should we change this at all?
 	.list-group {
 		font-size: 0.8em;
 	}
+
 	.wsr-compact-calendar {
 		display: none;
 	}
+
 	.wsr-full-calendar {
 		display: block;
 	}
@@ -2427,6 +2437,7 @@ Should we change this at all?
 		margin-left: 15px;
 		margin-top: 15px;
 	}
+
 	.wsr-row__contacts > div[class*='col-'] {
 		flex-basis: 100% !important;
 	}
@@ -2477,9 +2488,11 @@ Should we change this at all?
 	.wsr-header__carousel {
 		padding-top: 50px;
 	}
+
 	.wsr-compact-calendar {
 		display: none;
 	}
+
 	.wsr-full-calendar {
 		display: block;
 	}
@@ -2506,12 +2519,18 @@ Should we change this at all?
 	}
 
 	.wsr-menu__contacts-divider {
-		width: 20%;
+		width: 50%;
+		text-align: left;
+	}
+
+	.wsr-menu__logo-divider {
+		width: 50%;
+		text-align: left;
 	}
 
 }
 
-_:-ms-lang(x),_:-webkit-full-screen, .wsr-affix {
+_:-ms-lang(x),_:-webkit-full-screen,.wsr-affix {
 	background-color: transparent;
 	background-image: none;
 }
@@ -2525,6 +2544,11 @@ _:-ms-lang(x),_:-webkit-full-screen,.wsr-menu > li > a {
 }
 
 _:-ms-lang(x),_:-webkit-full-screen,.wsr-menu__contacts-divider {
-	width: 20%;
-	direction: ltr;
+	width: 50%;
+	text-align: left;
+}
+
+_:-ms-lang(x),_:-webkit-full-screen,.wsr-menu__logo-divider {
+	width: 50%;
+	text-align: left;
 }
