@@ -4,16 +4,15 @@ import "./css/wsr.css";
 import "./css/fonts.css";
 import { LinkContainer } from "react-router-bootstrap";
 /* import { Link } from 'react-router-dom' */
-import { MdMail, MdPhone, MdGroup, MdWork } from "react-icons/lib/md";
 
 import OwlCarousel from 'react-owl-carousel';
 
 /* Import React-Boorstrap components*/
-import { Panel, Table, ListGroup, ListGroupItem, Form, FormGroup, FormControl, ControlLabel, Checkbox, Button, Modal, Grid, Row, Col, Image} from "react-bootstrap";
+import {  ListGroup, ListGroupItem, Grid, Row, Col, Image} from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrExpert, WsrPage, WsrGalleryItem, WsrSpinner, WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlock, WsrBlockBlank, WsrNewsItem, WsrPartnersItem, WsrNumbersItem, WsrFooter,} from "./wsr-components.js";
+import { WsrExpert, WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlock, WsrBlockBlank, WsrFooter,} from "./wsr-components.js";
 
 
 /* Main app */

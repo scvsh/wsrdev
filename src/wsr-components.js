@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "./css/wsr.css";
-import { MdStar, MdAccountCircle, MdPlace, MdInput, MdMore, MdMoreVert, MdKeyboardControl, MdStarHalf, MdStarOutline, MdStars, MdApps, MdDateRange, MdArrowForward, MdSearch, MdVpnKey, MdMail, MdPhone } from "react-icons/lib/md";
-import { FaArchive, FaGraduationCap, FaStarHalfEmpty, FaStarHalf, FaStarO, FaStar, FaVk, FaFacebook, FaInstagram, FaYoutube } from "react-icons/lib/fa";
+import { MdStar, MdAccountCircle, MdPlace, MdMore, MdStars, MdApps, MdDateRange, MdArrowForward, MdSearch, MdMail, MdPhone } from "react-icons/lib/md";
+import { FaVk, FaFacebook, FaInstagram, FaYoutube } from "react-icons/lib/fa";
 import TextTruncate from "react-text-truncate";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom"
 import OwlCarousel from 'react-owl-carousel';
 import MetaTags from 'react-meta-tags';
-import { Table, Tooltip, Carousel, Thumbnail, Media, Popover, OverlayTrigger, InputGroup, Form, FormGroup, FormControl, Image, Panel, Label, Button, Grid, Row, Col, Nav, NavItem, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
+import { Thumbnail, Media, Popover, OverlayTrigger, InputGroup, Form, FormGroup, FormControl, Image, Panel, Label, Button, Grid, Row, Col, Nav, NavItem, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
 
 
 export class WsrMeta extends React.Component {
@@ -300,8 +300,8 @@ constructor(props) {
                         </div>
                         <hr className="wsr-menu__contacts-divider" />
                         <div className="wsr-menu__social wsr-menu__sponsors">
-                        <img src="Images/wsr-msk-logo-dogm.svg"></img>
-                        <img src="Images/wsr-msk-logo-wsr.svg"></img>
+                        <img alt="" src="Images/wsr-msk-logo-dogm.svg"></img>
+                        <img alt="" src="Images/wsr-msk-logo-wsr.svg"></img>
                         </div>
                       </Row>
                     </div>
@@ -362,15 +362,7 @@ export class WsrCarouselCaption extends React.Component {
     }
 }
 
-const options = {
-    items: 1,
-    nav: true,
-    rewind: true,
-    autoplay: true
-};
 
-const events = {
-};
 
 export class WsrCarousel extends React.Component {
 
@@ -392,10 +384,10 @@ export class WsrCarousel extends React.Component {
               <WsrCarouselCaption ref="redcaption" activeKey={ this.state.activeNav } />
               <OwlCarousel ref="redstage" rewind={ false } autoplay={ true } className="red-stage" items={ 1 } margin={ 0 }
                 loop={ true } onTranslate={ this.handleKeyChange }>
-                <div><img src="/Images/carousel/gallery02.jpg" alt="The Last of us" /></div>
-                <div><img src="/Images/carousel/gallery01.jpg" alt="GTA V" /></div>
-                <div><img src="/Images/carousel/gallery03.jpg" alt="Mirror Edge" /></div>
-                <div><img src="/Images/carousel/gallery04.jpg" alt="Mirror Edge" /></div>
+                <div><img src="/Images/carousel/gallery02.jpg" alt="" /></div>
+                <div><img src="/Images/carousel/gallery01.jpg" alt="" /></div>
+                <div><img src="/Images/carousel/gallery03.jpg" alt="" /></div>
+                <div><img src="/Images/carousel/gallery04.jpg" alt="" /></div>
               </OwlCarousel>
               <svg width="0" height="0">
               <defs>
@@ -626,7 +618,7 @@ export class WsrBlockTitle extends React.Component {
         let _props = this.props;
         return (
 
-            <div className= { "wsr-block__title " + _props.className ? _props.className : "" } >
+            <div className={ "wsr-block__title " + _props.className ? _props.className : "" } >
               <LinkContainer className="wsr-block__title " to={ _props.link ? _props.link : "/" }>
                 <a className="align-bottom">
                                                                                                                                             { _props.title }
@@ -759,7 +751,7 @@ export class WsrTierLabel extends React.Component {
         let _props = this.props;
         return (
             <Label className={ _props.tier === "primary" ? "wsr-team-label__primary" : "wsr-team-label__secondary" }>
-              { _props.tier == "primary" ? "Основной состав" : "Запасной состав" }
+              { _props.tier === "primary" ? "Основной состав" : "Запасной состав" }
             </Label>
 
         );
@@ -828,7 +820,7 @@ export class WsrMedal extends React.Component {
         case "bronze":
             medal = 2;
             break;
-        case "professional":
+        case  "professional":
             medal = 3;
             break;
         }
@@ -857,7 +849,7 @@ export class WsrTeamMember extends React.Component {
         
         let _props = this.props;
         return (
-            <Panel className={ "wsr-team__member " +  _props.tier } header={ <Row><Col xs={6}><TextTruncate line={ 1 } truncateText="…" text={ _props.competence } /> </Col><Col xs={6} className="full-size text-right pull-right">{ _props.tier == "primary" ? "Основной состав" : "Запасной состав" }</Col></Row>}  footer={ <TextTruncate line={ 1 } truncateText="…" text={ "Эксперт: " +_props.expert } /> } >
+            <Panel className={ "wsr-team__member " +  _props.tier } header={ <Row><Col xs={6}><TextTruncate line={ 1 } truncateText="…" text={ _props.competence } /> </Col><Col xs={6} className="full-size text-right pull-right">{ _props.tier === "primary" ? "Основной состав" : "Запасной состав" }</Col></Row>}  footer={ <TextTruncate line={ 1 } truncateText="…" text={ "Эксперт: " +_props.expert } /> } >
               {_props.children }
 
 
@@ -897,7 +889,7 @@ export class WsrCertification extends React.Component {
         return (
             <OverlayTrigger trigger={ ['hover', 'focus'] } placement="bottom" overlay={ tooltip }>
                   <div className={ "wsr-team__member-star-wrapper member-expert " }>
-                    <img className="wsr-expert-status" src= {"/Images/" + _props.certification + ".svg"} />
+                    <img alt="" className="wsr-expert-status" src={"/Images/" + _props.certification + ".svg"} />
                   </div>
                 </OverlayTrigger>
         );

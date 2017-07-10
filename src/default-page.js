@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import "../bootswatch/cosmo/bootstrap.css";
 import "./css/wsr.css";
 import "./css/fonts.css";
-import { LinkContainer } from "react-router-bootstrap";
 
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { Form, FormGroup, FormControl, ControlLabel, Checkbox, Modal, Button, Thumbnail, Grid, Row, Col, Image } from "react-bootstrap";
+import { Form, FormGroup, FormControl, ControlLabel, Checkbox, Modal, Button, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 

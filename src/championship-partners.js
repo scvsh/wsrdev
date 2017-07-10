@@ -7,7 +7,7 @@ import { LinkContainer } from "react-router-bootstrap";
 
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { Thumbnail,  Grid, Row, Col, Image } from "react-bootstrap";
+import {  Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 

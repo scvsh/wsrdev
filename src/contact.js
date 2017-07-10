@@ -9,11 +9,11 @@ import { MdMail, MdPhone, MdGroup, MdWork } from "react-icons/lib/md";
 import OwlCarousel from 'react-owl-carousel';
 
 /* Import React-Boorstrap components*/
-import { Panel, Table, ListGroup, ListGroupItem, Form, FormGroup, FormControl, ControlLabel, Checkbox, Button, Modal, Grid, Row, Col, Image} from "react-bootstrap";
+import { Table, ListGroup, ListGroupItem, Grid, Row, Col, Image} from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrPage, WsrGalleryItem, WsrSpinner, WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlock, WsrBlockBlank, WsrNewsItem, WsrPartnersItem, WsrNumbersItem, WsrFooter,} from "./wsr-components.js";
+import { WsrPage, WsrGalleryItem, WsrSpinner, WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter,} from "./wsr-components.js";
 
 
 /* Main app */

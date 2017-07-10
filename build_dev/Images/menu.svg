@@ -6,5 +6,18 @@
 <style type="text/css">
 	.st0{fill:#092B4A;}
 </style>
-<polygon class="st0" points="0,0 0,1920 212.2,1811.9 463.8,114 697.6,0 "/>
+<polygon class="st0" points="0,0 0,1920 325,1920 463.8,114 697.6,0 "/>
+<g>
+	<defs>
+		<polygon id="SVGID_1_" points="0,0 0,1920 325,1920 463.8,114 697.6,0 		"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g style="clip-path:url(#SVGID_2_);">
+		
+			<image style="overflow:visible;" width="758" height="1277" xlink:href="overlay.png"  transform="matrix(1.5035 0 0 1.5035 0 0)">
+		</image>
+	</g>
+</g>
 </svg>

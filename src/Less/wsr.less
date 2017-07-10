@@ -710,6 +710,7 @@ a .wsr-footer__social-icons:first-child {
 	border-left: 3px solid @brand-primary;
 }
 
+
 .wsr-block-project__image--large {
 	height: 415px;
 }
@@ -2359,6 +2360,12 @@ Should we change this at all?
 }
 
 @media (min-width:@screen-xs) and (max-width:@screen-xs-max) {
+
+	.wsr-block-project--large > .row > .wsr-block__image-container {
+	display: none;
+}
+
+
 	.containter-fluid {
 		margin-left: 15px;
 		margin-top: 15px;
@@ -2433,6 +2440,12 @@ Should we change this at all?
 }
 
 @media (max-width:@screen-xs) {
+
+	.wsr-block-project--large > .row > .wsr-block__image-container {
+	display: none;
+}
+
+
 	.containter-fluid {
 		margin-left: 15px;
 		margin-top: 15px;
