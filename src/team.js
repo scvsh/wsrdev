@@ -57,33 +57,52 @@ class Team extends Component {
                                       </WsrTeamMember>
                                   </Col>
                                   <Col xs={12} sm={ 6 } md={ 6 } lg={ 4 }>
-                                    <WsrTeamMember tier="primary" competence="Камнетесное дело" expert="Шкребтиенко Сергей Олегович"> 
+                                    <WsrTeamMember tier="primary" competence="Кирпичная кладка" expert="Калединцев Сергей Юрьевич"> 
                                       <WsrTeamMemberItem  name="Воронков  Никита Александрович" competence="Камнетесное дело" tier="primary"  host=" ООО «Практика реставрации»" expert="Шеблов Александр Николаевич" >
                                         <WsrMedal tier="primary" medal="gold"/>
                                         <WsrMedal tier="primary" medal="silver"/>
                                         <WsrMedal tier="primary" medal="silver"/>
                                       </WsrTeamMemberItem>
-                                      <WsrTeamMemberItem  name="Плахотнюк Глеб Дмитриевич, Гусева Ирина Денисовна" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" >
+                                    </WsrTeamMember>
+                                    <WsrTeamMember tier="secondary" competence="Кирпичная кладка" expert="  Федорова Елена Викторовна"> 
+                                    <WsrTeamMemberItem  name="Моренкова Анастасия Андреевна " competence="Камнетесное дело" tier="secondary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/2.jpg" >
                                         <WsrMedal tier="secondary" medal="gold"/>
                                         <WsrMedal tier="secondary" medal="silver"/>
                                         <WsrMedal tier="secondary" medal="silver"/>
                                       </WsrTeamMemberItem>
-                                    </WsrTeamMember>
+                                      </WsrTeamMember>
                                   </Col>
                                   <Col xs={12} sm={ 6 } md={ 6 } lg={ 4 }>
-                                    <WsrTeamMember tier="secondary" competence="Камнетесное дело" expert="Калединцев Сергей Юрьевич"> 
-                                      <WsrTeamMemberItem  name="Юсупов Набихон Маннонович" competence="Кирпичная кладка" tier="secondary"  host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg" >
-                                        <WsrMedal tier="secondary" medal="bronze"/>
+                                    <WsrTeamMember tier="primary" competence="Краснодеревщик" expert="Калединцев Сергей Юрьевич"> 
+                                      <WsrTeamMemberItem  name="Ткачёв Александр Дмитриевич, Моренкова Анастасия Андреевна" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                        <WsrMedal tier="primary" medal="bronze"/>
+                                        <WsrMedal tier="primary" medal="bronze"/>
                                       </WsrTeamMemberItem>
                                     </WsrTeamMember>
+                                    <WsrTeamMember tier="secondary" competence="Камнетесное дело" expert="Шкребтиенко Сергей Олегович"> 
+                                    <WsrTeamMemberItem  name="Плахотнюк Глеб Дмитриевич, Гусева Ирина Денисовна, Кряжов Владимир Алексеевич, Шутовская Ольга Викторовна" competence="Камнетесное дело" tier="secondary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/2.jpg" >
+                                        <WsrMedal tier="secondary" medal="gold"/>
+                                        <WsrMedal tier="secondary" medal="silver"/>
+                                        <WsrMedal tier="secondary" medal="silver"/>
+                                      </WsrTeamMemberItem>
+                                      </WsrTeamMember>
                                   </Col>    
                                         
                           </Row>
-                          <WsrBlockTitle title="Строительная сфера" />
+                          <WsrBlockTitle title="Специалисты информационных и коммуникационных технологий" />
                     <Row>
                                   <Col xs={12} sm={ 6 } md={ 6 } lg={ 4 }>
-                                    <WsrTeamMember tier="primary" competence="Камнетесное дело" expert="Шкребтиенко Сергей Олегович"> 
-                                      <WsrTeamMemberItem  name="Дармограй Тимофей Юрьевич, Воронков  Никита Александрович, Юсупов Набихон Маннонович, Моренкова Анастасия Андреевна" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
+                                    <WsrTeamMember tier="primary" competence="Интернет вещей" expert="  Поворотова Елена Вячеславовна"> 
+                                      <WsrTeamMemberItem  name="Колесниченко Варвара Валерьевна, Попов Дмитрий Сергеевич " competence="Камнетесное дело" tier="primary" medal="gold" host="Московский государственный университет путей сообщения императора Николая II (МГУПС (МИИТ) Московский колледж железнодорожного транспорта Института прикладных технологий  " expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
+                                        <WsrMedal tier="primary" medal="gold"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                      </WsrTeamMemberItem>
+
+                                    </WsrTeamMember>
+                                    <WsrTeamMember tier="secondary" competence="Интернет вещей" expert="  Поворотова Елена Вячеславовна"> 
+                                      <WsrTeamMemberItem  name="Лукашин Даниил Дмитриевич, Пытин Фёдор Николаевич" competence="Камнетесное дело" tier="primary" medal="gold" host="Московский государственный университет путей сообщения императора Николая II (МГУПС (МИИТ) Московский колледж железнодорожного транспорта Института прикладных технологий " expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
                                         <WsrMedal tier="primary" medal="gold"/>
                                         <WsrMedal tier="primary" medal="silver"/>
                                         <WsrMedal tier="primary" medal="silver"/>
@@ -92,15 +111,31 @@ class Team extends Component {
                                     </WsrTeamMember>
                                   </Col>
                                   <Col xs={12} sm={ 6 } md={ 6 } lg={ 4 }>
-                                    <WsrTeamMember tier="secondary" competence="Камнетесное дело" expert="Калединцев Сергей Юрьевич"> 
-                                      <WsrTeamMemberItem  name="Юсупов Набихон Маннонович" competence="Кирпичная кладка" tier="secondary"  host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg" >
+                                  <WsrTeamMember tier="primary" competence="Лазерные технологии" expert="Османов Эльдар Зиннюрович "> 
+                                      <WsrTeamMemberItem  name="Селютин Андрей Михайлович " competence="Лазерные технологи" tier="primary" medal="gold" host="Западный комплекс непрерывного образования " expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
+                                        <WsrMedal tier="primary" medal="gold"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                      </WsrTeamMemberItem>
+
+                                    </WsrTeamMember>
+                                    <WsrTeamMember tier="secondary" competence="Лазерные технологии" expert="Жесткова Дина Александровна "> 
+                                      <WsrTeamMemberItem  name="Петровский Иван Сергеевич" competence="Лазерные технологии" tier="secondary"  host="Московский колледж бизнес-технологий " expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg" >
                                         <WsrMedal tier="secondary" medal="bronze"/>
                                       </WsrTeamMemberItem>
                                     </WsrTeamMember>
 
                                   </Col>
                                   <Col xs={12} sm={ 6 } md={ 6 } lg={ 4 }>
-                                    <WsrTeamMember  tier="secondary" competence="Камнетесное дело" expert="Шкребтиенко Сергей Олегович"> 
+                                  <WsrTeamMember tier="primary" competence="Управление беспилотными летательными аппаратам" expert="Османов Эльдар Зиннюрович "> 
+                                      <WsrTeamMemberItem  name="Селютин Андрей Михайлович " competence="Лазерные технологи" tier="primary" medal="gold" host="Западный комплекс непрерывного образования " expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
+                                        <WsrMedal tier="primary" medal="gold"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                      </WsrTeamMemberItem>
+
+                                    </WsrTeamMember>
+                                    <WsrTeamMember  tier="secondary" competence="Управление беспилотными летательными аппаратам" expert="Шкребтиенко Сергей Олегович"> 
                                       <WsrTeamMemberItem  name="Воронков  Никита Александрович" competence="Камнетесное дело" tier="secondary"  host=" ООО «Практика реставрации»" expert="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg" >
                                         <WsrMedal tier="secondary" medal="gold"/>
                                         <WsrMedal tier="secondary" medal="silver"/>

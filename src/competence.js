@@ -109,42 +109,20 @@ class Competence extends Component {
                                     <WsrBlockTitle title="Сборная Москвы" />
                                     
                                     <WsrTeamMember tier="primary" competence="Камнетесное дело" expert="Шкребтиенко Сергей Олегович"> 
-                                      <WsrTeamMemberItem  name="Гусева Ирина Денисовна" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
-                                        <WsrMedal tier="primary" medal="gold"/>
+                                      <WsrTeamMemberItem  name="Ткачёв Александр Дмитриевич, Дармограй Тимофей Юрьевич, Воронков  Никита Александрович, Юсупов Набихон Маннонович, Моренкова Анастасия Андреевна" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
                                         <WsrMedal tier="primary" medal="silver"/>
-                                        <WsrMedal tier="primary" medal="silver"/>
-                                      </WsrTeamMemberItem>
-                                      <WsrTeamMemberItem  name="Дармограй Тимофей Юрьевич" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/avatar.png" >
-                                        <WsrMedal tier="primary" medal="gold"/>
-                                        <WsrMedal tier="primary" medal="silver"/>
-                                        <WsrMedal tier="primary" medal="silver"/>
-                                      </WsrTeamMemberItem>
-                                      <WsrTeamMemberItem  name="Калединцев Сергей Юрьевич" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/avatar.png" >
-                                        <WsrMedal tier="primary" medal="gold"/>
-                                        <WsrMedal tier="primary" medal="silver"/>
-                                        <WsrMedal tier="primary" medal="silver"/>
+                                        <WsrMedal tier="primary" medal="bronze"/>
+                                        <WsrMedal tier="primary" medal="bronze"/>
                                       </WsrTeamMemberItem>
                                     </WsrTeamMember>
-
-                                    <WsrBlockTitle title="Сборная Москвы" />
-                                    
                                     <WsrTeamMember tier="secondary" competence="Камнетесное дело" expert="Шкребтиенко Сергей Олегович"> 
-                                      <WsrTeamMemberItem  name="Плахотнюк Глеб Дмитриевич" competence="Камнетесное дело" tier="secondary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/2.jpg" >
-                                        <WsrMedal tier="primary" medal="gold"/>
-                                        <WsrMedal tier="primary" medal="silver"/>
-                                        <WsrMedal tier="primary" medal="silver"/>
+                                    <WsrTeamMemberItem  name="Плахотнюк Глеб Дмитриевич, Гусева Ирина Денисовна, Кряжов Владимир Алексеевич, Шутовская Ольга Викторовна" competence="Камнетесное дело" tier="secondary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/2.jpg" >
+                                        <WsrMedal tier="secondary" medal="gold"/>
+                                        <WsrMedal tier="secondary" medal="silver"/>
+                                        <WsrMedal tier="secondary" medal="silver"/>
                                       </WsrTeamMemberItem>
-                                      <WsrTeamMemberItem  name="Воронков  Никита Александрович" competence="Камнетесное дело" tier="secondary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/3.jpg" >
-                                        <WsrMedal tier="primary" medal="gold"/>
-                                        <WsrMedal tier="primary" medal="silver"/>
-                                        <WsrMedal tier="primary" medal="silver"/>
-                                      </WsrTeamMemberItem>
-                                      <WsrTeamMemberItem  name="Дармограй Тимофей Юрьевич" competence="Камнетесное дело" tier="secondary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/4.jpg" >
-                                        <WsrMedal tier="primary" medal="gold"/>
-                                        <WsrMedal tier="primary" medal="silver"/>
-                                        <WsrMedal tier="primary" medal="silver"/>
-                                      </WsrTeamMemberItem>
-                                    </WsrTeamMember>
+                                      </WsrTeamMember>
+                                    
                                     
                                   
                                     <WsrBlockTitle title="Базовая площадка" />

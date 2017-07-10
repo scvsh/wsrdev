@@ -30,7 +30,8 @@ body:focus {
   outline-style: auto;
   outline-width: 1px;
 }
-body {
+html,
+Ftranbody {
   max-width: 100%;
   overflow-x: hidden;
   transition: 100ms ease-in;
@@ -150,6 +151,7 @@ li .active > a:any-link {
   padding-right: 0;
   height: inherit;
   transform: translateZ(0);
+  overflow-x: hidden;
 }
 .wsr-carousel-menu {
   position: absolute;
@@ -1041,7 +1043,6 @@ a .wsr-footer__social-icons:first-child {
   border-top: 1px solid #dddddd;
 }
 .wsr-team__member .panel-heading {
-  height: 2.5em;
   color: white;
   background-color: #ce112d;
   font-weight: bold;
@@ -2094,6 +2095,15 @@ li.wsr-side-menu__item:focus > a {
 }
 .Cal__Month__rows {
   background: white !important;
+}
+.Cal__Day__root.Cal__Day__today {
+  color: white;
+}
+.Cal__Day__root.Cal__Day__today:before {
+  background-color: #002b4a;
+}
+.Cal__Day__root.Cal__Day__today > span {
+  color: white;
 }
 .form-horizontal .form-group {
   margin-left: 0;

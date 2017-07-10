@@ -276,10 +276,11 @@ constructor(props) {
                             <MdMail className="ri-contacts" /><a href="mailto:mail@wsr.msk.ru">mail@wsr.msk.ru</a></div>
                           <div>
                             <MdPhone className="ri-contacts" /><a href="tel:+74995770056">+7 499 577 00-56</a></div>
-                            <div>
-                            <MdSearch className="ri-contacts" /> <a href="/">Поиск </a></div>  
+                            
                             <div>
                             <MdAccountCircle className="ri-contacts" /> <a href="/">Личный кабинет </a></div>  
+                            <div>
+                            <MdSearch className="ri-contacts" /> <a href="/">Поиск </a></div>  
 
                         </div>
 
@@ -849,7 +850,7 @@ export class WsrTeamMember extends React.Component {
         
         let _props = this.props;
         return (
-            <Panel className={ "wsr-team__member " +  _props.tier } header={ <Row><Col xs={6}><TextTruncate line={ 1 } truncateText="…" text={ _props.competence } /> </Col><Col xs={6} className="full-size text-right pull-right">{ _props.tier === "primary" ? "Основной состав" : "Запасной состав" }</Col></Row>}  footer={ <TextTruncate line={ 1 } truncateText="…" text={ "Эксперт: " +_props.expert } /> } >
+            <Panel className={ "wsr-team__member " +  _props.tier } header={ <Row><Col xs={6}> { _props.competence }</Col><Col xs={6} className="full-size text-right pull-right">{ _props.tier === "primary" ? "Основной состав" : "Запасной состав" }</Col></Row>}  footer={ <TextTruncate line={ 1 } truncateText="…" text={ "Эксперт: " +_props.expert } /> } >
               {_props.children }
 
 
