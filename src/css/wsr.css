@@ -2100,7 +2100,7 @@ li.wsr-side-menu__item:focus > a {
   color: white;
 }
 .Cal__Day__root.Cal__Day__today:before {
-  background-color: #002b4a;
+  border: 2px solid #ce112d;
 }
 .Cal__Day__root.Cal__Day__today > span {
   color: white;
