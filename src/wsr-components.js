@@ -28,13 +28,11 @@ export class WsrProject extends React.Component {
         return (
             <div className={ "wsr-block " + _props.type }>
               <Row className="row-eq-height">
-                <svg width="0" height="0">
-                <defs>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"  width="0" height="0">
                   <clipPath id="ClipBlock" clipPathUnits="objectBoundingBox">
                     <polygon points="0 1, 1 1,1 0,0.09 0">
                     </polygon>
                   </clipPath>
-                  </defs>
                 </svg>
                 <Col sm={ 9 } md={ 7 } className="wsr_block__container wsr_block__flex-container">
                   <LinkContainer className="text-left wsr-block__heading" to={ _props.link ? _props.link : "/" }>
@@ -146,13 +144,11 @@ constructor(props) {
 
             <Grid bsClass="containter-fluid">
               <Row>
-              <svg  width="0" height="0">
-              <defs>
-                <clipPath id="ClipAffix" clipPathUnits="objectBoundingBox">
+              <svg xmlns="http://www.w3.org/2000/svg"   width="0" height="0">
+                <clipPath   id="ClipAffix" clipPathUnits="objectBoundingBox">
                   <polygon ref={(ref) => this.scrollIcon = ref} id="clipmask" points={"0 1,0.5 1,0.67 " + this.state.scroll  + ",1 0,0 0"}>
                   </polygon>
                 </clipPath>
-                </defs>
               </svg>
                 <Navbar inverse collapseOnSelect className="navbar-fixed-top">
                   <Navbar.Header>
@@ -391,20 +387,16 @@ export class WsrCarousel extends React.Component {
                 <div><img src="/Images/carousel/gallery04.jpg" alt="" /></div>
               </OwlCarousel>
               <svg width="0" height="0">
-              <defs>
                 <clipPath id="ClipRight" clipPathUnits="objectBoundingBox">
                   <polygon points="0.28 1, 1 1,1 0,0 0">
                   </polygon>
                 </clipPath>
-                </defs>
               </svg>
               <svg width="0" height="0">
-              <defs>
                 <clipPath id="ClipRightBg" clipPathUnits="objectBoundingBox">
                   <polygon points="0.3 1, 1 1,1 0,0.02 0">
                   </polygon>
                 </clipPath>
-                </defs>
               </svg>
             </Row>
 
@@ -450,12 +442,10 @@ export class WsrBlock extends React.Component {
             <div className={ "wsr-block " + _props.type }>
               <Row className="row-eq-height">
                 <svg width="0" height="0">
-                <defs>
                   <clipPath id="ClipBlock" clipPathUnits="objectBoundingBox">
                     <polygon points="0 1, 1 1,1 0,0.09 0">
                     </polygon>
                   </clipPath>
-                  </defs>
                 </svg>
                 <Col sm={ 9 } md={ 7 } className="wsr_block__container">
                   <LinkContainer className="text-left wsr-block__heading" to={ _props.link ? _props.link : "/" }>
