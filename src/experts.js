@@ -65,7 +65,7 @@ class Team extends Component {
                                 Прошедшие двух/трёхдневную программу обучения, сдавшие тестирование по итогам обучения. Имеют право проведения региональных (корпоративных) чемпионатов, а также
                                 оценки заданий демонстрационного экзамена
                               </p>
-                              <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label>
+                              <Label><a href="/docs/certificate.txt">Образец Свидетельства</a></Label>
                             </Media.Body>
                           </Media>
                         </Col>
@@ -81,7 +81,7 @@ class Team extends Component {
                               <p className="wsr-expert-description">
                                 Прошедшие однодневную программу обучения, успешно сдавшие тестирование. Допущены к оценке заданий демонстрационного экзамена
                               </p>
-                              <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label>
+                              <Label><a href="/docs/certificate.txt">Образец Свидетельства</a></Label>
                             </Media.Body>
                           </Media>
                         </Col>

@@ -6,7 +6,7 @@ import "./css/wsr.css";
 //import "./calendar.js";
 
 import { MdStar, MdAccountCircle, MdPlace, MdMore, MdStars, MdApps, MdDateRange, MdArrowForward, MdSearch, MdMail, MdPhone } from "react-icons/lib/md";
-import { FaVk, FaFacebook, FaInstagram, FaYoutube } from "react-icons/lib/fa";
+import { FaGlobe, FaVk, FaFacebook, FaInstagram, FaYoutube } from "react-icons/lib/fa";
 import TextTruncate from "react-text-truncate";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom"
@@ -565,6 +565,7 @@ export class WsrSckInfo extends React.Component {
                   </OverlayTrigger>
                   <div><MdPhone className="ri-contacts" /><a className="contact" href={ "tel:" + _props.phone }>{ _props.phone }</a></div>
                   <div><MdMail className="ri-contacts" /><a className="contact" href={ "mailto:" + _props.mail }>{ _props.mail }</a></div>
+                  <div><FaGlobe className="ri-contacts" /><a className="contact" href="">{ _props.location }</a></div>
                   </Row>
                 
                 </Col>
