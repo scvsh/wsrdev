@@ -894,7 +894,7 @@ export class WsrExpert extends React.Component {
 
         return (
 
-            <Panel className="wsr-team__member wsr-team__expert"  header={ _props.head ? <TextTruncate line={ 1 } truncateText="…" text={ _props.competence } /> : false }>
+            <Panel className={"wsr-team__member wsr-team__expert " + _props.className } header={ _props.head ? <TextTruncate line={ 1 } truncateText="…" text={ _props.competence } /> : false }>
               <Row className="wsr-team__avatar ">
               <Col xs={3} sm={4}>
               <Row className="wsr-team__avatar__container">

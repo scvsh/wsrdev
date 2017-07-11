@@ -121,6 +121,7 @@ li .active > a:any-link {
   position: absolute;
   top: 0;
   left: 0;
+  overflow: hidden;
 }
 .wsr-affix {
   overflow-y: auto;
@@ -583,42 +584,9 @@ li .active > a:any-link {
   }
 }
 .wsr-menu__sponsors img {
-  padding-top: 13px;
-  padding-top: 2.5vh;
-  width: 13px;
-  width: 10vh;
-  padding-right: 13px;
-  padding-right: 2.5vh;
-}
-@media (max-height: 120px) {
-  .wsr-menu__sponsors img {
-    padding-top: 3px;
-  }
-}
-@media (min-height: 800px) {
-  .wsr-menu__sponsors img {
-    padding-top: 20px;
-  }
-}
-@media (max-height: 50px) {
-  .wsr-menu__sponsors img {
-    width: 5px;
-  }
-}
-@media (min-height: 500px) {
-  .wsr-menu__sponsors img {
-    width: 50px;
-  }
-}
-@media (max-height: 120px) {
-  .wsr-menu__sponsors img {
-    padding-right: 3px;
-  }
-}
-@media (min-height: 800px) {
-  .wsr-menu__sponsors img {
-    padding-right: 20px;
-  }
+  width: 15%;
+  padding-right: 2%;
+  padding-top: 10%;
 }
 .wsr-menu__container {
   margin-left: -15px;
@@ -1064,6 +1032,9 @@ a .wsr-footer__social-icons:first-child {
   font-size: 15px;
   border-radius: 3px 3px 0 0;
   border-bottom: 0px;
+}
+.rkc-team {
+  min-height: 200px;
 }
 .wsr-team__member__star-container {
   justify-content: center;
@@ -2097,7 +2068,7 @@ li.wsr-side-menu__item:focus > a {
   background: white !important;
 }
 .Cal__Day__root.Cal__Day__today {
-  color: white;
+  color: white !important;
 }
 .Cal__Day__root.Cal__Day__today:before {
   border: 2px solid #ce112d;

@@ -57,7 +57,7 @@ class Projects extends Component {
                   <Col xs={0} sm={ 1 } md={ 1 } lg={ 3 }>
                     <WsrBlockTitle title={ 'Календарь' } />
                     <div className="wsr-full-calendar">
-                    <InfiniteCalendar selected={ new Date(2017, 6, 25) } locale={ { locale: require('date-fns/locale/ru'), headerFormat: 'dddd, D MMM', weekdays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], blank: 'Не выбрана дата', todayLabel: { long: 'Сегодня', short: 'Сег.' } } } width={ "100%" } height={ window.innerHeight } disabledDays={ [0, 7] }
+                    <InfiniteCalendar selected={ new Date(2017, 6, 25) } locale={ { locale: require('date-fns/locale/ru'), headerFormat: 'dddd, D MMM', weekdays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], blank: 'Не выбрана дата', todayLabel: { long: 'Сегодня', short: 'Сег.' } } } width={ "100%" } height={ window.innerHeight } disabledDays={ [7] }
                       minDate={ lastYear } />
                       </div>
                       <div className="wsr-compact-calendar">

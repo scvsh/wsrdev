@@ -124,6 +124,7 @@ li .active > a:any-link {
 	position: absolute;
 	top: 0;
 	left: 0;
+	overflow: hidden;
 }
 
 .wsr-affix {
@@ -418,9 +419,9 @@ li .active > a:any-link {
 }
 
 .wsr-menu__sponsors img {
-	.responsive_limited(2.5vh, 3px, 20px, 13px, padding-top);
-	.responsive_limited(10vh, 5px, 50px, 13px, width);
-	.responsive_limited(2.5vh, 3px, 20px, 13px, padding-right);
+	width: 15%;
+	padding-right: 2%;
+	padding-top: 10%;
 }
 
 .wsr-menu__container {
@@ -878,6 +879,9 @@ a .wsr-footer__social-icons:first-child {
 	font-size: 15px;
 	border-radius: 3px 3px 0 0;
 	border-bottom: 0px;
+}
+.rkc-team {
+	min-height: 200px;
 }
 
 .wsr-team__member__star-container {
@@ -2184,7 +2188,7 @@ li.wsr-side-menu__item:focus > a {
 }
 
 .Cal__Day__root.Cal__Day__today {
-	color: white;
+	color: white !important;
 }
 .Cal__Day__root.Cal__Day__today:before {
 	border: 2px solid @brand-primary;
