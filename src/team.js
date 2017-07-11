@@ -55,6 +55,20 @@ class Team extends Component {
                                         <WsrMedal tier="secondary" medal="silver"/>
                                       </WsrTeamMemberItem>
                                       </WsrTeamMember>
+                                      <WsrTeamMember tier="primary" competence="Облицовка плиткой" expert="Шкребтиенко Сергей Олегович"> 
+                                      <WsrTeamMemberItem  name="Ткачёв Александр Дмитриевич, Дармограй Тимофей Юрьевич, Воронков  Никита Александрович, Юсупов Набихон Маннонович, Моренкова Анастасия Андреевна" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                        <WsrMedal tier="primary" medal="bronze"/>
+                                        <WsrMedal tier="primary" medal="bronze"/>
+                                      </WsrTeamMemberItem>
+                                    </WsrTeamMember>
+                                    <WsrTeamMember tier="secondary" competence="Облицовка плиткой" expert="Шкребтиенко Сергей Олегович"> 
+                                    <WsrTeamMemberItem  name="Плахотнюк Глеб Дмитриевич, Гусева Ирина Денисовна, Кряжов Владимир Алексеевич, Шутовская Ольга Викторовна" competence="Камнетесное дело" tier="secondary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/2.jpg" >
+                                        <WsrMedal tier="secondary" medal="gold"/>
+                                        <WsrMedal tier="secondary" medal="silver"/>
+                                        <WsrMedal tier="secondary" medal="silver"/>
+                                      </WsrTeamMemberItem>
+                                      </WsrTeamMember>
                                   </Col>
                                   <Col xs={12} sm={ 6 } md={ 6 } lg={ 4 }>
                                     <WsrTeamMember tier="primary" competence="Кирпичная кладка" expert="Калединцев Сергей Юрьевич"> 
@@ -71,6 +85,20 @@ class Team extends Component {
                                         <WsrMedal tier="secondary" medal="silver"/>
                                       </WsrTeamMemberItem>
                                       </WsrTeamMember>
+                                      <WsrTeamMember tier="primary" competence="Столярное дело" expert="Шкребтиенко Сергей Олегович"> 
+                                      <WsrTeamMemberItem  name="Ткачёв Александр Дмитриевич, Дармограй Тимофей Юрьевич, Воронков  Никита Александрович, Юсупов Набихон Маннонович, Моренкова Анастасия Андреевна" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                        <WsrMedal tier="primary" medal="bronze"/>
+                                        <WsrMedal tier="primary" medal="bronze"/>
+                                      </WsrTeamMemberItem>
+                                    </WsrTeamMember>
+                                    <WsrTeamMember tier="secondary" competence="Столярное дело" expert="Шкребтиенко Сергей Олегович"> 
+                                    <WsrTeamMemberItem  name="Плахотнюк Глеб Дмитриевич, Гусева Ирина Денисовна, Кряжов Владимир Алексеевич, Шутовская Ольга Викторовна" competence="Камнетесное дело" tier="secondary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/2.jpg" >
+                                        <WsrMedal tier="secondary" medal="gold"/>
+                                        <WsrMedal tier="secondary" medal="silver"/>
+                                        <WsrMedal tier="secondary" medal="silver"/>
+                                      </WsrTeamMemberItem>
+                                      </WsrTeamMember>
                                   </Col>
                                   <Col xs={12} sm={ 6 } md={ 6 } lg={ 4 }>
                                     <WsrTeamMember tier="primary" competence="Краснодеревщик" expert="Калединцев Сергей Юрьевич"> 
@@ -80,8 +108,22 @@ class Team extends Component {
                                         <WsrMedal tier="primary" medal="bronze"/>
                                       </WsrTeamMemberItem>
                                     </WsrTeamMember>
-                                    <WsrTeamMember tier="secondary" competence="Камнетесное дело" expert="Шкребтиенко Сергей Олегович"> 
+                                    <WsrTeamMember tier="secondary" competence="Краснодеревщик" expert="Шкребтиенко Сергей Олегович"> 
                                     <WsrTeamMemberItem  name="Плахотнюк Глеб Дмитриевич, Гусева Ирина Денисовна, Кряжов Владимир Алексеевич, Шутовская Ольга Викторовна" competence="Камнетесное дело" tier="secondary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/2.jpg" >
+                                        <WsrMedal tier="secondary" medal="gold"/>
+                                        <WsrMedal tier="secondary" medal="silver"/>
+                                        <WsrMedal tier="secondary" medal="silver"/>
+                                      </WsrTeamMemberItem>
+                                      </WsrTeamMember>
+                                      <WsrTeamMember tier="primary" competence="Сантехника и отопление" expert="Калединцев Сергей Юрьевич"> 
+                                      <WsrTeamMemberItem  name="Воронков  Никита Александрович" competence="Камнетесное дело" tier="primary"  host=" ООО «Практика реставрации»" expert="Шеблов Александр Николаевич" >
+                                        <WsrMedal tier="primary" medal="gold"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                        <WsrMedal tier="primary" medal="silver"/>
+                                      </WsrTeamMemberItem>
+                                    </WsrTeamMember>
+                                    <WsrTeamMember tier="secondary" competence="Сантехника и отопление" expert="  Федорова Елена Викторовна"> 
+                                    <WsrTeamMemberItem  name="Моренкова Анастасия Андреевна " competence="Камнетесное дело" tier="secondary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/2.jpg" >
                                         <WsrMedal tier="secondary" medal="gold"/>
                                         <WsrMedal tier="secondary" medal="silver"/>
                                         <WsrMedal tier="secondary" medal="silver"/>
