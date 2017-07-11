@@ -73,6 +73,9 @@ class Competence extends Component {
                             <NavItem eventKey="11">
                               Презентационная (JS)
                             </NavItem>
+                            <NavItem eventKey="12">
+                              Отборочные соревнования
+                            </NavItem>
                           </Nav>
                         </WsrBlockBlank>
                         <Button block className="btn-export ">
@@ -513,6 +516,39 @@ class Competence extends Component {
                                       </Col>
                                       <Col lg={ 9 } className="wsr-team__description">
                                         <h3 className="wsr-competence__title">Презентационная(JS)</h3>
+                                      </Col>
+                                    </Row>
+                                    Всего 12 компетенций
+                                  </Panel>
+                                </WsrBlockBlank>
+                              </Col>
+                              <Tab.Content animation>
+                                <Tab.Pane eventKey="1c">
+                                  <Col sm={ 3 } md={ 3 } lg={ 3 }>
+                                    <WsrBlockTitle title="Сборная Москвы" />
+                                    <WsrTeamMember name="Дармограй Тимофей Юрьевич " tier="primary" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
+                                    />
+                                    <WsrTeamMember name="Воронков Никита Александрович" tier="secondary" host="ООО «Практика реставрации»" expert="Шеблов Александр Николаевич" photo="/Images/competence/2.jpg"
+                                    />
+                                  </Col>
+                                </Tab.Pane>
+                              </Tab.Content>
+                            </Row>
+                          </Tab.Container>
+                        </Tab.Pane>
+                        <Tab.Pane eventKey="12">
+                          <Tab.Container id="left-tabs-example" defaultActiveKey="1c">
+                            <Row className="clearfix">
+                              <Col sm={ 3 } md={ 3 } lg={ 4 }>
+                                <WsrBlockTitle title="Компетенции" />
+                                <WsrBlockBlank description="" date="10.05.2017">
+                                  <Panel defaultExpanded>
+                                    <Row className="is-flex">
+                                      <Col lg={ 3 }>
+                                        <Image src="/Images/icon_13.svg" />
+                                      </Col>
+                                      <Col lg={ 9 } className="wsr-team__description">
+                                        <h3 className="wsr-competence__title">Отборочные соревнования</h3>
                                       </Col>
                                     </Row>
                                     Всего 12 компетенций
