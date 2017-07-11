@@ -556,6 +556,7 @@ li .active > a:any-link {
   font-weight: 700;
 }
 .wsr-menu > li > a {
+  display: inline-block;
   color: #838d9d;
   padding: 1vh 1.5vw;
   padding-top: 13px;
