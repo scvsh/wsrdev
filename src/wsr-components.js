@@ -145,7 +145,7 @@ constructor(props) {
             <Grid bsClass="containter-fluid">
               <Row>
               <svg xmlns="http://www.w3.org/2000/svg"   width="0" height="0">
-                <clipPath   id="ClipAffix" clipPathUnits="objectBoundingBox">
+                <clipPath  pointer-events="none" id="ClipAffix" clipPathUnits="objectBoundingBox">
                   <polygon ref={(ref) => this.scrollIcon = ref} id="clipmask" points={"0 1,0.5 1,0.67 " + this.state.scroll  + ",1 0,0 0"}>
                   </polygon>
                 </clipPath>
