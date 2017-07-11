@@ -1,5 +1,10 @@
 import React, { Component } from "react";
+import $ from "jquery";
+
 import "./css/wsr.css";
+//import "./css/calendar.css";
+//import "./calendar.js";
+
 import { MdStar, MdAccountCircle, MdPlace, MdMore, MdStars, MdApps, MdDateRange, MdArrowForward, MdSearch, MdMail, MdPhone } from "react-icons/lib/md";
 import { FaVk, FaFacebook, FaInstagram, FaYoutube } from "react-icons/lib/fa";
 import TextTruncate from "react-text-truncate";
@@ -297,8 +302,12 @@ constructor(props) {
                         </div>
                         <hr className="wsr-menu__contacts-divider" />
                         <div className="wsr-menu__social wsr-menu__sponsors">
+                        <div className="wsr-menu__sponsors-wrapper" >
                         <img alt="" src="Images/wsr-msk-logo-dogm.svg"></img>
+                        </div>
+                        <div className="wsr-menu__sponsors-wrapper" >
                         <img alt="" src="Images/wsr-msk-logo-wsr.svg"></img>
+                        </div>
                         </div>
                       </Row>
                     </div>

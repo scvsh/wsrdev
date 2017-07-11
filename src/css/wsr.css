@@ -30,8 +30,7 @@ body:focus {
   outline-style: auto;
   outline-width: 1px;
 }
-html,
-Ftranbody {
+html {
   max-width: 100%;
   overflow-x: hidden;
   transition: 100ms ease-in;
@@ -165,7 +164,7 @@ li .active > a:any-link {
   transform: skew(15deg);
   font-weight: 300;
   background-size: cover;
-  z-index: 4000;
+  z-index: 40;
 }
 @media (max-width: 1600px) {
   .wsr-carousel-menu {
@@ -176,6 +175,10 @@ li .active > a:any-link {
   .wsr-carousel-menu {
     width: 500px;
   }
+}
+.wsr-modal__calendar {
+  padding: 0;
+  border-radius: 3px;
 }
 .wsr-carousel-menu__nav > li {
   text-align: left;
@@ -585,9 +588,12 @@ li .active > a:any-link {
   }
 }
 .wsr-menu__sponsors img {
-  width: 15%;
-  padding-right: 0.7em;
   padding-top: 3em;
+  width: 100%;
+}
+.wsr-menu__sponsors-wrapper {
+  padding-right: 0.9em;
+  width: 15%;
 }
 .wsr-menu__container {
   margin-left: -15px;

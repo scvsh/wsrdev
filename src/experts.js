@@ -167,6 +167,7 @@ class Team extends Component {
                       </Col>
                     </Row>
                   </Col>
+                  
                 </Row>
                 { /* Bottom Gallery */ }
                 <Row>
