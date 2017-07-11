@@ -92,7 +92,7 @@ class Competence extends Component {
                                         <Image src="/Images/icon_1.svg" />
                                       </Col>
                                       <Col lg={ 9 } className="wsr-team__description">
-                                        <h3 className="wsr-competence__title">Специалисты строительной сферы</h3>
+                                        <h3 className="wsr-competence__title">Информационные технилогии</h3>
                                       </Col>
                                     </Row>
                                     <ListGroup fill>

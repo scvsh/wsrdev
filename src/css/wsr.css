@@ -1398,7 +1398,7 @@ h6 {
 /************************************ TAB SELECTOR STYLES ************************************/
 /*-------------------------------------------------------------------------------------------*/
 .wsr-competence__icon-wrapper {
-  align-items: flex-end;
+  align-items: center;
 }
 .wsr-competence__icon-wrapper div {
   display: block !important;
@@ -1461,6 +1461,10 @@ h6 {
 .wsr-competence__title {
   color: #ce112d;
   margin-top: 0;
+  overflow: hidden;
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 }
 .dropdown-backdrop {
   position: static;
@@ -1635,18 +1639,20 @@ span .member-expert {
   height: auto;
   width: 2em;
 }
-.wsr-certification-description {
-  padding-left: 1em;
-  margin-left: 1em;
+.wsr-certification-description__col {
   border-left: 1px solid #dddddd;
 }
 .wsr-expert-description {
   margin-bottom: 0;
 }
 .wsr-certification-explanation__media {
+  padding-left: 1em !important;
   padding-bottom: 1.5em;
   word-break: break-word;
   word-wrap: break-word;
+}
+.wsr-certification-explanation__media:first-child {
+  padding-left: 0;
 }
 /*-------------------------------------------------------------------------------------------*/
 /************************************ AVATAR STAR STYLES ************************************/

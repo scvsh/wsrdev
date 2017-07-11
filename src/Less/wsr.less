@@ -1347,7 +1347,7 @@ h6 {
 /*-------------------------------------------------------------------------------------------*/
 
 .wsr-competence__icon-wrapper {
-	align-items: flex-end;
+	align-items: center;
 }
 
 .wsr-competence__icon-wrapper div {
@@ -1425,6 +1425,10 @@ h6 {
 .wsr-competence__title {
 	color: @brand-primary;
 	margin-top: 0;
+	overflow: hidden;
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
+    word-wrap: break-word;
 }
 
 .dropdown-backdrop {
@@ -1635,9 +1639,8 @@ span .member-expert {
 	width: 2em;
 }
 
-.wsr-certification-description {
-	padding-left: 1em;
-	margin-left: 1em;
+
+.wsr-certification-description__col {
 	border-left: 1px solid #dddddd;
 }
 
@@ -1646,9 +1649,14 @@ span .member-expert {
 }
 
 .wsr-certification-explanation__media {
+	padding-left: 1em !important;
 	padding-bottom: 1.5em;
 	word-break: break-word;
 	word-wrap: break-word;
+}
+
+.wsr-certification-explanation__media:first-child {
+	padding-left: 0;
 }
 
 /*-------------------------------------------------------------------------------------------*/

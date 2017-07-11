@@ -52,7 +52,7 @@ class Team extends Component {
                             </Media.Body>
                           </Media>
                         </Col>
-                        <Col md={ 4 }>
+                        <Col md={ 4 } className="wsr-certification-description__col">
                           <Media className="wsr-certification-explanation__media">
                             <Media.Left className="wsr-certification-explanation">
                               <img width={ 100 } src="/Images/regional.svg" alt="" />
@@ -69,7 +69,7 @@ class Team extends Component {
                             </Media.Body>
                           </Media>
                         </Col>
-                        <Col md={ 4 }>
+                        <Col md={ 4 } className="wsr-certification-description__col">
                           <Media className="wsr-certification-explanation__media">
                             <Media.Left className="wsr-certification-explanation">
                               <img width={ 100 } src="/Images/demo.svg" alt="" />
