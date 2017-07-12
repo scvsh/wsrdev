@@ -1641,6 +1641,9 @@ span .member-expert {
   height: auto;
   width: 2em;
 }
+.wsr-certification-description__col {
+  border-left: 1px solid #dddddd;
+}
 .wsr-expert-description {
   margin-bottom: 0;
 }
@@ -1651,6 +1654,7 @@ span .member-expert {
   font-size: 100% !important;
 }
 .wsr-certification-explanation__media {
+  padding-left: 1em !important;
   padding-bottom: 1.5em;
 }
 .wsr-certification-explanation__media:first-child {
@@ -2271,6 +2275,9 @@ Should we change this at all?
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .wsr-certification-description__col {
+    border-left: none;
+  }
   .row-flex,
   .row-flex > div[class*='col-'] {
     flex-basis: 50%;
@@ -2342,6 +2349,9 @@ Should we change this at all?
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
+  .wsr-certification-description__col {
+    border-left: none;
+  }
   .wsr-block-project--large > .row > .wsr-block__image-container {
     display: none;
   }
@@ -2410,6 +2420,9 @@ Should we change this at all?
   }
 }
 @media (max-width: 480px) {
+  .wsr-certification-description__col {
+    border-left: none;
+  }
   .wsr-block-project--large > .row > .wsr-block__image-container {
     display: none;
   }

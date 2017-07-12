@@ -36,7 +36,7 @@ class Team extends Component {
                     <Col xs={ 12 } sm={ 12 } md={ 12 } lg={ 12 }>
                       <WsrBlockTitle title="Эксперты" />
                       <WsrPage type="wsr-page" heading="" description="" date="10.05.2017">
-                        <Col md={ 4 }>
+                        <Col md={ 4 } >
                           <Media className="wsr-certification-explanation__media">
                             <Media.Left className="wsr-certification-explanation">
                               <img width={ 100 } src="/Images/certified.svg" alt="" />
