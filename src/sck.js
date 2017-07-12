@@ -146,7 +146,7 @@ class Sck extends Component {
 
                               <Col sm={ 7 } md={ 7 } lg={ 7 } className="full-size">
                               <WsrBlockTitle title={"Об учреждении"} />
-                              <WsrSckInfo title="ГАОУ ВО г. Москвы «Московский городской педагогический университет»" logo="/Images/sck/1.svg" contact="Бабалаева Мария Викторовна" phone="+7 963 600 82-12" mail="babalaewa73@inbox.ru" detailedAddress="м. «Кутузовская», последний вагон из центра, далее пешком 3-5 минут в сторону области." />
+                              <WsrSckInfo location="https://www.mgpu.ru/" title="ГАОУ ВО г. Москвы «Московский городской педагогический университет»" logo="/Images/sck/1.svg" contact="Бабалаева Мария Викторовна" phone="+7 963 600 82-12" mail="babalaewa73@inbox.ru" detailedAddress="м. «Кутузовская», последний вагон из центра, далее пешком 3-5 минут в сторону области." />
                               <WsrBlock type="" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
 На международном чемпионата China International Skills Competition 2017 (CISC-2017)"
                       date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
