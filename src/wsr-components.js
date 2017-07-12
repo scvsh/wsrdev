@@ -33,8 +33,8 @@ export class WsrProject extends React.Component {
         return (
             <div className={ "wsr-block " + _props.type }>
               <Row className="row-eq-height">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"  width="0" height="0">
-                  <clipPath id="ClipBlock" clipPathUnits="objectBoundingBox">
+                <svg pointer-events="none" xmlns="http://www.w3.org/2000/svg" version="1.1"  width="0" height="0">
+                  <clipPath pointer-events="none" id="ClipBlock" clipPathUnits="objectBoundingBox">
                     <polygon points="0 1, 1 1,1 0,0.09 0">
                     </polygon>
                   </clipPath>
@@ -149,7 +149,7 @@ constructor(props) {
 
             <Grid bsClass="containter-fluid">
               <Row>
-              <svg xmlns="http://www.w3.org/2000/svg"   width="0" height="0">
+              <svg pointer-events="none" xmlns="http://www.w3.org/2000/svg"   width="0" height="0">
                 <clipPath  pointer-events="none" id="ClipAffix" clipPathUnits="objectBoundingBox">
                   <polygon ref={(ref) => this.scrollIcon = ref} id="clipmask" points={"0 1,0.5 1,0.67 " + this.state.scroll  + ",1 0,0 0"}>
                   </polygon>
@@ -391,14 +391,14 @@ export class WsrCarousel extends React.Component {
                 <div><img src="/Images/carousel/gallery03.jpg" alt="" /></div>
                 <div><img src="/Images/carousel/gallery04.jpg" alt="" /></div>
               </OwlCarousel>
-              <svg width="0" height="0">
-                <clipPath id="ClipRight" clipPathUnits="objectBoundingBox">
+              <svg pointer-events="none" width="0" height="0">
+                <clipPath pointer-events="none" id="ClipRight" clipPathUnits="objectBoundingBox">
                   <polygon points="0.28 1, 1 1,1 0,0 0">
                   </polygon>
                 </clipPath>
               </svg>
-              <svg width="0" height="0">
-                <clipPath id="ClipRightBg" clipPathUnits="objectBoundingBox">
+              <svg pointer-events="none" width="0" height="0">
+                <clipPath pointer-events="none" id="ClipRightBg" clipPathUnits="objectBoundingBox">
                   <polygon points="0.3 1, 1 1,1 0,0.02 0">
                   </polygon>
                 </clipPath>
@@ -446,8 +446,8 @@ export class WsrBlock extends React.Component {
         return (
             <div className={ "wsr-block " + _props.type }>
               <Row className="row-eq-height">
-                <svg width="0" height="0">
-                  <clipPath id="ClipBlock" clipPathUnits="objectBoundingBox">
+                <svg pointer-events="none" width="0" height="0">
+                  <clipPath pointer-events="none" id="ClipBlock" clipPathUnits="objectBoundingBox">
                     <polygon points="0 1, 1 1,1 0,0.09 0">
                     </polygon>
                   </clipPath>
