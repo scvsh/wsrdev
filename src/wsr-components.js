@@ -357,10 +357,6 @@ export class WsrCarouselCaption extends React.Component {
                       Juniorskills
                     </NavItem>
                 </Nav>
-                <Button bsClass="wsr-skewed-btn text-left skew-right">
-                  <MdApps className="ri-big" />
-                  <a href="/projects">Архив мероприятий</a>
-                </Button>
               </Col>
             </Col>
 

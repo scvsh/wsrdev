@@ -4,7 +4,7 @@ import "./css/wsr.css";
 import "./css/fonts.css";
 import { LinkContainer } from "react-router-bootstrap";
 
-import { FaCalendar } from "react-icons/lib/fa";
+import { FaArchive, FaCalendar } from "react-icons/lib/fa";
 
 import InfiniteCalendar from 'react-infinite-calendar';
 import OwlCarousel from 'react-owl-carousel';
@@ -56,6 +56,9 @@ class Projects extends Component {
                       date="06.06.2017" image="/Images/thumb03.jpg" />
                     <WsrProject startdate="09.05.2017" enddate="05.07.2017" height={415} type="wsr-block-project--large" heading="Juniorskills" link="/projects/championship" lines={ 8 } description="JuniorSkills – программа ранней профориентации, основ профессиональной подготовки и состязаний школьников в профессиональном мастерстве была инициирована в 2014 году Фондом Олега Дерипаска «Вольное Дело» в партнерстве с WorldSkills Russia при поддержке Агентства стратегических инициатив, Министерства образования и науки РФ, Министерства промышленности и торговли РФ."
                       date="06.06.2017" image="/Images/thumb04.jpg" />
+                      <Button block className="btn-export ">
+                          <FaArchive/> Архив проектов
+                          </Button>
                   </Col>
                   <Col sm={ 9 } md={ 5 } lg={ 5 }>
                     <WsrBlockTitle title={ 'Мероприятия' } />
@@ -65,6 +68,9 @@ class Projects extends Component {
             На международном чемпионата China International Skills Competition 2017 (CISC-2017)" date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
              <WsrBlock type="wsr-block-announce" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
             На международном чемпионата China International Skills Competition 2017 (CISC-2017)" date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
+                  <Button block className="btn-export ">
+                           <FaArchive />Архив мероприятий
+                          </Button>
                   </Col>
                   <Col xs={0} sm={ 1 } md={ 1 } lg={ 1 }>
                     <WsrBlockTitle title={ 'Календарь' } />

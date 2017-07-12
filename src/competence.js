@@ -128,14 +128,16 @@ class Competence extends Component {
                                     
                                     
                                   
-                                    <WsrBlockTitle title="Базовая площадка" />
+                                    <WsrBlockTitle title="СЦК" />
                                     <WsrSckInfo location="г. Москва, Измайловский бульвар, д. 19" title="ГАОУ ВО г. Москвы «Московский городской педагогический университет»" logo="/Images/sck/1.svg" contact="Бабалаева Мария Викторовна" phone="+7 963 600 82-12" mail="babalaewa73@inbox.ru" detailedAddress="м. «Кутузовская», последний вагон из центра, далее пешком 3-5 минут в сторону области." />
-                                 
+                                  <ListGroup>
+                        <LinkContainer to="/competence/techdocs"><ListGroupItem>Техническая документация</ListGroupItem></LinkContainer>
+                      </ListGroup>
 
 
 
 
-                                   <WsrBlockTitle  title="Эксперты" />
+                                   <WsrBlockTitle  title="Главный региональный эксперт" />
                     
                     <WsrExpert name="Дармограй Тимофей Юрьевич" certification="certified" head={true} competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg"
                                     >
