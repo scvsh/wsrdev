@@ -2218,6 +2218,9 @@ li.wsr-side-menu__item:focus > a {
 	white-space: nowrap;
 }
 
+.Cal__Weekdays__day {
+	padding: 1em 0;
+}
 .Cal__Day__root.Cal__Day__today:before {
 	width: 30px !important;
     height: 30px !important;
@@ -2230,7 +2233,20 @@ li.wsr-side-menu__item:focus > a {
     height: 30px !important;
     margin-top: -15px !important;
     margin-left: -15px !important;
+}
 
+.Cal__Day__root.Cal__Day__selected .Cal__Day__selection {
+	width: 30px !important;
+    height: 30px !important;
+    margin-top: -15px !important;
+    margin-left: -15px !important;
+}
+.Cal__Day__month {
+	display: none !important;
+}
+.Cal__Day__day {
+	top: -12px !important;
+	font-size: 15px !important;
 }
 
 .Cal__Header__root {
