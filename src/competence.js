@@ -3,7 +3,7 @@ import "../bootswatch/cosmo/bootstrap.css";
 import "./css/wsr.css";
 import "./css/fonts.css";
 import { LinkContainer } from "react-router-bootstrap";
-
+import { FaFileTextO } from "react-icons/lib/fa";
 
 
 import OwlCarousel from 'react-owl-carousel';
@@ -130,9 +130,9 @@ class Competence extends Component {
                                   
                                     <WsrBlockTitle title="СЦК" />
                                     <WsrSckInfo location="https://www.mgpu.ru/" title="ГАОУ ВО г. Москвы «Московский городской педагогический университет»" logo="/Images/sck/1.svg" contact="Бабалаева Мария Викторовна" phone="+7 963 600 82-12" mail="babalaewa73@inbox.ru" detailedAddress="м. «Кутузовская», последний вагон из центра, далее пешком 3-5 минут в сторону области." />
-                                  <ListGroup>
-                        <LinkContainer to="/competence/techdocs"><ListGroupItem>Техническая документация</ListGroupItem></LinkContainer>
-                      </ListGroup>
+                                  <Button block className="btn-export text-left">
+                           <FaFileTextO />Техническая документация
+                          </Button>
 
 
 
