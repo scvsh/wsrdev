@@ -87,7 +87,6 @@ a:any-link {
   font-weight: 700 !important;
 }
 .wsr-menu a:any-link:visited {
-  color: #838d9d;
   text-decoration: none !important;
   cursor: pointer;
 }
@@ -566,6 +565,13 @@ li .active > a:any-link {
   font-weight: 700;
 }
 .wsr-menu > li > a {
+  transition: 150ms ease-in;
+}
+.wsr-menu > li {
+  transition: 150ms ease-in;
+}
+.wsr-menu > li > a {
+  display: inline-block;
   color: #838d9d;
   padding: 1vh 1.5vw;
   padding-top: 13px;
@@ -840,28 +846,17 @@ a .wsr-footer__social-icons:first-child {
   font-weight: bold;
   color: white;
 }
+.wsr-main-menu__nav > li.active > a {
+  margin-left: -0.2vw;
+}
 .wsr-main-menu__nav > li.active > a,
 .wsr-main-menu__nav > li.active > a:hover,
 .wsr-main-menu__nav > li.active > a:focus {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.wsr-main-menu__nav > li > a:hover,
-.wsr-main-menu__nav > li > a:focus {
-  background-color: rgba(255, 255, 255, 0.3);
   color: white;
-  transition: 300ms ease-out;
 }
-.nav-pills > li.active > a,
-.nav-pills > li.active > a:hover,
-.nav-pills > li.active > a:focus {
-  color: #ce112d;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.nav-pills > li > a:hover,
-.nav-pills > li > a:focus {
-  background-color: rgba(255, 255, 255, 0.3);
-  color: white;
-  transition: 300ms ease-out;
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: inherit;
 }
 .nav-stacked > li + li {
   margin: 0;

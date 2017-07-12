@@ -83,7 +83,6 @@ a:any-link {
 }
 
 .wsr-menu a:any-link:visited {
-	color: @secondary-gray;
 	text-decoration: none !important;
 	cursor: pointer;
 }
@@ -105,6 +104,8 @@ li .active > a:any-link {
 .wsr-menu > li.active {
 	border-left: 0.2vw solid white;
 }
+
+
 
 .wsr-menu > li.active > a:hover {
 	color: white !important;
@@ -426,7 +427,15 @@ li .active > a:any-link {
 }
 
 .wsr-menu > li > a {
-	//display: inline-block;
+	transition: 150ms ease-in;
+}
+
+.wsr-menu > li  {
+	transition: 150ms ease-in;
+}
+
+.wsr-menu > li > a {
+	display: inline-block;
 	color: #838d9d;
 	padding: 1vh 1.5vw;
 	.responsive_limited(0.7vh, 2px, 10px, 13px, padding-top);
@@ -647,31 +656,39 @@ a .wsr-footer__social-icons:first-child {
 	color: white;
 }
 
+.wsr-main-menu__nav > li.active > a {
+	margin-left: -0.2vw;	
+}
+
 .wsr-main-menu__nav > li.active > a,
 .wsr-main-menu__nav > li.active > a:hover,
 .wsr-main-menu__nav > li.active > a:focus {
-	background-color: rgba(0, 0, 0, 0.3);
+	color: white;
+
 }
 
 .wsr-main-menu__nav > li > a:hover,
 .wsr-main-menu__nav > li > a:focus {
-	background-color: rgba(255, 255, 255, .3);
-	color: white;
-	transition: 300ms ease-out;
+	//background-color: rgba(255, 255, 255, .3);
+	//color: white;
+	//transition: 300ms ease-out;
 }
 
+.nav > li > a:hover, .nav > li > a:focus {
+	background-color: inherit;
+}
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-	color: @brand-primary;
-	background-color: rgba(0, 0, 0, 0.3);
+	//color: @brand-primary;
+	//background-color: rgba(0, 0, 0, 0.3);
 }
 
 .nav-pills > li > a:hover,
 .nav-pills > li > a:focus {
-	background-color: rgba(255, 255, 255, .3);
-	color: white;
-	transition: 300ms ease-out;
+	//background-color: rgba(255, 255, 255, .3);
+	//color: white;
+	//transition: 300ms ease-out;
 }
 
 .nav-stacked > li + li {
