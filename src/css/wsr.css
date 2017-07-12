@@ -2148,6 +2148,9 @@ Should we change this at all?
   flex-basis: 50%;
 }
 @media (min-width: 1200px) {
+  .wsr-calendar-button {
+    display: none;
+  }
   .row-flex,
   .row-flex > div[class*='col-'] {
     flex-basis: 30%;

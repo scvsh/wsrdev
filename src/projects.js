@@ -60,7 +60,7 @@ class Projects extends Component {
                           <FaArchive/> Архив проектов
                           </Button>
                   </Col>
-                  <Col sm={ 9 } md={ 5 } lg={ 4 }>
+                  <Col sm={ 9 } md={ 4 } lg={ 4 }>
                     <WsrBlockTitle title={ 'Мероприятия' } />
                      <WsrBlock type="wsr-block-announce" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
             На международном чемпионата China International Skills Competition 2017 (CISC-2017)" date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
@@ -79,7 +79,7 @@ class Projects extends Component {
                       minDate={ lastYear } />
                       </div>
                       <div >
-                      <Button block onClick={this.openModal} className="wsr-btn-search">
+                      <Button block onClick={this.openModal} className="wsr-btn-search wsr-calendar-button">
                           <FaCalendar className="ri-search" />
                         </Button>
                         </div>
