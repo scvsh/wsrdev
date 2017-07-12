@@ -88,6 +88,7 @@ a:any-link {
 }
 
 .wsr-menu a:any-link:hover {
+	//filter: drop-shadow(0 0 4.5px rgba(255,255,255,0.7));
 	color: white;
 	text-decoration: none !important;
 	cursor: pointer;
@@ -95,6 +96,7 @@ a:any-link {
 }
 
 li .active > a:any-link {
+	filter: drop-shadow(0 0 4.5px rgba(255,255,255,0.5));
 	text-decoration: none !important;
 	cursor: pointer;
 	opacity: 1;
@@ -664,6 +666,7 @@ a .wsr-footer__social-icons:first-child {
 .wsr-main-menu__nav > li.active > a:hover,
 .wsr-main-menu__nav > li.active > a:focus {
 	color: white;
+	filter: drop-shadow(0 0 4.5px #FFFFFF);
 
 }
 
@@ -2597,7 +2600,7 @@ Should we change this at all?
 		display: inline-block;
 	}
 
-	.wsr-menu__contacts-divider {
+	.wsr-menu__contacts-divider .wsr-menu a:-webkit-any-link:hover {
 		width: 50%;
 		text-align: left;
 	}
