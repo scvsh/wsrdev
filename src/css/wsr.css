@@ -283,6 +283,7 @@ li .active > a:any-link {
   height: inherit;
 }
 .top_gal {
+  margin-bottom: 1em;
   height: 200px;
   height: 50vh;
 }

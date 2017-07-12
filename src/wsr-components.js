@@ -149,12 +149,7 @@ constructor(props) {
 
             <Grid bsClass="containter-fluid">
               <Row>
-              <svg xmlns="http://www.w3.org/2000/svg"   width="0" height="0">
-                <clipPath  pointer-events="none" id="ClipAffix" clipPathUnits="objectBoundingBox">
-                  <polygon ref={(ref) => this.scrollIcon = ref} id="clipmask" points={"0 1,0.5 1,0.67 " + this.state.scroll  + ",1 0,0 0"}>
-                  </polygon>
-                </clipPath>
-              </svg>
+              
                 <Navbar inverse collapseOnSelect className="navbar-fixed-top">
                   <Navbar.Header>
                     <Navbar.Brand>
@@ -299,6 +294,12 @@ constructor(props) {
                           <a className="wsr-footer__social-icons" href="https://www.youtube.com/channel/UCoAA0xPF2lp2o_RsAuawwMQ">
                             <FaYoutube/>
                           </a>
+                          <svg xmlns="http://www.w3.org/2000/svg"   width="0" height="0">
+                <clipPath  pointer-events="none" id="ClipAffix" clipPathUnits="objectBoundingBox">
+                  <polygon ref={(ref) => this.scrollIcon = ref} id="clipmask" points={"0 1,0.5 1,0.67 " + this.state.scroll  + ",1 0,0 0"}>
+                  </polygon>
+                </clipPath>
+              </svg>
                         </div>
                         <hr className="wsr-menu__contacts-divider" />
                         <div className="wsr-menu__social wsr-menu__sponsors">
