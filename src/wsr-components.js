@@ -499,28 +499,7 @@ export class WsrCite extends React.Component {
 
     render() {
         let _props = this.props;
-        let certifications = ["Сертифицированный эксперт", "Региональный эксперт", "Эксперт Демонстрационного Экзамена"];
-        let cert;
-
-        switch (_props.certification) {
-        case "certified":
-            cert = 0;
-            break;
-        case "regional":
-            cert = 1;
-            break;
-        case "demo":
-            cert = 2;
-            break;
-        }
-
-        let curcert = certifications[cert];
-
-        let tooltip = (
-        <Popover id="popover-positioned-bottom">
-          { curcert }
-        </Popover>
-        );
+      
         return (
             <Panel className="wsr-team__member " header={ _props.comment ? <div className="wsr-team__member-expert"> { _props.coment }</div> : "" }>
               <Row className="wsr-cite__avatar ">

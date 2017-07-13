@@ -126,9 +126,9 @@ class Partners extends Component {
 
                     </WsrBlockBlank>
 
-                      <WsrCite name="Ткачёв Александр Дмитриевич "  tier="primary" medal="professional" host="«Если у тебя есть сад и библиотека, то у тебя есть все, что тебе нужно»" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/6.jpg"
+                      <WsrCite name="Ткачёв Александр Дмитриевич" host="«Если у тебя есть сад и библиотека, то у тебя есть все, что тебе нужно»" photo="/Images/competence/6.jpg"
                                     />
-                                    <WsrCite name="Сергеев Николай Валерьевич " tier="primary" medal="professional" host="«Exceptio probat regulam in casibus non exceptis»" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/5.jpg"
+                                    <WsrCite name="Сергеев Николай Валерьевич" host="«Exceptio probat regulam in casibus non exceptis»"  photo="/Images/competence/5.jpg"
                                     />
                   </Col>
                   
