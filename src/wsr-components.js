@@ -495,6 +495,50 @@ export class WsrPartnerCarousel extends React.Component {
     }
 }
 
+export class WsrCite extends React.Component {
+
+    render() {
+        let _props = this.props;
+        let certifications = ["Сертифицированный эксперт", "Региональный эксперт", "Эксперт Демонстрационного Экзамена"];
+        let cert;
+
+        switch (_props.certification) {
+        case "certified":
+            cert = 0;
+            break;
+        case "regional":
+            cert = 1;
+            break;
+        case "demo":
+            cert = 2;
+            break;
+        }
+
+        let curcert = certifications[cert];
+
+        let tooltip = (
+        <Popover id="popover-positioned-bottom">
+          { curcert }
+        </Popover>
+        );
+        return (
+            <Panel className="wsr-team__member " header={ _props.comment ? <div className="wsr-team__member-expert"> { _props.coment }</div> : "" }>
+              <Row className="wsr-cite__avatar ">
+                <div className={ "wsr-cite-photo-wrapper " }>
+                  <Image src={ _props.photo } circle responsive />
+                </div>
+                <span className="wsr-cite--expert">{ _props.name } <br/>
+                </span>
+                <hr />
+                <div className="flex-grow">
+                  <span className="wsr-team__host ">{ _props.host }</span>
+                </div>
+              </Row>
+            </Panel>
+        );
+    }
+}
+
 
 export class WsrImage extends Component {
     render() {
@@ -731,7 +775,7 @@ export class WsrFooter extends React.Component {
               <Row>
                 <Col xs={ 0 } sm={ 10 } md={ 2 } />
                 <Col xs={ 12 } md={ 7 }>
-                  <span className="wsr-footer__heading"><i>© 2017 Региональный координационный центр WorldSkills Russia по городу Москва</i> </span>
+                  <span className="wsr-footer__heading"><i>© 2017 Региональный координационный центр WorldSkills Russia по городу Москве</i> </span>
                 </Col>
                 <Col xs={ 12 } md={ 3 } className="pull-right">
                   <div className="text-right wsr-social-icons">

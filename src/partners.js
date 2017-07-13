@@ -11,7 +11,7 @@ import {  Label, Panel, NavItem, Tab, Nav, ListGroupItem, ListGroup, Grid, Row, 
 
 /* Import WSR React components*/
 
-import { WsrPartnerCarousel, WsrTierLabel, WsrBlock, WsrSckInfo, WsrExpert, WsrCompetence, WsrTeamMember, WsrPartnersItem, WsrCarousel, WsrPartner, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrCite, WsrPartnerCarousel, WsrTierLabel, WsrBlock, WsrSckInfo, WsrExpert, WsrCompetence, WsrTeamMember, WsrPartnersItem, WsrCarousel, WsrPartner, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 
 /* Main app */
@@ -126,14 +126,10 @@ class Partners extends Component {
 
                     </WsrBlockBlank>
 
-                                  <WsrBlockTitle title="Стать партнёром" />
-                    
-                    <WsrBlockBlank className="wsr-block-select">
-                      <ListGroup>
-                        <LinkContainer exact to="/partners/become-a-partner"><ListGroupItem>Заполнить заявку</ListGroupItem></LinkContainer>
-                        <LinkContainer exact to="/"><ListGroupItem>Скачать документы</ListGroupItem></LinkContainer>                        
-                      </ListGroup>
-                    </WsrBlockBlank>
+                      <WsrCite name="Ткачёв Александр Дмитриевич "  tier="primary" medal="professional" host="«Если у тебя есть сад и библиотека, то у тебя есть все, что тебе нужно»" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/6.jpg"
+                                    />
+                                    <WsrCite name="Сергеев Николай Валерьевич " tier="primary" medal="professional" host="«Exceptio probat regulam in casibus non exceptis»" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/5.jpg"
+                                    />
                   </Col>
                   
                 </Row>
