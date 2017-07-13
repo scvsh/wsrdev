@@ -366,6 +366,44 @@ export class WsrCarouselCaption extends React.Component {
 }
 
 
+export class WsrPartnerCompilation extends React.Component {
+
+    render() {
+        let _props = this.props;
+
+        return (
+         <Row>
+          <Col sm={ 2 }  />
+          <Col sm={ 7 } >
+            <div className="wsr-partner-comp__wrap">
+              
+              <div className="wsr-partner-comp__item" ><img src="/Images/1.png"/></div>
+              <div className="wsr-partner-comp__item" ><img src="/Images/2.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img src="/Images/3.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img src="/Images/4.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img src="/Images/5.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img src="/Images/6.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img src="/Images/7.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img src="/Images/8.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img src="/Images/9.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img src="/Images/10.png"/></div>
+              <div className="wsr-partner-comp__item" ><img src="/Images/11.png"/></div>
+              <div className="wsr-partner-comp__item" ><img src="/Images/12.png"/></div>
+              <div className="wsr-partner-comp__item" ><img src="/Images/13.png"/></div>
+              <div className="wsr-partner-comp__item" ><img src="/Images/14.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img src="/Images/15.png"/></div>
+
+
+            </div>
+             </Col> 
+            </Row>
+
+
+
+
+        );
+    }
+}
 
 export class WsrCarousel extends React.Component {
 
@@ -384,14 +422,59 @@ export class WsrCarousel extends React.Component {
         //setTimeout(this.handleKeyChange, 5000)
         return (
             <Row className="top_gal">
-              <WsrCarouselCaption ref="redcaption" activeKey={ this.state.activeNav } />
-              <OwlCarousel ref="redstage" rewind={ false } autoplay={ true } className="red-stage" items={ 1 } margin={ 0 }
+            <WsrCarouselCaption ref="redcaption" activeKey={ this.state.activeNav } />
+            <OwlCarousel ref="redstage" rewind={ false } autoplay={ true } className="red-stage" items={ 1 } margin={ 0 }
                 loop={ true } onTranslate={ this.handleKeyChange }>
                 <div><img src="/Images/carousel/gallery02.jpg" alt="" /></div>
                 <div><img src="/Images/carousel/gallery01.jpg" alt="" /></div>
                 <div><img src="/Images/carousel/gallery03.jpg" alt="" /></div>
                 <div><img src="/Images/carousel/gallery04.jpg" alt="" /></div>
-              </OwlCarousel>
+              </OwlCarousel>    
+              <svg pointer-events="none" width="0" height="0">
+                <clipPath id="ClipRight" clipPathUnits="objectBoundingBox">
+                  <polygon points="0.28 1, 1 1,1 0,0 0">
+                  </polygon>
+                </clipPath>
+              </svg>
+              <svg pointer-events="none" width="0" height="0">
+                <clipPath id="ClipRightBg" clipPathUnits="objectBoundingBox">
+                  <polygon points="0.3 1, 1 1,1 0,0.02 0">
+                  </polygon>
+                </clipPath>
+              </svg>
+            </Row>
+
+
+
+        );
+    }
+}
+
+export class WsrPartnerCarousel extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.handleKeyChange = this.handleKeyChange.bind(this);
+        this.state = {
+            activeNav: 1
+        };
+    }
+    handleKeyChange() {
+        this.refs.redcaption.handleChange();
+    }
+    render() {
+        let _props = this.props;
+        //setTimeout(this.handleKeyChange, 5000)
+        return (
+            <Row className="top_gal">
+            <WsrCarouselCaption ref="redcaption" activeKey={ this.state.activeNav } />
+            <OwlCarousel ref="redstage" rewind={ false } autoplay={ true } className="red-stage" items={ 1 } margin={ 0 }
+                loop={ true } onTranslate={ this.handleKeyChange }>
+                <div><WsrPartnerCompilation/> </div>
+                <div><WsrPartnerCompilation/></div>
+                <div><WsrPartnerCompilation/></div>
+                <div><WsrPartnerCompilation/> </div>
+</OwlCarousel>
               <svg pointer-events="none" width="0" height="0">
                 <clipPath id="ClipRight" clipPathUnits="objectBoundingBox">
                   <polygon points="0.28 1, 1 1,1 0,0 0">

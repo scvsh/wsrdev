@@ -11,7 +11,7 @@ import {  Label, Panel, NavItem, Tab, Nav, ListGroupItem, ListGroup, Grid, Row, 
 
 /* Import WSR React components*/
 
-import { WsrTierLabel, WsrBlock, WsrSckInfo, WsrExpert, WsrCompetence, WsrTeamMember, WsrPartnersItem, WsrCarousel, WsrPartner, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrPartnerCarousel, WsrTierLabel, WsrBlock, WsrSckInfo, WsrExpert, WsrCompetence, WsrTeamMember, WsrPartnersItem, WsrCarousel, WsrPartner, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 
 /* Main app */
@@ -21,7 +21,7 @@ class Partners extends Component {
         return (
             <div className="App">
               { /* Header carousel */ }
-              <WsrCarousel />
+              <WsrPartnerCarousel />
               { /* Left sidebar */ }
               <WsrMainMenu/>
               { /* Main content */ }
