@@ -141,8 +141,12 @@ constructor(props) {
        if (this.scrollIcon !== null) {
           this.scrollIcon.setAttribute('points', '0 1,0.5 1,0.67 ' + point/87.5 + ',1 0,0 0');
       }
-       document.querySelector('.wsr-affix').style.webkitClipPath = "polygon(65%" + point + "%, 50% 100%, 0px 100%, 0px 0px, 100% 0px)";
-       document.querySelector('.wsr-affix').style.clipPath = "polygon(65%" + point + "%, 50% 100%, 0px 100%, 0px 0px, 100% 0px)";
+      if (this.Affix !== null) {
+          this.Affix.style.webkitClipPath = "polygon(65%" + point + "%, 50% 100%, 0px 100%, 0px 0px, 100% 0px)";
+          this.Affix.style.clipPath = "polygon(65%" + point + "%, 50% 100%, 0px 100%, 0px 0px, 100% 0px)";
+      }
+       //document.querySelector('.wsr-affix').style.webkitClipPath = "polygon(65%" + point + "%, 50% 100%, 0px 100%, 0px 0px, 100% 0px)";
+       //document.querySelector('.wsr-affix').style.clipPath = "polygon(65%" + point + "%, 50% 100%, 0px 100%, 0px 0px, 100% 0px)";
       }
 
     render() {
@@ -213,7 +217,7 @@ constructor(props) {
                   </Navbar.Collapse>
                 </Navbar>
                 <Col xs={ 5 } sm={ 5 } md={ 4 } lg={ 3 }>
-                  <div dir="rtl" className="wsr-affix">
+                  <div ref={(ref) => this.Affix = ref} dir="rtl" className="wsr-affix">
                     <div className="wsr-affix">
                       <Row dir="ltr">
                         <WsrMenuTitle />
