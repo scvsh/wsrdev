@@ -131,9 +131,13 @@ class Competence extends Component {
                                     <WsrBlockTitle title="СЦК" />
                                     <WsrSckInfo location="https://www.mgpu.ru/" title="ГАОУ ВО г. Москвы «Московский городской педагогический университет»" logo="/Images/sck/1.svg" contact="Бабалаева Мария Викторовна" phone="+7 963 600 82-12" mail="babalaewa73@inbox.ru" detailedAddress="м. «Кутузовская», последний вагон из центра, далее пешком 3-5 минут в сторону области." />
                                   
+                                  <WsrBlockTitle title="Техническая документация" />
+                                  <WsrBlockBlank>
                                   <Button block className="btn-export text-left">
-                           <FaFileTextO />Техническая документация
+                                  
+                           <FaFileTextO />Скачать документы
                           </Button>
+                          </WsrBlockBlank>
 
 
 

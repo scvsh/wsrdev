@@ -140,14 +140,12 @@ constructor(props) {
 
        if (this.scrollIcon !== null) {
           this.scrollIcon.setAttribute('points', '0 1,0.5 1,0.67 ' + point/87.5 + ',1 0,0 0');
-      }
-      if (this.Affix !== null) {
+          }
+       if (this.Affix !== null) {
           this.Affix.style.webkitClipPath = "polygon(65%" + point + "%, 50% 100%, 0px 100%, 0px 0px, 100% 0px)";
           this.Affix.style.clipPath = "polygon(65%" + point + "%, 50% 100%, 0px 100%, 0px 0px, 100% 0px)";
-      }
-       //document.querySelector('.wsr-affix').style.webkitClipPath = "polygon(65%" + point + "%, 50% 100%, 0px 100%, 0px 0px, 100% 0px)";
-       //document.querySelector('.wsr-affix').style.clipPath = "polygon(65%" + point + "%, 50% 100%, 0px 100%, 0px 0px, 100% 0px)";
-      }
+          } 
+    }
 
     render() {
         return (
@@ -500,28 +498,43 @@ export class WsrPartnerCarousel extends React.Component {
     }
 }
 
+
 export class WsrCite extends React.Component {
 
     render() {
         let _props = this.props;
       
         return (
-            <Panel className="wsr-team__member text-center" footer={ _props.host ? <div className="wsr-team__member-expert"> { _props.host }</div> : "" }>
-              <Row className="wsr-cite__avatar ">
+                      <Panel className={"wsr-cite " + _props.className }>
+
+          <Row className="wsr-cite__avatar ">
+              <Col sm={3}>
+              <Row className="wsr-team__avatar__container">
                 <div className={ "wsr-cite-photo-wrapper " }>
-                  <Image src={ _props.photo } circle responsive />
+                  <Image src={ _props.photo ? _props.photo : "/Images/avatar.png"} circle responsive />
                 </div>
-                <span className="wsr-cite--expert">{ _props.name } <br/>
-                </span>
-                <hr />
-                <div className="flex-grow">
-                  <span className="wsr-team__host ">{ _props.cite }</span>
+                </Row>
+
+                </Col>
+ </Row>
+
+        <Row className="wsr-cite__avatar ">
+
+                <h4 className="wsr-cite__text text-center">{ _props.cite } <br/>
+                </h4>
+                <hr/>
+                <span className={ "wsr-cite__name" }>{ _props.name } <br/></span>  
+
+                                <div className="flex-grow">
+                  <span className="wsr-cite__host ">{ <span><div className="wsr-team__member-expert"></div>{ _props.host }</span> }</span>
                 </div>
               </Row>
-            </Panel>
+ </Panel>
+              
         );
     }
 }
+
 
 
 export class WsrImage extends Component {
@@ -886,7 +899,7 @@ export class WsrTeamMemberItem extends React.Component {
         let _props = this.props;
         return (
             <Row className="wsr-team__avatar ">
-              <Col sm={4}>
+              <Col sm={3}>
               <Row className="wsr-team__avatar__container">
                 <div className={ "wsr-team__member-photo-wrapper " + (_props.tier === "primary" ? "member-primary" : "member-secondary") }>
                   <Image src={ _props.photo ? _props.photo : "/Images/avatar.png"} circle responsive />
@@ -1014,7 +1027,7 @@ export class WsrExpert extends React.Component {
 
             <Panel className={"wsr-team__member wsr-team__expert " + _props.className } header={ _props.head ? <TextTruncate line={ 1 } truncateText="…" text={ _props.competence } /> : false }>
               <Row className="wsr-team__avatar ">
-              <Col xs={3} sm={4}>
+              <Col xs={3} sm={3}>
               <Row className="wsr-team__avatar__container">
                 <div className={ "wsr-team__member-photo-wrapper " + _props.tier }>
                   <Image src={ _props.photo } circle responsive />
@@ -1024,7 +1037,7 @@ export class WsrExpert extends React.Component {
                 
                 </Row>
                 </Col>
-                <Col xs={9} sm={8}>
+                <Col xs={9} sm={9}>
                 <span className="wsr-team__member--expert">{ _props.name } <br/></span>
                 <hr />
                 <div className="flex-grow">
