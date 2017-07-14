@@ -125,10 +125,11 @@ class Partners extends Component {
                                     /></LinkContainer>
 
                     </WsrBlockBlank>
+                    <WsrBlockTitle title="Цитаты о движении" />
 
-                      <WsrCite name="Ткачёв Александр Дмитриевич" host="«Если у тебя есть сад и библиотека, то у тебя есть все, что тебе нужно»" photo="/Images/competence/6.jpg"
+                      <WsrCite host="ООО «Практика реставрации»" name="Ткачёв Александр Дмитриевич" cite="«Если у тебя есть сад и библиотека, то у тебя есть все, что тебе нужно»" photo="/Images/competence/6.jpg"
                                     />
-                                    <WsrCite name="Сергеев Николай Валерьевич" host="«Exceptio probat regulam in casibus non exceptis»"  photo="/Images/competence/5.jpg"
+                                    <WsrCite host="Колледж архитектуры и строительства № 7" name="Сергеев Николай Валерьевич" cite="«Exceptio probat regulam in casibus non exceptis»"  photo="/Images/competence/5.jpg"
                                     />
                   </Col>
                   
