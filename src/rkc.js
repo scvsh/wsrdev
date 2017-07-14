@@ -24,9 +24,8 @@ class Rkc extends Component {
               <WsrMainMenu/>
               { /* Main content */ }
               <Grid bsClass="containter-fluid">
-              
                    <Row>
-                   <Col xs={ 0 } sm={ 3 } md={ 2 } lg={ 2 } />
+                   <Col xs={ 0 } sm={ 3 } md={ 2 } lg={ 2 }/>
                    <Col xs={ 12 } sm={ 7 } md={ 7 } lg={ 7 } className="full-size">  
                   <Col xs={ 12 } sm={ 12 } md={ 12 } lg={ 12 } className="full-size">  
                     <WsrBlockTitle title="Контакты" />
@@ -58,7 +57,7 @@ class Rkc extends Component {
                                   </Row></Col></Col>
                        
                           
-                  <Col sm={ 3 } md={ 3 } lg={ 3 }>
+                  <Col sm={ 2 } md={ 3 } lg={ 3 }>
                     <WsrBlockTitle title="WSR в Москве" />
                     <WsrBlockBlank className="wsr-block-select">
                       <ListGroup>

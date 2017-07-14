@@ -96,7 +96,7 @@ class Partners extends Component {
                           </Tab.Container>
                         </Tab.Pane>
                         <Tab.Pane eventKey="10">
-                          <Tab.Container id="left-tabs-example" defaultActiveKey="2c">
+                          <Tab.Container id="left-tabs-example" defaultActiveKey="1c">
                             <Row className="clearfix">
                               <Col sm={ 7 } md={ 7 } lg={ 9 } className="full-size">
                                 <WsrBlockTitle title="Новости партнёров" />

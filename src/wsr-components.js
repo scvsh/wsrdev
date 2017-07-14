@@ -121,10 +121,6 @@ export class WsrMainMenu extends React.Component {
 constructor(props) {
         super(props);
         this.handleScroll = this.handleScroll.bind(this);
-        this.state = {
-            scroll: 0.08,
-            anchor: 180
-        };
     }
     componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
@@ -136,18 +132,17 @@ constructor(props) {
 
     handleScroll() {
       
-      let anchor = 180;
+       let anchor = 120;
        let value = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-       console.log(window.pageYOffset);
-       console.log(document.documentElement.scrollTop);
-       console.log(document.body.scrollTop);
-       console.log(this.scrollIcon);
+       let tensor = (1/(value/anchor))*7 -  1.8 * ((value/anchor) -  1);
+       let point = value > anchor ? ( tensor > 0 ? tensor : 0 ):  7;
 
-       console.log(value);
+
        if (this.scrollIcon !== null) {
-          this.scrollIcon.setAttribute('points', '0 1,0.5 1,0.67 ' + ( value > anchor ? 1/(value/anchor)*0.08 - (value/anchor*0.02) :  0.08 ) + ',1 0,0 0');
+          this.scrollIcon.setAttribute('points', '0 1,0.5 1,0.67 ' + point/87.5 + ',1 0,0 0');
       }
-       
+       document.querySelector('.wsr-affix').style.webkitClipPath = "polygon(65%" + point + "%, 50% 100%, 0px 100%, 0px 0px, 100% 0px)";
+       document.querySelector('.wsr-affix').style.clipPath = "polygon(65%" + point + "%, 50% 100%, 0px 100%, 0px 0px, 100% 0px)";
       }
 
     render() {
@@ -302,7 +297,7 @@ constructor(props) {
                           </a>
                           <svg xmlns="http://www.w3.org/2000/svg"   width="0" height="0">
                 <clipPath  pointerEvents="none" id="ClipAffix" clipPathUnits="objectBoundingBox">
-                  <polygon ref={(ref) => this.scrollIcon = ref} id="clipmask" points={"0 1,0.5 1,0.67 " + this.state.scroll  + ",1 0,0 0"}>
+                  <polygon ref={(ref) => this.scrollIcon = ref} id="clipmask" points={"0 1,0.5 1,0.67 0.08,1 0,0 0"}>
                   </polygon>
                 </clipPath>
               </svg>
