@@ -508,7 +508,7 @@ export class WsrCite extends React.Component {
                       <Panel className={"wsr-cite " + _props.className }>
 
           <Row className="wsr-cite__avatar ">
-              <Col sm={3}>
+              <Col xs={4} sm={3}>
               <Row className="wsr-team__avatar__container">
                 <div className={ "wsr-cite-photo-wrapper " }>
                   <Image src={ _props.photo ? _props.photo : "/Images/avatar.png"} circle responsive />
