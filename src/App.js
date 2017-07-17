@@ -7,7 +7,7 @@ import "./css/fonts.css";
 import OwlCarousel from 'react-owl-carousel';
 
 /* Import React-Boorstrap components*/
-import { Grid, Row, Col, Image} from "react-bootstrap";
+import { Nav, NavItem, Grid, Row, Col, Image} from "react-bootstrap";
 
 /* Import WSR React components*/
 
@@ -90,45 +90,42 @@ class App extends Component {
                   <Col xs={ 12 } sm={ 0 } md={ 2 }>
                   
                     <WsrBlockTitle title="Партнёры" />
-                    <WsrBlockBlank type="wsr-block-partners">
-                      <WsrPartnersItem>
-                        <div className="center-block">
+                    <WsrBlockBlank className="wsr-block-select">
+                          <Nav bsStyle="pills" className="wsr-partner-list" stacked>
+                            <NavItem eventKey="0">
+                              <div className="center-block ">
                           <Image className="center-block wsr-parther-logo" src="/Images/1.png" responsive />
                         </div>
-                        <div className="wsr_block-menu__divider" />
-                        <div className="center-block">
+                            </NavItem>
+                            <NavItem eventKey="1">
+                              <div className="center-block ">
                           <Image className="center-block wsr-parther-logo" src="/Images/2.jpg" responsive />
                         </div>
-                        <div className="wsr_block-menu__divider" />
-                        <div className="center-block">
+                            </NavItem>
+                            <NavItem eventKey="2">
+                              <div className="center-block">
                           <Image className="center-block wsr-parther-logo" src="/Images/3.jpg" responsive />
                         </div>
-                        <div className="wsr_block-menu__divider" />
-                        <div className="center-block">
+                            </NavItem>
+                            <NavItem eventKey="3">
+                               <div className="center-block ">
                           <Image className="center-block wsr-parther-logo" src="/Images/4.jpg" responsive />
                         </div>
-                        <div className="wsr_block-menu__divider" />
-                        <div className="center-block">
+                            </NavItem>
+                            <NavItem eventKey="4">
+                              <div className="center-block">
                           <Image className="center-block wsr-parther-logo" src="/Images/5.jpg" responsive />
                         </div>
-                        <div className="wsr_block-menu__divider" />
-                        <div className="center-block">
+                            </NavItem>
+                            <NavItem eventKey="5">
+                              <div className="center-block">
                           <Image className="center-block wsr-parther-logo" src="/Images/6.jpg" responsive />
                         </div>
-                        <div className="wsr_block-menu__divider" />
-                        <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/7.jpg" responsive />
-                        </div>
-                        <div className="wsr_block-menu__divider" />
-                        <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/8.jpg" responsive />
-                        </div>
-                        <div className="wsr_block-menu__divider" />
-                        <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/9.jpg" responsive />
-                        </div>
-                      </WsrPartnersItem>
-                    </WsrBlockBlank>
+                            </NavItem>
+                            
+                            
+                          </Nav>
+                        </WsrBlockBlank>           
 
                   </Col>
                 </Row>

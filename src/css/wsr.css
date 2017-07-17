@@ -1148,8 +1148,7 @@ li.active {
   filter: grayscale(0%);
   opacity: 1;
 }
-.wsr-partner-list > li:hover,
-li.active > a > div > img {
+.wsr-partner-list > li:hover > a > div > img {
   opacity: 1;
 }
 .wsr-partner-list > li > a {
