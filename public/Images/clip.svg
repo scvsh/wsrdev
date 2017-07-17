@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"   width="0" height="0">
+                <clipPath  pointerEvents="none" id="ClipAffix" clipPathUnits="objectBoundingBox">
+                  <polygon id="clipmask" points="0 1,0.5 1,0.67 0.08,1 0,0 0">
+                  </polygon>
+                </clipPath>
+              </svg>
