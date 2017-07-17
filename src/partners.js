@@ -35,35 +35,35 @@ class Partners extends Component {
                       <Col xs={ 12 } sm={ 5 } md={ 5 } lg={ 3 }>
                         <WsrBlockTitle title="Партнёры" />
                         <WsrBlockBlank className="wsr-block-select">
-                          <Nav bsStyle="pills" className="wsr-competence-category" stacked>
+                          <Nav bsStyle="pills" className="wsr-partner-list" stacked>
                             <NavItem eventKey="0">
                               <div className="center-block wsr-parther-logo--news">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_02.svg" responsive />
+                          <Image className="center-block wsr-parther-logo" src="/Images/1.png" responsive />
                         </div>
                             </NavItem>
                             <NavItem eventKey="1">
                               <div className="center-block ">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_01.svg" responsive />
+                          <Image className="center-block wsr-parther-logo" src="/Images/2.jpg" responsive />
                         </div>
                             </NavItem>
                             <NavItem eventKey="2">
                               <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_03.svg" responsive />
+                          <Image className="center-block wsr-parther-logo" src="/Images/3.jpg" responsive />
                         </div>
                             </NavItem>
                             <NavItem eventKey="3">
                                <div className="center-block wsr-parther-logo--news">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_04.svg" responsive />
+                          <Image className="center-block wsr-parther-logo" src="/Images/4.jpg" responsive />
                         </div>
                             </NavItem>
                             <NavItem eventKey="4">
                               <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_05.svg" responsive />
+                          <Image className="center-block wsr-parther-logo" src="/Images/5.jpg" responsive />
                         </div>
                             </NavItem>
                             <NavItem eventKey="5">
                               <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_06.svg" responsive />
+                          <Image className="center-block wsr-parther-logo" src="/Images/6.jpg" responsive />
                         </div>
                             </NavItem>
                             

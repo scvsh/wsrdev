@@ -93,27 +93,39 @@ class App extends Component {
                     <WsrBlockBlank type="wsr-block-partners">
                       <WsrPartnersItem>
                         <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_01.svg" responsive />
+                          <Image className="center-block wsr-parther-logo" src="/Images/1.png" responsive />
                         </div>
                         <div className="wsr_block-menu__divider" />
                         <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_02.svg" responsive />
+                          <Image className="center-block wsr-parther-logo" src="/Images/2.jpg" responsive />
                         </div>
                         <div className="wsr_block-menu__divider" />
                         <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_03.svg" responsive />
+                          <Image className="center-block wsr-parther-logo" src="/Images/3.jpg" responsive />
                         </div>
                         <div className="wsr_block-menu__divider" />
                         <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_04.svg" responsive />
+                          <Image className="center-block wsr-parther-logo" src="/Images/4.jpg" responsive />
                         </div>
                         <div className="wsr_block-menu__divider" />
                         <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_05.svg" responsive />
+                          <Image className="center-block wsr-parther-logo" src="/Images/5.jpg" responsive />
                         </div>
                         <div className="wsr_block-menu__divider" />
                         <div className="center-block">
-                          <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_06.svg" responsive />
+                          <Image className="center-block wsr-parther-logo" src="/Images/6.jpg" responsive />
+                        </div>
+                        <div className="wsr_block-menu__divider" />
+                        <div className="center-block">
+                          <Image className="center-block wsr-parther-logo" src="/Images/7.jpg" responsive />
+                        </div>
+                        <div className="wsr_block-menu__divider" />
+                        <div className="center-block">
+                          <Image className="center-block wsr-parther-logo" src="/Images/8.jpg" responsive />
+                        </div>
+                        <div className="wsr_block-menu__divider" />
+                        <div className="center-block">
+                          <Image className="center-block wsr-parther-logo" src="/Images/9.jpg" responsive />
                         </div>
                       </WsrPartnersItem>
                     </WsrBlockBlank>

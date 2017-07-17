@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../bootswatch/cosmo/bootstrap.css";
 import "./css/wsr.css";
 import "./css/fonts.css";
+import $ from "jquery";
 import { LinkContainer } from "react-router-bootstrap";
 
 import { FaArchive, FaCalendar } from "react-icons/lib/fa";

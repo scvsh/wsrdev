@@ -36,7 +36,7 @@ class Team extends Component {
                     <Col xs={ 12 } sm={ 12 } md={ 12 } lg={ 12 }>
                       <WsrBlockTitle title="Эксперты" />
                       <WsrPage type="wsr-page" heading="" description="" date="10.05.2017">
-                        <Col md={ 4 } >
+                        <Col md={ 12 } >
                           <Media className="wsr-certification-explanation__media">
                             <Media.Left className="wsr-certification-explanation">
                               <img width={ 100 } src="/Images/certified.svg" alt="" />
@@ -52,7 +52,23 @@ class Team extends Component {
                             </Media.Body>
                           </Media>
                         </Col>
-                        <Col md={ 4 } className="wsr-certification-description__col">
+                        <Col md={ 12 } className="wsr-certification-description__col">
+                          <Media className="wsr-certification-explanation__media">
+                            <Media.Left className="wsr-certification-explanation">
+                              <img width={ 100 } src="/Images/primary_regional.svg" alt="" />
+                            </Media.Left>
+                            <Media.Body className="wsr-certification-description">
+                              <Media.Heading>
+                                Главный региональный эксперт
+                              </Media.Heading>
+                              <p className="wsr-expert-description">
+                                Краткое описание категории
+                              </p>
+                              <Label><a href="/docs/certificate.txt">Образец Свидетельства</a></Label>
+                            </Media.Body>
+                          </Media>
+                        </Col>
+                        <Col md={ 12 } className="wsr-certification-description__col">
                           <Media className="wsr-certification-explanation__media">
                             <Media.Left className="wsr-certification-explanation">
                               <img width={ 100 } src="/Images/regional.svg" alt="" />
@@ -69,7 +85,7 @@ class Team extends Component {
                             </Media.Body>
                           </Media>
                         </Col>
-                        <Col md={ 4 } className="wsr-certification-description__col">
+                        <Col md={ 12 } className="wsr-certification-description__col">
                           <Media className="wsr-certification-explanation__media">
                             <Media.Left className="wsr-certification-explanation">
                               <img width={ 100 } src="/Images/demo.svg" alt="" />

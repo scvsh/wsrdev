@@ -7,13 +7,19 @@
 /*********************************** COMMON STYLES *****************************************/
 
 /*------------------- ------------------------------------------------------------------------*/
-body:focus {
-	outline: none;
-	outline-color: white;
-	outline-style: auto;
-	outline-width: 1px;
+body:focus  {
+	outline: none !important;
+	outline-color: white !important;
+	outline-style: auto !important;
+	outline-width: 1px !important;
 }
 
+li:focus {
+	outline: none !important;
+	outline-color: white !important;
+	outline-style: auto !important;
+	outline-width: 1px !important;
+}
 html {
 	max-width: 100%;
 	overflow-x: hidden;
@@ -1033,6 +1039,68 @@ a .wsr-footer__social-icons:first-child {
 
 }
 
+.wsr-partner-list  > li {
+	border-bottom: 1px solid #dddddd;
+	filter: grayscale(100%);
+	transition: 150 ms ease-in;
+}
+
+.wsr-partner-list  > li:hover, li.active {
+	border-bottom: 1px solid #dddddd;
+	filter: grayscale(0%);
+	opacity: 1;
+}
+
+.wsr-partner-list  > li:hover, li.active > a > div > img {
+	opacity: 1;
+}
+
+
+.wsr-partner-list  > li > a {
+	transition: 100ms ease-in;
+}
+
+.wsr-partner-list > li > a:hover {
+	color: @brand-primary;
+	font-weight: normal;
+	background-color: transparent;
+}
+
+.wsr-partner-list > li.active > a {
+	color: @brand-primary;
+	font-weight: 300;
+	background-color: transparent;
+}
+
+.wsr-partner-list > li.active:hover > a {
+	color: @brand-primary;
+	font-weight: 300;
+	background-color: transparent;
+}
+
+.wsr-partner-list> li.active > a:hover {
+	color: @brand-primary;
+	font-weight: 300;
+	background-color: transparent;
+}
+
+.wsr-partner-list > li.active > a:focus {
+	color: @brand-primary;
+	font-weight: 300;
+	background-color: transparent;
+}
+
+.wsr-partner-list > li.active:focus > a {
+	color: @brand-primary;
+	font-weight: 300;
+	background-color: transparent;
+}
+
+.sr-partner-list > li > a:focus {
+	color: @brand-primary;
+	font-weight: 100;
+	background-color: transparent;
+}
 
 
 .wsr-partner-comp__item {
@@ -1074,11 +1142,15 @@ a .wsr-footer__social-icons:first-child {
 }
 
 .wsr-parther-logo {
-	opacity: 0.5;
-	height: 100px;
-	width: 80%;
-	padding: 5%;
+	max-height: 100px;
+	max-width: 80%;
+	padding: 8%;
+	transition: 150ms ease-out;
+	opacity: 0.55;
+	cursor: pointer;
 }
+
+
 
 .wsr-parther-logo--news:after {
 	content: '';
@@ -1090,6 +1162,7 @@ a .wsr-footer__social-icons:first-child {
 	top: ~"calc(50% - 0.5em)";
 	left: -0.5em;
 	border: 2px solid whitesmoke;
+	pointer-events: none;
 }
 
 /*-------------------------------------------------------------------------------------------*/
@@ -1818,7 +1891,8 @@ span .member-expert {
 
 
 .wsr-certification-description__col {
-	border-left: 1px solid #dddddd;
+	border-top: 1px solid #dddddd;
+	padding-top: 1.5em;
 }
 
 .wsr-expert-description {
@@ -1826,7 +1900,7 @@ span .member-expert {
 }
 
 .wsr-expert-description {
-	padding: 0.5em 0 1em 0 !important;
+	padding: 0.2em 0 !important;
 }
 .wsr-certification-description  h4 {
 	font-size: 100% !important;
