@@ -537,6 +537,43 @@ export class WsrCite extends React.Component {
 
 
 
+export class WsrQuote extends React.Component {
+
+    render() {
+        let _props = this.props;
+      
+        return (
+                      <Panel className={"wsr-cite " + _props.className }>
+
+          <Row>
+          <Col className="wsr-cite-content" sm={1}>
+          <h1 className="wsr-quote-sign">“</h1>
+          </Col>
+            <Col className="wsr-cite-content" sm={7}>
+            <h4 className="wsr-cite__text">{ _props.cite } <br/>
+                </h4>
+                <hr />
+                <span className={ "wsr-cite__name" }>{ _props.name } <br/></span>
+                <span className="wsr-cite__host ">{ <span><div className="wsr-team__member-expert"></div>{ _props.host }</span> }</span>
+
+            </Col>
+            <Col sm={4} className="wsr-block__image-container full-size">
+            
+                  <WsrImage className="wsr-block__image" src={ _props.photo ? _props.photo : "/Images/avatar.png" } height={ _props.height ? _props.height : 200 } width="100%" mode="fill" /> 
+                
+            </Col>
+
+          </Row>
+ </Panel>
+              
+        );
+    }
+}
+
+
+
+
+
 export class WsrImage extends Component {
     render() {
         let {mode, src, height, width, style, ...props} = this.props;

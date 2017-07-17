@@ -1597,8 +1597,11 @@ h6 {
   font-weight: 300;
   color: white;
   padding-right: 1em;
-  padding-left: 1em;
-  padding-top: 5px;
+  margin-top: 0;
+}
+.wsr-quote-sign {
+  color: white;
+  margin-top: 0 !important;
 }
 .wsr-cite__name {
   color: #838d9d;
@@ -1611,7 +1614,18 @@ h6 {
 .wsr-cite {
   background-color: #002b4a;
   background-image: url(/Images/overlay.png);
-  padding-bottom: 1rem;
+}
+.wsr-cite hr {
+  margin: 0;
+  margin-bottom: 0.5em;
+  opacity: 0.2;
+}
+.wsr-cite-content {
+  padding-top: 20px;
+}
+.wsr-cite > .panel-body {
+  padding: 0;
+  padding-left: 20px;
 }
 .wsr-cite__avatar {
   display: flex;

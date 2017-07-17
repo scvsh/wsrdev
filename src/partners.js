@@ -11,7 +11,7 @@ import {  Label, Panel, NavItem, Tab, Nav, ListGroupItem, ListGroup, Grid, Row, 
 
 /* Import WSR React components*/
 
-import { WsrCite, WsrPartnerCarousel, WsrTierLabel, WsrBlock, WsrSckInfo, WsrExpert, WsrCompetence, WsrTeamMember, WsrPartnersItem, WsrCarousel, WsrPartner, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrCite, WsrQuote, WsrPartnerCarousel, WsrTierLabel, WsrBlock, WsrSckInfo, WsrExpert, WsrCompetence, WsrTeamMember, WsrPartnersItem, WsrCarousel, WsrPartner, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 
 /* Main app */
@@ -29,7 +29,7 @@ class Partners extends Component {
                 <Row>
                   <Col xs={ 0 } sm={ 3 } md={ 2 } lg={ 2 } />
                   <Col sm = {7}  md={7}>
-                  <Tab.Container id="left-tabs-example" defaultActiveKey="10">
+                  <Tab.Container id="left-tabs-example" defaultActiveKey="0">
                     <Row className="clearfix">
                       
                       <Col xs={ 12 } sm={ 5 } md={ 5 } lg={ 3 }>
@@ -127,9 +127,9 @@ class Partners extends Component {
                     </WsrBlockBlank>
                     <WsrBlockTitle title="Цитаты о движении" />
 
-                      <WsrCite host="ООО «Практика реставрации»" name="Ткачёв Александр Дмитриевич" cite="«Если у тебя есть сад и библиотека, то у тебя есть все, что тебе нужно»" photo="/Images/competence/6.jpg"
+                      <WsrQuote host="ООО «Практика реставрации»" name="Ткачёв Александр Дмитриевич" cite="«Если у тебя есть сад и библиотека, то у тебя есть все, что тебе нужно»" photo="/Images/competence/6.jpg"
                                     />
-                                    <WsrCite host="Колледж архитектуры и строительства № 7" name="Сергеев Николай Валерьевич" cite="«Exceptio probat regulam in casibus non exceptis»"  photo="/Images/competence/5.jpg"
+                                    <WsrQuote host="Колледж архитектуры и строительства № 7" name="Сергеев Николай Валерьевич" cite="«Exceptio probat regulam in casibus non exceptis»"  photo="/Images/competence/5.jpg"
                                     />
                   </Col>
                   
