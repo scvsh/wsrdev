@@ -1581,18 +1581,20 @@ h6 {
 }
 .wsr-cite__host {
   display: block;
-  font-size: 0.8em;
+  font-size: 0.7vw;
   bottom: 0px;
   padding: 0;
   margin: 0;
   width: 100%;
   color: white;
   font-weight: 300;
+  padding-top: 2%;
 }
 .wsr-cite-photo-wrapper img {
   width: 100%;
 }
 .wsr-cite__text {
+  font-size: 1vw;
   display: block;
   font-weight: 300;
   color: white;
@@ -1604,6 +1606,8 @@ h6 {
   margin-top: 0 !important;
 }
 .wsr-cite__name {
+  font-size: 0.8vw;
+  line-height: 1em !important;
   color: #838d9d;
   font-weight: 300;
 }
