@@ -32,7 +32,7 @@ import Qualification from "./qualification"
 import QualificationCompetence from "./qualification-competence"
 import PlayGround from "./pg"
 
-
+  
 
 const Routes = () => (
     <Router>

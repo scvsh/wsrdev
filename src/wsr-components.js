@@ -24,7 +24,7 @@ export class WsrMeta extends React.Component {
               </MetaTags>
             </div>
         );
-    }
+    } 
 }
 
 export class WsrProject extends React.Component {
