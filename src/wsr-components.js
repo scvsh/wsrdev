@@ -249,11 +249,9 @@ constructor(props) {
                               { "Компетенции".toUpperCase() }
                             </NavItem>
                           </LinkContainer>
-                          <LinkContainer to="/page.html">
-                            <NavItem className="wsr-menu-item" eventKey={ 5 }>
+                            <NavItem href="/page.html" className="wsr-menu-item" eventKey={ 5 }>
                               { "Проекты".toUpperCase() }
                             </NavItem>
-                          </LinkContainer>
                           <LinkContainer to="/partners">
                             <NavItem className="wsr-menu-item" eventKey={ 6 }>
                               { "Партнёры".toUpperCase() }
