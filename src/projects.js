@@ -38,6 +38,10 @@ class Projects extends Component {
         var lastYear = new Date(today.getFullYear() - 1, today.getMonth(), today.getDate());
         return (
             <div className="App">
+            <script src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
+    <script src="./calendar.js"></script>
+    <script src="./sc.js"></script>
+
               { /* Header carousel */ }
               <WsrCarousel />
               { /* Left sidebar */ }
@@ -75,10 +79,10 @@ class Projects extends Component {
                   </Col>
                   <Col xs={0} sm={ 1 } md={ 1 } lg={ 2 }>
                     <WsrBlockTitle title={ 'Календарь' } />
-                    <div className="wsr-full-calendar">
-                    <InfiniteCalendar rowHeight={45} selected={ new Date(2017, 6, 25) } locale={ { locale: require('date-fns/locale/ru'), headerFormat: 'dddd, D MMM', weekdays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], blank: 'Не выбрана дата', todayLabel: { long: 'Сегодня', short: 'Сег.' } } } width={ "100%" } height={ 500 } disabledDays={ [7] }
-                      minDate={ lastYear } />
-                      </div>
+                    <div id="demo">
+        <h2>Inline calendar</h2>
+        <div id="one"></div>
+    </div>
                       <div >
                       <Button block onClick={this.openModal} className="wsr-btn-search wsr-calendar-button">
                           <FaCalendar className="ri-search" />

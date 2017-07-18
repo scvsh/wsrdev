@@ -30,6 +30,7 @@ import ChampionshipPartners from "./championship-partners"
 import ChampionshipLocations from "./championship-locations"
 import Qualification from "./qualification"
 import QualificationCompetence from "./qualification-competence"
+import PlayGround from "./pg"
 
 
 

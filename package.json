@@ -6,6 +6,7 @@
     "bootswatch": "^3.3.7",
     "bundle": "^0.2.3",
     "jquery": "^3.2.1",
+    "jquery.2": "^1.0.0",
     "missing": "0.0.1",
     "npm-install-missing": "^0.1.4",
     "react": "^15.4.2",
@@ -17,6 +18,7 @@
     "react-icons": "^2.2.5",
     "react-images": "^0.5.4",
     "react-infinite-calendar": "^2.3.1",
+    "react-load-script": "0.0.6",
     "react-meta-tags": "^0.1.3",
     "react-overlays": "^0.7.0",
     "react-owl-carousel": "^2.2.0",
@@ -34,8 +36,10 @@
     "grunt-contrib-less": "^1.4.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-less": "^0.1.7",
+    "imports-loader": "^0.7.1",
     "jit-grunt": "^0.10.0",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "umd": "^3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
