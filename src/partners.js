@@ -127,9 +127,9 @@ class Partners extends Component {
                     </WsrBlockBlank>
                     <WsrBlockTitle title="Цитаты о движении" />
 
-                      <WsrQuote host="ООО «Практика реставрации»" name="Ткачёв Александр Дмитриевич" cite="Если у тебя есть сад и библиотека, то у тебя есть все, что тебе нужно" photo="/Images/competence/6.jpg"
+                      <WsrQuote host="ООО «Практика реставрации»" name="Ткачёв Александр Дмитриевич" position="Генеральный директор" cite="Если у тебя есть сад и библиотека, то у тебя есть все, что тебе нужно" photo="/Images/user1.jpg"
                                     />
-                                    <WsrQuote host="Колледж архитектуры и строительства № 7" name="Сергеев Николай Валерьевич" cite="Exceptio probat regulam in casibus non exceptis"  photo="/Images/competence/5.jpg"
+                                    <WsrQuote host="Колледж архитектуры и строительства № 7" position="Менеджер по связям с общественностью"  name="Сергеев Николай Валерьевич" cite="Exceptio probat regulam in casibus non exceptis"  photo="/Images/user2.jpg"
                                     />
                   </Col>
                   

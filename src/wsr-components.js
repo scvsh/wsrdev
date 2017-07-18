@@ -553,12 +553,14 @@ export class WsrQuote extends React.Component {
                 </h4>
                 <hr />
                 <span className={ "wsr-cite__name" }>{ _props.name } <br/></span>
+                <span className="wsr-cite__position ">{ <span><div className="wsr-team__member-expert"></div>{ _props.position }</span> }</span>
+                <hr />
                 <span className="wsr-cite__host ">{ <span><div className="wsr-team__member-expert"></div>{ _props.host }</span> }</span>
 
             </Col>
             <Col sm={4} className="wsr-block__image-container full-size">
             
-                  <WsrImage className="wsr-block__image" src={ _props.photo ? _props.photo : "/Images/avatar.png" } height={ _props.height ? _props.height : 200 } width="100%" mode="fill" /> 
+                  <WsrImage className="wsr-block__image" src={ _props.photo ? _props.photo : "/Images/avatar.png" } height="100%" width="100%" mode="fill" /> 
                 
             </Col>
 

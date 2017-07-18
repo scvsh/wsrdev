@@ -801,6 +801,7 @@ a .wsr-footer__social-icons:first-child {
 
 .wsr-block__image-container {
 	padding-right: 0px;
+	height: inherit;
 }
 
 .wsr-block:hover {
@@ -1042,12 +1043,16 @@ a .wsr-footer__social-icons:first-child {
 
 .wsr-partner-list  > li {
 	border-bottom: 1px solid #dddddd;
+	transition: 150 ms ease-in;
+}
+
+.wsr-partner-list  > li > a > div > img {
 	filter: grayscale(100%);
 	transition: 150 ms ease-in;
 }
 
-.wsr-partner-list  > li:hover, .wsr-partner-list  > li.active {
-	border-bottom: 1px solid #dddddd;
+.wsr-partner-list  > li:hover > a > div > img, 
+.wsr-partner-list  > li.active > a > div > img{
 	filter: grayscale(0%);
 	opacity: 1;
 }
@@ -1056,6 +1061,7 @@ a .wsr-footer__social-icons:first-child {
 	opacity: 1;
 }
 
+.wsr-parther-logo--news:after
 
 .wsr-partner-list  > li > a {
 	transition: 100ms ease-in;
@@ -1670,7 +1676,9 @@ h6 {
 .list-group-item .panel-default > .panel-heading {
 	background: none;
 }
-
+.wsr-cite > .panel-body > .row {
+	height: 250px;
+}
 .wsr-cite-photo-wrapper {
 	border: 2px solid;
 	border-radius: 50%;
@@ -1678,7 +1686,7 @@ h6 {
 	text-align: center;
 	border-color: white;
 }
-.wsr-cite__host {
+.wsr-cite__position {
 	display: block;
 	font-size: 0.7vw;
 	bottom: 0px;
@@ -1688,6 +1696,18 @@ h6 {
 	color: white;
 	font-weight: 300;
 	padding-top: 2%;
+}
+
+.wsr-cite__host {
+	display: block;
+	font-size: 0.7vw;
+	bottom: 0px;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	font-weight: 300;
+	padding-top: 2%;
+	color: #838d9d;
 }
 .wsr-cite-photo-wrapper img {
 	width: 100%;
@@ -1709,7 +1729,7 @@ h6 {
 	margin-top: 0 !important;
 }
 .wsr-cite__name {
-	font-size: 0.8vw;
+	font-size: 1vw;
 	line-height: 1em !important;
 	color: #838d9d;
 	font-weight: 300;
@@ -1729,6 +1749,7 @@ h6 {
 .wsr-cite hr {
 	margin: 0;
 	margin-bottom: 0.5em;
+	margin-top: 0.5em;
 	opacity: 0.2;
 }
 
@@ -2572,6 +2593,7 @@ Should we change this at all?
 		clip-path: url("#ClipBlock");
 		-webkit-clip-path: url("#ClipBlock");
 		transform: translateZ(0);
+		height: 100%;
 	}
 
 	.wsr-compact-calendar {
