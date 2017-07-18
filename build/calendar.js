@@ -45,10 +45,10 @@
     format: 'yyyy/mm/dd',
 
     // first day of the week
-    startWeek: 4,
+    startWeek: 1,
 
     // week format
-    weekArray: ['Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс', 'Пн'],
+    weekArray: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
 
     // month format
     monthArray: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
@@ -199,10 +199,10 @@
         if (isDate(y)) {
             var dt = y;
             y = dt.getFullYear();
-            m = dt.getMonth() + 1;
+            m = dt.getMonth();
             d = dt.getDate();
         }
-        return this.getFullYear() === y && this.getMonth() + 1 === m && this.getDate() === d;
+        return this.getFullYear() === y && this.getMonth() === m && this.getDate() === d;
     }
 
     Date.prototype.add = function (n) {
@@ -223,19 +223,20 @@
 
     Date.isLeap = function (y) {
         return (y % 100 !== 0 && y % 4 === 0) || (y % 400 === 0);
+
     }
 
     Date.getDaysNum = function (y, m) {
         var num = 31;
 
         switch (m) {
-            case 2:
+            case 1:
                 num = this.isLeap(y) ? 29 : 28;
                 break;
-            case 4:
-            case 6:
-            case 9:
-            case 11:
+            case 3:
+            case 5:
+            case 8:
+            case 10:
                 num = 30;
                 break;
         }
@@ -314,7 +315,7 @@
         },
         getDayItem: function (y, m, d, f) {
             var dt = this.date,
-                idt = new Date(y, m - 1, d),
+                idt = new Date(y, m, d),
                 data = {
                     w: this.width / 7,
                     h: this.height / 7,
@@ -322,6 +323,7 @@
                 },
                 markData,
                 $item;
+
 
             var selected = dt.isSame(y, m, d) ? SELECT_CLASS : '';
             if (f === 1) {
@@ -350,6 +352,7 @@
             return $item;
         },
         getDaysHtml: function (y, m) {
+
             var year, month, firstWeek, daysNum, prevM, prevDiff,
                 dt = this.date,
                 $days = $('<ol class="days"></ol>');
@@ -362,9 +365,10 @@
                 month = Number(m);
             }
 
-            firstWeek = new Date(year, month - 1, 1).getDay() || 7;
+            firstWeek = new Date(year, month, 1).getDay() || 7;
             prevDiff = firstWeek - this.options.startWeek;
             daysNum = Date.getDaysNum(year, month);
+            console.log(daysNum);
             prevM = Date.getPrevMonth(year, month);
             prevDaysNum = Date.getDaysNum(year, prevM.m);
             nextM = Date.getNextMonth(year, month);
@@ -452,6 +456,7 @@
             this.$element.html(TEMPLATE.join('').repeat(staticData));
         },
         updateDisDate: function (y, m) {
+
             this.$disDate.html(DATE_DIS_TPL.repeat({
                 year: y,
                 month: m
