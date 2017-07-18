@@ -45,10 +45,10 @@
     format: 'yyyy/mm/dd',
 
     // first day of the week
-    startWeek: 0,
+    startWeek: 4,
 
     // week format
-    weekArray: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+    weekArray: ['Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс', 'Пн'],
 
     // month format
     monthArray: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],

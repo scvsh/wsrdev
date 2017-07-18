@@ -96,7 +96,13 @@
 .calendar-display {
     font-size: 28px;
     text-indent: 10px;
+    color: #002b4a !important;
 }
+
+.calendar-display > .m{
+    color: #002b4a !important;
+}
+
 
 .view-month .calendar-hd {
     padding: 10px;

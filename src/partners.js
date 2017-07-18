@@ -125,7 +125,6 @@ class Partners extends Component {
                                     /></LinkContainer>
 
                     </WsrBlockBlank>
-                    <WsrBlockTitle title="Цитаты о движении" />
 
                       <WsrQuote host="ООО «Практика реставрации»" name="Ткачёв Александр Дмитриевич" position="Генеральный директор" cite="Если у тебя есть сад и библиотека, то у тебя есть все, что тебе нужно" photo="/Images/user1.jpg"
                                     />
