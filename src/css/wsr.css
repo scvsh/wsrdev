@@ -25,22 +25,16 @@ Make the @max and @fallback parameters optional.
 /*********************************** COMMON STYLES *****************************************/
 /*------------------- ------------------------------------------------------------------------*/
 body:focus {
-  outline: 0 !important;
-  outline-color: white !important;
-  outline-style: auto !important;
-  outline-width: 1px !important;
+  outline: none !important;
 }
 li:focus {
-  outline: 0 !important;
-  outline-color: white !important;
-  outline-style: auto !important;
-  outline-width: 1px !important;
+  outline: none !important;
 }
 li > a:focus {
-  outline: 0 !important;
-  outline-color: white !important;
-  outline-style: auto !important;
-  outline-width: 1px !important;
+  outline: none !important;
+}
+* :focus {
+  outline: none !important;
 }
 html {
   max-width: 100%;
