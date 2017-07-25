@@ -32,8 +32,8 @@ class Competence extends Component {
                 <Row>
                   <Tab.Container id="left-tabs-example" defaultActiveKey="0">
                     <Row className="clearfix">
-                      <Col xs={ 0 } sm={ 4 } md={ 2 } lg={ 2 } />
-                      <Col xs={ 12 } sm={ 5 } md={ 3 } lg={ 2 }>
+                      <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
+                      <Col xs={ 12 } sm={ 3 } md={ 3 } lg={ 2 }>
                         <WsrBlockTitle title="Категории" />
                         <WsrBlockBlank className="wsr-block-select">
                           <Nav bsStyle="pills" className="wsr-competence-category" stacked>
@@ -86,15 +86,15 @@ class Competence extends Component {
                         <Tab.Pane eventKey="0">
                           <Tab.Container id="left-tabs-example" defaultActiveKey="1c">
                             <Row className="clearfix">
-                              <Col sm={ 3 } md={ 3 } lg={ 3 }>
+                              <Col sm={ 2 } md={ 3 } lg={ 3 }>
                                 <WsrBlockTitle title="Компетенции" />
                                 <WsrBlockBlank description="" date="10.05.2017">
                                   <Panel defaultExpanded>
                                     <Row className="wsr-competence__icon-wrapper">
-                                      <Col xs={3}>
+                                      <Col xs={3} sm={3} smHidden >
                                         <Image src="/Images/icon_1.svg" />
                                       </Col>
-                                      <Col xs={9} className="wsr-team__description">
+                                      <Col xs={9} sm={3} smHidden className="wsr-team__description">
                                         <h3 className="wsr-competence__title">Информационные технологии</h3>
                                       </Col>
                                     </Row>
@@ -108,7 +108,7 @@ class Competence extends Component {
                               </Col>
                               <Tab.Content animation>
                                 <Tab.Pane eventKey="1c">
-                                  <Col sm={ 4 } md={ 4 } lg={ 5 }>
+                                  <Col sm={ 4 } md={ 3 } lg={ 5 }>
                                     <WsrBlockTitle title="Сборная Москвы" />
                                     
                                     <WsrTeamMember tier="primary" competence="Камнетесное дело" expert="Шкребтиенко Сергей Олегович"> 
@@ -157,17 +157,17 @@ class Competence extends Component {
 
                                     <WsrBlockTitle  title="Партнёры" />
                                   <WsrBlockBlank type="wsr-block-partners--horizontal">
-                                  <Col sm={6} md={4}>
+                                  <Col sm={6} md={12} lg={4}>
                                   
                           <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_01.svg" responsive />
                         
                                   </Col>
-                                  <Col sm={6} md={4}>
+                                  <Col sm={6} md={12} lg={4}>
                                   
                           <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_02.svg" responsive />
                         
                                   </Col>
-                                  <Col sm={6} md={4}>
+                                  <Col sm={6} md={12} lg={4}>
                                   
                           <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_03.svg" responsive />
                         

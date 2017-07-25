@@ -12,7 +12,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom"
 import OwlCarousel from 'react-owl-carousel';
 import MetaTags from 'react-meta-tags';
-import { Thumbnail, Media, Popover, OverlayTrigger, InputGroup, Form, FormGroup, FormControl, Image, Panel, Label, Button, Grid, Row, Col, Nav, NavItem, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
+import { Clearfix, Thumbnail, Media, Popover, OverlayTrigger, InputGroup, Form, FormGroup, FormControl, Image, Panel, Label, Button, Grid, Row, Col, Nav, NavItem, Navbar, MenuItem, NavDropdown } from "react-bootstrap";
 
 
 export class WsrMeta extends React.Component {
@@ -94,17 +94,10 @@ export class WsrMenuTitle extends React.Component {
            
             <Link to="/">
               <div className="wsr-title">
-              { /* 
-                <div className="wsr-title-primary">
-                  Региональный координационный центр
-                </div>
-                <div className="wsr-title-descriptor">
-                  WorldSkills Russia по городу Москвe
-                </div>
-                
-                */}
                 <div className="wsr-title-logo">
-                  <img alt="" src="/Images/wsr-msk-logo2.svg" />
+                    <img alt="" src="/Images/wsr-msk-logo2.svg" />
+                  <div className="test-sizes">
+                  </div>
                 </div>
               
               </div>
@@ -162,24 +155,14 @@ constructor(props) {
                   </Navbar.Header>
                   <Navbar.Collapse>
                     <Nav>
-                      <NavDropdown eventKey={ 1 } title="Wsr в Москве" id="basic-nav-dropdown">
-                        <LinkContainer to="/about/rkc">
-                          <MenuItem eventKey={ 1.1 }>РКЦ Москвы</MenuItem>
+                    <LinkContainer to="/about/rkc">
+                      <NavItem eventKey={ 1 } title="WSR в Москве" id="basic-nav">
+                          WSR в Москве
+                        </NavItem>
                         </LinkContainer>
-                        <LinkContainer to="/about/history">
-                          <MenuItem eventKey={ 1.2 }>
-                            История
-                          </MenuItem>
-                        </LinkContainer>
-                        <LinkContainer to="/about/reglament">
-                          <MenuItem eventKey={ 1.3 }>
-                            Регламентирующие документы
-                          </MenuItem>
-                        </LinkContainer>
-                      </NavDropdown>
                       <LinkContainer to="/team">
-                        <NavItem eventKey={ 2 } title="Сборная команда" id="basic-nav">
-                          Сборная команда
+                        <NavItem eventKey={ 2 } title="Сборная Москвы" id="basic-nav">
+                          Сборная Москвы
                         </NavItem>
                       </LinkContainer>
                       <LinkContainer to="/experts">
@@ -214,7 +197,7 @@ constructor(props) {
                     </Nav>
                   </Navbar.Collapse>
                 </Navbar>
-                <Col xs={ 5 } sm={ 5 } md={ 4 } lg={ 3 }>
+                <Col xs={ 5 } sm={ 4 } md={ 4 } lg={ 3 }>
                   <div ref={(ref) => this.Affix = ref} dir="rtl" className="wsr-affix">
                     <div className="wsr-affix">
                       <Row dir="ltr">
@@ -545,10 +528,10 @@ export class WsrQuote extends React.Component {
                       <Panel className={"wsr-cite " + _props.className }>
 
           <Row>
-          <Col className="wsr-cite-content" sm={1}>
+          <Col className="wsr-cite-content" sm={1} md={2} lg={1}>
           <h1 className="wsr-quote-sign">“</h1>
           </Col>
-            <Col className="wsr-cite-content" sm={7}>
+            <Col className="wsr-cite-content" sm={7} md={10} lg={7}>
             <h4 className="wsr-cite__text">{ _props.cite } <br/>
                 </h4>
                 <hr />
@@ -558,7 +541,7 @@ export class WsrQuote extends React.Component {
                 <span className="wsr-cite__host ">{ <span><div className="wsr-team__member-expert"></div>{ _props.host }</span> }</span>
 
             </Col>
-            <Col sm={4} className="wsr-block__image-container full-size">
+            <Col sm={4} md={0} mdHidden lg={4} className="wsr-block__image-container full-size">
             
                   <WsrImage className="wsr-block__image" src={ _props.photo ? _props.photo : "/Images/avatar.png" } height="100%" width="100%" mode="fill" /> 
                 
@@ -711,16 +694,14 @@ export class WsrSckInfo extends React.Component {
               </Row>
               <Row className="wsr-block__sck-info-description">
               <hr />
-                <Col xs={ 6 }>
+                <Col xs={ 6 } md={12} lg={6}>
                   <div className="name">{ "Ответственный: " + _props.contact } </div>
                   
                 </Col>
-                <Col xs={ 6 }>
-                  
-                  
+                <Col xs={ 6 } md={12} lg={6}>
                   <Row>
                   <OverlayTrigger trigger={ ['hover', 'focus'] } rootClose placement="bottom" overlay={ popoverBottom }>
-                   <div> <MdPlace className="ri-contacts" />г. Москва, ул. Поклонная, д. 2<Label className="wsr-location-label">Как доехать?</Label></div>
+                   <div> <MdPlace className="ri-contacts" />г. Москва, ул. Поклонная, д. 2</div>
                   </OverlayTrigger>
                   <div><MdPhone className="ri-contacts" /><a className="contact" href={ "tel:" + _props.phone }>{ _props.phone }</a></div>
                   <div><MdMail className="ri-contacts" /><a className="contact" href={ "mailto:" + _props.mail }>{ _props.mail }</a></div>
@@ -937,7 +918,7 @@ export class WsrTeamMemberItem extends React.Component {
         let _props = this.props;
         return (
             <Row className="wsr-team__avatar ">
-              <Col sm={3}>
+              <Col sm={3} md={3} xs={3} smHidden>
               <Row className="wsr-team__avatar__container">
                 <div className={ "wsr-team__member-photo-wrapper " + (_props.tier === "primary" ? "member-primary" : "member-secondary") }>
                   <Image src={ _props.photo ? _props.photo : "/Images/avatar.png"} circle responsive />
@@ -945,7 +926,7 @@ export class WsrTeamMemberItem extends React.Component {
                 </Row>
 
                 </Col>
-                <Col sm={8}>
+                <Col sm={12} md={8} xs={8}>
                 <span className={ _props.tier === "primary" ? "wsr-team__member--primary" : "wsr-team__member--secondary" }>{ _props.name } <br/></span>
                 
                 <hr />
@@ -1065,7 +1046,8 @@ export class WsrExpert extends React.Component {
 
             <Panel className={"wsr-team__member wsr-team__expert " + _props.className } header={ _props.head ? <TextTruncate line={ 1 } truncateText="…" text={ _props.competence } /> : false }>
               <Row className="wsr-team__avatar ">
-              <Col xs={3} sm={3}>
+              <Col xs={3} sm={3} smHidden md={3}>
+              <Clearfix/>
               <Row className="wsr-team__avatar__container">
                 <div className={ "wsr-team__member-photo-wrapper " + _props.tier }>
                   <Image src={ _props.photo } circle responsive />
@@ -1075,7 +1057,7 @@ export class WsrExpert extends React.Component {
                 
                 </Row>
                 </Col>
-                <Col xs={9} sm={9}>
+                <Col xs={9} sm={12} md={9}>
                 <span className="wsr-team__member--expert">{ _props.name } <br/></span>
                 <hr />
                 <div className="flex-grow">
@@ -1151,7 +1133,7 @@ export class WsrExpertSearch extends React.Component {
         return (
             <Row>
               <Form>
-                <Col md={ 8 } lg={ 3 }>
+                <Col xs={6} sm={4} md={ 8 } lg={ 3 }>
                   <FormGroup controlId="formControlsSelect">
                     <WsrBlockTitle title="Категория" />
                     <FormControl componentClass="select" placeholder="select">
@@ -1159,7 +1141,7 @@ export class WsrExpertSearch extends React.Component {
                     </FormControl>
                   </FormGroup>
                 </Col>
-                <Col md={ 4 } lg={ 3 }>
+                <Col xs={6} sm={4} md={ 4 } lg={ 3 }>
                   <FormGroup controlId="formControlsSelect">
                     <WsrBlockTitle title="Компетенция" />
                     <FormControl componentClass="select" placeholder="select">
@@ -1167,7 +1149,7 @@ export class WsrExpertSearch extends React.Component {
                     </FormControl>
                   </FormGroup>
                 </Col>
-                <Col md={ 8 } lg={ 4 }>
+                <Col sm={4} md={ 8 } lg={ 4 }>
                   <FormGroup>
                     <WsrBlockTitle title="Поиск" />
                     <InputGroup>
@@ -1180,7 +1162,7 @@ export class WsrExpertSearch extends React.Component {
                     </InputGroup>
                   </FormGroup>
                 </Col>
-                <Col md={ 4 } lg={ 2 } >
+                <Col md={ 4 } lg={ 2 } xsHidden>
                   <FormGroup>
                     <WsrBlockTitle title={'\u00A0'} />
 

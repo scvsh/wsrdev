@@ -31,8 +31,8 @@ class Team extends Component {
               { /* Main content */ }
               <Grid bsClass="containter-fluid">
                 <Row>
-                  <Col xs={ 0 } sm={ 3 } md={ 2 } lg={ 2 } />
-                  <Col xs={ 12 } sm={ 7 } md={ 7 } lg={ 7 } className="full-size">
+                  <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
+                  <Col xs={ 12 } sm={ 5 } md={ 6 } lg={ 7 } className="full-size">
                     <Col xs={ 12 } sm={ 12 } md={ 12 } lg={ 12 }>
                       <WsrBlockTitle title="Эксперты" />
                       <WsrPage type="wsr-page" heading="" description="" date="10.05.2017">
@@ -104,7 +104,7 @@ class Team extends Component {
                       </WsrPage>
                     </Col>
                   </Col>
-                  <Col sm={ 2 } md={ 3 } lg={ 3 }>
+                  <Col sm={ 4 } md={ 3 } lg={ 3 }>
                     <WsrBlockTitle title="Координатор" />
                     <WsrBlockBlank className="wsr-block-select">
                       <LinkContainer exact to="/">
@@ -136,8 +136,8 @@ class Team extends Component {
                   </Col>
                 </Row>
                 <Row>
-                  <Col xs={ 0 } sm={ 3 } md={ 2 } lg={ 2 } />
-                  <Col xs={ 12 } sm={ 9 } md={ 10 } lg={ 10 }>
+                  <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
+                  <Col xs={ 12 } sm={ 9 } md={ 9 } lg={ 10 }>
                     <WsrExpertSearch export categories={ ["Все категории", "Специалисты строительной сферы", "Творчество и дизайн", "Специалисты, занятые на промышленном производстве", "Сфера услуг", "Обслуживание гражданского транспорта", "RU", "FutureSkills (FS)", "Презентационная (FS)", "Презентационная", "JuniorSkills", "Презентационная (JS)"] } competences={ ["Все компетенции", "Камнетёсное дело", "Облицовка плиткой", "Столярное дело", "Плотницкое дело", "Кирпичная кладка", "Холодильная техника и системы кондиционирования", "Сантехника и отопление", "Сухое строительство и штукатурные работы", "Малярные и декоративные работы", "Ландшафтный дизайн", "Электромонтаж", "Производство мебели"] } />
                     <WsrBlockTitle title="Строительная сфера" />
                     <Row className="row-flex row-flex-wrap">

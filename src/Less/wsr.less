@@ -22,6 +22,9 @@ li > a:focus {
 * :focus {
 	outline: none !important;
 }
+a:hover, a:focus {
+	text-decoration: none;
+}
 
 html {
 	max-width: 100%;
@@ -29,6 +32,7 @@ html {
 	transition: 100ms ease-in;
 	width: 100vw;
 	font-family: 'Gotham Pro', Helvetica, Arial, sans-serif;
+	word-wrap: break-word;
 }
 
 .label {
@@ -1140,6 +1144,8 @@ a .wsr-footer__social-icons:first-child {
 	display: flex;
 	padding-top: 2em;
 	padding-bottom: 2em;
+	flex-wrap: wrap;
+	align-items: center;
 }
 
 .wsr-partner-container {
@@ -1185,6 +1191,7 @@ a .wsr-footer__social-icons:first-child {
 	padding-top: 0px;
 	padding-left: 20px;
 	vertical-align: top;
+	word-break: break-word;
 }
 
 .wsr-numbers__item  h1 {
@@ -1579,6 +1586,9 @@ h6 {
 .panel-title > a {
 	font-weight: normal;
 	cursor: pointer;
+	font-size: 0.8em;
+    color: @brand-secondary;
+    font-weight: 300;
 }
 
 .panel > .list-group {
@@ -1622,6 +1632,8 @@ h6 {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
+
+
 
 /*
 .row.is-flex > [class*='col-'] {
@@ -2606,6 +2618,11 @@ Should we change this at all?
 	.wsr-full-calendar {
 		display: block;
 	}
+	// .test-sizes:after {
+	// 	content: 'MIN-LG';
+	// 	color: white;
+	// 	font-size: 2em;
+	// }
 
 }
 
@@ -2646,7 +2663,7 @@ Should we change this at all?
 	}
 
 	.wsr-certification-explanation__media {
-		font-size: 0.8em;
+		//font-size: 0.8em;
 	}
 
 	.wsr-certification-explanation__media h4 {
@@ -2660,6 +2677,24 @@ Should we change this at all?
 	.wsr-full-calendar {
 		display: none;
 	}
+	// .test-sizes:after  {
+	// 	content: 'MD-LG';
+	// 	color: white;
+	// 	font-size: 2em;
+	// }
+	.wsr-cite__text {
+		font-size: 1em;
+	}
+	.wsr-cite__host {
+		font-size: 0.8em;
+	}
+	.wsr-cite__name {
+		font-size: 0.8em;
+	}
+	.wsr-cite__position {
+		font-size: 0.8em;
+	}
+
 
 }
 
@@ -2705,11 +2740,6 @@ Should we change this at all?
 		display: none;
 	}
 
-	.panel,
-	.panel-title,
-	.list-group {
-		font-size: 0.8em;
-	}
 
 	.wsr-certification-explanation__media {
 		font-size: 0.8em;
@@ -2725,6 +2755,52 @@ Should we change this at all?
 
 	.wsr-full-calendar {
 		display: none;
+	}
+	// .test-sizes:after  {
+	// 	content: 'SM-MD';
+	// 	color: white;
+	// 	font-size: 2em;
+	// }
+	.wsr-cite__text {
+		font-size: 1em;
+	}
+	.wsr-cite__host {
+		font-size: 0.8em;
+	}
+	.wsr-cite__name {
+		font-size: 0.8em;
+	}
+	.wsr-cite__position {
+		font-size: 0.8em;
+	}
+	.wsr-competence-category > li > a {
+		font-size: 0.8em;
+	}
+	.wsr-team__member {
+		font-size: 0.8em;
+	}
+	.wsr-block__heading {
+		font-size: 0.8em;
+	}
+	.list-group {
+		font-size: 0.8em;
+	}
+	.rkc-team {
+		min-height: 150px;
+	}
+	.form-control {
+		font-size: 0.8em;
+		height: 3em;
+	}
+	.btn-default {
+		font-size: 0.8em;
+		height: 3em;
+	}
+	.panel-title > a {
+		font-size: 0.8em;
+	}
+	.wsr-block__description {
+		font-size: 0.9em;
 	}
 
 }
@@ -2796,11 +2872,6 @@ Should we change this at all?
 		margin-top: 2em;
 	}
 
-	.panel,
-	.panel-title,
-	.list-group {
-		font-size: 0.8em;
-	}
 
 	.wsr-compact-calendar {
 		display: none;
@@ -2809,10 +2880,21 @@ Should we change this at all?
 	.wsr-full-calendar {
 		display: block;
 	}
+	// .test-sizes:after  {
+	// 	content: 'XS-SM';
+	// 	color: white;
+	// 	font-size: 2em;
+	// }
+	.wsr-menu__contacts a {
+
+	}
 
 }
 
 @media (max-width:@screen-xs) {
+	.App {
+		padding-top: 40px;
+	}
 	.wsr-certification-description__col {
 	border-left: none;
 }
@@ -2841,7 +2923,7 @@ Should we change this at all?
 	}
 
 	.wsr-block__title {
-		margin-top: 1em;
+		margin-top: 0;
 	}
 
 	.top_gal {
@@ -2885,7 +2967,13 @@ Should we change this at all?
 	.wsr-full-calendar {
 		display: block;
 	}
-
+	
+	// .test-sizes:after  {
+	// 	content: 'MAX-XS';
+	// 	color: white;
+	// 	font-size: 2em;
+	// }
+	
 }
 
 /*-------------------------------------------------------------------------------------------*/

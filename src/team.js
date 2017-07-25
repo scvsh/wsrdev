@@ -34,7 +34,7 @@ class Team extends Component {
                   </Col>
                 </Row>
                 
-                <Row className="containter-fluid">
+                <Row>
 
                   <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
                   <Col xs={ 12 } sm={ 7 } md={ 8 } lg={ 9 } className="full-size">  

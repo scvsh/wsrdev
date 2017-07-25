@@ -7,7 +7,7 @@ import "./css/fonts.css";
 import OwlCarousel from 'react-owl-carousel';
 
 /* Import React-Boorstrap components*/
-import { Nav, NavItem, Grid, Row, Col, Image} from "react-bootstrap";
+import { Clearfix, Nav, NavItem, Grid, Row, Col, Image} from "react-bootstrap";
 
 /* Import WSR React components*/
 
@@ -33,8 +33,8 @@ class App extends Component {
               { /* Main content */ }
               <Grid bsClass="containter-fluid">
                 <Row>
-                  <Col xs={ 0 } sm={ 4 } md={ 3 } lg={ 2 } />
-                  <Col xs={ 12 } sm={ 5 } md={ 4 } lg={ 5 }>
+                  <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
+                  <Col xs={ 12 } sm={ 6 } md={ 4 } lg={ 5 }>
                     <WsrBlockTitle link="/press/important" title="Важная информация" more />
                     <WsrBlock type="wsr-block-important" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
 На международном чемпионата China International Skills Competition 2017 (CISC-2017)"
@@ -85,10 +85,12 @@ class App extends Component {
                       <WsrNewsItem heading="Консультация по процедуре аккредитации СЦК (Специализированного центра компетенций)" description="26 апреля 2017 года состоится консультация по процедуре аккредитации СЦК (Специализированного центра компетенций). "
                         date="26.04.2017" />
                     </WsrBlockBlank>
+
                   </Col>
-                  
+
+                  <Clearfix visibleSmBlock/>
                   { /* Block partners */ }
-                  <Col xs={ 12 } sm={ 0 } md={ 2 }>
+                  <Col xs={ 12 } sm={5} md={ 2 } smHidden>
                   
                     <WsrBlockTitle title="Партнёры" />
                     <WsrBlockBlank className="wsr-block-select">
