@@ -132,6 +132,7 @@ class App extends Component {
 
                   </Col>
                 </Row>
+                </Grid>
                 { /* Bottom Gallery */ }
                 <Row>
                   <OwlCarousel className="owl-theme" loop  items={ 4 } margin={ 0 } nav={ false } dots={ false }>
@@ -152,7 +153,7 @@ class App extends Component {
                 
                 { /* Footer */ }
                 <WsrFooter/>
-              </Grid>
+              
             </div>
         );
     }

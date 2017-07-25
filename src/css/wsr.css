@@ -2649,10 +2649,16 @@ Should we change this at all?
     display: block;
   }
   .wsr-block__heading {
-    padding-top: 10px;
+    padding-top: 0px;
   }
   .wsr-competence__title {
     font-size: 2em;
+  }
+  .wsr_page__container {
+    padding: 10px;
+  }
+  .wsr-certification-description {
+    padding-left: 10px;
   }
 }
 @media (min-width: 480px) and (max-width: 767px) and (max-height: 457.516339869281px) {
@@ -2720,10 +2726,16 @@ Should we change this at all?
     display: block;
   }
   .wsr-block__heading {
-    padding-top: 10px;
+    padding-top: 0px;
   }
   .wsr-competence__title {
     font-size: 2em;
+  }
+  .wsr_page__container {
+    padding: 10px;
+  }
+  .wsr-certification-description {
+    padding-left: 10px;
   }
 }
 /*-------------------------------------------------------------------------------------------*/

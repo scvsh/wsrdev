@@ -580,6 +580,7 @@ class Competence extends Component {
                     </Row>
                   </Tab.Container>
                 </Row>
+                </Grid>
                 { /* Bottom Gallery */ }
                 <Row>
                   <OwlCarousel className="owl-theme" loop items={ 4 } margin={ 0 } nav={ false } dots={ false }>
@@ -599,7 +600,6 @@ class Competence extends Component {
                 </Row>
                 { /* Footer */ }
                 <WsrFooter/>
-              </Grid>
             </div>
         );
     }

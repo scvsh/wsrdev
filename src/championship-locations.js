@@ -58,6 +58,7 @@ class Championship extends Component {
                     </WsrBlockBlank>
                   </Col>
                 </Row>
+              </Grid>
                 { /* Bottom Gallery */ }
                 <Row>
                   <OwlCarousel className="owl-theme" loop items={ 4 } margin={ 0 } nav={ false } dots={ false }>
@@ -77,7 +78,6 @@ class Championship extends Component {
                 </Row>
                 { /* Footer */ }
                 <WsrFooter/>
-              </Grid>
             </div>
         );
     }

@@ -69,6 +69,7 @@ class Rkc extends Component {
                           
                   
                 </Row>
+                </Grid>
                 { /* Bottom Gallery */ }
                 <Row>
                   <OwlCarousel className="owl-theme" loop items={ 4 } margin={ 0 } nav={ false } dots={ false }>
@@ -88,7 +89,7 @@ class Rkc extends Component {
                 </Row>
                 { /* Footer */ }
                 <WsrFooter/>
-              </Grid>
+              
             </div>
         );
     }

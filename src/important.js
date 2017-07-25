@@ -78,6 +78,7 @@ class Important extends Component {
                     </WsrBlockBlank>
                   </Col>
                 </Row>
+                </Grid>
                 { /* Bottom Gallery */ }
                 <Row>
                   <OwlCarousel className="owl-theme" loop  items={ 4 } margin={ 0 } nav={ false } dots={ false }>
@@ -98,7 +99,6 @@ class Important extends Component {
                 
                 { /* Footer */ }
                 <WsrFooter/>
-              </Grid>
             </div> 
         );
     }

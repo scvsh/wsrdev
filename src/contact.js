@@ -104,6 +104,7 @@ class Contact extends Component {
                     </WsrBlockBlank>
                   </Col>
                 </Row>
+                              </Grid>
                 { /* Bottom Gallery */ }
                 <Row>
                   <OwlCarousel className="owl-theme" loop  items={ 4 } margin={ 0 } nav={ false } dots={ false }>
@@ -124,7 +125,6 @@ class Contact extends Component {
                 
                 { /* Footer */ }
                 <WsrFooter/>
-              </Grid>
             </div>
         );
     }

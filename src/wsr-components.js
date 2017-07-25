@@ -246,10 +246,6 @@ constructor(props) {
                             </NavItem>
                           </LinkContainer>
                         </Nav>
-
-                      <Row className="">
-
-                      </Row>
                         <hr className="wsr-menu__contacts-divider" />
                         <div className="wsr-menu__contacts">
                           <div>
@@ -590,7 +586,7 @@ export class WsrBlock extends React.Component {
     render() {
         let _props = this.props;
         return (
-            <div className={ "wsr-block " + _props.type }>
+            <div className={ "wsr-block " + ( _props.type ? _props.type : "" ) }>
               <Row className="row-eq-height">
                 <svg pointerEvents="none" width="0" height="0">
                   <clipPath pointerEvents="none" id="ClipBlock" clipPathUnits="objectBoundingBox">
@@ -746,7 +742,7 @@ export class WsrBlockBlank extends React.Component {
     render() {
         let _props = this.props;
         return (
-            <div className={ "wsr-block " + _props.type }>
+            <div className={ "wsr-block " + ( _props.type ? _props.type : "" ) }>
               { _props.children }
             </div>
         );
