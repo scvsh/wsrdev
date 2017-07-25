@@ -27,12 +27,12 @@ class Partners extends Component {
               { /* Main content */ }
               <Grid bsClass="containter-fluid">
                 <Row>
-                  <Col xs={ 0 } sm={ 3 } md={ 2 } lg={ 2 } />
-                  <Col sm = {7}  md={7}>
+                  <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
+                  <Col sm = {6}  md={6}>
                   <Tab.Container id="left-tabs-example" defaultActiveKey="0">
                     <Row className="clearfix">
                       
-                      <Col xs={ 12 } sm={ 5 } md={ 5 } lg={ 3 } className="full-size">
+                      <Col xs={ 12 } sm={ 3 } md={ 4 } lg={ 3 } >
                         <WsrBlockTitle title="Партнёры" />
                         <WsrBlockBlank className="wsr-block-select">
                           <Nav bsStyle="pills" className="wsr-partner-list" stacked>
@@ -75,7 +75,7 @@ class Partners extends Component {
                         <Tab.Pane eventKey="0">
                           <Tab.Container id="left-tabs-example" defaultActiveKey="1c">
                             <Row className="clearfix">
-                              <Col sm={ 7 } md={ 7 } lg={ 9 } className="full-size">
+                              <Col sm={ 9 } md={ 8 } lg={ 9 } className="full-size">
                                 <WsrBlockTitle title="Информация о партнёре" />
                                 <WsrPartner 
                     title="CISCO" 
@@ -98,7 +98,7 @@ class Partners extends Component {
                         <Tab.Pane eventKey="10">
                           <Tab.Container id="left-tabs-example" defaultActiveKey="1c">
                             <Row className="clearfix">
-                              <Col sm={ 7 } md={ 7 } lg={ 9 } className="full-size">
+                              <Col sm={ 9 } md={ 8 } lg={ 9 } className="full-size">
                                 <WsrBlockTitle title="Новости партнёров" />
 
 
@@ -117,7 +117,7 @@ class Partners extends Component {
                     </Row>
                   </Tab.Container>
                   </Col>
-                  <Col sm={ 2 } md={ 3 } lg={ 3 } >
+                  <Col sm={ 3 } md={ 3 } lg={ 3 } >
                   <WsrBlockTitle title="Координатор" />
                                   <WsrBlockBlank className="wsr-block-select">
                       
