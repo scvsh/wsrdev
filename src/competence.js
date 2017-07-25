@@ -91,10 +91,10 @@ class Competence extends Component {
                                 <WsrBlockBlank description="" date="10.05.2017">
                                   <Panel defaultExpanded>
                                     <Row className="wsr-competence__icon-wrapper">
-                                      <Col xs={3} sm={3} smHidden >
+                                      <Col xs={3} sm={3}  smHidden >
                                         <Image src="/Images/icon_1.svg" />
                                       </Col>
-                                      <Col xs={9} sm={3} smHidden className="wsr-team__description">
+                                      <Col xs={9} sm={9} smHidden className="wsr-team__description">
                                         <h3 className="wsr-competence__title">Информационные технологии</h3>
                                       </Col>
                                     </Row>
