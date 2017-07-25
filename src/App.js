@@ -11,7 +11,7 @@ import { Clearfix, Nav, NavItem, Grid, Row, Col, Image} from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlock, WsrBlockBlank, WsrNewsItem, WsrPartnersItem, WsrNumbersItem, WsrFooter,} from "./wsr-components.js";
+import { WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlock, WsrBlockNew, WsrBlockBlank, WsrNewsItem, WsrPartnersItem, WsrNumbersItem, WsrFooter,} from "./wsr-components.js";
 
 
 /* Main app */

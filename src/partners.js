@@ -32,7 +32,7 @@ class Partners extends Component {
                   <Tab.Container id="left-tabs-example" defaultActiveKey="0">
                     <Row className="clearfix">
                       
-                      <Col xs={ 12 } sm={ 5 } md={ 5 } lg={ 3 }>
+                      <Col xs={ 12 } sm={ 5 } md={ 5 } lg={ 3 } className="full-size">
                         <WsrBlockTitle title="Партнёры" />
                         <WsrBlockBlank className="wsr-block-select">
                           <Nav bsStyle="pills" className="wsr-partner-list" stacked>
@@ -117,7 +117,7 @@ class Partners extends Component {
                     </Row>
                   </Tab.Container>
                   </Col>
-                  <Col sm={ 2 } md={ 3 } lg={ 3 } className="">
+                  <Col sm={ 2 } md={ 3 } lg={ 3 } >
                   <WsrBlockTitle title="Координатор" />
                                   <WsrBlockBlank className="wsr-block-select">
                       

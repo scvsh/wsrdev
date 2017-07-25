@@ -872,6 +872,12 @@ a .wsr-footer__social-icons:first-child {
   font-weight: bold;
   color: white;
 }
+.wsr-main-menu__nav {
+  pointer-events: none;
+}
+.wsr-main-menu__nav > li > a {
+  pointer-events: all;
+}
 .wsr-main-menu__nav > li.active > a {
   margin-left: -0.2vw;
 }
@@ -908,6 +914,20 @@ a .wsr-footer__social-icons:first-child {
 /*-------------------------------------------------------------------------------------------*/
 /*********************************** WSR-BLOCK STYLES ****************************************/
 /*-------------------------------------------------------------------------------------------*/
+.wsr-block__content {
+  display: flex;
+  flex-direction: row;
+}
+.wsr-block__image {
+  min-height: 200px;
+  border-radius: 0 3px 3px 0;
+  -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
+  clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
+  clip-path: url("#ClipBlock");
+  -webkit-clip-path: url("#ClipBlock");
+  transform: translateZ(0);
+  background-size: cover;
+}
 .list-group-item:first-child {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -2375,15 +2395,6 @@ Should we change this at all?
   .navbar-inverse {
     display: none;
   }
-  .wsr-block__image {
-    border-radius: 0 3px 3px 0;
-    -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
-    clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
-    clip-path: url("#ClipBlock");
-    -webkit-clip-path: url("#ClipBlock");
-    transform: translateZ(0);
-    height: 100%;
-  }
   .wsr-compact-calendar {
     display: none;
   }
@@ -2432,14 +2443,6 @@ Should we change this at all?
   }
   .navbar-inverse {
     display: none;
-  }
-  .wsr-block__image {
-    border-radius: 0 3px 3px 0;
-    -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
-    clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
-    clip-path: url("#ClipBlock");
-    -webkit-clip-path: url("#ClipBlock");
-    transform: translateZ(0);
   }
   .wsr-certification-explanation__media h4 {
     font-size: 1.2em;
@@ -2507,14 +2510,6 @@ Should we change this at all?
   }
   .navbar-inverse {
     display: none;
-  }
-  .wsr-block__image {
-    border-radius: 0 3px 3px 0;
-    -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
-    clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
-    clip-path: url("#ClipBlock");
-    -webkit-clip-path: url("#ClipBlock");
-    transform: translateZ(0);
   }
   .wsr-carousel-menu__bg {
     display: none;
@@ -2648,9 +2643,6 @@ Should we change this at all?
   .wsr-full-calendar {
     display: block;
   }
-  .wsr-block__heading {
-    padding-top: 0px;
-  }
   .wsr-competence__title {
     font-size: 2em;
   }
@@ -2659,6 +2651,12 @@ Should we change this at all?
   }
   .wsr-certification-description {
     padding-left: 10px;
+  }
+  .wsr-block__content {
+    flex-wrap: wrap;
+  }
+  .wsr-block__image {
+    clip-path: none;
   }
 }
 @media (min-width: 480px) and (max-width: 767px) and (max-height: 457.516339869281px) {
@@ -2725,9 +2723,6 @@ Should we change this at all?
   .wsr-full-calendar {
     display: block;
   }
-  .wsr-block__heading {
-    padding-top: 0px;
-  }
   .wsr-competence__title {
     font-size: 2em;
   }
@@ -2736,6 +2731,12 @@ Should we change this at all?
   }
   .wsr-certification-description {
     padding-left: 10px;
+  }
+  .wsr-block__content {
+    flex-wrap: wrap;
+  }
+  .wsr-block__image {
+    clip-path: none;
   }
 }
 /*-------------------------------------------------------------------------------------------*/

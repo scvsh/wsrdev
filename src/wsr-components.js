@@ -582,7 +582,7 @@ export class WsrImage extends Component {
     }
 }
 
-export class WsrBlock extends React.Component {
+export class WsrBlockOld extends React.Component {
     render() {
         let _props = this.props;
         return (
@@ -614,8 +614,48 @@ export class WsrBlock extends React.Component {
                     { _props.date }
                   </p>
                 </Col>
-                <Col sm={ 3 } md={ 5 } className="wsr-block__image-container">
+                <Col sm={ 3 } md={ 5 } className="wsr-block__image" >
                   <WsrImage className="wsr-block__image" src={ _props.image } height={ _props.height ? _props.height : 200 } width="100%" mode="fill" />
+                </Col>
+              </Row>
+            </div>
+        );
+    }
+}
+
+export class WsrBlock extends React.Component {
+    render() {
+        let _props = this.props;
+        return (
+            <div className={ "wsr-block " + ( _props.type ? _props.type : "" ) }>
+              <Row className="wsr-block__content">
+                <svg pointerEvents="none" width="0" height="0">
+                  <clipPath pointerEvents="none" id="ClipBlock" clipPathUnits="objectBoundingBox">
+                    <polygon points="0 1, 1 1,1 0,0.09 0">
+                    </polygon>
+                  </clipPath>
+                </svg>
+                <Col sm={ 8 } md={ 7 } className="wsr_block__container">
+                  <LinkContainer className="text-left wsr-block__heading" to={ _props.link ? _props.link : "/" }>
+                    <h5 className="text-left wsr-block__heading">
+                                                                                                                                                    <TextTruncate
+                        line={ 4 }
+                        truncateText="…"
+                        text={ _props.heading }
+                        />
+                                                                                                                                                </h5>
+                  </LinkContainer>
+                  <div className="wsr-block__description">
+                    <TextTruncate className="wsr-block__description" line={ _props.lines? _props.lines : 2 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
+                                                                                                                                                   <MdArrowForward className="wsr-block__date-icon" />
+                                                                                                                                                 </a> } />
+                  </div>
+                  <p className="wsr-block__date">
+                    <MdDateRange className="wsr-block__date-icon" />
+                    { _props.date }
+                  </p>
+                </Col>
+                <Col xs={12} sm={ 4 } md={ 5 } className="wsr-block__image" style = {{ backgroundImage: "url(" + _props.image + ")" }}>
                 </Col>
               </Row>
             </div>
