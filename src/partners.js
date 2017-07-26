@@ -28,7 +28,7 @@ class Partners extends Component {
               <Grid bsClass="containter-fluid">
                 <Row>
                   <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
-                  <Col sm = {6}  md={6}>
+                  <Col sm = {6}  md={6} lg={7}>
                   <Tab.Container id="left-tabs-example" defaultActiveKey="0">
                     <Row className="clearfix">
                       

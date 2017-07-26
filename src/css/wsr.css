@@ -33,7 +33,7 @@ li:focus {
 li > a:focus {
   outline: none !important;
 }
-* :focus {
+*:focus {
   outline: none !important;
 }
 a:hover,
@@ -169,7 +169,7 @@ li .active > a:any-link {
   overflow-x: hidden;
 }
 .wsr-carousel-menu__bg {
-  z-index: 100500;
+  z-index: 1000;
   right: 0px;
   position: absolute;
   clip-path: url("#ClipRight");
@@ -193,7 +193,7 @@ li .active > a:any-link {
   transform: skew(15deg);
   font-weight: 300;
   background-size: cover;
-  z-index: 40;
+  z-index: 1000;
 }
 @media (max-width: 1600px) {
   .wsr-carousel-menu {
@@ -927,6 +927,7 @@ a .wsr-footer__social-icons:first-child {
   -webkit-clip-path: url("#ClipBlock");
   transform: translateZ(0);
   background-size: cover;
+  background-position: center;
 }
 .list-group-item:first-child {
   border-top-left-radius: 4px;
@@ -940,7 +941,7 @@ a .wsr-footer__social-icons:first-child {
   background-color: #ffffff;
   box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);
   width: 100%;
-  z-index: 103;
+  z-index: 1000;
   margin-bottom: 15px;
   transition: 300ms ease-out;
   border-radius: 3px;
@@ -956,7 +957,6 @@ a .wsr-footer__social-icons:first-child {
 .wsr_block__container {
   padding-right: 20px;
   padding-left: 20px;
-  font-size: 0.9em;
 }
 .wsr_block__flex-container {
   height: 415px;
@@ -1004,6 +1004,7 @@ a .wsr-footer__social-icons:first-child {
 .wsr-block__description {
   opacity: 0.8;
   padding-top: 0.2em;
+  font-size: 0.9em;
 }
 .wsr-block__date {
   font-weight: bold;
@@ -1147,7 +1148,7 @@ a .wsr-footer__social-icons:first-child {
   background-color: #ffffff;
   box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);
   width: 100%;
-  z-index: 103;
+  z-index: 1000;
 }
 .wsr-partner-comp__wrap {
   margin-left: 4vw;
@@ -1219,14 +1220,14 @@ a .wsr-footer__social-icons:first-child {
 }
 .wsr-partner-comp__item > img {
   max-height: 3vw;
-  width: initial !important ;
+  width: initial !important;
 }
 .wsr-block-partners--horizontal {
   border-radius: 3px;
   background-color: #ffffff;
   box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);
   width: 100%;
-  z-index: 103;
+  z-index: 1000;
   display: flex;
   padding-top: 2em;
   padding-bottom: 2em;
@@ -1356,7 +1357,7 @@ a .wsr-footer__social-icons:first-child {
   background: #002b4a;
 }
 .bm-burger-button {
-  z-index: 1000500;
+  z-index: 1000;
 }
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -1404,7 +1405,7 @@ a .wsr-footer__social-icons:first-child {
 .wsr-burger__icon {
   color: white;
   width: 100%;
-  z-index: 4526262;
+  z-index: 1000;
   font-size: 2vw;
   cursor: pointer;
 }
@@ -1417,6 +1418,11 @@ a .wsr-footer__social-icons:first-child {
 /*-------------------------------------------------------------------------------------------*/
 /********************************** NAVBAR MENU STYLES ***************************************/
 /*-------------------------------------------------------------------------------------------*/
+.navbar-fixed-top {
+  background-image: url(/Images/overlay.png);
+  background-size: cover;
+  background-position: center;
+}
 .navbar-inverse {
   background-color: #002b4a;
   border: none;
@@ -1767,9 +1773,12 @@ h6 {
   border-radius: 50%;
   padding: 2px;
   text-align: center;
+  overflow: hidden;
 }
 .wsr-team__member-photo-wrapper img {
   width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 .member-primary {
   border-color: #ce112d;
@@ -2560,13 +2569,24 @@ Should we change this at all?
     font-size: 0.8em;
   }
   .wsr-block__description {
-    font-size: 0.9em;
+    font-size: 1.2rem;
   }
   .wsr-parther-logo {
     padding: 0.2em;
   }
   .wsr-cite > .panel-body {
     padding-bottom: 20px;
+  }
+  .wsr-page h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 0.8em;
+  }
+  .label {
+    font-size: 0.6em;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) and (max-height: 457.516339869281px) {
@@ -2592,6 +2612,11 @@ Should we change this at all?
 @media (min-width: 480px) and (max-width: 767px) {
   .wsr-certification-description__col {
     border-left: none;
+  }
+  .navbar-fixed-top {
+    background-image: url(/Images/overlay.png);
+    background-size: cover;
+    background-position: center;
   }
   .wsr-block-project--large > .row > .wsr-block__image-container {
     display: none;
@@ -2659,6 +2684,9 @@ Should we change this at all?
   .wsr-block__image {
     clip-path: none;
   }
+  .rkc-team {
+    min-height: 0;
+  }
 }
 @media (min-width: 480px) and (max-width: 767px) and (max-height: 457.516339869281px) {
   .wsr-title-primary {
@@ -2673,6 +2701,11 @@ Should we change this at all?
 @media (max-width: 480px) {
   .App {
     padding-top: 40px;
+  }
+  .navbar-fixed-top {
+    background-image: url(/Images/overlay.png);
+    background-size: cover;
+    background-position: center;
   }
   .wsr-certification-description__col {
     border-left: none;
@@ -2738,6 +2771,21 @@ Should we change this at all?
   }
   .wsr-block__image {
     clip-path: none;
+  }
+  .wsr-cite__text {
+    font-size: 1.1em;
+  }
+  .wsr-cite__name {
+    font-size: 0.9em;
+  }
+  .wsr-cite__position {
+    font-size: 0.8em;
+  }
+  .wsr-cite__host {
+    font-size: 0.8em;
+  }
+  .rkc-team {
+    min-height: 0;
   }
 }
 /*-------------------------------------------------------------------------------------------*/

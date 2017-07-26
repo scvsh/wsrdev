@@ -523,11 +523,11 @@ export class WsrQuote extends React.Component {
         return (
                       <Panel className={"wsr-cite " + _props.className }>
 
-          <Row>
-          <Col className="wsr-cite-content" sm={2} md={2} lg={1}>
+          <Row className="wsr-block__content">
+          <Col className="wsr-cite-content" xs={1} sm={2} md={2} lg={1}>
           <h1 className="wsr-quote-sign">“</h1>
           </Col>
-            <Col className="wsr-cite-content" sm={10} md={10} lg={7}>
+            <Col className="wsr-cite-content" xs={7} sm={10} md={10} lg={7}>
             <h4 className="wsr-cite__text">{ _props.cite } <br/>
                 </h4>
                 <hr />
@@ -537,11 +537,9 @@ export class WsrQuote extends React.Component {
                 <span className="wsr-cite__host ">{ <span><div className="wsr-team__member-expert"></div>{ _props.host }</span> }</span>
 
             </Col>
-            <Col sm={4} md={0} smHidden mdHidden lg={4} className="wsr-block__image-container full-size">
             
-                  <WsrImage className="wsr-block__image" src={ _props.photo ? _props.photo : "/Images/avatar.png" } height="100%" width="100%" mode="fill" /> 
-                
-            </Col>
+            <Col xs={4} sm={4} md={0} smHidden mdHidden lg={4}  className="wsr-block__image" style = {{ backgroundImage: "url(" + _props.photo + ")" }}>
+                </Col>
 
           </Row>
  </Panel>
@@ -582,46 +580,6 @@ export class WsrImage extends Component {
     }
 }
 
-export class WsrBlockOld extends React.Component {
-    render() {
-        let _props = this.props;
-        return (
-            <div className={ "wsr-block " + ( _props.type ? _props.type : "" ) }>
-              <Row className="row-eq-height">
-                <svg pointerEvents="none" width="0" height="0">
-                  <clipPath pointerEvents="none" id="ClipBlock" clipPathUnits="objectBoundingBox">
-                    <polygon points="0 1, 1 1,1 0,0.09 0">
-                    </polygon>
-                  </clipPath>
-                </svg>
-                <Col sm={ 9 } md={ 7 } className="wsr_block__container">
-                  <LinkContainer className="text-left wsr-block__heading" to={ _props.link ? _props.link : "/" }>
-                    <h5 className="text-left wsr-block__heading">
-                                                                                                                                                    <TextTruncate
-                        line={ 4 }
-                        truncateText="…"
-                        text={ _props.heading }
-                        />
-                                                                                                                                                </h5>
-                  </LinkContainer>
-                  <div className="wsr-block__description">
-                    <TextTruncate className="wsr-block__description" line={ _props.lines? _props.lines : 2 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
-                                                                                                                                                   <MdArrowForward className="wsr-block__date-icon" />
-                                                                                                                                                 </a> } />
-                  </div>
-                  <p className="wsr-block__date">
-                    <MdDateRange className="wsr-block__date-icon" />
-                    { _props.date }
-                  </p>
-                </Col>
-                <Col sm={ 3 } md={ 5 } className="wsr-block__image" >
-                  <WsrImage className="wsr-block__image" src={ _props.image } height={ _props.height ? _props.height : 200 } width="100%" mode="fill" />
-                </Col>
-              </Row>
-            </div>
-        );
-    }
-}
 
 export class WsrBlock extends React.Component {
     render() {
