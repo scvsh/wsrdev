@@ -12,7 +12,7 @@ import { Button, ListGroupItem, Panel, Tab, ListGroup, Grid, Row, Col, Nav, NavI
 
 /* Import WSR React components*/
 
-import { WsrCertification, WsrTeamMemberItem, WsrMedal, WsrExpert, WsrPartner, WsrSckInfo, WsrCarousel, WsrCompetence, WsrTeamMember, WsrMeta, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrExpertSearch, WsrCertification, WsrTeamMemberItem, WsrMedal, WsrExpert, WsrPartner, WsrSckInfo, WsrCarousel, WsrCompetence, WsrTeamMember, WsrMeta, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 
 
@@ -33,7 +33,10 @@ class Competence extends Component {
                   <Tab.Container id="left-tabs-example" defaultActiveKey="0">
                     <Row className="clearfix">
                       <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
-                      <Col xs={ 12 } sm={ 3 } md={ 3 } lg={ 2 }>
+                    <Col sm={ 9 } md={9} lg={10} smHidden mdHidden lgHidden className="full-size">
+                    <WsrExpertSearch categories={ ["Все категории", "Специалисты строительной сферы", "Творчество и дизайн", "Специалисты, занятые на промышленном производстве", "Сфера услуг", "Обслуживание гражданского транспорта", "RU", "FutureSkills (FS)", "Презентационная (FS)", "Презентационная", "JuniorSkills", "Презентационная (JS)"] } competences={ ["Все компетенции", "Камнетёсное дело", "Облицовка плиткой", "Столярное дело", "Плотницкое дело", "Кирпичная кладка", "Холодильная техника и системы кондиционирования", "Сантехника и отопление", "Сухое строительство и штукатурные работы", "Малярные и декоративные работы", "Ландшафтный дизайн", "Электромонтаж", "Производство мебели"] } />
+                  </Col>
+                      <Col xs={ 12 } sm={ 3 } md={ 3 } lg={ 2 } xsHidden>
                         <WsrBlockTitle title="Категории" />
                         <WsrBlockBlank className="wsr-block-select">
                           <Nav bsStyle="pills" className="wsr-competence-category" stacked>
@@ -86,7 +89,7 @@ class Competence extends Component {
                         <Tab.Pane eventKey="0">
                           <Tab.Container id="left-tabs-example" defaultActiveKey="1c">
                             <Row className="clearfix">
-                              <Col sm={ 2 } md={ 3 } lg={ 3 }>
+                              <Col sm={ 2 } md={ 3 } lg={ 3 } xsHidden>
                                 <WsrBlockTitle title="Компетенции" />
                                 <WsrBlockBlank description="" date="10.05.2017">
                                   <Panel defaultExpanded>

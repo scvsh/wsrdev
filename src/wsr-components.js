@@ -1181,7 +1181,7 @@ export class WsrExpertSearch extends React.Component {
                       { listCompetences }
                     </FormControl>
                 </Col>
-                <Col sm={4} md={ 8 } lg={ 4 }>
+                <Col xs={12} sm={4} md={ 8 } lg={ 4 }>
                     <WsrBlockTitle title="Поиск" />
                     <InputGroup>
                       <FormControl className="wsr-input-search" type="text" placeholder="Например, Столярное дело" />
@@ -1194,11 +1194,9 @@ export class WsrExpertSearch extends React.Component {
                 </Col>
                 <Col md={ 4 } lg={ 2 } xsHidden>
                     <WsrBlockTitle title={'\u00A0'} />
-
                         <Button block className="btn-export ">
                            Выгрузить
                           </Button>
-
                 </Col>
               
             </Row>
