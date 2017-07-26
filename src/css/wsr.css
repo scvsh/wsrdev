@@ -1780,11 +1780,6 @@ h6 {
 .member-expert {
   border-color: #002b4a;
 }
-.wsr-team__avatar__container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 span .member-expert {
   background-color: #002b4a;
 }
@@ -2570,6 +2565,9 @@ Should we change this at all?
   .wsr-parther-logo {
     padding: 0.2em;
   }
+  .wsr-cite > .panel-body {
+    padding-bottom: 20px;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) and (max-height: 457.516339869281px) {
   .wsr-title-descriptor {
@@ -2657,6 +2655,9 @@ Should we change this at all?
   }
   .wsr-block__content {
     flex-wrap: wrap;
+  }
+  .wsr-block__image {
+    clip-path: none;
   }
 }
 @media (min-width: 480px) and (max-width: 767px) and (max-height: 457.516339869281px) {

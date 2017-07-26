@@ -1168,25 +1168,20 @@ export class WsrExpertSearch extends React.Component {
         );
         return (
             <Row>
-              <Form>
+              
                 <Col xs={6} sm={4} md={ 8 } lg={ 3 }>
-                  <FormGroup controlId="formControlsSelect">
                     <WsrBlockTitle title="Категория" />
                     <FormControl componentClass="select" placeholder="select">
                       { listCategories }
                     </FormControl>
-                  </FormGroup>
                 </Col>
                 <Col xs={6} sm={4} md={ 4 } lg={ 3 }>
-                  <FormGroup controlId="formControlsSelect">
                     <WsrBlockTitle title="Компетенция" />
                     <FormControl componentClass="select" placeholder="select">
                       { listCompetences }
                     </FormControl>
-                  </FormGroup>
                 </Col>
                 <Col sm={4} md={ 8 } lg={ 4 }>
-                  <FormGroup>
                     <WsrBlockTitle title="Поиск" />
                     <InputGroup>
                       <FormControl className="wsr-input-search" type="text" placeholder="Например, Столярное дело" />
@@ -1196,19 +1191,16 @@ export class WsrExpertSearch extends React.Component {
                         </Button>
                       </InputGroup.Button>
                     </InputGroup>
-                  </FormGroup>
                 </Col>
                 <Col md={ 4 } lg={ 2 } xsHidden>
-                  <FormGroup>
                     <WsrBlockTitle title={'\u00A0'} />
 
                         <Button block className="btn-export ">
                            Выгрузить
                           </Button>
 
-                  </FormGroup>
                 </Col>
-              </Form>
+              
             </Row>
         );
 
