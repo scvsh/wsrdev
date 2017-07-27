@@ -6,11 +6,11 @@ import { LinkContainer } from "react-router-bootstrap";
 
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { Clearfix, Panel, Thumbnail, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
+import { Clearfix, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrExpert, WsrCertification, WsrCarousel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrExpert, WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 /* Main app */
 

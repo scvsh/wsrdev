@@ -4,19 +4,13 @@ import "./css/wsr.css";
 import "./css/fonts.css";
 import { LinkContainer } from "react-router-bootstrap";
 
-
-import TextTruncate from "react-text-truncate";
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
 import { Label, Media, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrTierLabel, WsrCertification, WsrExpert, WsrExpertSearch, WsrTeamMember, WsrCarousel, WsrSizeLabel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
-
-/* Import Icons */
-
-import { MdArrowForward, MdFileDownload } from "react-icons/lib/md";
+import { WsrCertification, WsrExpert, WsrExpertSearch, WsrCarousel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 /* Main app */
 

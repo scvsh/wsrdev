@@ -1,12 +1,7 @@
 import React, { Component } from "react";
-import 'react-infinite-calendar/styles.css';
-import InfiniteCalendar from 'react-infinite-calendar';
 import "../bootswatch/cosmo/bootstrap.css";
 import "./css/wsr.css";
 import "./css/fonts.css";
-import { LinkContainer } from "react-router-bootstrap";
-/* import { Link } from 'react-router-dom' */
-import { MdMail, MdPhone, MdGroup, MdWork } from "react-icons/lib/md";
 
 
 
@@ -14,11 +9,11 @@ import { MdMail, MdPhone, MdGroup, MdWork } from "react-icons/lib/md";
 import OwlCarousel from 'react-owl-carousel';
 
 /* Import React-Boorstrap components*/
-import { Panel, Table, ListGroup, ListGroupItem, Form, FormGroup, FormControl, ControlLabel, Checkbox, Button, Modal, Grid, Row, Col, Image } from "react-bootstrap";
+import { Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrPage, WsrGalleryItem, WsrSpinner, WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlock, WsrBlockBlank, WsrNewsItem, WsrPartnersItem, WsrNumbersItem, WsrFooter, } from "./wsr-components.js";
+import { WsrSpinner, WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlock, WsrFooter, } from "./wsr-components.js";
 
 
 /* Main app */
@@ -26,9 +21,6 @@ import { WsrPage, WsrGalleryItem, WsrSpinner, WsrCarousel, WsrMainMenu, WsrBlock
 class Archive extends Component {
 
     render() {
-        var today = new Date();
-        var lastWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7);
-        var lastYear = new Date(today.getFullYear() - 1, today.getMonth(), today.getDate() );
         return (
             <div className="App">
               { /* Header carousel */ }
@@ -55,8 +47,6 @@ class Archive extends Component {
                   </Col>
                   <Col sm={ 3 } md={ 3 } lg={ 3 }>
                     <WsrBlockTitle title={ 'Календарь' } />
-                    <InfiniteCalendar selected={new Date(2017, 6, 25)} locale={ { locale: require('date-fns/locale/ru'), headerFormat: 'dddd, D MMM', weekdays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], blank: 'Не выбрана дата', todayLabel: { long: 'Сегодня', short: 'Сег.' } } } width={ window.innerWidth / 3.25 } height={ window.innerHeight  }  disabledDays={ [0, 7] }
-                      minDate={ lastYear } />
                   </Col>
                 </Row>
                 </Grid>

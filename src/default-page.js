@@ -38,10 +38,18 @@ class DefaultPage extends Component {
               { /* Main content */ }
               <Grid bsClass="containter-fluid">
                 <Row>
+
+                <div className="stories_feed_item_ava">
+    <img src="https://pp.userapi.com/c629113/v629113060/1a327/DhMQoSrMQKQ.jpg" className="stories_feed_item_ava_img"/>
+  </div>
                   <Col xs={ 0 } sm={ 4 } md={ 3 } lg={ 2 } />
                   <Col xs={ 12 } sm={ 5 } md={ 6 } lg={ 7 }>
                     <WsrBlockTitle title="Набор тегов базовой страницы" />
                     <WsrPage type="wsr-page" heading="" description="" date="10.05.2017">
+
+                    
+
+
                       <h3>Заголовки</h3>
                       <hr />
                       <h1>h1. Это очень большой заголовок</h1>

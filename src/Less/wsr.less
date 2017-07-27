@@ -638,10 +638,10 @@ a .wsr-footer__social-icons:first-child {
 .wsr-block__image {
 	min-height: 200px;
 	border-radius: 0 3px 3px 0;
-	-webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
-	clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
 	clip-path: url("#ClipBlock");
 	-webkit-clip-path: url("#ClipBlock");
+	-webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
+	clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
 	transform: translateZ(0);
 	background-size: cover;
 	background-position: center;
@@ -984,6 +984,7 @@ a .wsr-footer__social-icons:first-child {
 	left: -0.5em;
 	border: 2px solid whitesmoke;
 	pointer-events: none;
+	clip-path: circle(50% at 50% 50%);
 }
 
 /*-------------------------------------------------------------------------------------------*/
@@ -1201,7 +1202,7 @@ a .wsr-footer__social-icons:first-child {
 	line-height: inherit;
 }
 .navbar-nav {
-	margin: 0 -15px;
+	margin: 10px -15px;
 }
 .navbar-collapse {
 	border-top: 0;
@@ -1305,7 +1306,7 @@ a .wsr-footer__social-icons:first-child {
 	align-items: center;
 }
 .wsr-competence__icon-wrapper div {
-	display: block !important;
+	display: block;
 }
 .wsr-competence__icon-wrapper div > h3 {
 	margin-bottom: 0;
@@ -1379,35 +1380,16 @@ a .wsr-footer__social-icons:first-child {
 	display: flex;
 	flex-wrap: wrap;
 }
-.row.is-flex > [class*='col-'] {
-	display: flex;
-	flex-direction: column;
-}
+
 .row.is-flex {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
-	display: flex;
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
 
-/*
-.row.is-flex > [class*='col-'] {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	justify-content: center;
-	padding-left: 5px;
-}
-*/
 .wsr-team__description > .row.is-flex {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -1444,7 +1426,7 @@ a .wsr-footer__social-icons:first-child {
 	background: none;
 }
 .wsr-cite > .panel-body > .row {
-	height: 250px;
+	min-height: 250px;
 }
 .wsr-cite-photo-wrapper {
 	border: 2px solid;
@@ -1452,6 +1434,7 @@ a .wsr-footer__social-icons:first-child {
 	padding: 2px;
 	text-align: center;
 	border-color: white;
+	clip-path: circle(50% at 50% 50%);
 }
 .wsr-cite__position {
 	display: block;
@@ -1550,12 +1533,16 @@ a .wsr-footer__social-icons:first-child {
 	padding: 2px;
 	text-align: center;
 	overflow: hidden;
+	clip-path: circle(50% at 50% 50%);
+	box-sizing: border-box;
+
 	//width: 80%;
 }
 .wsr-team__member-photo-wrapper img {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
+	clip-path: circle(50% at 50% 50%);
 }
 .member-primary {
 	border-color: @brand-primary;
@@ -1684,6 +1671,7 @@ span .member-expert {
 	margin-top: calc(-1.8em/2);
 	width: 1.7em !important;
 	cursor: pointer;
+	clip-path: circle(50% at 50% 50%);
 }
 .ri-star {
 	font-size: 1.7em;
@@ -2261,6 +2249,15 @@ Should we change this at all?
 		font-size: 0.8em;
 	}
 }
+
+@media (min-width:@screen-sm) and (max-width:@screen-sm-max) and (orientation: portrait) {
+	.wsr-menu__contacts a {
+		font-size: 1.1rem !important;
+	}
+	.wsr-footer__social-icons {
+		padding: 0 0.5em 0 0em !important;
+	}
+}
 @media (min-width:@screen-sm) and (max-width:@screen-sm-max) {
 	.wsr-certification-description__col {
 		border-left: none;
@@ -2352,8 +2349,17 @@ Should we change this at all?
 	.label {
 		font-size: 0.6em;
 	}
+	.wsr-carousel-red {
+		display: none;
+	}
+	.wsr-competence-category > li > a {
+		font-size: 1.2rem;
+	}
 }
 @media (min-width:@screen-xs) and (max-width:@screen-xs-max) {
+	.App {
+		padding-top: 40px;
+	}
 	.wsr-certification-description__col {
 		border-left: none;
 	}
@@ -2405,7 +2411,7 @@ Should we change this at all?
 		padding-top: 50px;
 	}
 	.wsr-block__title {
-		margin-top: 2em;
+		margin-top: 0;
 	}
 	.wsr-compact-calendar {
 		display: none;
@@ -2432,6 +2438,25 @@ Should we change this at all?
 	}
 	.rkc-team {
 		min-height: 0;
+	}
+	.wsr-cite-content {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.wsr-cite__text {
+		font-size: 1.1em;
+	}
+	.wsr-cite__name {
+		font-size: 0.9em;
+	}
+	.wsr-cite__position {
+		font-size: 0.8em;
+	}
+	.wsr-cite__host {
+		font-size: 0.8em;
+	}
+	.btn-more {
+		margin-bottom: 40px;
 	}
 }
 @media (max-width:@screen-xs) {
@@ -2511,6 +2536,10 @@ Should we change this at all?
 	.wsr-block__image {
 		clip-path: none;
 	}
+	.wsr-cite-content {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 	.wsr-cite__text {
 		font-size: 1.1em;
 	}
@@ -2526,8 +2555,29 @@ Should we change this at all?
 	.rkc-team {
 		min-height: 0;
 	}
+	.btn-more {
+		margin-bottom: 40px;
+	}
 }
 
+
+.stories_feed_item_ava {
+	position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 25px;
+    overflow: hidden;	
+    border: 2px solid #6590c7;
+    padding: 2px;
+}
+
+.stories_feed_item_ava_img {
+	width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
 /*-------------------------------------------------------------------------------------------*/
 
 /******************************** CRIPPLED BROWSER MEDICATION ********************************/
@@ -2571,3 +2621,9 @@ _:-ms-lang(x), _:-webkit-full-screen, .wsr-menu__logo-divider {
 	width: 50%;
 	text-align: left;
 }
+
+
+
+
+
+	

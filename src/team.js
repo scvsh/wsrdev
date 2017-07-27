@@ -10,11 +10,7 @@ import { ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap
 
 /* Import WSR React components*/
 
-import { WsrTeamMemberItem, WsrMedal, WsrExpertSearch, WsrTeamMember, WsrCarousel, WsrSizeLabel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
-
-/* Import Icons */
-
-import { MdFileDownload } from "react-icons/lib/md";
+import { WsrTeamMemberItem, WsrMedal, WsrExpertSearch, WsrTeamMember, WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 /* Main app */
 

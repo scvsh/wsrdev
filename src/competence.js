@@ -2,17 +2,16 @@ import React, { Component } from "react";
 import "../bootswatch/cosmo/bootstrap.css";
 import "./css/wsr.css";
 import "./css/fonts.css";
-import { LinkContainer } from "react-router-bootstrap";
 import { FaFileTextO } from "react-icons/lib/fa";
 
 
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { Button, ListGroupItem, Panel, Tab, ListGroup, Grid, Row, Col, Nav, NavItem, Image } from "react-bootstrap";
+import { Button, Panel, Tab, ListGroup, Grid, Row, Col, Nav, NavItem, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrExpertSearch, WsrCertification, WsrTeamMemberItem, WsrMedal, WsrExpert, WsrPartner, WsrSckInfo, WsrCarousel, WsrCompetence, WsrTeamMember, WsrMeta, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrExpertSearch, WsrCertification, WsrTeamMemberItem, WsrMedal, WsrExpert, WsrSckInfo, WsrCarousel, WsrCompetence, WsrTeamMember, WsrMeta, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 
 
@@ -36,7 +35,7 @@ class Competence extends Component {
                     <Col sm={ 9 } md={9} lg={10} smHidden mdHidden lgHidden className="full-size">
                     <WsrExpertSearch categories={ ["Все категории", "Специалисты строительной сферы", "Творчество и дизайн", "Специалисты, занятые на промышленном производстве", "Сфера услуг", "Обслуживание гражданского транспорта", "RU", "FutureSkills (FS)", "Презентационная (FS)", "Презентационная", "JuniorSkills", "Презентационная (JS)"] } competences={ ["Все компетенции", "Камнетёсное дело", "Облицовка плиткой", "Столярное дело", "Плотницкое дело", "Кирпичная кладка", "Холодильная техника и системы кондиционирования", "Сантехника и отопление", "Сухое строительство и штукатурные работы", "Малярные и декоративные работы", "Ландшафтный дизайн", "Электромонтаж", "Производство мебели"] } />
                   </Col>
-                      <Col xs={ 12 } sm={ 3 } md={ 3 } lg={ 2 } xsHidden>
+                      <Col xs={ 12 } sm={ 2 } md={ 3 } lg={ 2 } xsHidden>
                         <WsrBlockTitle title="Категории" />
                         <WsrBlockBlank className="wsr-block-select">
                           <Nav bsStyle="pills" className="wsr-competence-category" stacked>
@@ -88,17 +87,17 @@ class Competence extends Component {
                       <Tab.Content animation>
                         <Tab.Pane eventKey="0">
                           <Tab.Container id="left-tabs-example" defaultActiveKey="1c">
-                            <Row className="clearfix">
-                              <Col sm={ 2 } md={ 3 } lg={ 3 } xsHidden>
+                            <Row className="clearfix ">
+                              <Col sm={ 3 } md={ 3 } xsHidden>
                                 <WsrBlockTitle title="Компетенции" />
                                 <WsrBlockBlank description="" date="10.05.2017">
                                   <Panel defaultExpanded>
-                                    <Row className="wsr-competence__icon-wrapper">
-                                      <Col xs={3} sm={3}  smHidden >
+                                    <Row className="wsr-competence__icon-wrapper is is-flex">
+                                      <Col xs={3}  md={3} smHidden>
                                         <Image src="/Images/icon_1.svg" />
                                       </Col>
-                                      <Col xs={9} sm={9} smHidden className="wsr-team__description">
-                                        <h3 className="wsr-competence__title">Информационные технологии</h3>
+                                      <Col xs={9} sm={12} md={9} className="wsr-team__description">
+                                        <h3 className="wsr-competence__title">Специалисты строительной сферы</h3>
                                       </Col>
                                     </Row>
                                     <ListGroup fill>
@@ -160,17 +159,17 @@ class Competence extends Component {
 
                                     <WsrBlockTitle  title="Партнёры" />
                                   <WsrBlockBlank type="wsr-block-partners--horizontal">
-                                  <Col sm={6} md={12} lg={4}>
+                                  <Col xs={12} sm={6} md={12} lg={4}>
                                   
                           <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_01.svg" responsive />
                         
                                   </Col>
-                                  <Col sm={6} md={12} lg={4}>
+                                  <Col xs={12} sm={6} md={12} lg={4}>
                                   
                           <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_02.svg" responsive />
                         
                                   </Col>
-                                  <Col sm={6} md={12} lg={4}>
+                                  <Col xs={12} sm={6} md={12} lg={4}>
                                   
                           <Image className="center-block wsr-parther-logo" src="/Images/panel_logo_03.svg" responsive />
                         

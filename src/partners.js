@@ -3,15 +3,13 @@ import "../bootswatch/cosmo/bootstrap.css";
 import "./css/wsr.css";
 import "./css/fonts.css";
 import { LinkContainer } from "react-router-bootstrap";
-
-import { MdPhone, MdMail } from "react-icons/lib/md";
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import {  Label, Panel, NavItem, Tab, Nav, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
+import {  Label, NavItem, Tab, Nav, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrCite, WsrQuote, WsrPartnerCarousel, WsrTierLabel, WsrBlock, WsrSckInfo, WsrExpert, WsrCompetence, WsrTeamMember, WsrPartnersItem, WsrCarousel, WsrPartner, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrQuote, WsrPartnerCarousel, WsrBlock, WsrExpert, WsrPartner, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 
 /* Main app */
@@ -28,7 +26,7 @@ class Partners extends Component {
               <Grid bsClass="containter-fluid">
                 <Row>
                   <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
-                  <Col sm = {6}  md={6} lg={7}>
+                  <Col sm={6}  md={6} lg={7}>
                   <Tab.Container id="left-tabs-example" defaultActiveKey="0">
                     <Row className="clearfix">
                       

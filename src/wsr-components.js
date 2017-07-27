@@ -1,11 +1,6 @@
 import React, { Component } from "react";
-import $ from "jquery";
-
 import "./css/wsr.css";
-//import "./css/calendar.css";
-//import "./calendar.js";
-
-import { MdStar, MdAccountCircle, MdPlace, MdMore, MdStars, MdApps, MdDateRange, MdArrowForward, MdSearch, MdMail, MdPhone } from "react-icons/lib/md";
+import { MdStar, MdAccountCircle, MdPlace, MdMore, MdStars, MdDateRange, MdArrowForward, MdSearch, MdMail, MdPhone } from "react-icons/lib/md";
 import { FaGlobe, FaVk, FaFacebook, FaInstagram, FaYoutube } from "react-icons/lib/fa";
 import TextTruncate from "react-text-truncate";
 import { LinkContainer } from "react-router-bootstrap";
@@ -180,7 +175,7 @@ constructor(props) {
                           Компетенции
                         </NavItem>
                       </LinkContainer>
-                      <LinkContainer to="/projects">
+                      <LinkContainer to="/page.html">
                         <NavItem eventKey={ 6 } title="Компетенции" id="basic-nav">
                           Проекты
                         </NavItem>
@@ -232,7 +227,7 @@ constructor(props) {
                               { "Компетенции".toUpperCase() }
                             </NavItem>
                           </LinkContainer>
-                            <NavItem href="/page.html" className="wsr-menu-item" eventKey={ 5 }>
+                            <NavItem href="/projects" className="wsr-menu-item" eventKey={ 5 }>
                               { "Проекты".toUpperCase() }
                             </NavItem>
                           <LinkContainer to="/partners">
@@ -358,21 +353,21 @@ export class WsrPartnerCompilation extends React.Component {
           <Col sm={ 7 } >
             <div className="wsr-partner-comp__wrap">
               
-              <div className="wsr-partner-comp__item" ><img src="/Images/1.png"/></div>
-              <div className="wsr-partner-comp__item" ><img src="/Images/2.jpg"/></div>
-              <div className="wsr-partner-comp__item" ><img src="/Images/3.jpg"/></div>
-              <div className="wsr-partner-comp__item" ><img src="/Images/4.jpg"/></div>
-              <div className="wsr-partner-comp__item" ><img src="/Images/5.jpg"/></div>
-              <div className="wsr-partner-comp__item" ><img src="/Images/6.jpg"/></div>
-              <div className="wsr-partner-comp__item" ><img src="/Images/7.jpg"/></div>
-              <div className="wsr-partner-comp__item" ><img src="/Images/8.jpg"/></div>
-              <div className="wsr-partner-comp__item" ><img src="/Images/9.jpg"/></div>
-              <div className="wsr-partner-comp__item" ><img src="/Images/10.png"/></div>
-              <div className="wsr-partner-comp__item" ><img src="/Images/11.png"/></div>
-              <div className="wsr-partner-comp__item" ><img src="/Images/12.png"/></div>
-              <div className="wsr-partner-comp__item" ><img src="/Images/13.png"/></div>
-              <div className="wsr-partner-comp__item" ><img src="/Images/14.jpg"/></div>
-              <div className="wsr-partner-comp__item" ><img src="/Images/15.png"/></div>
+              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/1.png"/></div>
+              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/2.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/3.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/4.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/5.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/6.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/7.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/8.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/9.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/10.png"/></div>
+              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/11.png"/></div>
+              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/12.png"/></div>
+              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/13.png"/></div>
+              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/14.jpg"/></div>
+              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/15.png"/></div>
 
 
             </div>
@@ -538,7 +533,7 @@ export class WsrQuote extends React.Component {
 
             </Col>
             
-            <Col xs={4} sm={4} md={0} smHidden mdHidden lg={4}  className="wsr-block__image" style = {{ backgroundImage: "url(" + _props.photo + ")" }}>
+            <Col xs={4} sm={4} md={0} smHidden mdHidden lg={4}  className="wsr-block__image" style={{ backgroundImage: "url(" + _props.photo + ")" }}>
                 </Col>
 
           </Row>
@@ -613,7 +608,7 @@ export class WsrBlock extends React.Component {
                     { _props.date }
                   </p>
                 </Col>
-                <Col xs={12} sm={ 4 } md={ 5 } className="wsr-block__image" style = {{ backgroundImage: "url(" + _props.image + ")" }}>
+                <Col xs={12} sm={ 4 } md={ 5 } className="wsr-block__image" style={{ backgroundImage: "url(" + _props.image + ")" }}>
                 </Col>
               </Row>
             </div>
@@ -946,6 +941,8 @@ export class WsrMedal extends React.Component {
         let medal;
 
         switch (_props.medal) {
+        default:
+          break;
         case "gold":
             medal = 0;
             break;
@@ -1002,6 +999,8 @@ export class WsrCertification extends React.Component {
         let cert;
 
         switch (_props.certification) {
+        default:
+          break;
         case "certified":
             cert = 0;
             break;

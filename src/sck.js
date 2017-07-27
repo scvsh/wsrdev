@@ -2,19 +2,16 @@ import React, { Component } from "react";
 import "../bootswatch/cosmo/bootstrap.css";
 import "./css/wsr.css";
 import "./css/fonts.css";
+import OwlCarousel from 'react-owl-carousel';
 import { LinkContainer } from "react-router-bootstrap";
 
-import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
 import { Button, PanelGroup, Tab, Nav, NavItem, Panel, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrSckInfo, WsrExpert, WsrBlock, WsrCompetence, WsrTeamMember, WsrCarousel, WsrSizeLabel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrSckInfo, WsrExpert, WsrBlock, WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
-/* Import Icons */
-
-import { MdFileDownload } from "react-icons/lib/md";
 
 /* Main app */
 
@@ -43,8 +40,8 @@ class Sck extends Component {
               { /* Main content */ }
              <Grid bsClass="containter-fluid">
                 <Row>
-                <Col sm = {3} md={3} lg={2}/>
-                <Col sm = {6} md={6} lg ={7}>
+                <Col sm={3} md={3} lg={2}/>
+                <Col sm={6} md={6} lg={7}>
                   <Tab.Container id="left-tabs-example" defaultActiveKey="0">
                     <Row>
                       <Col xs={ 12 } sm={ 4 } md={ 5 } lg={ 5 } >
@@ -164,7 +161,7 @@ class Sck extends Component {
                   </Tab.Container>
                   </Col>
 
-                  <Col sm = {3}  md={3} lg={ 3 } className="">
+                  <Col sm={3}  md={3} lg={ 3 } className="">
                   <WsrBlockTitle title="Координатор" />
                                   <WsrBlockBlank className="wsr-block-select">
                       

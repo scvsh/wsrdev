@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import "../bootswatch/cosmo/bootstrap.css";
 import "./css/wsr.css";
 import "./css/fonts.css";
-import { LinkContainer } from "react-router-bootstrap";
-
 
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/

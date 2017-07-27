@@ -54,7 +54,7 @@ class History extends Component {
                         С каждым годом все больше специалистов разнообразных рабочих профессий из различных регионов стремятся принять участие в соревнованиях.
                         <br/>
                       </p>
-                      <div className ="wsr-page__tabs">
+                      <div className="wsr-page__tabs">
                       <Nav bsStyle="tabs" className="wsr-page__tabs" activeKey="1" onSelect={ this.handleSelect }>
                         <NavItem active eventKey="1">2012 год</NavItem>
                         <NavItem eventKey="2">2013</NavItem>

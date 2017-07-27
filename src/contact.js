@@ -13,7 +13,7 @@ import { Table, ListGroup, ListGroupItem, Grid, Row, Col, Image} from "react-boo
 
 /* Import WSR React components*/
 
-import { WsrPage, WsrGalleryItem, WsrSpinner, WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter,} from "./wsr-components.js";
+import { WsrPage, WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 
 /* Main app */

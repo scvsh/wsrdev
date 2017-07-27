@@ -2,19 +2,16 @@ import React, { Component } from "react";
 import "../bootswatch/cosmo/bootstrap.css";
 import "./css/wsr.css";
 import "./css/fonts.css";
-import $ from "jquery";
 import { LinkContainer } from "react-router-bootstrap";
 
-import { FaArchive, FaCalendar } from "react-icons/lib/fa";
-
-import InfiniteCalendar from 'react-infinite-calendar';
+import {  FaCalendar } from "react-icons/lib/fa";
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { Modal,  Button, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
+import {  Button, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrProject, WsrBlock, WsrCarousel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrProject, WsrBlock, WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrFooter } from "./wsr-components.js";
 
 /* Main app */
 
@@ -33,15 +30,8 @@ class Projects extends Component {
       }
 
     render() {
-        var today = new Date();
-        var lastWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7);
-        var lastYear = new Date(today.getFullYear() - 1, today.getMonth(), today.getDate());
         return (
-            <div className="App">
-            <script src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
-    <script src="./calendar.js"></script>
-    <script src="./sc.js"></script>
-
+            <div className="App">   
               { /* Header carousel */ }
               <WsrCarousel />
               { /* Left sidebar */ }
