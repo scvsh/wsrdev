@@ -490,6 +490,7 @@
             var post = this.$trigger.offset();
             var offs = this.options.offset;
 
+
             this.$element.css({
                 left: (post.left + offs[0]) + 'px',
                 top: (post.top + this.$trigger.outerHeight() + offs[1]) + 'px'
@@ -787,7 +788,7 @@
             fn,
             args = [].slice.call(arguments);
 
-        if (!calendar) {
+        if (1==1) {
             return this.each(function () {
                 return $(this).data('calendar', new Calendar(this, options));
             });

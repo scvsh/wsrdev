@@ -40,7 +40,20 @@ class Projects extends Component {
               <Grid bsClass="containter-fluid">
                 <Row>
                   <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
-                  <Col xs={ 12 } sm={ 9 } md={ 4 } lg={ 4 }>
+                  <Col xs={0} sm={ 1 } md={ 1 } lg={ 2 } smHidden mdHidden lgPush={8}>
+                    <WsrBlockTitle title={ 'Календарь' } />
+                    <div id="calendar">
+                    </div>
+                  </Col>
+
+                  <Col xs={0} sm={ 1 } md={ 1 } lg={ 2 } xsHidden lgHidden smPush={8} mdPush={8}>
+                    <WsrBlockTitle title={ 'Календарь' } />
+                      <Button block onClick={this.openModal} className="wsr-btn-search wsr-calendar-button">
+                          <FaCalendar className="ri-search" />
+                        </Button>
+                  </Col>
+
+                  <Col xs={ 12 } sm={ 4 } md={ 4 } lg={ 4 } smPull={1} mdPull={1} lgPull={2} >
                     <WsrBlockTitle title="Проекты" />
                     <WsrProject startdate="10.05.2017" enddate="19.05.2017" height={415} type="wsr-block-project--large" link="/projects/championship" lines={ 8 } heading="V ОЧМ «Московские мастера»" description="V Открытый чемпионат профессионального мастерства «Московские мастера» по стандартам WorldSkills Russia пройдет в период с 18 по 27 октября, закрытие чемпионата состоится 10 ноября 2016 года. В Чемпионате Москвы 2016 года заявлено: 75 компетенций, серия региональных отборочных соревнований по 15 компетенциям, а также 1 экспериментальная компетенция, которая ранее нигде представлена не была, 32 специализированных центра компетенций (СЦК). Для соревнований организовано 817 рабочих мест, из них 222 отведено для участников из других регионов."
                       date="06.06.2017" image="/Images/thumb01.jpg" />
@@ -55,7 +68,7 @@ class Projects extends Component {
                         <LinkContainer to="/competence/techdocs"><ListGroupItem> Архив проектов</ListGroupItem></LinkContainer>
                       </ListGroup>
                   </Col>
-                  <Col sm={ 9 } md={ 4 } lg={ 4 }>
+                  <Col sm={ 4 } md={ 4 } lg={ 4 } smPull={1} mdPull={1} lgPull={2}>
                     <WsrBlockTitle title={ 'Мероприятия' } />
                      <WsrBlock type="wsr-block-announce" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
             На международном чемпионата China International Skills Competition 2017 (CISC-2017)" date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
@@ -67,18 +80,7 @@ class Projects extends Component {
                         <LinkContainer to="/competence/techdocs"><ListGroupItem> Архив мероприятий</ListGroupItem></LinkContainer>
                       </ListGroup>
                   </Col>
-                  <Col xs={0} sm={ 1 } md={ 1 } lg={ 2 }>
-                    <WsrBlockTitle title={ 'Календарь' } />
-                    <div id="demo">
-        <h2>Inline calendar</h2>
-        <div id="one"></div>
-    </div>
-                      <div >
-                      <Button block onClick={this.openModal} className="wsr-btn-search wsr-calendar-button">
-                          <FaCalendar className="ri-search" />
-                        </Button>
-                        </div>
-                  </Col>
+                  
                 </Row>
                 </Grid>
                 { /* Bottom Gallery */ }

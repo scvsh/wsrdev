@@ -63,14 +63,12 @@ class App extends Component {
                     <WsrBlockTitle title="РКЦ в цифрах" />
                     <WsrBlockBlank type="wsr-block-numbers">
                       <Row>
-                        <WsrNumbersItem number="1457" description="Человек входят
-                                                                                       в состав сборной команды WS Москвы" />
-                        <WsrNumbersItem number="98" description="Человек входят
-                                                                                       в экспертное сообщество" />
+                        <WsrNumbersItem number="1" description="Место в медальном зачете по РФ" />
+                        <WsrNumbersItem number="448" description="Региональных экспертов" />
                       </Row>
                       <Row className="wsr-numbers__row">
-                        <WsrNumbersItem number="20" description="Победителей Национальных Международных соревенований WorldSkills среди участников Сборной команды Москвы" />
-                        <WsrNumbersItem number="61" description="Компетенцию представляет Москва" />
+                        <WsrNumbersItem number="32" description="Победителя V Национального чемпионата «Молодые профессионалы» 2017" />
+                        <WsrNumbersItem number="10 068" description="Участников демонстрационного экзамена по стандартам WSR в 2017" />
                       </Row>
                     </WsrBlockBlank>
                     { /* Block News */ }

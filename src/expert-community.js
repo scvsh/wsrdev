@@ -12,7 +12,7 @@ import {  Accordion, Table, Panel, Grid, Row, Col, Image } from "react-bootstrap
 /* Import WSR React components*/
 
 import { WsrCarousel, WsrBlock, WsrExpertSearch, WsrMeta, WsrMainMenu, WsrBlockTitle,  WsrFooter } from "./wsr-components.js";
-
+   
 
 /* Main app */
 

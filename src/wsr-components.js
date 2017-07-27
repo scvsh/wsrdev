@@ -22,19 +22,23 @@ export class WsrMeta extends React.Component {
     } 
 }
 
+
+
+
+
 export class WsrProject extends React.Component {
     render() {
         let _props = this.props;
         return (
-            <div className={ "wsr-block " + _props.type }>
-              <Row className="row-eq-height">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"  width="0" height="0">
-                  <clipPath id="ClipBlock" clipPathUnits="objectBoundingBox">
+            <div className={ "wsr-block " + ( _props.type ? _props.type : "" ) }>
+             <Row className="wsr-block__content">
+                <svg pointerEvents="none" width="0" height="0">
+                  <clipPath pointerEvents="none" id="ClipBlock" clipPathUnits="objectBoundingBox">
                     <polygon points="0 1, 1 1,1 0,0.09 0">
                     </polygon>
                   </clipPath>
                 </svg>
-                <Col sm={ 9 } md={ 7 } className="wsr_block__container wsr_block__flex-container">
+                <Col xs={12} sm={ 12 } md={ 7 } className="wsr_block__container">
                   <LinkContainer className="text-left wsr-block__heading" to={ _props.link ? _props.link : "/" }>
                     <h4 className="text-left wsr-block__heading">
                                                                                                                                                     <TextTruncate
@@ -61,8 +65,7 @@ export class WsrProject extends React.Component {
                            Подробнее
                           </Button>
                 </Col>
-                <Col sm={ 3 } md={ 5 } className="wsr-block__image-container">
-                  <WsrImage className="wsr-block__image" src={ _props.image } height={ _props.height ? _props.height : 200 } width="100%" mode="fill" />
+                 <Col xs={12} sm={ 4 } md={ 5 } className="wsr-block__image" style={{ backgroundImage: "url(" + _props.image + ")" }}>
                 </Col>
               </Row>
             </div>
@@ -175,8 +178,8 @@ constructor(props) {
                           Компетенции
                         </NavItem>
                       </LinkContainer>
-                      <LinkContainer to="/page.html">
-                        <NavItem eventKey={ 6 } title="Компетенции" id="basic-nav">
+                      <LinkContainer to="/page2.html">
+                        <NavItem eventKey={ 6 } title="Проекты" id="basic-nav">
                           Проекты
                         </NavItem>
                       </LinkContainer>
@@ -227,7 +230,7 @@ constructor(props) {
                               { "Компетенции".toUpperCase() }
                             </NavItem>
                           </LinkContainer>
-                            <NavItem href="/projects" className="wsr-menu-item" eventKey={ 5 }>
+                            <NavItem href="/page2.html" className="wsr-menu-item" eventKey={ 5 }>
                               { "Проекты".toUpperCase() }
                             </NavItem>
                           <LinkContainer to="/partners">
@@ -1125,7 +1128,17 @@ export class WsrExpertSearch extends React.Component {
         );
         return (
             <Row>
-              
+              <Col xs={12} sm={4} md={ 8 } lg={ 4 }>
+                    <WsrBlockTitle title="Поиск" />
+                    <InputGroup>
+                      <FormControl className="wsr-input-search" type="text" placeholder="Например, Столярное дело" />
+                      <InputGroup.Button>
+                        <Button className="wsr-btn-search">
+                          <MdSearch className="ri-search" />
+                        </Button>
+                      </InputGroup.Button>
+                    </InputGroup>
+                </Col>
                 <Col xs={6} sm={4} md={ 8 } lg={ 3 }>
                     <WsrBlockTitle title="Категория" />
                     <FormControl componentClass="select" placeholder="select">
@@ -1138,17 +1151,7 @@ export class WsrExpertSearch extends React.Component {
                       { listCompetences }
                     </FormControl>
                 </Col>
-                <Col xs={12} sm={4} md={ 8 } lg={ 4 }>
-                    <WsrBlockTitle title="Поиск" />
-                    <InputGroup>
-                      <FormControl className="wsr-input-search" type="text" placeholder="Например, Столярное дело" />
-                      <InputGroup.Button>
-                        <Button className="wsr-btn-search">
-                          <MdSearch className="ri-search" />
-                        </Button>
-                      </InputGroup.Button>
-                    </InputGroup>
-                </Col>
+                
                 <Col md={ 4 } lg={ 2 } xsHidden>
                     <WsrBlockTitle title={'\u00A0'} />
                         <Button block className="btn-export ">
