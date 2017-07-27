@@ -518,11 +518,11 @@ export class WsrQuote extends React.Component {
         return (
                       <Panel className={"wsr-cite " + _props.className }>
 
-          <Row className="wsr-block__content">
+          <Row className="wsr-block__content is-flex">
           <Col className="wsr-cite-content" xs={1} sm={2} md={2} lg={1}>
           <h1 className="wsr-quote-sign">“</h1>
           </Col>
-            <Col className="wsr-cite-content" xs={7} sm={10} md={10} lg={7}>
+            <Col className="wsr-cite-content " xs={7} sm={10} md={10} lg={7}>
             <h4 className="wsr-cite__text">{ _props.cite } <br/>
                 </h4>
                 <hr />
