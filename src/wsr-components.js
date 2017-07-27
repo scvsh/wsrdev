@@ -56,11 +56,7 @@ export class WsrProject extends React.Component {
                                                                                                                                                  </a> } />
                   </div>
 
-                 
-                  <p className="wsr-block__date">
-                    <MdDateRange className="wsr-block__date-icon" />
-                    { _props.date }
-                  </p>
+
                    <Button block className="btn-more ">
                            Подробнее
                           </Button>
