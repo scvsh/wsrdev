@@ -777,11 +777,11 @@ export class WsrFooter extends React.Component {
 
             <Row className="wsr-footer">
               <Row>
-                <Col xs={ 0 } sm={ 10 } md={ 2 } />
-                <Col xs={ 12 } md={ 7 }>
+                <Col xs={ 0 } sm={ 3} md={ 2 } />
+                <Col xs={6} sm={6} md={ 6 } >
                   <span className="wsr-footer__heading"><i>© 2017 Региональный координационный центр WorldSkills Russia по городу Москве</i> </span>
                 </Col>
-                <Col xs={ 12 } md={ 3 } className="pull-right">
+                <Col xs={6} sm={3} md={ 3 }  className="pull-right">
                   <div className="text-right wsr-social-icons">
                     <span className="wsr-footer__heading">
                                                               <a className="wsr-footer__social-icons" href="https://www.facebook.com/groups/wsrmoscow/">
@@ -798,8 +798,8 @@ export class WsrFooter extends React.Component {
               </Row>
               <Row className="wsr-footer__divider"></Row>
               <Row className="wsr-footer__menu">
-                <Col xs={ 0 } sm={ 10 } md={ 2 } />
-                <Col xs={ 12 } md={ 1 }>
+                <Col xs={ 0 } sm={ 3 } md={ 2 } />
+                <Col xs={ 12 } sm={ 2 } md={ 1 }>
                   <h7 className="wsr-footer__title">
                     { "Wsr в Москве".toUpperCase() }
                   </h7>
@@ -813,17 +813,17 @@ export class WsrFooter extends React.Component {
                   </h7>
                   <a href="">Информация для экспертов</a>
                 </Col>
-                <Col xs={ 12 } sm={ 2 } md={ 1 }>
+                <Col xs={ 12 } sm={ 1 } md={ 1 }>
                   <h7 className="wsr-footer__title">
                     { "СЦК".toUpperCase() }
                   </h7>
                 </Col>
-                <Col xs={ 12 } sm={ 2 } md={ 2 }>
+                <Col xs={ 12 } sm={ 1 } md={ 2 }>
                   <h7 className="wsr-footer__title">
                     { "Компетенции".toUpperCase() }
                   </h7>
                 </Col>
-                <Col xs={ 12 } sm={ 2 } md={ 2 }>
+                <Col xs={ 12 } sm={ 1 } md={ 2 }>
                   <h7 className="wsr-footer__title">
                     { "Проекты".toUpperCase() }
                   </h7>
@@ -839,7 +839,7 @@ export class WsrFooter extends React.Component {
                   <a href="">Наши партнёры</a>
                   <a href="">Стать партнёром</a>
                 </Col>
-                <Col xs={ 12 } sm={ 2 } md={ 2 }>
+                <Col xs={ 12 } sm={ 1 } md={ 2 }>
                   <h7 className="wsr-footer__title">
                     { "Пресс-центр".toUpperCase() }
                   </h7>

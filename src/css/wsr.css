@@ -1319,6 +1319,7 @@ a .wsr-footer__social-icons:first-child {
   font-size: 0.8em;
   margin-bottom: 1em;
   display: block;
+  word-wrap: nowrap;
 }
 .wsr-footer__title {
   color: white;
