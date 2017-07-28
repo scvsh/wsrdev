@@ -1175,7 +1175,7 @@ export class WsrSckSearch extends React.Component {
         return (
             <Row>
               <Col xs={ 12 } sm={ 4 } md={ 8 } lg={ 4 }>
-                    <WsrBlockTitle title="Поиск" />
+                    <WsrBlockTitle title="Поиск СЦК" />
                     <InputGroup>
                       <FormControl className="wsr-input-search" type="text" placeholder="Например, Столярное дело" />
                       <InputGroup.Button>
@@ -1186,7 +1186,7 @@ export class WsrSckSearch extends React.Component {
                     </InputGroup>
                 </Col>
                 <Col xs={ 6 } sm={ 4 } md={ 8 } lg={ 3 }>
-                    <WsrBlockTitle title="Категория" />
+                    <WsrBlockTitle title="Компетенция" />
                     <FormControl componentClass="select" placeholder="select">
                       { listCategories }
                     </FormControl>
