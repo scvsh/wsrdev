@@ -1211,6 +1211,28 @@ export class WsrSckSearch extends React.Component {
     }
 }
 
+export class WsrPartnerSearch extends React.Component {
+    render() {
+        let _props = this.props;
+        let listPartners = _props.partners.map((partner, index) => <option key={ index } value="select">
+                                                                          { partner }
+                                                                        </option>
+        );
+        return (
+            <Row>
+                <Col xs={ 12 } sm={ 4 } md={ 8 } lg={ 3 }>
+                    <WsrBlockTitle title="Партнёр" />
+                    <FormControl componentClass="select" placeholder="select">
+                      { listPartners }
+                    </FormControl>
+                </Col>
+             
+            </Row>
+        );
+
+    }
+}
+
 export class WsrLocationItem extends React.Component {
     render() {
         let _props = this.props;

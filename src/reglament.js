@@ -29,8 +29,20 @@ class Reglament extends Component {
               { /* Main content */ }
               <Grid bsClass="containter-fluid">
                 <Row>
-                  <Col xs={ 0 } sm={ 4 } md={ 3 } lg={ 2 } />
-                  <Col xs={ 12 } sm={ 5 } md={ 6 } lg={ 7 }>
+                  <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
+
+                  <Col sm={ 3 } md={ 3 } lg={ 3 } smPush={6} mdPush={6} lgPush={7} >
+                    <WsrBlockTitle title="WSR в Москве" />
+                    <WsrBlockBlank className="wsr-block-select">
+                      <ListGroup>
+                        <LinkContainer to="/about/rkc"><ListGroupItem>РКЦ Москвы</ListGroupItem></LinkContainer>
+                        <LinkContainer to="/about/history"><ListGroupItem>История WSR в Москве</ListGroupItem></LinkContainer>
+                        <LinkContainer to="/about/reglament"><ListGroupItem>Регламентирующие документы</ListGroupItem></LinkContainer>
+                      </ListGroup>
+                    </WsrBlockBlank>
+                  </Col>
+
+                  <Col xs={ 12 } sm={ 6 } md={ 6 } lg={ 7 } smPull={3} mdPull={3} lgPull={3}>
                     <WsrBlockTitle title="Об РКЦ" />
                     <WsrPage type="wsr-page" heading="Регламентирующие документы" description="" date="10.05.2017">
                       <p>Краткое описание раздела
@@ -46,16 +58,7 @@ class Reglament extends Component {
                       </ListGroup>
                     </WsrPage>
                   </Col>
-                  <Col sm={ 3 } md={ 3 } lg={ 3 }>
-                    <WsrBlockTitle title="WSR в Москве" />
-                    <WsrBlockBlank className="wsr-block-select">
-                      <ListGroup>
-                        <LinkContainer to="/about/rkc"><ListGroupItem>РКЦ Москвы</ListGroupItem></LinkContainer>
-                        <LinkContainer to="/about/history"><ListGroupItem>История WSR в Москве</ListGroupItem></LinkContainer>
-                        <LinkContainer to="/about/reglament"><ListGroupItem>Регламентирующие документы</ListGroupItem></LinkContainer>
-                      </ListGroup>
-                    </WsrBlockBlank>
-                  </Col>
+                 
                 </Row>
                 </Grid>
                 { /* Bottom Gallery */ }

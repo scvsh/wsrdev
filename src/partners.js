@@ -9,7 +9,7 @@ import {  Label, NavItem, Tab, Nav, Grid, Row, Col, Image } from "react-bootstra
 
 /* Import WSR React components*/
 
-import { WsrQuote, WsrPartnerCarousel, WsrBlock, WsrExpert, WsrPartner, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrQuote, WsrPartnerSearch, WsrPartnerCarousel, WsrBlock, WsrExpert, WsrPartner, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 
 /* Main app */
@@ -25,12 +25,17 @@ class Partners extends Component {
               { /* Main content */ }
               <Grid bsClass="containter-fluid">
                 <Row>
-                  <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
+                  <Col sm={ 3 } md={ 3 } lg={ 2 } xsHidden/>
+
+                  <Col sm={ 9 } md={9} lg={10} smHidden mdHidden lgHidden className="full-size">
+                    <WsrPartnerSearch partners={ ["CISCO", "DMG MORI", "Лазерная столица", "..."] } />
+                  </Col>
+
                   <Col sm={6}  md={6} lg={7}>
                   <Tab.Container id="left-tabs-example" defaultActiveKey="0">
                     <Row className="clearfix">
                       
-                      <Col xs={ 12 } sm={ 3 } md={ 4 } lg={ 3 } >
+                      <Col xs={ 12 } sm={ 3 } md={ 4 } lg={ 3 } xsHidden>
                         <WsrBlockTitle title="Партнёры" />
                         <WsrBlockBlank className="wsr-block-select">
                           <Nav bsStyle="pills" className="wsr-partner-list" stacked>
