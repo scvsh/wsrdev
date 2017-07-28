@@ -1672,6 +1672,7 @@ h6 {
   text-align: center;
   border-color: white;
   clip-path: circle(50% at 50% 50%);
+  transform: translateZ(0);
 }
 .wsr-cite__position {
   display: block;
@@ -1769,12 +1770,14 @@ h6 {
   overflow: hidden;
   clip-path: circle(50% at 50% 50%);
   box-sizing: border-box;
+  transform: translateZ(0);
 }
 .wsr-team__member-photo-wrapper img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   clip-path: circle(50% at 50% 50%);
+  transform: translateZ(0);
 }
 .member-primary {
   border-color: #ce112d;
