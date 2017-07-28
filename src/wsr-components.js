@@ -1311,7 +1311,7 @@ export class WsrGalleryItem extends React.Component {
         let _props = this.props;
 
         return (
-            <Col xs={ 6 } md={ 4 }>
+            <Col xs={ 12 } md={ 4 } >
               <LinkContainer className="wsr-photo-gallery-item" to={ _props.album }>
                 <Thumbnail src={ _props.thumbnail } alt={ _props.title }>
                   <div className="wsr-photo-gallery-item__description">
