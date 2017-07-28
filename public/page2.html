@@ -7975,6 +7975,8 @@ a .wsr-footer__social-icons:first-child {
   margin-top: 0;
   padding-top: 20px;
   font-weight: 300;
+  margin-bottom: 0.2em;
+  word-wrap: normal;
 }
 .wsr-block__heading:hover {
   opacity: 0.8;
@@ -8331,6 +8333,7 @@ a .wsr-footer__social-icons:first-child {
   font-size: 0.8em;
   margin-bottom: 1em;
   display: block;
+  word-wrap: nowrap;
 }
 .wsr-footer__title {
   color: white;
@@ -8687,6 +8690,8 @@ h6 {
   border-color: white;
   -webkit-clip-path: circle(50% at 50% 50%);
           clip-path: circle(50% at 50% 50%);
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 .wsr-cite__position {
   display: block;
@@ -8803,16 +8808,16 @@ h6 {
   padding: 2px;
   text-align: center;
   overflow: hidden;
-  -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
   box-sizing: border-box;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 .wsr-team__member-photo-wrapper img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 .member-primary {
   border-color: #ce112d;
@@ -9662,14 +9667,6 @@ Should we change this at all?
   .wsr-cite > .panel-body {
     padding-bottom: 20px;
   }
-  .wsr-page h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 0.8em;
-  }
   .label {
     font-size: 0.6em;
   }
@@ -9772,7 +9769,7 @@ Should we change this at all?
     font-size: 2em;
   }
   .wsr_page__container {
-    padding: 10px;
+    padding: 15px;
   }
   .wsr-certification-description {
     padding-left: 10px;
@@ -9883,7 +9880,7 @@ Should we change this at all?
     font-size: 2em;
   }
   .wsr_page__container {
-    padding: 10px;
+    padding: 15px;
   }
   .wsr-certification-description {
     padding-left: 10px;

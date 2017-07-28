@@ -997,6 +997,7 @@ a .wsr-footer__social-icons:first-child {
   padding-top: 20px;
   font-weight: 300;
   margin-bottom: 0.2em;
+  word-wrap: normal;
 }
 .wsr-block__heading:hover {
   opacity: 0.8;
