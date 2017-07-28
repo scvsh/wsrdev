@@ -598,7 +598,7 @@ export class WsrBlock extends React.Component {
                                                                                                                                                 </h5>
                   </LinkContainer>
                   <div className="wsr-block__description">
-                    <TextTruncate className="wsr-block__description" line={ _props.lines? _props.lines : 2 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
+                    <TextTruncate className="wsr-block__description" line={ _props.lines? _props.lines : 3 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
                                                                                                                                                    <MdArrowForward className="wsr-block__date-icon" />
                                                                                                                                                  </a> } />
                   </div>
@@ -1124,7 +1124,7 @@ export class WsrExpertSearch extends React.Component {
         );
         return (
             <Row>
-              <Col xs={12} sm={4} md={ 8 } lg={ 4 }>
+              <Col xs={ 12 } sm={ 4 } md={ 8 } lg={ 4 }>
                     <WsrBlockTitle title="Поиск" />
                     <InputGroup>
                       <FormControl className="wsr-input-search" type="text" placeholder="Например, Столярное дело" />
@@ -1135,16 +1135,66 @@ export class WsrExpertSearch extends React.Component {
                       </InputGroup.Button>
                     </InputGroup>
                 </Col>
-                <Col xs={6} sm={4} md={ 8 } lg={ 3 }>
+                <Col xs={ 6 } sm={ 4 } md={ 8 } lg={ 3 }>
                     <WsrBlockTitle title="Категория" />
                     <FormControl componentClass="select" placeholder="select">
                       { listCategories }
                     </FormControl>
                 </Col>
-                <Col xs={6} sm={4} md={ 4 } lg={ 3 }>
+                <Col xs={ 6 } sm={ 4 } md={ 4 } lg={ 3 }>
                     <WsrBlockTitle title="Компетенция" />
                     <FormControl componentClass="select" placeholder="select">
                       { listCompetences }
+                    </FormControl>
+                </Col>
+                
+                <Col md={ 4 } lg={ 2 } xsHidden>
+                    <WsrBlockTitle title={'\u00A0'} />
+                        <Button block className="btn-export ">
+                           Выгрузить
+                          </Button>
+                </Col>
+              
+            </Row>
+        );
+
+    }
+}
+
+export class WsrSckSearch extends React.Component {
+    render() {
+        let _props = this.props;
+        let listCategories = _props.categories.map((category, index) => <option key={ index } value="select">
+                                                                          { category }
+                                                                        </option>
+        );
+        let listSck = _props.scks.map((sck, index) => <option key={ index } value="select">
+                                                                              { sck }
+                                                                            </option>
+        );
+        return (
+            <Row>
+              <Col xs={ 12 } sm={ 4 } md={ 8 } lg={ 4 }>
+                    <WsrBlockTitle title="Поиск" />
+                    <InputGroup>
+                      <FormControl className="wsr-input-search" type="text" placeholder="Например, Столярное дело" />
+                      <InputGroup.Button>
+                        <Button className="wsr-btn-search">
+                          <MdSearch className="ri-search" />
+                        </Button>
+                      </InputGroup.Button>
+                    </InputGroup>
+                </Col>
+                <Col xs={ 6 } sm={ 4 } md={ 8 } lg={ 3 }>
+                    <WsrBlockTitle title="Категория" />
+                    <FormControl componentClass="select" placeholder="select">
+                      { listCategories }
+                    </FormControl>
+                </Col>
+                <Col xs={ 6 } sm={ 4 } md={ 4 } lg={ 3 }>
+                    <WsrBlockTitle title="СЦК" />
+                    <FormControl componentClass="select" placeholder="select">
+                      { listSck }
                     </FormControl>
                 </Col>
                 

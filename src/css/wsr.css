@@ -996,6 +996,7 @@ a .wsr-footer__social-icons:first-child {
   margin-top: 0;
   padding-top: 20px;
   font-weight: 300;
+  margin-bottom: 0.2em;
 }
 .wsr-block__heading:hover {
   opacity: 0.8;
@@ -1768,7 +1769,6 @@ h6 {
   padding: 2px;
   text-align: center;
   overflow: hidden;
-  clip-path: circle(50% at 50% 50%);
   box-sizing: border-box;
   transform: translateZ(0);
 }
@@ -1776,7 +1776,6 @@ h6 {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  clip-path: circle(50% at 50% 50%);
   transform: translateZ(0);
 }
 .member-primary {
@@ -2584,14 +2583,6 @@ Should we change this at all?
   }
   .wsr-cite > .panel-body {
     padding-bottom: 20px;
-  }
-  .wsr-page h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 0.8em;
   }
   .label {
     font-size: 0.6em;

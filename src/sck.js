@@ -10,7 +10,7 @@ import { Button, PanelGroup, Tab, Nav, NavItem, Panel, ListGroupItem, ListGroup,
 
 /* Import WSR React components*/
 
-import { WsrSckInfo, WsrExpert, WsrBlock, WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrSckSearch, WsrSckInfo, WsrExpert, WsrBlock, WsrCarousel, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 
 /* Main app */
@@ -40,11 +40,14 @@ class Sck extends Component {
               { /* Main content */ }
              <Grid bsClass="containter-fluid">
                 <Row>
-                <Col sm={3} md={3} lg={2}/>
+                <Col sm={3} md={3} lg={2} xsHidden />
+                <Col xs={12} smHidden mdHidden lgHidden>
+                                    <WsrSckSearch export categories={ ["Все категории", "Специалисты строительной сферы", "Творчество и дизайн", "Специалисты, занятые на промышленном производстве", "Сфера услуг", "Обслуживание гражданского транспорта", "RU", "FutureSkills (FS)", "Презентационная (FS)", "Презентационная", "JuniorSkills", "Презентационная (JS)"] } scks={ ["ГАОУ ВО г. Москвы «Московский городской педагогический университет»", "Камнетёсное дело", "Облицовка плиткой", "Столярное дело", "Плотницкое дело", "Кирпичная кладка", "Холодильная техника и системы кондиционирования", "Сантехника и отопление", "Сухое строительство и штукатурные работы", "Малярные и декоративные работы", "Ландшафтный дизайн", "Электромонтаж", "Производство мебели"] } />
+                </Col>
                 <Col sm={6} md={6} lg={7}>
-                  <Tab.Container id="left-tabs-example" defaultActiveKey="0">
+                  <Tab.Container id="left-tabs-example" defaultActiveKey="1.1">
                     <Row>
-                      <Col xs={ 12 } sm={ 4 } md={ 5 } lg={ 5 } >
+                      <Col xs={ 12 } sm={ 4 } md={ 5 } lg={ 5 } xsHidden>
                         <WsrBlockTitle title="СЦК" />
                         <WsrBlockBlank className="wsr-block-select">
 
