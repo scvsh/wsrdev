@@ -954,6 +954,18 @@ export class WsrMedal extends React.Component {
         case  "professional":
             medal = 3;
             break;
+        case  "gold-eagle":
+            medal = 4;
+            break;
+        case  "silver-eagle":
+            medal = 5;
+            break;
+        case  "bronze-eagle":
+            medal = 6;
+            break;
+        case  "professional-eagle":
+            medal = 6;
+            break;
         }
 
         let curmed = medals[medal];
@@ -967,7 +979,7 @@ export class WsrMedal extends React.Component {
         return (
             <OverlayTrigger trigger={ ['hover', 'focus'] } placement="bottom" overlay={ tooltip }>
                   <div className={ "wsr-team__member-star-wrapper " + (_props.tier === "primary" ? "member-primary" : "member-secondary") }>
-                    <MdStars className={ "ri-star " + _props.medal } />
+                    <img alt="" className="wsr-expert-status" src={"/Images/" + _props.medal + ".svg"} />
                   </div>
             </OverlayTrigger>
         );

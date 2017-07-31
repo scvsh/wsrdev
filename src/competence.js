@@ -115,9 +115,14 @@ class Competence extends Component {
                                     
                                     <WsrTeamMember tier="primary" competence="Камнетесное дело" expert="Шкребтиенко Сергей Олегович"> 
                                       <WsrTeamMemberItem  name="Ткачёв Александр Дмитриевич, Дармограй Тимофей Юрьевич, Воронков  Никита Александрович, Юсупов Набихон Маннонович, Моренкова Анастасия Андреевна" competence="Камнетесное дело" tier="primary" medal="gold" host="Колледж Архитектуры, Дизайна и Реинжиниринга №26" expert="Шкребтиенко Сергей Олегович" photo="/Images/competence/1.jpg" >
+                                        <WsrMedal tier="primary" medal="gold"/>
                                         <WsrMedal tier="primary" medal="silver"/>
                                         <WsrMedal tier="primary" medal="bronze"/>
-                                        <WsrMedal tier="primary" medal="bronze"/>
+                                        <WsrMedal tier="primary" medal="professional"/>
+                                        <WsrMedal tier="primary" medal="gold-eagle"/>
+                                        <WsrMedal tier="primary" medal="silver-eagle"/>
+                                        <WsrMedal tier="primary" medal="bronze-eagle"/>
+                                        <WsrMedal tier="primary" medal="professional-eagle"/>
                                       </WsrTeamMemberItem>
                                     </WsrTeamMember>
                                     <WsrTeamMember tier="secondary" competence="Камнетесное дело" expert="Шкребтиенко Сергей Олегович"> 
