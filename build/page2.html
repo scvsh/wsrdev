@@ -10358,6 +10358,32 @@ _:-webkit-full-screen,
                           });
                            
                         </script>
+                        <script>
+                         $(document).scroll(function() {
+                          let affix = $(".wsr-affix");
+                          let mask = $("#clipmask");
+                          let anchor = 120;
+                          let value =
+                            window.pageYOffset ||
+                            document.documentElement.scrollTop ||
+                            document.body.scrollTop ||
+                            0;
+                          let tensor = 1 / (value / anchor) * 7 - 1.8 * (value / anchor - 1);
+                          let point = value > anchor ? (tensor > 0 ? tensor : 0) : 7;
+
+                          if (mask !== null) {
+                            mask.attr("points", "0 1,0.5 1,0.67 " + point / 87.5 + ",1 0,0 0");
+                          }
+                          if (affix !== null) {
+                            affix.css({
+                              "webkit-clip-path":
+                                "polygon(65% " + point + "%, 50% 100%, 0px 100%, 0px 0px, 100% 0px)",
+                              "clip-path":
+                                "polygon(65% " + point + "%, 50% 100%, 0px 100%, 0px 0px, 100% 0px)"
+                            });
+                          }
+                        });
+                        </script>
                         
                      </div>
                   </div>
