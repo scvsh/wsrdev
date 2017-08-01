@@ -51,7 +51,6 @@ class Rkc extends Component {
                                     <WsrExpert className="rkc-team"  name="Лабуза Иван" phone="+7 499 577 00-56" mail="partner@wsr.msk.ru" certification="certified"  competence="Камнетесное дело" tier="primary" medal="gold" host="Руководитель направления по работе с партнерами" expert="Шкребтиенко Сергей Олегович" photo="/Images/avatar.png"
                                     />
                                   </Col>
-                                  <Clearfix/>
                                   <Col xs={12} sm={ 6 } md={ 6 } lg={ 6 }>
                                     <WsrExpert className="rkc-team"  name="Шпитонова Пелагея" phone="+7 499 577 00-56" mail="mail@wsr.msk.ru" certification="certified"  competence="Камнетесное дело" tier="primary" medal="gold" host="Руководитель организационного отдела" expert="Шкребтиенко Сергей Олегович" photo="/Images/avatar.png"
                                     />
