@@ -2617,7 +2617,7 @@ Should we change this at all?
 }
 @media (min-width: 480px) and (max-width: 767px) {
   body {
-    overflow-x: 0;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
   }
   .App {
@@ -2732,7 +2732,7 @@ Should we change this at all?
 }
 @media (max-width: 480px) {
   body {
-    overflow-x: 0;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
   }
   .App {
