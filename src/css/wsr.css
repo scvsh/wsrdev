@@ -48,6 +48,10 @@ html {
   font-family: 'Gotham Pro', Helvetica, Arial, sans-serif;
   word-wrap: break-word;
 }
+body {
+  max-width: 100%;
+  width: 100vw;
+}
 .label {
   display: inline-block;
 }

@@ -1,3 +1,4 @@
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,6 +28,10 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+body {
+  max-width: 100%;
+  width: 100vw;
 }
 body {
   margin: 0;
@@ -8479,9 +8484,6 @@ a .wsr-footer__social-icons:first-child {
 .wsr-page__content li {
   padding: .5em 0.5em .5em 0.5em;
 }
-.wsr-page__content p {
-  padding: 1em 0 1em 0;
-}
 .wsr-page__content ul {
   padding-bottom: 0.5em;
   padding-left: 2em;
@@ -8814,7 +8816,6 @@ h6 {
 }
 .wsr-team__member-photo-wrapper img {
   width: 100%;
-  height: 100%;
   border-radius: 50%;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
@@ -9014,8 +9015,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+      -ms-flex: 1 0 ;
+          flex: 1 0 ;
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
 }
@@ -10062,38 +10063,38 @@ _:-webkit-full-screen,
                <div class="wsr-col-inherit wsr-carousel-red col-xs-11 col-xs-offset-1">
                   <div class="pull-right wsr-carousel-menu col-lg-3 col-md-4 col-sm-3 col-xs-2">
                      <ul class=" text-right wsr-carousel-menu__nav nav">
-                        <li role="presentation" class="wsr-carousel-menu-item "><a role="button" href="#">V ОЧМ «Московские мастера»</a></li>
+                        <li role="presentation" class="wsr-carousel-menu-item  active"><a role="button" href="#">V ОЧМ «Московские мастера»</a></li>
                         <li role="presentation" class="wsr-carousel-menu-item"><a role="button" href="#">Всероссийские отборочные соревнования</a></li>
                         <li role="presentation" class="wsr-carousel-menu-item"><a role="button" href="#">Демонстрационный экзамен по&nbsp;стандартам WorldSkills</a></li>
-                        <li role="presentation" class="wsr-carousel-menu-item active"><a role="button" href="#">Juniorskills</a></li>
+                        <li role="presentation" class="wsr-carousel-menu-item"><a role="button" href="#">Juniorskills</a></li>
                      </ul>
                   </div>
                </div>
                <div class="owl-carousel red-stage owl-loaded owl-drag">
                   <div class="owl-stage-outer">
-                     <div class="owl-stage" style="transform: translate3d(-6835px, 0px, 0px); transition: 0.25s; width: 10936px;">
-                        <div class="owl-item cloned" style="width: 1367px;">
+                     <div class="owl-stage" style="transform: translate3d(-3330px, 0px, 0px); transition: 0s; width: 13320px;">
+                        <div class="owl-item cloned" style="width: 1665px;">
                            <div><img src="/Images/carousel/gallery03.jpg" alt=""></div>
                         </div>
-                        <div class="owl-item cloned" style="width: 1367px;">
+                        <div class="owl-item cloned" style="width: 1665px;">
                            <div><img src="/Images/carousel/gallery04.jpg" alt=""></div>
                         </div>
-                        <div class="owl-item" style="width: 1367px;">
+                        <div class="owl-item active" style="width: 1665px;">
                            <div><img src="/Images/carousel/gallery02.jpg" alt=""></div>
                         </div>
-                        <div class="owl-item" style="width: 1367px;">
+                        <div class="owl-item" style="width: 1665px;">
                            <div><img src="/Images/carousel/gallery01.jpg" alt=""></div>
                         </div>
-                        <div class="owl-item" style="width: 1367px;">
+                        <div class="owl-item" style="width: 1665px;">
                            <div><img src="/Images/carousel/gallery03.jpg" alt=""></div>
                         </div>
-                        <div class="owl-item active" style="width: 1367px;">
+                        <div class="owl-item" style="width: 1665px;">
                            <div><img src="/Images/carousel/gallery04.jpg" alt=""></div>
                         </div>
-                        <div class="owl-item cloned" style="width: 1367px;">
+                        <div class="owl-item cloned" style="width: 1665px;">
                            <div><img src="/Images/carousel/gallery02.jpg" alt=""></div>
                         </div>
-                        <div class="owl-item cloned" style="width: 1367px;">
+                        <div class="owl-item cloned" style="width: 1665px;">
                            <div><img src="/Images/carousel/gallery01.jpg" alt=""></div>
                         </div>
                      </div>
@@ -10103,10 +10104,10 @@ _:-webkit-full-screen,
                      <div class="owl-next">next</div>
                   </div>
                   <div class="owl-dots">
-                     <div class="owl-dot"><span></span></div>
-                     <div class="owl-dot"><span></span></div>
-                     <div class="owl-dot"><span></span></div>
                      <div class="owl-dot active"><span></span></div>
+                     <div class="owl-dot"><span></span></div>
+                     <div class="owl-dot"><span></span></div>
+                     <div class="owl-dot"><span></span></div>
                   </div>
                </div>
                <svg pointer-events="none" width="0" height="0">
@@ -10151,7 +10152,7 @@ _:-webkit-full-screen,
                      </div>
                   </nav>
                   <div class="col-lg-3 col-md-4 col-sm-4 col-xs-5">
-                     <div dir="rtl" class="wsr-affix" style="clip-path: polygon(65% 7%, 50% 100%, 0px 100%, 0px 0px, 100% 0px);">
+                     <div dir="rtl" class="wsr-affix">
                         <div class="wsr-affix">
                            <div dir="ltr" class="row">
                               <a href="/">
@@ -10401,10 +10402,108 @@ _:-webkit-full-screen,
                         </svg>
                      </button>
                   </div>
-                  <div class="col-lg-4 col-lg-pull-2 col-md-4 col-md-pull-1 col-sm-4 col-sm-pull-1 col-xs-12">
+                  <div class="col-lg-4 col-lg-push-2 col-md-4 col-md-push-3 col-sm-4 col-sm-push-3 col-xs-12">
                      <div>
                         <a class="wsr-block__title  active" href="/">
-                           <!-- react-text: 183 -->Проекты<!-- /react-text --><!-- react-text: 184 --><!-- /react-text --><!-- react-text: 185 --> <!-- /react-text -->
+                           <!-- react-text: 183 -->Мероприятия<!-- /react-text --><!-- react-text: 184 --><!-- /react-text --><!-- react-text: 185 --> <!-- /react-text -->
+                        </a>
+                     </div>
+                     <div class="wsr-block wsr-block-announce">
+                        <div class="wsr-block__content row">
+                           <svg pointer-events="none" width="0" height="0">
+                              <clipPath pointer-events="none" id="ClipBlock" clipPathUnits="objectBoundingBox">
+                                 <polygon points="0 1, 1 1,1 0,0.09 0"></polygon>
+                              </clipPath>
+                           </svg>
+                           <div class="wsr_block__container col-md-7 col-sm-8">
+                              <h5 class="text-left wsr-block__heading" href="/default">
+                                 <div style="overflow: hidden;">
+                                    <div>Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»</div>
+                                 </div>
+                              </h5>
+                              <div class="wsr-block__description">
+                                 <div style="overflow: hidden;">
+                                    <div class="wsr-block__description"> На международном чемпионата China International Skills Competition 2017 (CISC-2017)</div>
+                                 </div>
+                              </div>
+                              <p class="wsr-block__date">
+                                 <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="wsr-block__date-icon" style="vertical-align: middle;">
+                                    <g>
+                                       <path d="m31.6 33.4v-18.4h-23.2v18.4h23.2z m0-26.8c1.8 0 3.4 1.6 3.4 3.4v23.4c0 1.8-1.6 3.2-3.4 3.2h-23.2c-1.9 0-3.4-1.4-3.4-3.2v-23.4c0-1.8 1.5-3.4 3.4-3.4h1.6v-3.2h3.4v3.2h13.2v-3.2h3.4v3.2h1.6z m-3.2 11.8v3.2h-3.4v-3.2h3.4z m-6.8 0v3.2h-3.2v-3.2h3.2z m-6.6 0v3.2h-3.4v-3.2h3.4z"></path>
+                                    </g>
+                                 </svg>
+                                 <!-- react-text: 200 -->10.06.2017<!-- /react-text -->
+                              </p>
+                           </div>
+                           <div class="wsr-block__image col-md-5 col-sm-4 col-xs-12" style="background-image: url(&quot;/Images/thumb06.jpg&quot;);"></div>
+                        </div>
+                     </div>
+                     <div class="wsr-block wsr-block-announce">
+                        <div class="wsr-block__content row">
+                           <svg pointer-events="none" width="0" height="0">
+                              <clipPath pointer-events="none" id="ClipBlock" clipPathUnits="objectBoundingBox">
+                                 <polygon points="0 1, 1 1,1 0,0.09 0"></polygon>
+                              </clipPath>
+                           </svg>
+                           <div class="wsr_block__container col-md-7 col-sm-8">
+                              <h5 class="text-left wsr-block__heading" href="/default">
+                                 <div style="overflow: hidden;">
+                                    <div>Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»</div>
+                                 </div>
+                              </h5>
+                              <div class="wsr-block__description">
+                                 <div style="overflow: hidden;">
+                                    <div class="wsr-block__description"> На международном чемпионата China International Skills Competition 2017 (CISC-2017)</div>
+                                 </div>
+                              </div>
+                              <p class="wsr-block__date">
+                                 <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="wsr-block__date-icon" style="vertical-align: middle;">
+                                    <g>
+                                       <path d="m31.6 33.4v-18.4h-23.2v18.4h23.2z m0-26.8c1.8 0 3.4 1.6 3.4 3.4v23.4c0 1.8-1.6 3.2-3.4 3.2h-23.2c-1.9 0-3.4-1.4-3.4-3.2v-23.4c0-1.8 1.5-3.4 3.4-3.4h1.6v-3.2h3.4v3.2h13.2v-3.2h3.4v3.2h1.6z m-3.2 11.8v3.2h-3.4v-3.2h3.4z m-6.8 0v3.2h-3.2v-3.2h3.2z m-6.6 0v3.2h-3.4v-3.2h3.4z"></path>
+                                    </g>
+                                 </svg>
+                                 <!-- react-text: 216 -->10.06.2017<!-- /react-text -->
+                              </p>
+                           </div>
+                           <div class="wsr-block__image col-md-5 col-sm-4 col-xs-12" style="background-image: url(&quot;/Images/thumb06.jpg&quot;);"></div>
+                        </div>
+                     </div>
+                     <div class="wsr-block wsr-block-announce">
+                        <div class="wsr-block__content row">
+                           <svg pointer-events="none" width="0" height="0">
+                              <clipPath pointer-events="none" id="ClipBlock" clipPathUnits="objectBoundingBox">
+                                 <polygon points="0 1, 1 1,1 0,0.09 0"></polygon>
+                              </clipPath>
+                           </svg>
+                           <div class="wsr_block__container col-md-7 col-sm-8">
+                              <h5 class="text-left wsr-block__heading" href="/default">
+                                 <div style="overflow: hidden;">
+                                    <div>Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»</div>
+                                 </div>
+                              </h5>
+                              <div class="wsr-block__description">
+                                 <div style="overflow: hidden;">
+                                    <div class="wsr-block__description"> На международном чемпионата China International Skills Competition 2017 (CISC-2017)</div>
+                                 </div>
+                              </div>
+                              <p class="wsr-block__date">
+                                 <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="wsr-block__date-icon" style="vertical-align: middle;">
+                                    <g>
+                                       <path d="m31.6 33.4v-18.4h-23.2v18.4h23.2z m0-26.8c1.8 0 3.4 1.6 3.4 3.4v23.4c0 1.8-1.6 3.2-3.4 3.2h-23.2c-1.9 0-3.4-1.4-3.4-3.2v-23.4c0-1.8 1.5-3.4 3.4-3.4h1.6v-3.2h3.4v3.2h13.2v-3.2h3.4v3.2h1.6z m-3.2 11.8v3.2h-3.4v-3.2h3.4z m-6.8 0v3.2h-3.2v-3.2h3.2z m-6.6 0v3.2h-3.4v-3.2h3.4z"></path>
+                                    </g>
+                                 </svg>
+                                 <!-- react-text: 232 -->10.06.2017<!-- /react-text -->
+                              </p>
+                           </div>
+                           <div class="wsr-block__image col-md-5 col-sm-4 col-xs-12" style="background-image: url(&quot;/Images/thumb06.jpg&quot;);"></div>
+                        </div>
+                     </div>
+                     <div class="list-group"><a href="/competence/techdocs" class="list-group-item"> Архив мероприятий</a></div>
+                  </div>
+                  <div class="col-lg-4 col-lg-pull-6 col-md-4 col-md-pull-5 col-sm-4 col-sm-pull-5 col-xs-12">
+                     <div>
+                        <a class="wsr-block__title  active" href="/">
+                           <!-- react-text: 239 -->Проекты<!-- /react-text --><!-- react-text: 240 --><!-- /react-text --><!-- react-text: 241 --> <!-- /react-text -->
                         </a>
                      </div>
                      <div class="wsr-block wsr-block-project--large">
@@ -10424,7 +10523,7 @@ _:-webkit-full-screen,
                               <div class="wsr-block__description">
                                  <div style="overflow: hidden;">
                                     <div class="wsr-block__description">
-                                       <!-- react-text: 433 -->V Открытый чемпионат профессионального мастерства «Московские мастера» по стандартам WorldSkills Russia пройдет в период с 18 по 27 октября, закрытие чемпионата состоится 10… <!-- /react-text -->
+                                       <!-- react-text: 389 -->V Открытый чемпионат профессионального мастерства «Московские мастера» по стандартам WorldSkills Russia пройдет в период с 18 по 27 октября, закрытие чемпионата состоится 10 ноября 2016 года. В Чемпионате Москвы 2016 года заявлено: 75 компетенций, серия… <!-- /react-text -->
                                        <a href="#">
                                           <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="wsr-block__date-icon" style="vertical-align: middle;">
                                              <g>
@@ -10457,7 +10556,7 @@ _:-webkit-full-screen,
                               <div class="wsr-block__description">
                                  <div style="overflow: hidden;">
                                     <div class="wsr-block__description">
-                                       <!-- react-text: 438 -->Всероссийские отборочные соревнования WorldSkills – важнейший этап на пути к участию в Финале V Национального чемпионата «Молодые профессионалы» (WorldSkills). Старт… <!-- /react-text -->
+                                       <!-- react-text: 396 -->Всероссийские отборочные соревнования WorldSkills – важнейший этап на пути к участию в Финале V Национального чемпионата «Молодые профессионалы» (WorldSkills). Старт Всероссийским отборочным соревнованиям будет дан 14 марта 2017 года в Москве. В след за Москвой соревнования… <!-- /react-text -->
                                        <a href="#">
                                           <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="wsr-block__date-icon" style="vertical-align: middle;">
                                              <g>
@@ -10490,7 +10589,7 @@ _:-webkit-full-screen,
                               <div class="wsr-block__description">
                                  <div style="overflow: hidden;">
                                     <div class="wsr-block__description">
-                                       <!-- react-text: 397 -->Проведение демонстрационного экзамена в рамках процедуры государственной итоговой аттестации – пилотный проект, стартующий в 2017 году в… <!-- /react-text -->
+                                       <!-- react-text: 403 -->Проведение демонстрационного экзамена в рамках процедуры государственной итоговой аттестации – пилотный проект, стартующий в 2017 году в рамках внедрения Регионального стандарта кадрового обеспечения промышленного роста в 20 субъектах Российской Федерации.… <!-- /react-text -->
                                        <a href="#">
                                           <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="wsr-block__date-icon" style="vertical-align: middle;">
                                              <g>
@@ -10523,7 +10622,7 @@ _:-webkit-full-screen,
                               <div class="wsr-block__description">
                                  <div style="overflow: hidden;">
                                     <div class="wsr-block__description">
-                                       <!-- react-text: 443 -->JuniorSkills – программа ранней профориентации, основ профессиональной подготовки и состязаний школьников в профессиональном мастерстве была… <!-- /react-text -->
+                                       <!-- react-text: 410 -->JuniorSkills – программа ранней профориентации, основ профессиональной подготовки и состязаний школьников в профессиональном мастерстве была инициирована в 2014 году Фондом Олега Дерипаска «Вольное Дело» в партнерстве с WorldSkills… <!-- /react-text -->
                                        <a href="#">
                                           <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="wsr-block__date-icon" style="vertical-align: middle;">
                                              <g>
@@ -10541,177 +10640,46 @@ _:-webkit-full-screen,
                      </div>
                      <div class="list-group"><a href="/competence/techdocs" class="list-group-item"> Архив проектов</a></div>
                   </div>
-                  <div class="col-lg-4 col-lg-pull-2 col-md-4 col-md-pull-1 col-sm-4 col-sm-pull-1">
-                     <div>
-                        <a class="wsr-block__title  active" href="/">
-                           <!-- react-text: 247 -->Мероприятия<!-- /react-text --><!-- react-text: 248 --><!-- /react-text --><!-- react-text: 249 --> <!-- /react-text -->
-                        </a>
-                     </div>
-                     <div class="wsr-block wsr-block-announce">
-                        <div class="wsr-block__content row">
-                           <svg pointer-events="none" width="0" height="0">
-                              <clipPath pointer-events="none" id="ClipBlock" clipPathUnits="objectBoundingBox">
-                                 <polygon points="0 1, 1 1,1 0,0.09 0"></polygon>
-                              </clipPath>
-                           </svg>
-                           <div class="wsr_block__container col-md-7 col-sm-8">
-                              <h5 class="text-left wsr-block__heading" href="/default">
-                                 <div style="overflow: hidden;">
-                                    <div>
-                                       <!-- react-text: 465 -->Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции… <!-- /react-text -->
-                                    </div>
-                                 </div>
-                              </h5>
-                              <div class="wsr-block__description">
-                                 <div style="overflow: hidden;">
-                                    <div class="wsr-block__description">
-                                       <!-- react-text: 448 --> На международном чемпионата… <!-- /react-text -->
-                                       <a href="#">
-                                          <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="wsr-block__date-icon" style="vertical-align: middle;">
-                                             <g>
-                                                <path d="m20 6.6l13.4 13.4-13.4 13.4-2.3-2.4 9.3-9.4h-20.4v-3.2h20.4l-9.3-9.4z"></path>
-                                             </g>
-                                          </svg>
-                                       </a>
-                                    </div>
-                                 </div>
-                              </div>
-                              <p class="wsr-block__date">
-                                 <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="wsr-block__date-icon" style="vertical-align: middle;">
-                                    <g>
-                                       <path d="m31.6 33.4v-18.4h-23.2v18.4h23.2z m0-26.8c1.8 0 3.4 1.6 3.4 3.4v23.4c0 1.8-1.6 3.2-3.4 3.2h-23.2c-1.9 0-3.4-1.4-3.4-3.2v-23.4c0-1.8 1.5-3.4 3.4-3.4h1.6v-3.2h3.4v3.2h13.2v-3.2h3.4v3.2h1.6z m-3.2 11.8v3.2h-3.4v-3.2h3.4z m-6.8 0v3.2h-3.2v-3.2h3.2z m-6.6 0v3.2h-3.4v-3.2h3.4z"></path>
-                                    </g>
-                                 </svg>
-                                 <!-- react-text: 264 -->10.06.2017<!-- /react-text -->
-                              </p>
-                           </div>
-                           <div class="wsr-block__image col-md-5 col-sm-4 col-xs-12" style="background-image: url(&quot;/Images/thumb06.jpg&quot;);"></div>
-                        </div>
-                     </div>
-                     <div class="wsr-block wsr-block-announce">
-                        <div class="wsr-block__content row">
-                           <svg pointer-events="none" width="0" height="0">
-                              <clipPath pointer-events="none" id="ClipBlock" clipPathUnits="objectBoundingBox">
-                                 <polygon points="0 1, 1 1,1 0,0.09 0"></polygon>
-                              </clipPath>
-                           </svg>
-                           <div class="wsr_block__container col-md-7 col-sm-8">
-                              <h5 class="text-left wsr-block__heading" href="/default">
-                                 <div style="overflow: hidden;">
-                                    <div>
-                                       <!-- react-text: 466 -->Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции… <!-- /react-text -->
-                                    </div>
-                                 </div>
-                              </h5>
-                              <div class="wsr-block__description">
-                                 <div style="overflow: hidden;">
-                                    <div class="wsr-block__description">
-                                       <!-- react-text: 453 --> На международном чемпионата… <!-- /react-text -->
-                                       <a href="#">
-                                          <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="wsr-block__date-icon" style="vertical-align: middle;">
-                                             <g>
-                                                <path d="m20 6.6l13.4 13.4-13.4 13.4-2.3-2.4 9.3-9.4h-20.4v-3.2h20.4l-9.3-9.4z"></path>
-                                             </g>
-                                          </svg>
-                                       </a>
-                                    </div>
-                                 </div>
-                              </div>
-                              <p class="wsr-block__date">
-                                 <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="wsr-block__date-icon" style="vertical-align: middle;">
-                                    <g>
-                                       <path d="m31.6 33.4v-18.4h-23.2v18.4h23.2z m0-26.8c1.8 0 3.4 1.6 3.4 3.4v23.4c0 1.8-1.6 3.2-3.4 3.2h-23.2c-1.9 0-3.4-1.4-3.4-3.2v-23.4c0-1.8 1.5-3.4 3.4-3.4h1.6v-3.2h3.4v3.2h13.2v-3.2h3.4v3.2h1.6z m-3.2 11.8v3.2h-3.4v-3.2h3.4z m-6.8 0v3.2h-3.2v-3.2h3.2z m-6.6 0v3.2h-3.4v-3.2h3.4z"></path>
-                                    </g>
-                                 </svg>
-                                 <!-- react-text: 280 -->10.06.2017<!-- /react-text -->
-                              </p>
-                           </div>
-                           <div class="wsr-block__image col-md-5 col-sm-4 col-xs-12" style="background-image: url(&quot;/Images/thumb06.jpg&quot;);"></div>
-                        </div>
-                     </div>
-                     <div class="wsr-block wsr-block-announce">
-                        <div class="wsr-block__content row">
-                           <svg pointer-events="none" width="0" height="0">
-                              <clipPath pointer-events="none" id="ClipBlock" clipPathUnits="objectBoundingBox">
-                                 <polygon points="0 1, 1 1,1 0,0.09 0"></polygon>
-                              </clipPath>
-                           </svg>
-                           <div class="wsr_block__container col-md-7 col-sm-8">
-                              <h5 class="text-left wsr-block__heading" href="/default">
-                                 <div style="overflow: hidden;">
-                                    <div>
-                                       <!-- react-text: 467 -->Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции… <!-- /react-text -->
-                                    </div>
-                                 </div>
-                              </h5>
-                              <div class="wsr-block__description">
-                                 <div style="overflow: hidden;">
-                                    <div class="wsr-block__description">
-                                       <!-- react-text: 458 --> На международном чемпионата… <!-- /react-text -->
-                                       <a href="#">
-                                          <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="wsr-block__date-icon" style="vertical-align: middle;">
-                                             <g>
-                                                <path d="m20 6.6l13.4 13.4-13.4 13.4-2.3-2.4 9.3-9.4h-20.4v-3.2h20.4l-9.3-9.4z"></path>
-                                             </g>
-                                          </svg>
-                                       </a>
-                                    </div>
-                                 </div>
-                              </div>
-                              <p class="wsr-block__date">
-                                 <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="wsr-block__date-icon" style="vertical-align: middle;">
-                                    <g>
-                                       <path d="m31.6 33.4v-18.4h-23.2v18.4h23.2z m0-26.8c1.8 0 3.4 1.6 3.4 3.4v23.4c0 1.8-1.6 3.2-3.4 3.2h-23.2c-1.9 0-3.4-1.4-3.4-3.2v-23.4c0-1.8 1.5-3.4 3.4-3.4h1.6v-3.2h3.4v3.2h13.2v-3.2h3.4v3.2h1.6z m-3.2 11.8v3.2h-3.4v-3.2h3.4z m-6.8 0v3.2h-3.2v-3.2h3.2z m-6.6 0v3.2h-3.4v-3.2h3.4z"></path>
-                                    </g>
-                                 </svg>
-                                 <!-- react-text: 296 -->10.06.2017<!-- /react-text -->
-                              </p>
-                           </div>
-                           <div class="wsr-block__image col-md-5 col-sm-4 col-xs-12" style="background-image: url(&quot;/Images/thumb06.jpg&quot;);"></div>
-                        </div>
-                     </div>
-                     <div class="list-group"><a href="/competence/techdocs" class="list-group-item"> Архив мероприятий</a></div>
-                  </div>
                </div>
             </div>
             <div class="row">
                <div class="owl-carousel owl-theme owl-loaded owl-drag">
                   <div class="owl-stage-outer">
-                     <div class="owl-stage" style="transform: translate3d(-1367px, 0px, 0px); transition: 0s; width: 4101px;">
-                        <div class="owl-item cloned" style="width: 341.75px;">
+                     <div class="owl-stage" style="transform: translate3d(-1665px, 0px, 0px); transition: 0s; width: 4995px;">
+                        <div class="owl-item cloned" style="width: 416.25px;">
                            <div class="item"><img src="/Images/thumb01.jpg" class="wsr-gallery-item img-responsive"></div>
                         </div>
-                        <div class="owl-item cloned" style="width: 341.75px;">
+                        <div class="owl-item cloned" style="width: 416.25px;">
                            <div class="item"><img src="/Images/thumb02.jpg" class="wsr-gallery-item img-responsive"></div>
                         </div>
-                        <div class="owl-item cloned" style="width: 341.75px;">
+                        <div class="owl-item cloned" style="width: 416.25px;">
                            <div class="item"><img src="/Images/thumb03.jpg" class="wsr-gallery-item img-responsive"></div>
                         </div>
-                        <div class="owl-item cloned" style="width: 341.75px;">
+                        <div class="owl-item cloned" style="width: 416.25px;">
                            <div class="item"><img src="/Images/thumb04.jpg" class="wsr-gallery-item img-responsive"></div>
                         </div>
-                        <div class="owl-item active" style="width: 341.75px;">
+                        <div class="owl-item active" style="width: 416.25px;">
                            <div class="item"><img src="/Images/thumb01.jpg" class="wsr-gallery-item img-responsive"></div>
                         </div>
-                        <div class="owl-item active" style="width: 341.75px;">
+                        <div class="owl-item active" style="width: 416.25px;">
                            <div class="item"><img src="/Images/thumb02.jpg" class="wsr-gallery-item img-responsive"></div>
                         </div>
-                        <div class="owl-item active" style="width: 341.75px;">
+                        <div class="owl-item active" style="width: 416.25px;">
                            <div class="item"><img src="/Images/thumb03.jpg" class="wsr-gallery-item img-responsive"></div>
                         </div>
-                        <div class="owl-item active" style="width: 341.75px;">
+                        <div class="owl-item active" style="width: 416.25px;">
                            <div class="item"><img src="/Images/thumb04.jpg" class="wsr-gallery-item img-responsive"></div>
                         </div>
-                        <div class="owl-item cloned" style="width: 341.75px;">
+                        <div class="owl-item cloned" style="width: 416.25px;">
                            <div class="item"><img src="/Images/thumb01.jpg" class="wsr-gallery-item img-responsive"></div>
                         </div>
-                        <div class="owl-item cloned" style="width: 341.75px;">
+                        <div class="owl-item cloned" style="width: 416.25px;">
                            <div class="item"><img src="/Images/thumb02.jpg" class="wsr-gallery-item img-responsive"></div>
                         </div>
-                        <div class="owl-item cloned" style="width: 341.75px;">
+                        <div class="owl-item cloned" style="width: 416.25px;">
                            <div class="item"><img src="/Images/thumb03.jpg" class="wsr-gallery-item img-responsive"></div>
                         </div>
-                        <div class="owl-item cloned" style="width: 341.75px;">
+                        <div class="owl-item cloned" style="width: 416.25px;">
                            <div class="item"><img src="/Images/thumb04.jpg" class="wsr-gallery-item img-responsive"></div>
                         </div>
                      </div>
@@ -10725,13 +10693,13 @@ _:-webkit-full-screen,
             </div>
             <div class="wsr-footer row">
                <div class="row">
-                  <div class="col-md-2 col-sm-10 col-xs-0"></div>
-                  <div class="col-md-7 col-xs-12">
+                  <div class="col-md-2 col-sm-3 col-xs-0"></div>
+                  <div class="col-md-6 col-sm-6 col-xs-6">
                      <span class="wsr-footer__heading">
                         <i>© 2017 Региональный координационный центр WorldSkills Russia по городу Москве</i><!-- react-text: 316 --> <!-- /react-text -->
                      </span>
                   </div>
-                  <div class="pull-right col-md-3 col-xs-12">
+                  <div class="pull-right col-md-3 col-sm-3 col-xs-6">
                      <div class="text-right wsr-social-icons">
                         <span class="wsr-footer__heading">
                            <a class="wsr-footer__social-icons" href="https://www.facebook.com/groups/wsrmoscow/">
@@ -10768,8 +10736,8 @@ _:-webkit-full-screen,
                </div>
                <div class="wsr-footer__divider row"></div>
                <div class="wsr-footer__menu row">
-                  <div class="col-md-2 col-sm-10 col-xs-0"></div>
-                  <div class="col-md-1 col-xs-12">
+                  <div class="col-md-2 col-sm-3 col-xs-0"></div>
+                  <div class="col-md-1 col-sm-2 col-xs-12">
                      <h7 class="wsr-footer__title">WSR В МОСКВЕ</h7>
                      <a href="">Об РКЦ</a><a href="">История WorldSkills</a><a href="">Активные мероприятия</a>
                   </div>
@@ -10777,13 +10745,13 @@ _:-webkit-full-screen,
                      <h7 class="wsr-footer__title">ЭКСПЕРТЫ</h7>
                      <a href="">Информация для экспертов</a>
                   </div>
-                  <div class="col-md-1 col-sm-2 col-xs-12">
+                  <div class="col-md-1 col-sm-1 col-xs-12">
                      <h7 class="wsr-footer__title">СЦК</h7>
                   </div>
-                  <div class="col-md-2 col-sm-2 col-xs-12">
+                  <div class="col-md-2 col-sm-1 col-xs-12">
                      <h7 class="wsr-footer__title">КОМПЕТЕНЦИИ</h7>
                   </div>
-                  <div class="col-md-2 col-sm-2 col-xs-12">
+                  <div class="col-md-2 col-sm-1 col-xs-12">
                      <h7 class="wsr-footer__title">ПРОЕКТЫ</h7>
                      <a href="">Региональный эксперт WSR</a><a href="">Эксперт ДЭ</a><a href="">Обучение становлению СЦК</a><a href="">Обучение экспертов WorldSkills</a>
                   </div>
@@ -10791,7 +10759,7 @@ _:-webkit-full-screen,
                      <h7 class="wsr-footer__title">ПАРТНЁРЫ</h7>
                      <a href="">Наши партнёры</a><a href="">Стать партнёром</a>
                   </div>
-                  <div class="col-md-2 col-sm-2 col-xs-12">
+                  <div class="col-md-2 col-sm-1 col-xs-12">
                      <h7 class="wsr-footer__title">ПРЕСС-ЦЕНТР</h7>
                      <a href="">Новости</a><a href="">Важная информация</a><a href="">Фотогалерея</a><a href="">Видеогалерея</a>
                   </div>
@@ -10804,11 +10772,6 @@ _:-webkit-full-screen,
    <!--
       React source file.
       -->
-   <!--<script type="text/javascript" src="/static/js/bundle.js"></script>-->
-</body>
-
-
-
-
-
+<!--    <script type="text/javascript" src="/static/js/bundle.js"></script>
+ --></body>
 </html>

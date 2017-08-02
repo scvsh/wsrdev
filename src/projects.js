@@ -53,7 +53,20 @@ class Projects extends Component {
                         </Button>
                   </Col>
 
-                  <Col xs={ 12 } sm={ 4 } md={ 4 } lg={ 4 } smPull={1} mdPull={1} lgPull={2} >
+                  <Col xs={12} sm={ 4 } md={ 4 } lg={ 4 } smPush={3} mdPush={3} lgPush={2} >
+                    <WsrBlockTitle title={ 'Мероприятия' } />
+                     <WsrBlock type="wsr-block-announce" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
+            На международном чемпионата China International Skills Competition 2017 (CISC-2017)" date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
+             <WsrBlock type="wsr-block-announce" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
+            На международном чемпионата China International Skills Competition 2017 (CISC-2017)" date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
+             <WsrBlock type="wsr-block-announce" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
+            На международном чемпионата China International Skills Competition 2017 (CISC-2017)" date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
+                  <ListGroup>
+                        <LinkContainer to="/competence/techdocs"><ListGroupItem> Архив мероприятий</ListGroupItem></LinkContainer>
+                      </ListGroup>
+                  </Col>
+
+                  <Col xs={ 12 } sm={ 4 } md={ 4 } lg={ 4 } smPull={5} mdPull={5} lgPull={6} >
                     <WsrBlockTitle title="Проекты" />
                     <WsrProject startdate="10.05.2017" enddate="19.05.2017" height={415} type="wsr-block-project--large" link="/projects/championship" lines={ 8 } heading="V ОЧМ «Московские мастера»" description="V Открытый чемпионат профессионального мастерства «Московские мастера» по стандартам WorldSkills Russia пройдет в период с 18 по 27 октября, закрытие чемпионата состоится 10 ноября 2016 года. В Чемпионате Москвы 2016 года заявлено: 75 компетенций, серия региональных отборочных соревнований по 15 компетенциям, а также 1 экспериментальная компетенция, которая ранее нигде представлена не была, 32 специализированных центра компетенций (СЦК). Для соревнований организовано 817 рабочих мест, из них 222 отведено для участников из других регионов."
                       date="06.06.2017" image="/Images/thumb01.jpg" />
@@ -68,18 +81,7 @@ class Projects extends Component {
                         <LinkContainer to="/competence/techdocs"><ListGroupItem> Архив проектов</ListGroupItem></LinkContainer>
                       </ListGroup>
                   </Col>
-                  <Col sm={ 4 } md={ 4 } lg={ 4 } smPull={1} mdPull={1} lgPull={2}>
-                    <WsrBlockTitle title={ 'Мероприятия' } />
-                     <WsrBlock type="wsr-block-announce" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
-            На международном чемпионата China International Skills Competition 2017 (CISC-2017)" date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
-             <WsrBlock type="wsr-block-announce" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
-            На международном чемпионата China International Skills Competition 2017 (CISC-2017)" date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
-             <WsrBlock type="wsr-block-announce" heading="Анна Беликова, участница Сборной Москвы, заработала серебряную медаль в компетенции «Графический дизайн»" description="
-            На международном чемпионата China International Skills Competition 2017 (CISC-2017)" date="10.06.2017" image="/Images/thumb06.jpg" link="/default" />
-                  <ListGroup>
-                        <LinkContainer to="/competence/techdocs"><ListGroupItem> Архив мероприятий</ListGroupItem></LinkContainer>
-                      </ListGroup>
-                  </Col>
+                  
                   
                 </Row>
                 </Grid>

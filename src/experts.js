@@ -148,9 +148,7 @@ class Team extends Component {
                           <WsrCertification certification="certified" />
                           <WsrCertification certification="regional" />
                           <WsrCertification certification="demo" />
-                          <WsrCertification certification="certified" />
-                          <WsrCertification certification="regional" />
-                          <WsrCertification certification="demo" />
+
                         </WsrExpert>
                       </Col>
                       <Col xs={ 12 } sm={ 6 } md={ 4 } lg={ 6 }>
