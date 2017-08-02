@@ -4,6 +4,7 @@ import "./css/wsr.css";
 import "./css/fonts.css";
 import { LinkContainer } from "react-router-bootstrap";
 import OwlCarousel from 'react-owl-carousel';
+import $ from "jquery";
 /* Import React-Boorstrap components*/
 import {  Label, NavItem, Tab, Nav, Grid, Row, Col, Image } from "react-bootstrap";
 
@@ -15,7 +16,15 @@ import { WsrQuote, WsrPartnerSearch, WsrPartnerCarousel, WsrBlock, WsrExpert, Ws
 /* Main app */
 
 class Partners extends Component {
+  componentDidMount() {
+      let items = $(".wsr-partner-comp__wrap > div").length / $(".owl-item").length;;
+      let count = 9 / items + "vw";
+      $(".wsr-partner-comp__item > img").css('max-height', count); 
+  }
+  
+
     render() {
+      
         return (
             <div className="App">
               { /* Header carousel */ }

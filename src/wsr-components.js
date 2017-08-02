@@ -357,16 +357,9 @@ export class WsrPartnerCompilation extends React.Component {
               <div className="wsr-partner-comp__item" ><img alt="" src="/Images/3.jpg"/></div>
               <div className="wsr-partner-comp__item" ><img alt="" src="/Images/4.jpg"/></div>
               <div className="wsr-partner-comp__item" ><img alt="" src="/Images/5.jpg"/></div>
-              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/6.jpg"/></div>
-              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/7.jpg"/></div>
-              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/8.jpg"/></div>
-              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/9.jpg"/></div>
-              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/10.png"/></div>
-              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/11.png"/></div>
-              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/12.png"/></div>
-              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/13.png"/></div>
-              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/14.jpg"/></div>
-              <div className="wsr-partner-comp__item" ><img alt="" src="/Images/15.png"/></div>
+       
+
+         
 
 
             </div>
