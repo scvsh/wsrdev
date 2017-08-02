@@ -349,7 +349,7 @@ export class WsrPartnerCompilation extends React.Component {
         return (
          <Row>
           <Col sm={ 2 }  />
-          <Col sm={ 7 } >
+          <Col sm={ 10 } md={ 7 } >
             <div className="wsr-partner-comp__wrap">
               
               <div className="wsr-partner-comp__item" ><img alt="" src="/Images/1.png"/></div>
@@ -357,7 +357,7 @@ export class WsrPartnerCompilation extends React.Component {
               <div className="wsr-partner-comp__item" ><img alt="" src="/Images/3.jpg"/></div>
               <div className="wsr-partner-comp__item" ><img alt="" src="/Images/4.jpg"/></div>
               <div className="wsr-partner-comp__item" ><img alt="" src="/Images/5.jpg"/></div>
-       
+
 
          
 
