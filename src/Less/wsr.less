@@ -30,11 +30,6 @@ html,  {
 	word-wrap: break-word;
 }
 
-body {
-	max-width: 100%;
-	width: 100vw;
-}
-
 .label {
 	display: inline-block;
 }
@@ -2365,6 +2360,10 @@ Should we change this at all?
 	}
 }
 @media (min-width:@screen-xs) and (max-width:@screen-xs-max) {
+	body {
+		overflow-x: 0;
+		-webkit-overflow-scrolling: touch;
+	}
 	.App {
 		padding-top: 40px;
 	}
@@ -2468,6 +2467,10 @@ Should we change this at all?
 	}
 }
 @media (max-width:@screen-xs) {
+	body {
+		overflow-x: 0;
+		-webkit-overflow-scrolling: touch;
+	}
 	.App {
 		padding-top: 40px;
 	}

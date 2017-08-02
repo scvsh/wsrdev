@@ -30,10 +30,6 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  max-width: 100%;
-  width: 100vw;
-}
-body {
   margin: 0;
 }
 article,
@@ -9702,6 +9698,10 @@ Should we change this at all?
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
+  body {
+    overflow-x: 0;
+    -webkit-overflow-scrolling: touch;
+  }
   .App {
     padding-top: 40px;
   }
@@ -9817,6 +9817,10 @@ Should we change this at all?
   }
 }
 @media (max-width: 480px) {
+  body {
+    overflow-x: 0;
+    -webkit-overflow-scrolling: touch;
+  }
   .App {
     padding-top: 40px;
   }
@@ -10384,6 +10388,18 @@ _:-webkit-full-screen,
                             });
                           }
                         });
+                        </script>
+                        <script>
+                        var docWidth = document.documentElement.offsetWidth;
+
+                        [].forEach.call(
+                          document.querySelectorAll('*'),
+                          function(el) {
+                            if (el.offsetWidth > docWidth) {
+                              console.log(el);
+                            }
+                          }
+                        );
                         </script>
                         
                      </div>
