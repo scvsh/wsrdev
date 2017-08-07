@@ -324,13 +324,13 @@ export class WsrCarouselCaption extends React.Component {
                       V ОЧМ «Московские мастера»
                     </NavItem>
                     <NavItem className="wsr-carousel-menu-item" eventKey={ 2 }>
-                      Всероссийские отборочные соревнования
+                      Всероссийские отборочные соревнования WorldSkills
                     </NavItem>
                     <NavItem className="wsr-carousel-menu-item" eventKey={ 3 }>
-                      Демонстрационный экзамен по стандартам WorldSkills
+                      V Национальный чемпионат WorldSkills Russia 
                     </NavItem>
                     <NavItem className="wsr-carousel-menu-item" eventKey={ 4 }>
-                      Juniorskills
+                      Демонстрационный экзамен по стандартам WorldSkills Russia 
                     </NavItem>
                 </Nav>
               </Col>

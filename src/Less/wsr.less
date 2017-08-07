@@ -186,11 +186,19 @@ li .active > a:any-link {
 	padding: 0;
 	border-radius: 3px;
 }
+.wsr-carousel-menu__nav {
+	display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    justify-content: space-around;
+    height: 100%;
+}
+    
 .wsr-carousel-menu__nav > li {
 	text-align: left;
 	color: #002b4a;
 	padding-right: 35%;
-	.responsive_limited(4.1vh, 7px, 21px, 16px, margin-top);
+	// .responsive_limited(4.1vh, 7px, 21px, 16px, margin-top);
 	background-color: white;
 	-webkit-transform: translateX(-2%);
 	-ms-transform: translateX(-2%);
@@ -208,7 +216,7 @@ li .active > a:any-link {
 	padding-left: 1vw;
 	display: block;
 	transform: skew(-15deg);
-	.responsive_limited(2vh, 7px, 13px, 12px, font-size);
+	.responsive_limited(1.8vh, 6px, 12px, 10px, font-size);
 	color: @brand-secondary;
 }
 .wsr-carousel-menu__nav > li > a:hover {
