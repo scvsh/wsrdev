@@ -448,7 +448,7 @@ li .active > a:any-link {
 	font-weight: 100;
 	color: white;
 	padding-left: 0.7vw;
-	.responsive_limited(2vh, 10px, 14px, 13px, font-size);
+	.responsive_limited(2vh, 7px, 14px, 13px, font-size);
 }
 .wsr-menu__contacts a:hover, .wsr-menu__social a:hover {
 	opacity: 0.8;
@@ -2270,6 +2270,9 @@ Should we change this at all?
 	}
 }
 @media (min-width:@screen-sm) and (max-width:@screen-sm-max) {
+	.wsr-menu__contacts a {
+		font-size: 1.1rem !important;
+	}
 	body {
 		hyphens: auto;
 		-webkit-hyphens: auto;

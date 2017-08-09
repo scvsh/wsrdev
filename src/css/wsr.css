@@ -705,9 +705,9 @@ li .active > a:any-link {
   font-size: 13px;
   font-size: 2vh;
 }
-@media (max-height: 500px) {
+@media (max-height: 350px) {
   .wsr-menu__contacts a {
-    font-size: 10px;
+    font-size: 7px;
   }
 }
 @media (min-height: 700px) {
@@ -2492,6 +2492,9 @@ Should we change this at all?
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .wsr-menu__contacts a {
+    font-size: 1.1rem !important;
+  }
   body {
     hyphens: auto;
     -webkit-hyphens: auto;
