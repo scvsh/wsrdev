@@ -2483,17 +2483,12 @@ Should we change this at all?
     font-size: 10px;
   }
 }
-@media (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+@media (min-width: 768px) and (max-width: 991px) {
   .wsr-menu__contacts a {
     font-size: 1.1rem !important;
   }
   .wsr-footer__social-icons {
     padding: 0 0.5em 0 0em !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .wsr-menu__contacts a {
-    font-size: 1.1rem !important;
   }
   body {
     hyphens: auto;
@@ -2567,11 +2562,6 @@ Should we change this at all?
   }
   .form-control {
     font-size: 0.8em;
-    height: 3em;
-  }
-  .btn-default {
-    font-size: 0.8em;
-    height: 3em;
   }
   .panel-title > a {
     font-size: 0.8em;
