@@ -2492,6 +2492,10 @@ Should we change this at all?
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  body {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
   .wsr-certification-description__col {
     border-left: none;
   }
