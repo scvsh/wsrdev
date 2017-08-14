@@ -862,6 +862,9 @@ a .wsr-footer__social-icons:first-child {
 .wsr-footer {
   background-color: #002b4a;
 }
+.wsr-footer__menu > div[class*='col-'] {
+  padding-bottom: 1em;
+}
 .wsr-footer-menu {
   font-weight: bold;
   color: white;
@@ -1856,7 +1859,7 @@ span .member-expert {
   width: 2em;
 }
 .wsr-certification-description__col {
-  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
   padding-top: 1.5em;
 }
 .wsr-expert-description {
@@ -1864,6 +1867,9 @@ span .member-expert {
 }
 .wsr-expert-description {
   padding: 0.2em 0 !important;
+}
+.wsr-expert-search {
+  padding-bottom: 15px;
 }
 .wsr-certification-description h4 {
   font-size: 100% !important;
@@ -2484,6 +2490,9 @@ Should we change this at all?
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .btn-export {
+    font-size: 0.7em;
+  }
   .wsr-menu__contacts a {
     font-size: 1.1rem !important;
   }

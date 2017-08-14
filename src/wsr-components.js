@@ -796,43 +796,52 @@ export class WsrFooter extends React.Component {
                   <h7 className="wsr-footer__title">
                     { "Wsr в Москве".toUpperCase() }
                   </h7>
-                  <a href="">Об РКЦ</a>
-                  <a href="">История WorldSkills</a>
-                  <a href="">Активные мероприятия</a>
+                  <a href="">История WSR в Москве</a>
+                  <a href="">Регламентирующие документы</a>
+                  <a href="">Контакты</a>
                 </Col>
                 <Col xs={ 12 } sm={ 2 } md={ 1 }>
                   <h7 className="wsr-footer__title">
+                    { "Сборная Москвы".toUpperCase() }
+                  </h7>
+                </Col>
+                <Col xs={ 12 } sm={ 2 } md={ 2 }>
+                  <h7 className="wsr-footer__title">
                     { "Эксперты".toUpperCase() }
                   </h7>
-                  <a href="">Информация для экспертов</a>
+                  <a href="">Региональный эксперт</a>
+                  <a href="">Эксперт демонстрационного экзамена</a>
+                  <a href="">Обучение в 1С:Учебном центре №1</a>
+                  
                 </Col>
-                <Col xs={ 12 } sm={ 1 } md={ 1 }>
+                <Col xs={ 12 } sm={ 2 } md={ 1 }>
                   <h7 className="wsr-footer__title">
                     { "СЦК".toUpperCase() }
                   </h7>
+                  <a href="">Стать СЦК</a>
                 </Col>
-                <Col xs={ 12 } sm={ 1 } md={ 2 }>
+                      <Clearfix visibleSmBlock/>
+
+                <Col xs={ 12 } sm={ 2 } md={ 1 } smPush={3} mdPush={0}>
                   <h7 className="wsr-footer__title">
                     { "Компетенции".toUpperCase() }
                   </h7>
                 </Col>
-                <Col xs={ 12 } sm={ 1 } md={ 2 }>
+                <Col xs={ 12 } sm={ 2 } md={ 1 } smPush={3} mdPush={0}>
                   <h7 className="wsr-footer__title">
                     { "Проекты".toUpperCase() }
                   </h7>
-                  <a href="">Региональный эксперт WSR</a>
-                  <a href="">Эксперт ДЭ</a>
-                  <a href="">Обучение становлению СЦК</a>
-                  <a href="">Обучение экспертов WorldSkills</a>
+                  <a href="">Архив проектов</a>
+                  <a href="">Архив мероприятий</a>
                 </Col>
-                <Col xs={ 12 } sm={ 2 } md={ 1 }>
+                <Col xs={ 12 } sm={ 2 } md={ 1 } smPush={3} mdPush={0}>
                   <h7 className="wsr-footer__title">
                     { "Партнёры".toUpperCase() }
                   </h7>
                   <a href="">Наши партнёры</a>
                   <a href="">Стать партнёром</a>
                 </Col>
-                <Col xs={ 12 } sm={ 1 } md={ 2 }>
+                <Col xs={ 12 } sm={ 2 } md={ 2 } smPush={3} mdPush={0}>
                   <h7 className="wsr-footer__title">
                     { "Пресс-центр".toUpperCase() }
                   </h7>
@@ -854,9 +863,9 @@ export class WsrPage extends React.Component {
             <div className={ "wsr-block " + _props.type }>
               <Row>
                 <Col xs={ 12 } className="wsr_page__container">
-                  <h3>
-                                                                                                                                                    { _props.heading ? _props.heading : "" }
-                                                                                                                                                </h3>
+                  
+                                                                                                                                                    { _props.heading ? "<h3>" + _props.heading + "</h3>" : "" }
+                                                                                                                                                
                   <div className="wsr-page__content">
                     { _props.description ? " <p> { _props.description } </p> " : false }
                     { _props.children }
