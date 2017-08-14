@@ -5,6 +5,8 @@ import "./css/fonts.css";
 import { LinkContainer } from "react-router-bootstrap";
 import { FaFileTextO } from "react-icons/lib/fa";
 import { MdSearch } from "react-icons/lib/md";
+import TextTruncate from "react-text-truncate";
+
 
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
@@ -43,9 +45,15 @@ class Team extends Component {
                                 Сертифицированный эксперт
                               </Media.Heading>
                               <p className="wsr-expert-description">
-                                Прошедшие процедуру сертификации Союза, представляющие Союз «Ворлдскиллс Россия» на чемпионатах любого уровня
+                              <TextTruncate
+                                line={ 1 }
+                                truncateText="…"
+                                text="Прошедшие процедуру сертификации Союза, представляющие Союз «Ворлдскиллс Россия» на чемпионатах любого уровня"
+                                />
+                               <a>Развернуть</a> 
                               </p>
-                              <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label>
+
+                              { /*  <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label> */ }
                             </Media.Body>
                           </Media>
                         </Col>
@@ -59,9 +67,15 @@ class Team extends Component {
                                 Главный региональный эксперт
                               </Media.Heading>
                               <p className="wsr-expert-description">
-                                Краткое описание категории
-                              </p>
-                              <Label><a href="/docs/certificate.txt">Образец Свидетельства</a></Label>
+                              <TextTruncate
+                                line={ 1 }
+                                truncateText="…"
+                                text=" Краткое описание категории...
+                              "
+                                />
+                               <a>Развернуть</a> 
+                               </p>
+                              { /*  <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label> */ }
                             </Media.Body>
                           </Media>
                         </Col>
@@ -77,10 +91,16 @@ class Team extends Component {
                                 Региональный эксперт
                               </Media.Heading>
                               <p className="wsr-expert-description">
-                                Прошедшие двух/трёхдневную программу обучения, сдавшие тестирование по итогам обучения. Имеют право проведения региональных (корпоративных) чемпионатов, а также
+                              <TextTruncate
+                                line={ 1 }
+                                truncateText="…"
+                                text="Прошедшие двух/трёхдневную программу обучения, сдавшие тестирование по итогам обучения. Имеют право проведения региональных (корпоративных) чемпионатов, а также
                                 оценки заданий демонстрационного экзамена
-                              </p>
-                              <Label><a href="/docs/certificate.txt">Образец Свидетельства</a></Label>
+                              "
+                                />
+                               <a>Развернуть</a> 
+                               </p>
+                              { /*  <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label> */ }
                             </Media.Body>
                           </Media>
                         </Col>
@@ -94,9 +114,18 @@ class Team extends Component {
                                 Эксперт Демонстрационного экзамена
                               </Media.Heading>
                               <p className="wsr-expert-description">
-                                Прошедшие однодневную программу обучения, успешно сдавшие тестирование. Допущены к оценке заданий демонстрационного экзамена
-                              </p>
-                              <Label><a href="/docs/certificate.txt">Образец Свидетельства</a></Label>
+                              <TextTruncate
+                                line={ 1 }
+                                truncateText="…"
+                                text="                                Прошедшие однодневную программу обучения, успешно сдавшие тестирование. Допущены к оценке заданий демонстрационного экзамена
+
+                              "
+                                /><a>Развернуть</a> 
+                                </p>
+
+                              
+                              
+                              { /*  <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label> */ }
                             </Media.Body>
                           </Media>
                         </Col>
@@ -112,9 +141,16 @@ class Team extends Component {
                                 Сертифицированный эксперт возрастной категории 14-16 (WorldSkills Junior)
                               </Media.Heading>
                               <p className="wsr-expert-description">
-Эксперт, представляющий Союз «Ворлдскиллс Россия» на чемпионатах любого уровня в категории 14-16.
-                              </p>
-                              <Label><a href="/docs/certificate.txt">Образец Свидетельства</a></Label>
+                              <TextTruncate
+                                line={ 1 }
+                                truncateText="…"
+                                text="             Эксперт, представляющий Союз «Ворлдскиллс Россия» на чемпионатах любого уровня в категории 14-16.
+
+                              "
+                                />
+                                <a>Развернуть</a> 
+                                </p>
+                              { /*  <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label> */ }
                             </Media.Body>
                           </Media>
                         </Col>
@@ -128,8 +164,16 @@ class Team extends Component {
                                 Заместитель главного регионального эксперта по категории 14-16 (WorldSkills Junior) 
                               </Media.Heading>
                               <p className="wsr-expert-description">
-Осуществляет развитие категории 14-16 в компетенции в Москве, является главным экспертом регионального чемпионата в категории 14-16.                              </p>
-                              <Label><a href="/docs/certificate.txt">Образец Свидетельства</a></Label>
+                              <TextTruncate
+                                line={ 1 }
+                                truncateText="…"
+                                text="             Осуществляет развитие категории 14-16 в компетенции в Москве, является главным экспертом регионального чемпионата в категории 14-16.    
+
+                              "
+                                />
+                                <a>Развернуть</a> 
+                                </p>
+                             { /*  <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label> */ }
                             </Media.Body>
                           </Media>
                         </Col>
@@ -145,8 +189,15 @@ class Team extends Component {
                                 Эксперт-компатриот
                               </Media.Heading>
                               <p className="wsr-expert-description">
-Описание категории                              </p>
-                              <Label><a href="/docs/certificate.txt">Образец Свидетельства</a></Label>
+                              <TextTruncate
+                                line={ 1 }
+                                truncateText="…"
+                                text="             Осуществляет развитие категории 14-16 в компетенции в Москве, является главным экспертом регионального чемпионата в категории 14-16.    
+
+                              "
+                                /><a>Развернуть</a> 
+                                </p>
+                              { /*  <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label> */ }
                             </Media.Body>
                           </Media>
                         </Col>
@@ -186,12 +237,16 @@ class Team extends Component {
                   </Col>
                 </Row>
                 <Row>
+<Row>
+                  <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
+                    <Col sm={ 9 } md={9} lg={10} className="full-size"><WsrExpertSearch categories={ ["Все категории", "Специалисты строительной сферы", "Творчество и дизайн", "Специалисты, занятые на промышленном производстве", "Сфера услуг", "Обслуживание гражданского транспорта", "RU", "FutureSkills (FS)", "Презентационная (FS)", "Презентационная", "JuniorSkills", "Презентационная (JS)"] } competences={ ["Все компетенции", "Камнетёсное дело", "Облицовка плиткой", "Столярное дело", "Плотницкое дело", "Кирпичная кладка", "Холодильная техника и системы кондиционирования", "Сантехника и отопление", "Сухое строительство и штукатурные работы", "Малярные и декоративные работы", "Ландшафтный дизайн", "Электромонтаж", "Производство мебели"] } />
+                  </Col>
+                </Row>
                    <Tab.Container id="left-tabs-example" defaultActiveKey="0">
                     <Row className="clearfix">
                       <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
-                    <Col sm={ 9 } md={9} lg={10} smHidden mdHidden lgHidden className="full-size">
-                    <WsrExpertSearch categories={ ["Все категории", "Специалисты строительной сферы", "Творчество и дизайн", "Специалисты, занятые на промышленном производстве", "Сфера услуг", "Обслуживание гражданского транспорта", "RU", "FutureSkills (FS)", "Презентационная (FS)", "Презентационная", "JuniorSkills", "Презентационная (JS)"] } competences={ ["Все компетенции", "Камнетёсное дело", "Облицовка плиткой", "Столярное дело", "Плотницкое дело", "Кирпичная кладка", "Холодильная техника и системы кондиционирования", "Сантехника и отопление", "Сухое строительство и штукатурные работы", "Малярные и декоративные работы", "Ландшафтный дизайн", "Электромонтаж", "Производство мебели"] } />
-                  </Col>
+
+
                       <Col xs={ 12 } sm={ 2 } md={ 3 } lg={ 2 } xsHidden>
                         <WsrBlockTitle title="Категории" />
                         <WsrBlockBlank className="wsr-block-select">
@@ -265,18 +320,11 @@ class Team extends Component {
                                 </WsrBlockBlank>
                                 
                               </Col>
+
                               <Tab.Content animation>
                                 <Tab.Pane eventKey="1c">
                                   <Col sm={ 4 } md={ 3 } lg={ 5 }>
                                      <WsrBlockTitle title="Эксперты" />
-                                     <InputGroup className="wsr-expert-search">
-                      <FormControl className="wsr-input-search" type="text" placeholder="Введите имя эксперта" />
-                      <InputGroup.Button>
-                        <Button className="wsr-btn-search">
-                          <MdSearch className="ri-search" />
-                        </Button>
-                      </InputGroup.Button>
-                    </InputGroup>
                                                             <WsrExpert name="Юсупов Набихон Маннонович" certification="certified" head={ true } competence="Кирпичная кладка" tier="primary " medal="bronze"
                           host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg">
                           <WsrCertification certification="certified" />
