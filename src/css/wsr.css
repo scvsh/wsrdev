@@ -1859,8 +1859,11 @@ span .member-expert {
   width: 2em;
 }
 .wsr-certification-description__col {
-  border-left: 1px solid #dddddd;
-  padding-top: 1.5em;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+.wsr-certification-description__row:not(:last-child) {
+  border-bottom: 1px solid #dddddd;
 }
 .wsr-expert-description {
   margin-bottom: 0;
@@ -1876,7 +1879,9 @@ span .member-expert {
 }
 .wsr-certification-explanation__media {
   padding-left: 1em !important;
-  padding-bottom: 1.5em;
+}
+.wsr-certification-explanation__media:nth-child(even) {
+  border-left: 1px solid #dddddd;
 }
 .wsr-certification-explanation__media:first-child {
   padding-left: 0;
