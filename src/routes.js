@@ -51,6 +51,7 @@ const Routes = () => (
             <Route exact path="/team" component={ Team } />
 
             <Route exact path="/competence" component={ Competence } />
+            <Route exact path="/competence-junior" component={ Competence } />
             <Route path="/competence/techdocs" component={ Techdocs } />
             <Route exact path="/expert" render={ () => ( <Redirect to="/expert/community" /> ) } />
             <Route path="/expert/community" component={ ExpertCommunity } />

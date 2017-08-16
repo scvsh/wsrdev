@@ -226,6 +226,11 @@ constructor(props) {
                               { "Компетенции".toUpperCase() }
                             </NavItem>
                           </LinkContainer>
+                          <LinkContainer to="/competence-junior">
+                            <NavItem className="wsr-menu-item" eventKey={ 4 }>
+                              { "КОМПЕТЕНЦИИ 14+ (Junior)".toUpperCase() }
+                            </NavItem>
+                          </LinkContainer>
                             <NavItem href="/page2.html" className="wsr-menu-item" eventKey={ 5 }>
                               { "Проекты".toUpperCase() }
                             </NavItem>
