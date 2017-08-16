@@ -190,7 +190,7 @@ class Team extends Component {
                         
         
       </PanelGroup>
-      <WsrBlockTitle title="Поиск по экспертам" />
+      <WsrBlockTitle title="Поиск экспертов" />
       <WsrBlockBlank>
       <InputGroup>
                       <FormControl className="wsr-input-search" type="text" placeholder="Введите категорию, компетенцию или имя эксперта" />
