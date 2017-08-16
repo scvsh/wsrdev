@@ -10,11 +10,11 @@ import TextTruncate from "react-text-truncate";
 
 import OwlCarousel from 'react-owl-carousel';
 /* Import React-Boorstrap components*/
-import { InputGroup, FormControl, Tab, Nav, NavItem, Panel, Button, Clearfix, Label, Media, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
+import { PanelGroup, InputGroup, FormControl, Tab, Nav, NavItem, Panel, Button, Clearfix, Label, Media, ListGroupItem, ListGroup, Grid, Row, Col, Image } from "react-bootstrap";
 
 /* Import WSR React components*/
 
-import { WsrCertification, WsrMedal, WsrTeamMember, WsrTeamMemberItem, WsrSckInfo, WsrCompetence, WsrExpert, WsrExpertSearch, WsrCarousel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrAccordeonExpert, WsrCertification, WsrMedal, WsrTeamMember, WsrTeamMemberItem, WsrSckInfo, WsrCompetence, WsrExpert, WsrExpertSearch, WsrCarousel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 /* Main app */
 
@@ -33,176 +33,176 @@ class Team extends Component {
                   <Col xs={ 12 } sm={ 5 } md={ 6 } lg={ 7 } className="full-size">
                     <Col xs={ 12 } sm={ 12 } md={ 12 } lg={ 12 }>
                       <WsrBlockTitle title="Эксперты" />
-                      <WsrPage type="wsr-page" heading="" description="" date="10.05.2017">
-                      <Row className="wsr-certification-description__row">
-                        <Col md={6 }  className="wsr-certification-description__col">
-                          <Media className="wsr-certification-explanation__media">
-                            <Media.Left className="wsr-certification-explanation">
-                              <img width={ 100 } src="/Images/certified.svg" alt="" />
-                            </Media.Left>
-                            <Media.Body className="wsr-certification-description">
-                              <Media.Heading>
-                                Сертифицированный эксперт
-                              </Media.Heading>
+                      
+                      <PanelGroup accordion className="wsr-block__sck-info__panel" defaultActiveKey="1">
+                      <Panel header={ 
+                        <div className="wsr-expert-accordeon__heading">
+                        <div className="wsr-expert-accordeon__heading">
+                        <div>
+                          <img width={30} src="/Images/certified.svg" alt="Image"/>
+                        </div>
+                        <div className="wsr-expert-accordeon__heading_text ">
+                          <h5>Сертифицированный эксперт</h5>
+                          </div>
+                        </div>
+                        </div>
+                        
+                         } eventKey="1">
                               <p className="wsr-expert-description">
-                              <TextTruncate
-                                line={ 1 }
-                                truncateText="…"
-                                text="Прошедшие процедуру сертификации Союза, представляющие Союз «Ворлдскиллс Россия» на чемпионатах любого уровня"
-                                />
-                               <a>Развернуть</a> 
-                              </p>
-
-                              { /*  <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label> */ }
-                            </Media.Body>
-                          </Media>
-                        </Col>
-                        <Col md={ 6 } className="wsr-certification-description__col">
-                          <Media className="wsr-certification-explanation__media">
-                            <Media.Left className="wsr-certification-explanation">
-                              <img width={ 100 } src="/Images/primary_regional.svg" alt="" />
-                            </Media.Left>
-                            <Media.Body className="wsr-certification-description">
-                              <Media.Heading>
-                                Главный региональный эксперт
-                              </Media.Heading>
-                              <p className="wsr-expert-description">
-                              <TextTruncate
-                                line={ 1 }
-                                truncateText="…"
-                                text=" Краткое описание категории...
-                              "
-                                />
-                               <a>Развернуть</a> 
-                               </p>
-                              { /*  <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label> */ }
-                            </Media.Body>
-                          </Media>
-                        </Col>
-                        </Row>
-                        <Row className="wsr-certification-description__row"> 
-                        <Col md={ 6 } className="wsr-certification-description__col">
-                          <Media className="wsr-certification-explanation__media">
-                            <Media.Left className="wsr-certification-explanation">
-                              <img width={ 100 } src="/Images/regional.svg" alt="" />
-                            </Media.Left>
-                            <Media.Body className="wsr-certification-description">
-                              <Media.Heading>
-                                Региональный эксперт
-                              </Media.Heading>
-                              <p className="wsr-expert-description">
-                              <TextTruncate
-                                line={ 1 }
-                                truncateText="…"
-                                text="Прошедшие двух/трёхдневную программу обучения, сдавшие тестирование по итогам обучения. Имеют право проведения региональных (корпоративных) чемпионатов, а также
+                              Прошедшие двух/трёхдневную программу обучения, сдавшие тестирование по итогам обучения. Имеют право проведения региональных (корпоративных) чемпионатов, а также
                                 оценки заданий демонстрационного экзамена
-                              "
-                                />
-                               <a>Развернуть</a> 
+                                
                                </p>
-                              { /*  <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label> */ }
-                            </Media.Body>
-                          </Media>
-                        </Col>
-                        <Col md={ 6 } className="wsr-certification-description__col">
-                          <Media className="wsr-certification-explanation__media">
-                            <Media.Left className="wsr-certification-explanation">
-                              <img width={ 100 } src="/Images/demo.svg" alt="" />
-                            </Media.Left>
-                            <Media.Body className="wsr-certification-description">
-                              <Media.Heading>
-                                Эксперт Демонстрационного экзамена
-                              </Media.Heading>
+                               <Label className="wsr-certificate-label"><a href="/docs/certificate.txt">Образец Сертификата</a></Label>
+
+                        </Panel>
+
+                        <Panel header={ 
+                        <div className="wsr-expert-accordeon__heading">
+                        <div className="wsr-expert-accordeon__heading">
+                        <div>
+                          <img width={30} src="/Images/icons/certified_junior.svg" alt="Image"/>
+                        </div>
+                        <div className="wsr-expert-accordeon__heading_text ">
+                          <h5>Сертифицированный эксперт возрастной категории 14-16 (WorldSkills Junior)</h5>
+                          </div>
+                        </div>
+                        </div>
+                        
+                         } eventKey="2">
                               <p className="wsr-expert-description">
-                              <TextTruncate
-                                line={ 1 }
-                                truncateText="…"
-                                text="                                Прошедшие однодневную программу обучения, успешно сдавшие тестирование. Допущены к оценке заданий демонстрационного экзамена
+Эксперт, представляющий Союз «Ворлдскиллс Россия» на чемпионатах любого уровня в категории 14-16.
+                                
+                               </p>
+                               <Label className="wsr-certificate-label"><a href="/docs/certificate.txt">Образец Сертификата</a></Label>
 
-                              "
-                                /><a>Развернуть</a> 
-                                </p>
+                        </Panel>
 
-                              
-                              
-                              { /*  <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label> */ }
-                            </Media.Body>
-                          </Media>
-                        </Col>
-                        </Row>
-                        <Row className="wsr-certification-description__row">
-                        <Col md={ 6 } className="wsr-certification-description__col">
-                          <Media className="wsr-certification-explanation__media">
-                            <Media.Left className="wsr-certification-explanation">
-                              <img width={ 100 } src="/Images/junior.svg" alt="" />
-                            </Media.Left>
-                            <Media.Body className="wsr-certification-description">
-                              <Media.Heading>
-                                Сертифицированный эксперт возрастной категории 14-16 (WorldSkills Junior)
-                              </Media.Heading>
+                        <Panel header={ 
+                        <div className="wsr-expert-accordeon__heading">
+                        <div className="wsr-expert-accordeon__heading">
+                        <div>
+                          <img width={30} src="/Images/icons/primary_regional.svg" alt="Image"/>
+                        </div>
+                        <div className="wsr-expert-accordeon__heading_text ">
+                          <h5>Главный региональный эксперт</h5>
+                          </div>
+                        </div>
+                        </div>
+                        
+                         } eventKey="3">
                               <p className="wsr-expert-description">
-                              <TextTruncate
-                                line={ 1 }
-                                truncateText="…"
-                                text="             Эксперт, представляющий Союз «Ворлдскиллс Россия» на чемпионатах любого уровня в категории 14-16.
+                              Главный региональный эксперт осуществляет развитие компетенции в Москве, является главным экспертом регионального чемпионата
+                                
+                               </p>
+                               <Label className="wsr-certificate-label"><a href="/docs/certificate.txt">Образец Сертификата</a></Label>
 
-                              "
-                                />
-                                <a>Развернуть</a> 
-                                </p>
-                              { /*  <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label> */ }
-                            </Media.Body>
-                          </Media>
-                        </Col>
-                        <Col md={ 6 } className="wsr-certification-description__col">
-                          <Media className="wsr-certification-explanation__media">
-                            <Media.Left className="wsr-certification-explanation">
-                              <img width={ 100 } src="/Images/deputy-junior.svg" alt="" />
-                            </Media.Left>
-                            <Media.Body className="wsr-certification-description">
-                              <Media.Heading>
-                                Заместитель главного регионального эксперта по категории 14-16 (WorldSkills Junior) 
-                              </Media.Heading>
+                        </Panel>
+                        <Panel header={ 
+                        <div className="wsr-expert-accordeon__heading">
+                        <div className="wsr-expert-accordeon__heading">
+                        <div>
+                          <img width={30} src="/Images/icons/primary_junior.svg" alt="Image"/>
+                        </div>
+                        <div className="wsr-expert-accordeon__heading_text ">
+                          <h5>Заместитель главного регионального эксперта по категории 14-16 (WorldSkills Junior)</h5>
+                          </div>
+                        </div>
+                        </div>
+                        
+                         } eventKey="4">
                               <p className="wsr-expert-description">
-                              <TextTruncate
-                                line={ 1 }
-                                truncateText="…"
-                                text="             Осуществляет развитие категории 14-16 в компетенции в Москве, является главным экспертом регионального чемпионата в категории 14-16.    
+Осуществляет развитие категории 14-16 в компетенции в Москве, является главным экспертом регионального чемпионата в категории 14-16.
+                                
+                               </p>
+                               <Label className="wsr-certificate-label"><a href="/docs/certificate.txt">Образец Сертификата</a></Label>
 
-                              "
-                                />
-                                <a>Развернуть</a> 
-                                </p>
-                             { /*  <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label> */ }
-                            </Media.Body>
-                          </Media>
-                        </Col>
-                        </Row>
-                        <Row className="wsr-certification-description__row">
-                        <Col md={ 6 } className="wsr-certification-description__col">
-                          <Media className="wsr-certification-explanation__media">
-                            <Media.Left className="wsr-certification-explanation">
-                              <img width={ 100 } src="/Images/compatriot.svg" alt="" />
-                            </Media.Left>
-                            <Media.Body className="wsr-certification-description">
-                              <Media.Heading>
-                                Эксперт-компатриот
-                              </Media.Heading>
+                        </Panel>
+                        <Panel header={ 
+                        <div className="wsr-expert-accordeon__heading">
+                        <div className="wsr-expert-accordeon__heading">
+                        <div>
+                          <img width={30} src="/Images/icons/compatriot.svg" alt="Image"/>
+                        </div>
+                        <div className="wsr-expert-accordeon__heading_text ">
+                          <h5>Эксперт-компатриот</h5>
+                          </div>
+                        </div>
+                        </div>
+                        
+                         } eventKey="5">
                               <p className="wsr-expert-description">
-                              <TextTruncate
-                                line={ 1 }
-                                truncateText="…"
-                                text="             Осуществляет развитие категории 14-16 в компетенции в Москве, является главным экспертом регионального чемпионата в категории 14-16.    
+                                Описание категории                                
+                               </p>
+                               <Label className="wsr-certificate-label"><a href="/docs/certificate.txt">Образец Сертификата</a></Label>
 
-                              "
-                                /><a>Развернуть</a> 
-                                </p>
-                              { /*  <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label> */ }
-                            </Media.Body>
-                          </Media>
-                        </Col>
-                        </Row>
-                      </WsrPage>
+                        </Panel>
+                        
+        
+      </PanelGroup>
+      <WsrBlockTitle title="Эксперты" />
+                      
+                      <PanelGroup accordion className="wsr-block__sck-info__panel">
+                      <Panel header={ 
+                        <div className="wsr-expert-accordeon__heading">
+                        <div className="wsr-expert-accordeon__heading">
+                        <div>
+                          <img width={30} src="/Images/icons/regional.svg" alt="Image"/>
+                        </div>
+                        <div className="wsr-expert-accordeon__heading_text ">
+                          <h5>Региональный эксперт</h5>
+                          </div>
+                        </div>
+                        </div>
+                        
+                         } eventKey="6">
+                              <p className="wsr-expert-description">
+                              Прошедшие двух/трёхдневную программу обучения, сдавшие тестирование по итогам обучения. Имеют право проведения региональных (корпоративных) чемпионатов, а также
+                                оценки заданий демонстрационного экзамена
+                                
+                               </p>
+                               <Label className="wsr-certificate-label"><a href="/docs/certificate.txt">Образец Сертификата</a></Label>
+
+                        </Panel>
+
+                        <Panel header={ 
+                        <div className="wsr-expert-accordeon__heading">
+                        <div className="wsr-expert-accordeon__heading">
+                        <div>
+                          <img width={30} src="/Images/icons/demo.svg" alt="Image"/>
+                        </div>
+                        <div className="wsr-expert-accordeon__heading_text ">
+                          <h5>Эксперт Демонстрационного экзамена</h5>
+                          </div>
+                        </div>
+                        </div>
+                        
+                         } eventKey="7">
+                              <p className="wsr-expert-description">
+Эксперт, прошедший однодневную программу обучения, успешно сдавший тестирование. Эксперт демоэкзамена допущен к оценке заданий демонстрационного экзамена.
+                                
+                               </p>
+                               <Label className="wsr-certificate-label"><a href="/docs/certificate.txt">Образец Сертификата</a></Label>
+
+                        </Panel>
+
+
+                        
+        
+      </PanelGroup>
+      <WsrBlockTitle title="Поиск по экспертам" />
+      <WsrBlockBlank>
+      <InputGroup>
+                      <FormControl className="wsr-input-search" type="text" placeholder="Введите категорию, компетенцию или имя эксперта" />
+                      <InputGroup.Button>
+                        <Button className="wsr-btn-search">
+                          <MdSearch className="ri-search" />
+                        </Button>
+                      </InputGroup.Button>
+                    </InputGroup>    
+                    </WsrBlockBlank>
+
+
                     </Col>
                   </Col>
                   <Col sm={ 4 } md={ 3 } lg={ 3 }>
@@ -237,11 +237,6 @@ class Team extends Component {
                   </Col>
                 </Row>
                 <Row>
-<Row>
-                  <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
-                    <Col sm={ 9 } md={9} lg={10} className="full-size"><WsrExpertSearch categories={ ["Все категории", "Специалисты строительной сферы", "Творчество и дизайн", "Специалисты, занятые на промышленном производстве", "Сфера услуг", "Обслуживание гражданского транспорта", "RU", "FutureSkills (FS)", "Презентационная (FS)", "Презентационная", "JuniorSkills", "Презентационная (JS)"] } competences={ ["Все компетенции", "Камнетёсное дело", "Облицовка плиткой", "Столярное дело", "Плотницкое дело", "Кирпичная кладка", "Холодильная техника и системы кондиционирования", "Сантехника и отопление", "Сухое строительство и штукатурные работы", "Малярные и декоративные работы", "Ландшафтный дизайн", "Электромонтаж", "Производство мебели"] } />
-                  </Col>
-                </Row>
                    <Tab.Container id="left-tabs-example" defaultActiveKey="0">
                     <Row className="clearfix">
                       <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />

@@ -174,7 +174,13 @@ class Sck extends Component {
                                     /></LinkContainer>
 
                     </WsrBlockBlank>
-                    
+                    <WsrBlockTitle title="СЦК — это?" />
+                    <WsrBlockBlank className="wsr-block-select"> 
+                      <p className="wsr-block-descriptor__text"><b>Специализированный центр компетенции (СЦК) </b>— центр развития профессий и профессиональных сообществ WorldSkills, обладающий современным оборудованием и технологиями, отвечающими требованиям Ворлдскиллс, а также наличием экспертов для осуществления обучения и оценки 
+соответствующей квалификации по стандартам WorldSkills. 
+</p>
+                      
+                    </WsrBlockBlank>
                     <WsrBlockBlank className="wsr-block-select">
                       <ListGroup>
                         <LinkContainer exact to="/sck/become-sck"><ListGroupItem>Стать СЦК</ListGroupItem></LinkContainer>

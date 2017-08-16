@@ -1247,6 +1247,35 @@ export class WsrPartnerSearch extends React.Component {
     }
 }
 
+
+export class WsrAccordeonExpert extends React.Component {
+  render() {
+    let _props = this.props;
+    return(
+      <Panel header={ 
+                        <Row> 
+                          <Col sm={1}> 
+                            <img width={ 20 } src="/Images/certified.svg" alt="" />
+                          </Col> 
+                          <Col sm="9">
+                            <h4> Главный региональный эксперт </h4>
+                          </Col>
+                        </Row> } eventKey= { _props.paneleventKey }>
+                          <Media className="wsr-certification-explanation__media">
+                            <Media.Body className="wsr-certification-description">
+                              <p className="wsr-expert-description">
+                              Прошедшие двух/трёхдневную программу обучения, сдавшие тестирование по итогам обучения. Имеют право проведения региональных (корпоративных) чемпионатов, а также
+                                оценки заданий демонстрационного экзамена
+                               </p>
+                              { /*  <Label><a href="/docs/certificate.txt">Образец Сертификата</a></Label> */ }
+                            </Media.Body>
+                          </Media>
+                        </Panel>
+    )
+  }
+}
+
+
 export class WsrLocationItem extends React.Component {
     render() {
         let _props = this.props;
@@ -1303,10 +1332,7 @@ export class WsrPartner extends React.Component {
                           <a href="http://www.cisco.com/">{ _props.title }</a>
                         </Media.Heading>
                         { _props.children }
-                        <TextTruncate className="wsr-block__description" line={ 3 } truncateText="…" text={ _props.description } textTruncateChild={ <a href="#">
-                                                                                                                                                       <MdArrowForward className="wsr-block__date-icon" />
-                                                                                                                                                     </a>
-                                                                                                                                                      } />
+                        <p className="wsr-block__description"> { _props.description } </p>                                                                                                                                         
                       </Media.Body>
                     </Media>
                   </div>
