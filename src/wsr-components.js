@@ -174,19 +174,24 @@ constructor(props) {
                           Компетенции
                         </NavItem>
                       </LinkContainer>
+                      <LinkContainer to="/competence-junior">
+                        <NavItem eventKey={ 6 } title="Компетенции Junior" id="basic-nav">
+                          Компетенции
+                        </NavItem>
+                      </LinkContainer>
                       <LinkContainer to="/page2.html">
-                        <NavItem eventKey={ 6 } title="Проекты" id="basic-nav">
+                        <NavItem eventKey={ 7 } title="Проекты" id="basic-nav">
                           Проекты
                         </NavItem>
                       </LinkContainer>
                       
                         <LinkContainer to="/partners">
-                          <NavItem eventKey={ 7 }>
+                          <NavItem eventKey={ 8 }>
                             Партнёры
                           </NavItem>
                         </LinkContainer>
                         <LinkContainer to="/press/important">
-                          <NavItem eventKey={ 8 }>Пресс-центр</NavItem>
+                          <NavItem eventKey={ 9 }>Пресс-центр</NavItem>
                         </LinkContainer>
                     </Nav>
                   </Navbar.Collapse>
@@ -228,7 +233,7 @@ constructor(props) {
                           </LinkContainer>
                           <LinkContainer to="/competence-junior">
                             <NavItem className="wsr-menu-item" eventKey={ 4 }>
-                              { "КОМПЕТЕНЦИИ 14+".toUpperCase() }
+                              { "КОМПЕТЕНЦИИ Junior".toUpperCase() }
                             </NavItem>
                           </LinkContainer>
                             <NavItem href="/page2.html" className="wsr-menu-item" eventKey={ 5 }>

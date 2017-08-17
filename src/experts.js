@@ -190,19 +190,7 @@ class Team extends Component {
                         
         
       </PanelGroup>
-      <WsrBlockTitle title="Поиск экспертов" />
-      <WsrBlockBlank>
-      <InputGroup>
-                      <FormControl className="wsr-input-search" type="text" placeholder="Введите категорию, компетенцию или имя эксперта" />
-                      <InputGroup.Button>
-                        <Button className="wsr-btn-search">
-                          <MdSearch className="ri-search" />
-                        </Button>
-                      </InputGroup.Button>
-                    </InputGroup>    
-                    </WsrBlockBlank>
-
-
+     
                     </Col>
                   </Col>
                   <Col sm={ 4 } md={ 3 } lg={ 3 }>
@@ -319,7 +307,18 @@ class Team extends Component {
                               <Tab.Content animation>
                                 <Tab.Pane eventKey="1c">
                                   <Col sm={ 4 } md={ 3 } lg={ 5 }>
+
                                      <WsrBlockTitle title="Эксперты" />
+                                     <WsrBlockBlank>
+      <InputGroup>
+                      <FormControl className="wsr-input-search" type="text" placeholder="Введите категорию, компетенцию или имя эксперта" />
+                      <InputGroup.Button>
+                        <Button className="wsr-btn-search">
+                          <MdSearch className="ri-search" />
+                        </Button>
+                      </InputGroup.Button>
+                    </InputGroup>    
+                    </WsrBlockBlank>
                                                             <WsrExpert name="Юсупов Набихон Маннонович" certification="certified" head={ true } competence="Кирпичная кладка" tier="primary " medal="bronze"
                           host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg">
                           <WsrCertification certification="certified" />
