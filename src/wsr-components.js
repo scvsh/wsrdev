@@ -228,7 +228,7 @@ constructor(props) {
                           </LinkContainer>
                           <LinkContainer to="/competence-junior">
                             <NavItem className="wsr-menu-item" eventKey={ 4 }>
-                              { "КОМПЕТЕНЦИИ 14+ (Junior)".toUpperCase() }
+                              { "КОМПЕТЕНЦИИ 14+".toUpperCase() }
                             </NavItem>
                           </LinkContainer>
                             <NavItem href="/page2.html" className="wsr-menu-item" eventKey={ 5 }>
@@ -1041,7 +1041,7 @@ export class WsrCertification extends React.Component {
         return (
             <OverlayTrigger trigger={ ['hover', 'focus'] } placement="bottom" overlay={ tooltip }>
                   <div className={ "wsr-team__member-star-wrapper member-expert " }>
-                    <img alt="" className="wsr-expert-status" src={"/Images/" + _props.certification + ".svg"} />
+                    <img alt="" className="wsr-expert-status" src={"/Images/icons/" + _props.certification + ".svg"} />
                   </div>
                 </OverlayTrigger>
         );

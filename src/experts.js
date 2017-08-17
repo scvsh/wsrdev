@@ -323,6 +323,11 @@ class Team extends Component {
                                                             <WsrExpert name="Юсупов Набихон Маннонович" certification="certified" head={ true } competence="Кирпичная кладка" tier="primary " medal="bronze"
                           host="Политехнический Колледж № 50" expert="Калединцев Сергей Юрьевич" photo="/Images/competence/3.jpg">
                           <WsrCertification certification="certified" />
+                          <WsrCertification certification="certified_junior" />
+                          <WsrCertification certification="primary_regional" />
+                          <WsrCertification certification="primary_junior" />
+                          <WsrCertification certification="regional" />
+                          <WsrCertification certification="compatriot" />
                           <WsrCertification certification="demo" />
                         </WsrExpert>
 <WsrExpert name="Моренкова Анастасия Андреевна" certification="regional" head={ true } competence="Кирпичная кладка" tier="member-expert " medal="professional"
