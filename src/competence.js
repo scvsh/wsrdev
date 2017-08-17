@@ -80,7 +80,7 @@ class Competence extends Component {
                             </NavItem>
                           </Nav>
                         </WsrBlockBlank>
-                        <Button block className="btn-export ">
+                        <Button block className="btn-export">
                            Скачать списком 
                           </Button>
                       </Col>
@@ -97,13 +97,13 @@ class Competence extends Component {
                                         <Image src="/Images/icon_1.svg" />
                                       </Col>
                                       <Col xs={9} sm={12} md={9} className="wsr-team__description">
-                                        <h3 className="wsr-competence__title">Специалисты строительной сферы</h3>
+                                        <h3 className="wsr-competence__title">Камнетёсное дело</h3>
                                       </Col>
                                     </Row>
                                     <ListGroup fill>
-                                      <WsrCompetence competences={ [ "Камнетёсное дело" , "Облицовка плиткой" , "Столярное дело" , "Плотницкое дело" , "Кирпичная кладка" , "Холодильная техника и системы кондиционирования" , "Сантехника и отопление" , "Сухое строительство и штукатурные работы" , "Малярные и декоративные работы" , "Ландшафтный дизайн" , "Электромонтаж" , "Производство мебели"] } />
+                                      <WsrCompetence competences={ ["Камнетёсное дело" , "Облицовка плиткой" , "Столярное дело" , "Плотницкое дело" , "Кирпичная кладка" , "Холодильная техника и системы кондиционирования" , "Сантехника и отопление" , "Сухое строительство и штукатурные работы" , "Малярные и декоративные работы" , "Ландшафтный дизайн" , "Электромонтаж" , "Производство мебели", "..."] } />
                                     </ListGroup>
-                                    Всего 12 компетенций
+                                    Всего 463 компетенций
                                   </Panel>
                                 </WsrBlockBlank>
                                 
@@ -140,7 +140,7 @@ class Competence extends Component {
                                     <WsrSckInfo location="https://www.mgpu.ru/" title="ГАОУ ВО г. Москвы «Московский городской педагогический университет»" logo="/Images/sck/1.svg" contact="Бабалаева Мария Викторовна" phone="+7 963 600 82-12" mail="babalaewa73@inbox.ru" detailedAddress="м. «Кутузовская», последний вагон из центра, далее пешком 3-5 минут в сторону области." />
                                   
                                   <WsrBlockTitle title="Техническая документация" />
-                                  <WsrBlockBlank>
+                                  <WsrBlockBlank type="wsr-button-block">
                                   <Button block className="btn-export text-left">
                                   
                            <FaFileTextO />Скачать документы

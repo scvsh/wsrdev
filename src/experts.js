@@ -247,7 +247,7 @@ class Team extends Component {
                         <WsrBlockBlank className="wsr-block-select">
                           <Nav bsStyle="pills" className="wsr-competence-category" stacked>
                             <NavItem eventKey="0">
-                              Специалисты строительной сферы
+                              Все категории
                             </NavItem>
                             <NavItem eventKey="1">
                               Специалисты информационных и коммуникационных технологий
@@ -301,16 +301,16 @@ class Team extends Component {
                                   <Panel defaultExpanded>
                                     <Row className="wsr-competence__icon-wrapper is is-flex">
                                       <Col xs={3}  md={3} smHidden>
-                                        <Image src="/Images/icon_1.svg" />
+                                        <Image src="/Images/icon_all.svg" />
                                       </Col>
                                       <Col xs={9} sm={12} md={9} className="wsr-team__description">
-                                        <h3 className="wsr-competence__title">Специалисты строительной сферы</h3>
+                                        <h3 className="wsr-competence__title">Все компетенции</h3>
                                       </Col>
                                     </Row>
                                     <ListGroup fill>
-                                      <WsrCompetence competences={ [ "Камнетёсное дело" , "Облицовка плиткой" , "Столярное дело" , "Плотницкое дело" , "Кирпичная кладка" , "Холодильная техника и системы кондиционирования" , "Сантехника и отопление" , "Сухое строительство и штукатурные работы" , "Малярные и декоративные работы" , "Ландшафтный дизайн" , "Электромонтаж" , "Производство мебели"] } />
+                                      <WsrCompetence competences={ [ "Все компетенции", "Камнетёсное дело" , "Облицовка плиткой" , "Столярное дело" , "Плотницкое дело" , "Кирпичная кладка" , "Холодильная техника и системы кондиционирования" , "Сантехника и отопление" , "Сухое строительство и штукатурные работы" , "Малярные и декоративные работы" , "Ландшафтный дизайн" , "Электромонтаж" , "Производство мебели", "..." ]} />
                                     </ListGroup>
-                                    Всего 12 компетенций
+                                    Всего 456 компетенций
                                   </Panel>
                                 </WsrBlockBlank>
                                 

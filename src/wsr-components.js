@@ -1143,7 +1143,20 @@ export class WsrExpertSearch extends React.Component {
         );
         return (
             <Row>
-              <Col xs={ 12 } sm={ 4 } md={ 8 } lg={ 4 }>
+              
+                <Col xs={ 6 } sm={ 4 } md={ 4 } lg={ 4 }>
+                    <WsrBlockTitle title="Категория" />
+                    <FormControl componentClass="select" placeholder="select">
+                      { listCategories }
+                    </FormControl>
+                </Col>
+                <Col xs={ 6 } sm={ 4 } md={ 4 } lg={ 4 }>
+                    <WsrBlockTitle title="Компетенция" />
+                    <FormControl componentClass="select" placeholder="select">
+                      { listCompetences }
+                    </FormControl>
+                </Col>
+                <Col xs={ 12 } sm={ 4 } md={ 4 } lg={ 4 }>
                     <WsrBlockTitle title="Поиск" />
                     <InputGroup>
                       <FormControl className="wsr-input-search" type="text" placeholder="Например, Столярное дело" />
@@ -1154,25 +1167,14 @@ export class WsrExpertSearch extends React.Component {
                       </InputGroup.Button>
                     </InputGroup>
                 </Col>
-                <Col xs={ 6 } sm={ 4 } md={ 8 } lg={ 3 }>
-                    <WsrBlockTitle title="Категория" />
-                    <FormControl componentClass="select" placeholder="select">
-                      { listCategories }
-                    </FormControl>
-                </Col>
-                <Col xs={ 6 } sm={ 4 } md={ 4 } lg={ 3 }>
-                    <WsrBlockTitle title="Компетенция" />
-                    <FormControl componentClass="select" placeholder="select">
-                      { listCompetences }
-                    </FormControl>
-                </Col>
                 
-                <Col md={ 4 } lg={ 2 } xsHidden>
+                {/* <Col md={ 4 } lg={ 2 } xsHidden>
                     <WsrBlockTitle title={'\u00A0'} />
                         <Button block className="btn-export ">
                            Выгрузить
                           </Button>
-                </Col>
+                </Col> */}
+                
               
             </Row>
         );
