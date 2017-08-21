@@ -803,65 +803,65 @@ export class WsrFooter extends React.Component {
               <Row className="wsr-footer__menu">
                 <Col xs={ 0 } sm={ 3 } md={ 2 } />
                 <Col xs={ 12 } sm={ 2 } md={ 1 }>
-                  <a className="wsr-footer__title">
+                  <a href="#" className="wsr-footer__title">
                     { "Wsr в Москве".toUpperCase() }
                   </a>
-                  <a href="">История WSR в Москве</a>
-                  <a href="">Регламентирующие документы</a>
-                  <a href="">Контакты</a>
+                  <a href="#">История WSR в Москве</a>
+                  <a href="#">Регламентирующие документы</a>
+                  <a href="#">Контакты</a>
                 </Col>
                 <Col xs={ 12 } sm={ 2 } md={ 1 }>
-                  <a className="wsr-footer__title">
+                  <a href="#" className="wsr-footer__title">
                     { "Сборная Москвы".toUpperCase() }
                   </a>
                 </Col>
                 <Col xs={ 12 } sm={ 2 } md={ 2 }>
-                  <a className="wsr-footer__title">
+                  <a href="#" className="wsr-footer__title">
                     { "Эксперты".toUpperCase() }
                   </a>
-                  <a href="">Региональный эксперт</a>
-                  <a href="">Эксперт демонстрационного экзамена</a>
-                  <a href="">Обучение в 1С:Учебном центре №1</a>
+                  <a href="#">Региональный эксперт</a>
+                  <a href="#">Эксперт демонстрационного экзамена</a>
+                  <a href="#">Обучение в 1С:Учебном центре №1</a>
                   
                 </Col>
                 <Col xs={ 12 } sm={ 2 } md={ 1 }>
-                  <a className="wsr-footer__title">
+                  <a href="#" className="wsr-footer__title">
                     { "СЦК".toUpperCase() }
                   </a>
-                  <a href="">Стать СЦК</a>
+                  <a href="#">Стать СЦК</a>
                 </Col>
                       <Clearfix visibleSmBlock/>
 
                 <Col xs={ 12 } sm={ 2 } md={ 1 } smPush={3} mdPush={0}>
-                  <a className="wsr-footer__title">
+                  <a href="#" className="wsr-footer__title">
                     { "Компетенции".toUpperCase() }
                   </a>
-                  <a className="wsr-footer__title">
+                  <a href="#" className="wsr-footer__title">
                     { "Компетенции Junior".toUpperCase() }
                   </a>
                 </Col>
                 <Col xs={ 12 } sm={ 2 } md={ 1 } smPush={3} mdPush={0}>
-                  <a className="wsr-footer__title">
+                  <a href="#" className="wsr-footer__title">
                     { "Проекты".toUpperCase() }
                   </a>
-                  <a href="">Архив проектов</a>
-                  <a href="">Архив мероприятий</a>
+                  <a href="#">Архив проектов</a>
+                  <a href="#">Архив мероприятий</a>
                 </Col>
                 <Col xs={ 12 } sm={ 2 } md={ 1 } smPush={3} mdPush={0}>
-                  <a className="wsr-footer__title">
+                  <a href="#" className="wsr-footer__title">
                     { "Партнёры".toUpperCase() }
                   </a>
-                  <a href="">Наши партнёры</a>
-                  <a href="">Стать партнёром</a>
+                  <a href="#">Наши партнёры</a>
+                  <a href="#">Стать партнёром</a>
                 </Col>
                 <Col xs={ 12 } sm={ 2 } md={ 2 } smPush={3} mdPush={0}>
-                  <a className="wsr-footer__title">
+                  <a href="#" className="wsr-footer__title">
                     { "Пресс-центр".toUpperCase() }
                   </a>
-                  <a href="">Новости</a>
-                  <a href="">Важная информация</a>
-                  <a href="">Фотогалерея</a>
-                  <a href="">Видеогалерея</a>
+                  <a href="#">Новости</a>
+                  <a href="#">Важная информация</a>
+                  <a href="#">Фотогалерея</a>
+                  <a href="#">Видеогалерея</a>
                 </Col>
               </Row>
             </Row>
@@ -873,7 +873,7 @@ export class WsrPage extends React.Component {
     render() {
         let _props = this.props;
         return (
-            <div className={ "wsr-block " + _props.type }>
+            <div className={ _props.type ? "wsr-block " + _props.type : "wsr-block"}>
               <Row>
                 <Col xs={ 12 } className="wsr_page__container">
                   
@@ -1337,7 +1337,7 @@ export class WsrPartner extends React.Component {
         let _props = this.props;
 
         return (
-            <div className={ "wsr-block " + _props.type }>
+            <div className={ _props.type ? "wsr-block " + _props.type : "wsr-block"}>
               <Row>
                 <Col sm={ 9 } md={ 12 } className="wsr_partner__container ">
                   <div className="wsr-page__description">
