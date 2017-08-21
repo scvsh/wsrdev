@@ -137,13 +137,7 @@ class Team extends Component {
                                <Label className="wsr-certificate-label"><a href="/docs/certificate.txt">Образец Сертификата</a></Label>
 
                         </Panel>
-                        
-        
-      </PanelGroup>
-      <WsrBlockTitle title="Эксперты" />
-                      
-                      <PanelGroup accordion className="wsr-block__sck-info__panel">
-                      <Panel header={ 
+                        <Panel header={ 
                         <div className="wsr-expert-accordeon__heading">
                         <div className="wsr-expert-accordeon__heading">
                         <div>
@@ -185,8 +179,6 @@ class Team extends Component {
                                <Label className="wsr-certificate-label"><a href="/docs/certificate.txt">Образец Сертификата</a></Label>
 
                         </Panel>
-
-
                         
         
       </PanelGroup>

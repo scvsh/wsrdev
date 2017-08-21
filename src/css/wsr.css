@@ -1036,7 +1036,7 @@ a .wsr-footer__social-icons:first-child {
   padding-top: 20px;
   font-weight: 300;
   margin-bottom: 0.2em;
-  word-wrap: normal;
+  word-wrap: nowrap;
 }
 .wsr-block__heading:hover {
   opacity: 0.8;
@@ -1138,7 +1138,7 @@ a .wsr-footer__social-icons:first-child {
   font-weight: 300;
   cursor: pointer;
   color: #ce112d;
-  word-wrap: normal;
+  word-wrap: nowrap;
 }
 .wsr-team__expert .panel-heading {
   height: 2.5em;
@@ -1393,7 +1393,21 @@ a .wsr-footer__social-icons:first-child {
   opacity: 0.8;
   font-style: normal;
 }
-.wsr-footer__menu a {
+.wsr-footer__menu a.wsr-footer__title {
+  cursor: pointer;
+  color: white;
+  display: block;
+  padding-bottom: 1em;
+  transition: opacity 150ms ease-in;
+}
+.wsr-footer__menu a.wsr-footer__title:hover {
+  cursor: pointer;
+  color: white;
+  display: block;
+  padding-bottom: 1em;
+  opacity: 0.7;
+}
+.wsr-footer__menu a:not(.wsr-footer__title) {
   cursor: pointer;
   color: white;
   opacity: 0.7;
@@ -1670,7 +1684,7 @@ h6 {
   overflow: hidden;
   /* white-space: nowrap; */
   text-overflow: ellipsis;
-  word-wrap: break-word;
+  word-wrap: nowrap;
 }
 .dropdown-backdrop {
   position: static;
