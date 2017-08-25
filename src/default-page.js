@@ -9,7 +9,7 @@ import { Form, FormGroup, FormControl, ControlLabel, Checkbox, Modal, Button, Gr
 
 /* Import WSR React components*/
 
-import { WsrNewsItem, WsrCarousel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
+import { WsrBlock, WsrNewsItem, WsrCarousel, WsrPage, WsrMainMenu, WsrBlockTitle, WsrBlockBlank, WsrFooter } from "./wsr-components.js";
 
 /* Main app */
 
@@ -151,6 +151,19 @@ class DefaultPage extends Component {
 
 
                     </WsrPage>
+                  </Col>
+                  <Col xsHidden smHidden md={ 3 } lg={ 3 } className="wsr-aside">
+                  <WsrBlockTitle title="Название категории" />
+                  <WsrBlockBlank type="wsr-block-news">
+                      <WsrNewsItem heading="Заголовок первой новости, анонса или блока важной информации" description="Описание первой новости, анонса или блока важной информации"
+                        date="26.04.2017" />
+                      <div className="wsr_block-menu__divider" />
+                      <WsrNewsItem heading="Заголовок второй новости, анонса или блока важной информации" description="Описание второй новости, анонса или блока важной информации"
+                        date="26.04.2017" />
+                      <div className="wsr_block-menu__divider" />
+                      <WsrNewsItem heading="Заголовок третьей новости, анонса или блока важной информации" description="Описание третьей новости, анонса или блока важной информации"
+                        date="26.04.2017" />
+                    </WsrBlockBlank>
                   </Col>
                 </Row>
                 </Grid>

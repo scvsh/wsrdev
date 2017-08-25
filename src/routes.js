@@ -22,6 +22,7 @@ import Partners from "./partners"
 import BecomePartner from "./become-a-partner"
 import PhotoGallery from "./photo-gallery"
 import Album from "./album"
+import Announce from "./announce"
 import Contact from "./contact"
 import Important from "./important"
 import Championship from "./championship"
@@ -90,6 +91,7 @@ const Routes = () => (
             <Route path="/qualification/competence" component={ QualificationCompetence } />
 
             <Route path="/archive" component={ Archive } />
+            <Route path="/announce" component={ Announce } />
         </ScrollToTop>
     </Router>
 )
