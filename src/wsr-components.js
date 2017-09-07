@@ -392,7 +392,7 @@ export class WsrCarousel extends React.Component {
 	<img className="wsr-banner_side_sm" src="/Images/banner_side_01_sm.svg"/>	
 	<div className="wsr-banner__description">
       <span>
-      12-17 февраля 2017
+      13-22 ноября 2017
       </span>
       <hr />
       <strong>WSR</strong>
