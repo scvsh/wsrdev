@@ -2470,7 +2470,7 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
   flex-basis: 50%;
 }
 .wsr-banner__wrap {
-  background-image: url('/Images/carousel/gallery01.jpg');
+  background-image: url('/Images/carousel/banner01.jpg');
   width: 100%;
   height: 300px;
   background-size: cover;
@@ -2481,7 +2481,7 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
   flex-shrink: 0;
 }
 .wrap-junior {
-  background-image: url('/Images/carousel/gallery02.jpg');
+  background-image: url('/Images/carousel/banner02.jpg');
 }
 .wsr-banner__description {
   height: 60%;
