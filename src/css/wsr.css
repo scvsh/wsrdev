@@ -28,7 +28,7 @@ input:focus {
   outline-color: red !important;
 }
 .form-control:focus {
-  border-color: #838d9d;
+  border-color: rgba(255, 255, 255, 0.5);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 102, 102, 0.6);
 }
 body:focus {
@@ -135,7 +135,7 @@ a:any-link {
   padding-right: 0;
 }
 .wsr-menu a:any-link {
-  color: #838d9d;
+  color: rgba(255, 255, 255, 0.5);
   font-weight: 700 !important;
 }
 .wsr-menu a:any-link:visited {
@@ -183,8 +183,7 @@ li .active > a:any-link {
 }
 .wsr-affix {
   overflow-y: auto;
-  background-color: #002b4a;
-  background-image: url(/Images/overlay.png);
+  background-image: url(/Images/overlay2.png);
   background-size: cover;
   position: fixed;
   top: 0;
@@ -221,11 +220,12 @@ li .active > a:any-link {
   height: 100%;
   width: 12px;
   width: 25vw;
-  background-image: url(/Images/overlay_red.png);
+  background-image: url(/Images/overlay_red2.png);
   transform: skew(15deg);
   font-weight: 300;
   background-size: cover;
   z-index: 1000;
+  background-color: #ce112d;
 }
 @media (max-width: 1600px) {
   .wsr-carousel-menu {
@@ -1494,8 +1494,8 @@ a .wsr-footer__social-icons:first-child {
   cursor: pointer;
 }
 /* .wsr-burger__icon:active svg{
-	transform: rotate(90deg);
-	transition: 200ms ease-out;
+transform: rotate(90deg);
+transition: 200ms ease-out;
 }
 
 */
@@ -2461,15 +2461,65 @@ li.wsr-side-menu__item:focus > a {
 /*
 Should we change this at all?
 .form-control:focus {
-  border-color: @brand-secondary;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
+border-color: @brand-secondary;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
 }
 */
 .wsr-row__contacts > div[class*='col-'] {
   flex-basis: 50%;
 }
+.wsr-banner__wrap {
+  background-image: url('/Images/carousel/gallery01.jpg');
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.wrap-junior {
+  background-image: url('/Images/carousel/gallery02.jpg');
+}
+.wsr-banner__description {
+  height: 60%;
+  min-height: 150px;
+  border: 10px solid #00465c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Gotham Pro';
+  font-size: 2em;
+  color: #00465c;
+  padding: 0 2em 0 1em;
+  width: 50vw;
+}
+.description-junior {
+  color: #012b43;
+  border: 10px solid #012b43 !important;
+}
+.wsr-banner__description hr {
+  margin: 0 !important;
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+  width: 100%;
+  border: 5px solid #e52520;
+}
 @media (min-width: 1200px) {
+  .wsr-banner_side {
+    min-width: initial !important;
+    height: 300px !important;
+    width: initial !important;
+    position: absolute !important;
+    right: 0 !important;
+    z-index: 10000 !important;
+  }
+  .wsr-banner_side_sm {
+    display: none !important;
+  }
   .wsr-calendar-button {
     display: none;
   }
@@ -2522,6 +2572,20 @@ Should we change this at all?
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+  .wsr-banner__description {
+    font-size: 1.5em;
+  }
+  .wsr-banner_side {
+    min-width: initial !important;
+    height: 300px !important;
+    width: initial !important;
+    position: absolute !important;
+    right: 0 !important;
+    z-index: 10000 !important;
+  }
+  .wsr-banner_side_sm {
+    display: none !important;
+  }
   body {
     hyphens: auto !important;
     -webkit-hyphens: auto !important;
@@ -2590,6 +2654,20 @@ Should we change this at all?
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .wsr-banner__description {
+    font-size: 1.5em;
+  }
+  .wsr-banner_side_sm {
+    min-width: initial !important;
+    height: 300px !important;
+    width: initial !important;
+    position: absolute !important;
+    right: 0 !important;
+    z-index: 10000 !important;
+  }
+  .wsr-banner_side {
+    display: none !important;
+  }
   .btn-export {
     font-size: 0.7em;
   }

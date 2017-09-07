@@ -328,23 +328,7 @@ export class WsrCarouselCaption extends React.Component {
 
 
             <Col xsOffset={ 1 } xs={ 11 } className="wsr-col-inherit wsr-carousel-red">
-              <Col xs={ 2 } sm={ 3 } md={ 4 } lg={ 3 } className="pull-right wsr-carousel-menu">
-                <Nav ref="red-stage-nav" className=" text-right wsr-carousel-menu__nav" activeKey={  this.state.activeNav  }>
-                    <NavItem className="wsr-carousel-menu-item " eventKey={ 1 }>
-                      V ОЧМ «Московские мастера»
-                    </NavItem>
-                    <NavItem className="wsr-carousel-menu-item" eventKey={ 2 }>
-                      Всероссийские отборочные соревнования WorldSkills
-                    </NavItem>
-                    <NavItem className="wsr-carousel-menu-item" eventKey={ 3 }>
-                      V Национальный чемпионат WorldSkills Russia 
-                    </NavItem>
-                    <NavItem className="wsr-carousel-menu-item" eventKey={ 4 }>
-                      Демонстрационный экзамен по стандартам WorldSkills Russia 
-                    </NavItem>
-                </Nav>
-              </Col>
-            </Col>
+           </Col>
 
         );
     }
@@ -403,10 +387,28 @@ export class WsrCarousel extends React.Component {
             <WsrCarouselCaption ref="redcaption" activeKey={ this.state.activeNav } />
             <OwlCarousel ref="redstage" rewind={ false } autoplay={ true } className="red-stage" items={ 1 } margin={ 0 }
                 loop={ true } onTranslate={ this.handleKeyChange }>
-                <div><img src="/Images/carousel/gallery02.jpg" alt="" /></div>
-                <div><img src="/Images/carousel/gallery01.jpg" alt="" /></div>
-                <div><img src="/Images/carousel/gallery03.jpg" alt="" /></div>
-                <div><img src="/Images/carousel/gallery04.jpg" alt="" /></div>
+		<div className="wsr-banner__wrap">
+<img className="wsr-banner_side" src="/Images/banner_side_01.svg"/>	
+	<img className="wsr-banner_side_sm" src="/Images/banner_side_01_sm.svg"/>	
+	<div className="wsr-banner__description">
+      <span>
+      12-17 февраля 2017
+      </span>
+      <hr />
+      <strong>WSR</strong>
+    </div>
+</div>
+	<div className="wsr-banner__wrap wrap-junior">
+<img className="wsr-banner_side" src="/Images/banner_side_02.svg"/>	
+	<img className="wsr-banner_side_sm" src="/Images/banner_side_02_sm.svg"/>	
+	<div className="wsr-banner__description description-junior">
+      <span>
+      12-17 февраля 2017
+      </span>
+      <hr />
+      <strong>WSR Junior</strong>
+    </div>
+</div>
               </OwlCarousel>    
               <svg pointerEvents="none" width="0" height="0">
                 <clipPath id="ClipRight" clipPathUnits="objectBoundingBox">
