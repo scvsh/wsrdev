@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./css/wsr.css";
 import { MdStar, MdAccountCircle, MdPlace, MdMore, MdStars, MdDateRange, MdArrowForward, MdSearch, MdMail, MdPhone } from "react-icons/lib/md";
-import { FaGlobe, FaVk, FaFacebook, FaInstagram, FaYoutube } from "react-icons/lib/fa";
+import {  FaTrophy, FaQuestionCircle, FaCheckSquareO, FaGlobe, FaVk, FaFacebook, FaInstagram, FaYoutube } from "react-icons/lib/fa";
 import TextTruncate from "react-text-truncate";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom"
@@ -100,6 +100,113 @@ export class WsrMenuTitle extends React.Component {
     }
 }
 
+export class WsrParticipateCategory extends React.Component {
+		
+    render() {
+        let _props = this.props;
+        return (
+				<WsrBlockBlank type="wsr-block__participate">
+						<Image className="wsr-block__participate--image" src={ _props.image } alt=""/>
+						<h4 className="wsr-competence__title">{ _props.title }</h4>
+						<hr/>
+						
+				<p className="wsr-block__participate--comment">Основанная в 1950 году, WorldSkills – международная организация, продвигающая профессиональное, техническое и ориентированное на сферу услуг образование и обучение.</p></WsrBlockBlank>
+            
+        );
+    }
+}
+export class WsrSkillCenter extends React.Component {
+		
+    render() {
+        let _props = this.props;
+        return (
+				<WsrBlockBlank type="wsr-block__skillcenter-wrap">
+						<WsrSkillCenterItem number={1} title="Тренинг-центр" text="Основанная в 1950 году, WorldSkills – международная организация, продвигающая профессиональное, техническое и ориентированное на сферу услуг образование и обучение"/>
+				<WsrSkillCenterItem  number={2} title="Методическое обеспечение" text="Основанная в 1950 году, WorldSkills – международная организация, продвигающая профессиональное, техническое и ориентированное на сферу услуг образование и обучение"/>
+
+				<WsrSkillCenterItem number={3} title="Организационное обеспечение" text="Основанная в 1950 году, WorldSkills – международная организация, продвигающая профессиональное, техническое и ориентированное на сферу услуг образование и обучение"/>
+				<Row>
+						<Col lg={1}/>
+						<Col lg={5} className="wsr-block__skillcenter-description">
+				<Button block className="btn-export text-left">
+                                  
+                           <FaTrophy/>Стать Skills-центром 
+				   </Button>
+		   </Col>
+   </Row>
+		</WsrBlockBlank> 
+        );
+    }
+}
+
+
+export class WsrSkillCenterItem extends React.Component {
+		
+    render() {
+        let _props = this.props;
+        return (
+				<Row>
+						<Col className="wsr-block__skillcenter-number" lg={ 1 }><h2>{ _props.number }</h2></Col>
+						<Col lg ={ 11 } className="wsr-block__skillcenter-description">
+						<h4 className="wsr-competence__title"> { _props.title }</h4>
+						<p> { _props.text }</p>
+						<hr/>
+				</Col>
+				</Row> 
+        );
+    }
+}
+
+export class Chosen extends React.Component {
+  render() {
+    return (
+      <div>
+			  <div id="demo">
+					  <div id="one"  ref={el => this.el = el}>
+					  {this.props.children}
+</div>
+                           </div>
+      </div>
+    );
+  }
+}
+
+export class WsrSchool extends React.Component {
+		
+    render() {
+        let _props = this.props;
+        return (
+				                <Row className="wsr-block__school is-flex">
+                  <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
+					  <Col xs={ 12 } sm={ 5 } md={ 6 } lg={ 7 } className="full-size">
+						
+			<Col lg={ 3 }>			
+					<WsrParticipateCategory image="Images/wsr_part_ic1.svg" title="Родителям"></WsrParticipateCategory>
+		</Col><Col lg={ 3 }>
+						  <WsrParticipateCategory image="Images/wsr_part_ic2.svg" title="Обучающимся"></WsrParticipateCategory>
+		</Col><Col lg={ 3 }>
+						  <WsrParticipateCategory image="Images/wsr_part_ic3.svg" title="Экспертам"></WsrParticipateCategory>
+		</Col>	  <Col lg={ 3 }>
+						  <WsrParticipateCategory image="Images/wsr_part_ic4.svg" title="Организациям"></WsrParticipateCategory>
+		</Col>				
+		</Col>				
+				  <Col className="wsr-school__wrap" xs={ 12 } sm={ 5 } md={ 6 } lg={ 3 } >
+
+						  <h2>Школа WorldSkills в&nbsp;Москве</h2>
+						  <h5>Присоединяйтесь к движению сейчас!</h5>
+						  
+						  <Button block className="btn-apply text-left">
+                                  
+                           <FaCheckSquareO/>Стать участником 
+                          </Button>
+				  </Col>
+    					
+				  </Row>
+
+        
+        );
+    }
+}
 
 
 
@@ -385,31 +492,9 @@ export class WsrCarousel extends React.Component {
         return (
             <Row className="top_gal">
             <WsrCarouselCaption ref="redcaption" activeKey={ this.state.activeNav } />
-            <OwlCarousel ref="redstage" rewind={ false } autoplay={ true } className="red-stage" items={ 1 } margin={ 0 }
+            <OwlCarousel ref="redstage" rewind={ false } autoplay={ false } className="red-stage" items={ 1 } margin={ 0 }
                 loop={ true } onTranslate={ this.handleKeyChange }>
-		<div className="wsr-banner__wrap">
-<img className="wsr-banner_side" src="/Images/banner_side_01.svg"/>	
-	<img className="wsr-banner_side_sm" src="/Images/banner_side_01_sm.svg"/>	
-	<div className="wsr-banner__description">
-      <span>
-      13-22 ноября 2017
-      </span>
-      <hr />
-      <strong>WSR</strong>
-    </div>
-</div>
-	<div className="wsr-banner__wrap wrap-junior">
-<img className="wsr-banner_side" src="/Images/banner_side_02.svg"/>	
-	<img className="wsr-banner_side_sm" src="/Images/banner_side_02_sm.svg"/>	
-	<div className="wsr-banner__description description-junior">
-      <span>
-      12-17 февраля 2017
-      </span>
-      <hr />
-      <strong>WSR Junior</strong>
-    </div>
-</div>
-              </OwlCarousel>    
+				<img src="/Images/carousel/gallery03.jpg"/>              </OwlCarousel>    
               <svg pointerEvents="none" width="0" height="0">
                 <clipPath id="ClipRight" clipPathUnits="objectBoundingBox">
                   <polygon points="0.28 1, 1 1,1 0,0 0">
@@ -1553,7 +1638,6 @@ export class WsrSpinner extends React.Component {
         );
     }
 }
-
 
 
 

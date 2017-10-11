@@ -97,6 +97,24 @@ h2 h3 {
 hr {
   margin-top: 2em;
 }
+.btn-apply {
+  padding: 10px 0px;
+  font-weight: 300;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent !important;
+  color: white !important;
+}
+.btn-apply:hover {
+  background-color: white !important;
+  color: #ce112d !important;
+}
+.btn-apply:focus {
+  color: #ce112d;
+  border-color: white;
+  color: white;
+}
 .btn-export {
   padding: 10px 0px;
   font-weight: 300;
@@ -111,6 +129,9 @@ hr {
   color: white !important;
 }
 .btn-export svg {
+  margin-right: 0.5em;
+}
+.btn-apply svg {
   margin-right: 0.5em;
 }
 .btn-more {
@@ -312,6 +333,93 @@ li .active > a:any-link {
 .wsr-carousel-menu__nav > li > a:focus {
   color: inherit;
   background-color: transparent;
+}
+.wsr-block__participate {
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wsr-block__skillcenter {
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.wsr-block__skillcenter {
+  padding-left: 25px;
+}
+.wsr-block__skillcenter-wrap {
+  padding-top: 1.5em;
+}
+.wsr-block__skillcenter-description {
+  padding-left: 25px;
+}
+.wsr-block__skillcenter-description hr {
+  margin: 1.5em 0;
+}
+.wsr-block__skillcenter-description h4 {
+  color: #002b4a;
+}
+.wsr-block__skillcenter-description p {
+  font-size: 0.8em;
+}
+.wsr-block__skillcenter-description button {
+  margin-bottom: 1.5em;
+}
+.wsr-block__skillcenter-number {
+  text-align: center;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+  background: #002b4a;
+}
+.wsr-block__skillcenter-number h2 {
+  color: white;
+}
+.wsr-block__school {
+  background: #ce112d;
+  background-image: url(/Images/overlay_red_h.jpg);
+  background-size: cover;
+  margin-bottom: 15px;
+  padding-top: 15px;
+}
+.wsr-school__wrap {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.wsr-school__wrap h2 {
+  color: white;
+  margin-top: 10px;
+  display: block;
+}
+.wsr-school__wrap h5 {
+  color: white;
+  margin-top: 0;
+  display: block;
+}
+.wsr-school__wrap button {
+  margin-top: auto;
+  margin-bottom: 15px;
+  color: white;
+  border-color: white;
+}
+.wsr-block__participate hr {
+  margin: 0;
+  padding: 0.5em 0;
+  /*border: 1px solid #dddddd;*/
+  width: 100%;
+}
+.wsr-block__participate--image {
+  width: 30%;
+  padding: 0 0 0.5em 0;
+}
+.wsr-block__participate--comment {
+  font-size: 0.8em;
+  text-align: center;
 }
 .wsr-carousel-menu__nav > li:hover,
 .wsr-carousel-menu__nav > li.active {

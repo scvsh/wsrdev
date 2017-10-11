@@ -31,6 +31,7 @@ import ChampionshipPartners from "./championship-partners"
 import ChampionshipLocations from "./championship-locations"
 import Qualification from "./qualification"
 import QualificationCompetence from "./qualification-competence"
+import Landing from "./landing"
 
   
 
@@ -46,6 +47,8 @@ const Routes = () => (
             <Route path="/about/rkc" component={ Rkc } />
             <Route path="/about/history" component={ History } />
             <Route path="/about/reglament" component={ Reglament } />
+            <Route path="/landing" component={ Landing } />
+
 
             { /* Team */ }
 
