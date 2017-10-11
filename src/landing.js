@@ -62,7 +62,11 @@ class Team extends Component {
 				   </Button>
                     </WsrPage>
 		</Col>
-		<Col lg={8}>
+		<Col lgPush={8} lg={4}>
+																										   <WsrBlockTitle title="Календарь" />
+																										   <WsrBlock type="announce"/></Col>
+
+		<Col lgPull={4} lg={8}>
                     <WsrBlockTitle title="Анонсы мероприятий" />
 				
 				<WsrBlock type="wsr-block-important" heading="Старт группы по обучению по программе «Региональный эксперт WorldSkills» перенесен на 13-14 июня!" description="Старт группы по обучению по программе «Региональный эксперт WorldSkills» состоится на 13-14 июня 2017г. 
@@ -77,10 +81,7 @@ class Team extends Component {
                                                                                                                    Адрес проведения: г. Москва, Дмитровское шоссе, д.51, корпус 1 (РКЦ WSR в городе Москве)."
 																												   date="06.06.2017" image="/Images/thumb03.jpg" /> 
 																								   </Col>
-																								   <Col lg={4}>
-																										   <WsrBlockTitle title="Календарь" />
-																										   <WsrBlock type="announce"/></Col>
-
+																								   
   </Col> 
   
                   <Col sm={ 4 } md={ 3 } lg={ 3 }>

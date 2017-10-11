@@ -331,6 +331,7 @@ li .active > a:any-link {
 		color: white;
 }
 .wsr-block__school {
+		display: flex;
 		background: @brand-primary;
 		background-image: url(/Images/overlay_red_h.jpg);
 		background-size: cover;
@@ -2490,7 +2491,7 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
 				flex-basis: 30%;
 		}
 		.wsr-row__contacts > div[class*='col-'] {
-				flex-basis: 50% !important;
+				flex-basis: 49.9% !important;
 		}
 		.wsr-title-descriptor {
 				.responsive_limited(1.53vh, 5px, 10px, 13px, font-size);
@@ -2519,7 +2520,12 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
 		@media (min-width:@screen-md) and (max-width:@screen-md-max) {
 				.wsr-block__school__row-flex, .wsr-block__school__row-flex > div[class*='col-'] {
 						flex-wrap: wrap;
-						flex-basis: 49%;
+						flex-basis: 49.9%;
+				}
+				.wsr-block__school {
+
+						margin-left: -15px;
+
 				}
 
 				.wsr-banner__description {
@@ -2546,7 +2552,7 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
 						flex-basis: 30%;
 				}
 				.wsr-row__contacts > div[class*='col-'] {
-						flex-basis: 50% !important;
+						flex-basis: 49.9% !important;
 				}
 				.wsr-title-descriptor {
 						.responsive_limited(1.53vh, 7px, 10px, 13px, font-size);
@@ -2588,6 +2594,15 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
 
 
 		@media (min-width:@screen-sm) and (max-width:@screen-sm-max) {
+				.wsr-school__wrap h2 {
+						padding-top: 1em;
+				}
+				.wsr-block__school {
+						margin-left: -15px;
+
+				}
+
+
 				.wsr-block__school__row-flex, .wsr-block__school__row-flex > div[class*='col-'] {
 						flex-wrap: wrap;
 						flex-basis: 49%;
@@ -2625,7 +2640,7 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
 						border-left: none;
 				}
 				.row-flex, .row-flex > div[class*='col-'] {
-						flex-basis: 49%;
+						flex-basis: 100%;
 				}
 				.panel-body .row.is-flex > [class*='col-'] {
 						display: block;
@@ -2715,6 +2730,18 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
 				}
 		}
 		@media (min-width:@screen-xs) and (max-width:@screen-xs-max) {
+				.wsr-school__wrap h2 {
+						padding-top: 1em;
+				}
+				.wsr-block__school {
+						margin-top:-25px;
+						padding-left: 15px;
+						display: block;
+						margin-left: -15px;
+
+				}
+
+
 				.wsr-block__school__row-flex, .wsr-block__school__row-flex > div[class*='col-'] {
 						flex-wrap: wrap;
 						flex-basis: 49%;
@@ -2830,9 +2857,21 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
 				}
 		}
 		@media (max-width:@screen-xs) {
+				.wsr-school__wrap h2 {
+						padding-top: 1em;
+				}
+				.wsr-block__school {
+						margin-top:-25px;
+						display: block;
+						padding-left: 15px;
+						margin-left: -15px;
+
+				}
+
+
 				.wsr-block__school__row-flex, .wsr-block__school__row-flex > div[class*='col-'] {
 						flex-wrap: wrap;
-						flex-basis: 49%;
+						flex-basis: 100%;
 				}
 				.navbar-brand {
 						font-size: 1.5rem;
@@ -2856,6 +2895,7 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
 						display: none;
 				}
 				.containter-fluid {
+
 						margin-left: 15px;
 						margin-top: 15px;
 				}
