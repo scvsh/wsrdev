@@ -3,7 +3,7 @@ import "../bootswatch/cosmo/bootstrap.css";
 import "./css/wsr.css";
 import "./css/fonts.css";
 import { LinkContainer } from "react-router-bootstrap";
-import { FaQuestionCircle, FaFileTextO, FaCheckSquareO } from "react-icons/lib/fa";
+import { FaTrophy, FaQuestionCircle, FaFileTextO, FaCheckSquareO } from "react-icons/lib/fa";
 import { MdSearch } from "react-icons/lib/md";
 import TextTruncate from "react-text-truncate";
 
@@ -33,11 +33,34 @@ class Team extends Component {
                   <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
 						  
 				  <Col xs={ 12 } sm={ 5 } md={ 6 } lg={ 7 } className="full-size">
-                    <WsrBlockTitle title="Стать Skills-центром" />
 						  
 					
 		<Col lg={ 12 }>
-						  <WsrSkillCenter></WsrSkillCenter>
+                    <WsrBlockTitle title="Стать Skills-центром" />
+				
+                    <WsrPage type="wsr-page" heading="Стать Skills-центром" description="" date="10.05.2017">
+                      <p>Движение WorldSkills существует с 1946 года. Россия вступила в Движение в 2012 году и Московский регион одним из первых начал деятельность по его продвижению.
+                        С каждым годом все больше специалистов разнообразных рабочих профессий из различных регионов стремятся принять участие в соревнованиях.
+                        <br/>
+                        <br/>Проведение соревнований в рамках Движения преследует несколько целей, таких как: популяризация рабочих профессий, подготовка высококвалифицированных
+                        рабочих кадров в соответствии с лучшими мировыми стандартами и передовыми технологиями, а также стандарты WorldSkills вносят существенный вклад в развитие
+                        отраслей экономики страны.
+                        <br/>
+                        <br/>Соревнования проводятся в форме конкурса профессионального мастерства, где участник должен продемонстрировать все свои навыки и за определенное количество
+                        времени выполнить ряд практических заданий. Стандарты WorldSkills позволяют «задавать планку» для подготовки специалистов высокого уровня и формулировать
+                        требования к выпускникам образовательных учреждений.
+                        <br/>
+                        <br/>В качестве жюри привлекаются ведущие эксперты в своей профессиональной области из различных бизнес-структур и образовательных организаций.
+                        <br/>
+                        <br/>Поддержку Движения WorldSkills в России осуществляют Министерство образования и науки РФ, Министерство промышленности и торговли РФ, Министерство труда
+                        и социальной защиты РФ, Агентство стратегических инициатив и многие другие.
+                        <br/>
+                      </p>
+					  	<Button block className="btn-export text-left">
+                                  
+                           <FaTrophy/>Стать Skills-центром 
+				   </Button>
+                    </WsrPage>
 		</Col>
 		<Col lg={8}>
                     <WsrBlockTitle title="Анонсы мероприятий" />
@@ -54,6 +77,9 @@ class Team extends Component {
                                                                                                                    Адрес проведения: г. Москва, Дмитровское шоссе, д.51, корпус 1 (РКЦ WSR в городе Москве)."
 																												   date="06.06.2017" image="/Images/thumb03.jpg" /> 
 																								   </Col>
+																								   <Col lg={4}>
+																										   <WsrBlockTitle title="Календарь" />
+																										   <WsrBlock type="announce"/></Col>
 
   </Col> 
   

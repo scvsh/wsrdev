@@ -110,7 +110,7 @@ export class WsrParticipateCategory extends React.Component {
 						<h4 className="wsr-competence__title">{ _props.title }</h4>
 						<hr/>
 						
-				<p className="wsr-block__participate--comment">Основанная в 1950 году, WorldSkills – международная организация, продвигающая профессиональное, техническое и ориентированное на сферу услуг образование и обучение.</p></WsrBlockBlank>
+				<p className="wsr-block__participate--comment">{ _props.text }</p></WsrBlockBlank>
             
         );
     }
@@ -179,18 +179,20 @@ export class WsrSchool extends React.Component {
 				                <Row className="wsr-block__school is-flex">
                   <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
 					  <Col xs={ 12 } sm={ 5 } md={ 6 } lg={ 7 } className="full-size">
-						
-			<Col lg={ 3 }>			
-					<WsrParticipateCategory image="Images/wsr_part_ic1.svg" title="Родителям"></WsrParticipateCategory>
-		</Col><Col lg={ 3 }>
-						  <WsrParticipateCategory image="Images/wsr_part_ic2.svg" title="Обучающимся"></WsrParticipateCategory>
-		</Col><Col lg={ 3 }>
-						  <WsrParticipateCategory image="Images/wsr_part_ic3.svg" title="Экспертам"></WsrParticipateCategory>
-		</Col>	  <Col lg={ 3 }>
-						  <WsrParticipateCategory image="Images/wsr_part_ic4.svg" title="Организациям"></WsrParticipateCategory>
+							  <Row className="wsr-block__school__row-flex">	
+			<Col xs={12} sm={6} md={6} lg={ 3 }>			
+					<WsrParticipateCategory text="Мечтаете о ранней профориентации своего ребёнка? Определите его будущую профессию вместе со Школой WorldSkills!" image="Images/wsr_part_ic1.svg" title="Родителям"></WsrParticipateCategory>
+		</Col><Col xs={12} sm={6} md={6} lg={ 3 }>
+								  <WsrParticipateCategory text="Хотите стать лучшими в своей профессии? Постройте свою карьеру с Движением WorldSkills!" image="Images/wsr_part_ic2.svg" title="Обучающимся"></WsrParticipateCategory>
+		</Col>
+<Col xs={12} sm={6} md={6} lg={ 3 }>
+						  <WsrParticipateCategory text="Хотите повысить свою квалификацию, научиться разрабатывать задания и участвовать в оценке чемпионатов и экзаменов по стандартам WorldSkills? Вступайте в нашу команду экспертов!" image="Images/wsr_part_ic3.svg" title="Экспертам"></WsrParticipateCategory>
+		</Col>	  <Col xs={12} sm={6} md={6} lg={ 3 }>
+						  <WsrParticipateCategory text="Заинтересованы в интеграции международных профессиональных стандартов в образовательный процесс своей организации? Присоединяйтесь к Движению со Школой WorldSkills!" image="Images/wsr_part_ic4.svg" title="Организациям"></WsrParticipateCategory>
+				  </Col>
+		  </Row>
 		</Col>				
-		</Col>				
-				  <Col className="wsr-school__wrap" xs={ 12 } sm={ 5 } md={ 6 } lg={ 3 } >
+				  <Col className="wsr-school__wrap" xs={ 12 } sm={ 4 } md={ 3 } lg={ 3 } >
 
 						  <h2>Школа WorldSkills в&nbsp;Москве</h2>
 						  <h5>Присоединяйтесь к движению сейчас!</h5>
@@ -964,7 +966,7 @@ export class WsrPage extends React.Component {
               <Row>
                 <Col xs={ 12 } className="wsr_page__container">
                   
-                                                                                                                                                    { _props.heading ? "<h3>" + _props.heading + "</h3>" : "" }
+						<h3>{ _props.heading ? _props.heading : "" } </h3>
                                                                                                                                                 
                   <div className="wsr-page__content">
                     { _props.description ? " <p> { _props.description } </p> " : false }
