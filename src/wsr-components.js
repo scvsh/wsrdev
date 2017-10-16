@@ -110,7 +110,10 @@ export class WsrParticipateCategory extends React.Component {
 						<h4>{ _props.title }</h4>
 						<hr/>
 						
-				<p className="wsr-block__participate--comment">{ _props.text }</p></WsrBlockBlank>
+				<p className="wsr-block__participate--comment">{ _props.text }</p><Button block className="btn-export text-left">
+                                  
+                           <FaCheckSquareO/>Стать участником
+				   </Button></WsrBlockBlank>
             
         );
     }
@@ -176,20 +179,17 @@ export class WsrSchool extends React.Component {
     render() {
         let _props = this.props;
         return (
+				<Row className="wsr-block__school--wrap">
+						<Row>		<Col xs={0} sm={2} md={2}/>
+						<Col sm={10} md={10}>
+						<h3>Школа WorldSkills в Москве</h3>
+				</Col>
+		</Row>
 				                <Row className="wsr-block__school ">
-                  <Col xs={ 0 } sm={ 3 } md={ 3 } lg={ 2 } />
-				  				  <Col className="wsr-school__wrap" xsPush={0} smPush={5} mdPush={ 6 } lgPush={7} xs={ 12 } sm={ 4 } md={ 3 } lg={ 3 } >
-
-						  <h2>Школа WorldSkills в&nbsp;Москве</h2>
-						  <h5>Присоединяйтесь к движению сейчас!</h5>
-						  
-						  <Button block className="btn-apply text-left">
-                                  
-                           <FaCheckSquareO/>Стать участником 
-                          </Button>
-				  </Col>
-
-					  <Col xs={ 12 } sm={ 5 } md={ 6 } lg={ 7 } xsPull={0} smPull={ 4 } mdPull={3} lgPull={3} className="full-size">
+				                										
+										<Col xs={ 12 } sm={ 3 } md={ 3 } lg={ 2 } className="full-size"/>
+										
+					  <Col xs={ 12 } sm={ 10 } md={ 10 } lg={ 10 } className="full-size">
 							  <Row className="wsr-block__school__row-flex">	
 			<Col xs={12} sm={6} md={6} lg={ 3 }>			
 					<WsrParticipateCategory text="Мечтаете о ранней профориентации своего ребёнка? Определите его будущую профессию вместе со Школой WorldSkills!" image="Images/wsr_part_ic1.svg" title="Родителям"></WsrParticipateCategory>
@@ -206,7 +206,7 @@ export class WsrSchool extends React.Component {
     					
 				  </Row>
 
-        
+		  </Row> 
         );
     }
 }

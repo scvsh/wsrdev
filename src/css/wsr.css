@@ -335,11 +335,20 @@ li .active > a:any-link {
   background-color: transparent;
 }
 .wsr-block__participate {
-  padding: 2em 1em;
+  padding: 1em;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+.wsr-block__participate img {
+  padding-top: 1em;
+}
+.wsr-block__participate p {
+  padding-bottom: 1em;
+}
+.wsr-block__participate .btn-default {
+  margin-top: auto;
 }
 .wsr-block__skillcenter {
   padding: 2em 1em;
@@ -370,7 +379,6 @@ li .active > a:any-link {
   margin-bottom: 1.5em;
 }
 .wsr-block__skillcenter-number {
-  text-align: center;
   -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
   background: #002b4a;
@@ -380,17 +388,26 @@ li .active > a:any-link {
 }
 .wsr-block__school {
   display: flex;
+}
+.wsr-block__school--wrap {
+  padding-left: 15px;
+  margin-left: -15px;
+  margin-bottom: 15px;
+  padding-top: 20px;
+  margin-top: -20px;
   background: #ce112d;
   background-image: url(/Images/overlay_red_h.jpg);
   background-size: cover;
-  margin-bottom: 15px;
-  padding-top: 15px;
 }
 .wsr-school__wrap {
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+.wsr-block__school--wrap h3 {
+  text-align: center;
+  color: white !important;
 }
 .wsr-school__wrap h2 {
   color: white;
@@ -2626,6 +2643,9 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
   border: 5px solid #e52520;
 }
 @media (min-width: 1200px) {
+  .wsr-block__school--wrap h3 {
+    text-align: left;
+  }
   .row-flex {
     wrap: nowrap;
   }
@@ -2939,10 +2959,10 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
     padding-top: 1em;
   }
   .wsr-block__school {
-    margin-top: -25px;
-    padding-left: 15px;
+    /*margin-top:-25px;*/
+    /*padding-left: 15px;*/
     display: block;
-    margin-left: -15px;
+    /*margin-left: -15px;*/
   }
   .wsr-block__school__row-flex,
   .wsr-block__school__row-flex > div[class*='col-'] {
@@ -3071,10 +3091,10 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
     padding-top: 1em;
   }
   .wsr-block__school {
-    margin-top: -25px;
+    /*margin-top:-25px;*/
     display: block;
-    padding-left: 15px;
-    margin-left: -15px;
+    /*padding-left: 15px;*/
+    /*margin-left: -15px;*/
   }
   .wsr-block__school__row-flex,
   .wsr-block__school__row-flex > div[class*='col-'] {
