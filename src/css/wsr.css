@@ -24,6 +24,14 @@ Make the @max and @fallback parameters optional.
 /*-------------------------------------------------------------------------------------------*/
 /*********************************** COMMON STYLES *****************************************/
 /*------------------- ------------------------------------------------------------------------*/
+.wsr-top-button-block {
+  display: none;
+  margin-bottom: 1em;
+}
+.wsr-top-button-block > a {
+  white-space: normal;
+  font-weight: 300;
+}
 input:focus {
   outline-color: red !important;
 }
@@ -213,8 +221,8 @@ li .active > a:any-link {
   width: inherit;
   height: 100vh;
   pointer-events: none;
-  clip-path: url("/Images/clip.svg#ClipAffix");
-  -webkit-clip-path: url("/Images/clip.svg#ClipAffix");
+  clip-path: url('/Images/clip.svg#ClipAffix');
+  -webkit-clip-path: url('/Images/clip.svg#ClipAffix');
   -webkit-clip-path: polygon(65% 7%, 50% 100%, 0px 100%, 0px 0px, 100% 0px);
   clip-path: polygon(65% 7%, 50% 100%, 0px 100%, 0px 0px, 100% 0px);
   transition: 10ms linear;
@@ -224,8 +232,8 @@ li .active > a:any-link {
   z-index: 1000;
   right: 0px;
   position: absolute;
-  clip-path: url("#ClipRight");
-  -webkit-clip-path: url("#ClipAffix");
+  clip-path: url('#ClipRight');
+  -webkit-clip-path: url('#ClipAffix');
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 28% 100%);
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 28% 100%);
   padding-left: 0;
@@ -462,34 +470,14 @@ li .active > a:any-link {
 .top_gal {
   background-color: white;
   margin-bottom: 1em;
-  height: 200px;
+  /*.responsive_limited(50vh, 100px, 300px, 200px, height);*/
   height: 50vh;
-}
-@media (max-height: 200px) {
-  .top_gal {
-    height: 100px;
-  }
-}
-@media (min-height: 600px) {
-  .top_gal {
-    height: 300px;
-  }
 }
 .top_gal img {
   min-width: 100%;
-  height: 200px;
   height: 50vh;
+  /*.responsive_limited(50vh, 100px, 300px, 200px, height);*/
   object-fit: cover;
-}
-@media (max-height: 200px) {
-  .top_gal img {
-    height: 100px;
-  }
-}
-@media (min-height: 600px) {
-  .top_gal img {
-    height: 300px;
-  }
 }
 .wsr-col-inherit {
   height: inherit;
@@ -597,8 +585,8 @@ li .active > a:any-link {
   }
 }
 .wsr-title-logo:hover img {
-  -webkit-filter: drop-shadow(0px 0px 6.61px #FFFFFF);
-  filter: drop-shadow(0px 0px 6.61px #FFFFFF);
+  -webkit-filter: drop-shadow(0px 0px 6.61px #ffffff);
+  filter: drop-shadow(0px 0px 6.61px #ffffff);
 }
 .wsr-skewed-btn div {
   width: 100%;
@@ -974,7 +962,7 @@ a .wsr-footer__social-icons:first-child {
   padding: 0px;
 }
 .wsr-block__date {
-  opacity: .7;
+  opacity: 0.7;
 }
 .wsr-block-descriptor__text {
   font-size: 0.8em;
@@ -1050,7 +1038,7 @@ a .wsr-footer__social-icons:first-child {
 .wsr-main-menu__nav > li.active > a:hover,
 .wsr-main-menu__nav > li.active > a:focus {
   color: white;
-  filter: drop-shadow(0 0 4.5px #FFFFFF);
+  filter: drop-shadow(0 0 4.5px #ffffff);
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -1086,8 +1074,8 @@ a .wsr-footer__social-icons:first-child {
 .wsr-block__image {
   min-height: 200px;
   border-radius: 0 3px 3px 0;
-  clip-path: url("#ClipBlock");
-  -webkit-clip-path: url("#ClipBlock");
+  clip-path: url('#ClipBlock');
+  -webkit-clip-path: url('#ClipBlock');
   -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
   clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
   transform: translateZ(0);
@@ -1176,12 +1164,12 @@ a .wsr-footer__social-icons:first-child {
   font-weight: bold;
   font-size: 0.8em;
   bottom: 0px;
-  padding: .8em 0 0 0;
+  padding: 0.8em 0 0 0;
   margin: 0;
   margin-bottom: 20px;
 }
 .wsr-block__date-icon {
-  margin-right: .8em;
+  margin-right: 0.8em;
   opacity: 1 !important;
 }
 .wsr-block__title {
@@ -1671,7 +1659,7 @@ transition: 200ms ease-out;
   padding-top: 2em;
 }
 .wsr-page__content li {
-  padding: .5em 0.5em .5em 0.5em;
+  padding: 0.5em 0.5em 0.5em 0.5em;
 }
 .wsr-page__content ul {
   padding-bottom: 0.5em;
@@ -1704,7 +1692,7 @@ transition: 200ms ease-out;
   height: auto;
 }
 .wsr-page__content img:hover {
-  border-color: #CE112D;
+  border-color: #ce112d;
 }
 .wsr-page__content {
   font-size: 0.9em;
@@ -2118,13 +2106,13 @@ span .member-expert {
   color: #ce112d;
 }
 .bronze {
-  color: #DCA184;
+  color: #dca184;
 }
 .silver {
-  color: #B2BCC5;
+  color: #b2bcc5;
 }
 .gold {
-  color: #FED152;
+  color: #fed152;
 }
 /*-------------------------------------------------------------------------------------------*/
 .wsr-team__member--primary {
@@ -2150,7 +2138,7 @@ span .member-expert {
   display: block;
   font-size: 0.8em;
   bottom: 0px;
-  padding: .5em 0 0 0;
+  padding: 0.5em 0 0 0;
   margin: 0;
   width: 100%;
 }
@@ -2574,7 +2562,7 @@ li.wsr-side-menu__item:focus > a {
   background-color: #ce112d !important;
 }
 .Cal__Header__date {
-  font-family: "Gotham Pro" !important;
+  font-family: 'Gotham Pro' !important;
   font-size: 1em;
 }
 .Cal__Month__rows {
@@ -2955,6 +2943,9 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
+  .wsr-top-button-block {
+    display: block !important;
+  }
   .wsr-school__wrap h2 {
     padding-top: 1em;
   }
@@ -3087,6 +3078,9 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 43, 74, 0.6);
   }
 }
 @media (max-width: 480px) {
+  .wsr-top-button-block {
+    display: block !important;
+  }
   .wsr-school__wrap h2 {
     padding-top: 1em;
   }
