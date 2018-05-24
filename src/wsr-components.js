@@ -682,7 +682,7 @@ export class WsrCarousel extends React.Component {
                     margin={0}
                     loop={true}
                     onTranslate={this.handleKeyChange}>
-                    <img src="/Images/carousel/gallery03.jpg" />{' '}
+                    <img src="/Images/carousel/44.jpg" />{' '}
                 </OwlCarousel>
                 <svg pointerEvents="none" width="0" height="0">
                     <clipPath id="ClipRight" clipPathUnits="objectBoundingBox">
